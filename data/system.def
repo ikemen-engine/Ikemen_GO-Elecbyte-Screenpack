@@ -1,18 +1,5 @@
 ﻿; Definitions of system screens
 
-; *** DO NOT MODIFY OR OVERWRITE THIS FILE ***
-; To customize, make a copy of this file in a subdirectory of your
-; motif's name. See readme.txt for details on motifs.
-
-; Notes about fonts:
-;   - up to 10 fonts can be specified in the [Files] section.
-;   - fonts indexed here do not refer to the ones in fight.def
-;   - fonts are search in directories in the following order:
-;     1. system directory
-;     2. mugen program directory (not recommended to keep custom fonts here)
-;     3. data/ (not recommended to keep custom fonts here)
-;     4. font/
-
 ;----------------------------
 [Info]
 name = "Default"          ;Name of motif
@@ -36,8 +23,8 @@ localcoord = 320,240      ;Local coordinate space width and height (new in MUGEN
 [Files]
 spr = system.sff          ;Filename of sprite data
 snd = system.snd          ;Filename of sound data
-logo.storyboard =         ;Logo storyboard definition (optional)
-intro.storyboard =        ;Intro storyboard definition (optional)
+logo.storyboard = logo.def   ;Logo storyboard definition (optional)
+intro.storyboard = intro.def ;Intro storyboard definition (optional)
 select = select.def       ;Character and stage selection list
 fight = fight.def         ;Fight definition filename
 font1 = f-4x6.def         ;System fonts
@@ -94,11 +81,13 @@ menu.itemname.arcade = "ARCADE"
 menu.itemname.versus = "VS MODE"
 menu.itemname.teamarcade = "TEAM ARCADE"
 menu.itemname.teamversus = "TEAM VS"
+menu.itemname.online = "NETWORK"              ;Ikemen feature
 menu.itemname.teamcoop = "TEAM CO-OP"
 menu.itemname.survival = "SURVIVAL"
 menu.itemname.survivalcoop = "SURVIVAL CO-OP"
 menu.itemname.training = "TRAINING"
 menu.itemname.watch = "WATCH"
+menu.itemname.extras = "EXTRAS"               ;Ikemen feature
 menu.itemname.options = "OPTIONS"
 menu.itemname.exit = "EXIT"
 ; These parameters define the window in which the items are visible
@@ -254,6 +243,12 @@ p2.teammenu.value.icon.spr = 191,0
 p2.teammenu.value.empty.icon.offset = -60,1
 p2.teammenu.value.empty.icon.spr = 192,0
 p2.teammenu.value.spacing = -6,0
+
+teammenu.itemname.single = Single ;Ikemen feature
+teammenu.itemname.tag = Tag       ;Ikemen feature
+teammenu.itemname.simul = Simul   ;Ikemen feature
+teammenu.itemname.turns = Turns   ;Ikemen feature
+
 ;Sounds
 
 [Begin Action 180] ;P1 Team mode cursor
@@ -423,8 +418,8 @@ enabled = 1               ;Set to 1 to show continue screen, 0 to disable
 ;-------------------------------------------------------------------
 ;Game over screen definition
 [Game Over Screen]
-enabled = 0               ;Set to 1 to show game over screen, 0 to disable
-storyboard =              ;Game over storyboard filename
+enabled = 1               ;Set to 1 to show game over screen, 0 to disable
+storyboard = gameover.def ;Game over storyboard filename
 
 ;-------------------------------------------------------------------
 ;Victory screen definition
@@ -506,8 +501,8 @@ storyboard =              ;Default ending storyboard filename
 ;Ending credits screen definition
 ;This screen shows up after the Win Screen and Ending
 [End Credits]
-enabled = 0               ;Set to 1 to show credits, 0 to disable
-storyboard =              ;Credits storyboard filename
+enabled = 1               ;Set to 1 to show credits, 0 to disable
+storyboard = credits.def  ;Credits storyboard filename
 
 ;-------------------------------------------------------------------
 ;Survival mode results screen definition
