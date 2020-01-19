@@ -1,154 +1,100 @@
-===========================
- Kung Fu Man (classic ver)
-===========================
+﻿とりあえず完成！
 
-For M.U.G.E.N 1.0
-(c) 2009 Elecbyte
+☆キャラクター概要
+　名前　　いっしょにとれーにんぐ
 
-This version updated: 15 Sep 2009
+-----------------------------------------------------------------------------------------------------------
+☆こいつは何？
+　トレーニングやキャラ作成のお供に！！
 
-Kung Fu Man is a sample character that works with M.U.G.E.N.
+-----------------------------------------------------------------------------------------------------------
+☆所感
+　すごい便利！！だよね？
 
-KFM's work files are available in the work/kfm720/ directory.
+-----------------------------------------------------------------------------------------------------------
+☆操作法方他
+・通常技
+　A　　　　　ヘッドポジションを調べます
+　B　　　　　ミッドポジションを調べます
+　C　　　　　攻撃の距離をはかります。お辞儀をしたら攻撃してください
+　　　　　　 Aでコマ送りして、攻撃判定が出たら再びCで判定します。Bでキャンセルできます
+　　　　　　 コマ送り中に攻撃判定が出た時にXボタンを押すことで攻撃の射程をはかることも可能
+　X　　　　　おっそい攻撃。当て身などの確認にどうぞ　空中、屈の3パターン
+　4X　　　　 おっそい飛び道具。Projectileタイプ
+　6X　　　　 おっそい飛び道具。Helperタイプ
+　Y　　　　　トレーニングパラメータを表示します。押すたびに奥表示か手前表示かが変わります
+　Z　　　　　距離を測れるようグリッドを表示します。押すたびに奥表示か手前表示かが変わります
+　Start　　　オプションを開きます
 
-KFM is licensed under the Creative Commons Noncommercial
-License.  Attribution is optional.  This means you may freely
-build upon or use parts of KFM for non-commercial puposes.
+・オプション項目
+　STATE TYPE　　待機中の行動を設定できます　S：通常　C：屈　A：ジャンプ
+　DISTANCE　　　距離を設定できます　4パターン
+　AUTO GUARD　　オートでガードするかの設定、1HITは2Hit目以降をガードします（コンボ確認用）、ADV.はアドガをします
+　RECOVER　　 　受け身をとるかどうか、またはダウン回避も設定できます
+　RECOVER TIME　受け身可能になってから何フレーム後に受け身を取るか設定できます a、bで10づつ変更可
+　POINTER TYPE　相手との距離を表示するポインタを設定できます
+　LIEDOWN TIME　ダウン後何フレーム後に起き上がるか設定できます　a、bで10づつ変更可
+　GET UP TYPE 　移動起き上がりをするかどうかの設定
 
+・表示パラメータ（表示されるのはこのキャラではなく相手キャラの基準です）
+　DAMAGE        その攻撃で与えるダメージ
+　TOTAL DAMEGE  そのコンボで与えるダメージ
+　MAX DAMAGE    TOTAL DAMAGEのハイスコアを記録
+　MAX COMBO     コンボ数のハイスコアを記録
+　ADV. FRAME    最後に与えた攻撃の有利フレームを表示（不利な場合は-が付きます）
+　ENEMY CTRL    敵が現在コントロール可能かどうかを表示します
 
-Controls
-========
+・初期設定
+　config.txtから変更可能です
 
-Basic Controls
---------------
+・特殊な仕様
+　VSモード時に死亡しません
+　一定時間state0で待機するとLIFEが全回復します
 
-Kung Fu Man is a 4-button character. Button X is his weak
-punch, button Y his strong punch, A for weak kick, and
-B for his strong kick. We will use W. to mean weak, and S.
-for strong.
+・サイズの変更
+　カンフーマンのサイズ以外も希望する方はキャラクターの変更が可能です
+　・小サイズ　プリニー（ディスガイアシリーズ）
+　・中サイズ　比那名居天子（東方プロジェクト）
+　・大サイズ　ヒューゴー（ストリートファイターⅢシリーズ）
+　変更方法はそれぞれsmall、medium、largeフォルダ内のファイルを全てコピーしてTrainingフォルダ内にペーストしてください
+　元に戻したい場合はkfmフォルダ内のファイルを全てコピーしてTrainingフォルダ内にペーストすればおｋ
+-----------------------------------------------------------------------------------------------------------
+☆ちょっと注意点
+　Explodを大量に使うのでExplodMaxがデフォ値だと厳しいです
+　mugen.cfgのExplodMaxの値を200～ぐらいにしてみてね
 
-We will use the notation:
-D - down
-F - forward
-U - up
-B - back
-x - button X (weak punch)
-y - button Y (strong punch)
-a - button A (weak kick)
-b - button B (strong kick)
+　ダメージ関連の表示は減少したlifeで判断しています
+　このため、残りlifeが少なくなると正確に判断不可能になります
+　コレが気になる方は初期LIFEを100000とかにしてください
+-----------------------------------------------------------------------------------------------------------
+☆スペシャルサンクス
+　mugenについて語るスレのみなさん
+　kong氏　　　　　　　　　　　　　　　　アドガのエフェクトを使用させてもらっています
+　㍻㌢氏　　　　　　　　　　　　　　　　ガードの記述を参考にさせてもらっています
+-----------------------------------------------------------------------------------------------------------
+☆更新内容
+　09.11.25　　とりあえず公開
+　09.11.26　　フォントを変更
+　　　　　　　見た目をカンフーマンに
+　　　　　　　オプション項目いろいろ追加
+　09.11.29　　ポインタを追加したりその他いろいろ
+　09.12.01　　有利フレ表示追加、ダウン時間変更可能
+　09.12.06　　アドガ、ダウン回避、移動起き上がり追加
+　09.12.10　　small、mediumフォルダ追加
+　09.12.15　　largeフォルダの追加、他細かいとこ
+　09.12.16　　ガードノックバックの不具合修正
+-----------------------------------------------------------------------------------------------------------
+☆今後の予定
+　ない！なんか要望があったら追加するよ。
 
-DF means diagonally down-forwards, UB diagonally up-back,
-etc. If you see ab it means press button A and button B
-simultaneously. x/y means hit either x or y, and so on.
+-----------------------------------------------------------------------------------------------------------
 
-Use the direction keys to move KFM. Press down to crouch,
-and up to jump. While in the air, you can press up again to
-air-jump. Hold the direction facing away from the opponent
-to guard. KFM can guard attacks while jumping.
+　無断転載、無断改変、無断公開は自己責任で。
+　このキャラを使用するにあたっての許可等は全くとらなくても私から文句を言うことはないです。
+　要望がありましたらサイトかメールで。
+　　　　　　　　　　　　　　　　　　　　　　　　　by stupa
 
-When falling in the air, hit buttons X and Y at the same
-time to recover. Hold a directional key when recovering to
-move a little bit in that direction. If you are near the
-ground when you hit xy, you will do a ground-based recovery
-instead.
-
-KFM has a taunt. To do it, press the start button.
-
-
-Standard Movement
------------------
-
-U              - Jump
-UF             - Jump forwards
-F              - Walk forwards
-DF             - Crouch
-D              - Crouch
-DB             - Crouch or low guard
-B              - Walk backwards or high guard
-UB             - Jump back
-F, F           - Forward dash
-B, B           - Back dash
-xy             - Recovery (when falling)
-
-Basic Standing Attacks
-----------------------
-
-x              - W. Punch
-y              - S. Punch
-a              - W. Kick
-b              - S. Kick
-
-Basic Crouching Attacks
------------------------
-
-x              - Low W. Punch
-y              - Low S. Punch
-a              - Low W. Kick
-b              - Sweep Kick
-
-Basic Air Attacks
------------------
-
-x              - Air W. Punch
-y              - Air S. Punch
-a              - Air W. Kick
-b              - Flying Kick
-
-Throws
-------
-
-F/B + y (when close) - Kung Fu Throw
-
-Special Attacks
----------------
-
-D, DF, F, x    - W. Kung Fu Palm
-D, DF, F, y    - S. Kung Fu Palm
-D, DF, F, x+y  - Fast Kung Fu Palm (uses 1/3 power bar)
-
-F, D, DF, x    - W. Kung Fu Upper
-F, D, DF, y    - S. Kung Fu Upper
-F, D, DF, x+y  - Fast Kung Fu Upper (uses 1/3 power bar)
-
-D, DB, B, x    - W. Kung Fu Blow
-D, DB, B, y    - S. Kung Fu Blow
-D, DB, B, x+y  - Fast Kung Fu Blow (uses 1/3 power bar)
-
-D, DF, F, a    - W. Kung Fu Zankou
-D, DF, F, b    - S. Kung Fu Zankou
-D, DF, F, a+b  - Fast Kung Fu Zankou (uses 1/3 power bar)
-
-F, F, a        - W. Kung Fu Knee
-F, F, b        - S. Kung Fu Knee
-F, F, a+b      - Fast Kung Fu Knee (uses 1/3 power bar)
-Press button A or B during Kung Fu Knee to add a kick.
-
-Hyper Attacks (each uses 1 power bar)
--------------
-
-D, DF, F, D, DF, F, x/y  - Triple Kung Fu Palm
-D, DB, B, D, DB, B, x/y  - Smash Kung Fu Upper
-
-
-Combo notes
-===========
-
-KFM's strengths lie in his ability to chain moves into each
-other. Here are his basic combo rules:
-
-1.  You can combo from weaker basic attacks into stronger ones
-    eg. light kick -> strong kick
-
-2.  You can combo into special attacks from most basic attacks
-    eg. stand strong punch -> Kung Fu Palm
-
-3.  You can combo into hyper attacks from all basic and special
-    attacks
-    eg. Kung Fu Palm -> Triple Kung Fu Palm
-
-4.  You can combo from hyper attacks into other hyper attacks,
-    as long as you do not do the same hyper twice in a row
-    eg. Triple Kung Fu Palm -> Smash Kung Fu Upper
-
-These rules make it possible for you to do some damaging combos.
-Experiment, and perfect your own Kung Fu Combos!
+-----------------------------------------------------------------------------------------------------------
+　　　　　　　　　　　　　　　　　　　　　　　　　　　
+　　　　　　　　　　　　　　　　　　　　　　　　　　　自サイト http://www.yakibuta-reimen2.com/
+　　　　　　　　　　　　　　　　　　　　　　　　　　　連絡先　 yakibuta_reimen@yahoo.co.jp
