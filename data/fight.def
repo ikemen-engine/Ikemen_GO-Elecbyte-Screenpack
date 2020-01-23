@@ -889,6 +889,30 @@ over.time   = 100 ;Time to wait before round ends
 300,9, 0,0, -1,, AS16D240
 
 ;-----------------------------------------------------------
+; Ikemen feature
+[Ratio]
+p1.pos          = 0, 0
+p1.offset       = 7, 15
+p1.level1.spr   = 400, 0
+p1.level1.scale = 0.5, 0.5
+p1.level2.spr   = 400, 1
+p1.level2.scale = 0.5, 0.5
+p1.level3.spr   = 400, 2
+p1.level3.scale = 0.5, 0.5
+p1.level4.spr   = 400, 3
+p1.level4.scale = 0.5, 0.5
+p2.pos          = 0, 0
+p2.offset       = 311, 15
+p2.level1.spr   = 400, 0
+p2.level1.scale = 0.5, 0.5
+p2.level2.spr   = 400, 1
+p2.level2.scale = 0.5, 0.5
+p2.level3.spr   = 400, 2
+p2.level3.scale = 0.5, 0.5
+p2.level4.spr   = 400, 3
+p2.level4.scale = 0.5, 0.5
+
+;-----------------------------------------------------------
 ; Background definition
 [BGdef]
 

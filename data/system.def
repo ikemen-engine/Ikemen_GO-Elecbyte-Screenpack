@@ -221,6 +221,36 @@ p1.teammenu.value.icon.spr = 181,0
 p1.teammenu.value.empty.icon.offset = 60,1
 p1.teammenu.value.empty.icon.spr = 182,0
 p1.teammenu.value.spacing = 6,0
+
+p1.teammenu.ratio1.icon.spr = 300, 0       ;Ikemen feature
+p1.teammenu.ratio1.icon.offset = 172, 203  ;Ikemen feature
+p1.teammenu.ratio1.icon.facing = 1,        ;Ikemen feature
+p1.teammenu.ratio1.icon.scale = 0.40, 0.40 ;Ikemen feature
+p1.teammenu.ratio2.icon.spr = 300, 1       ;Ikemen feature
+p1.teammenu.ratio2.icon.offset = 172, 203  ;Ikemen feature
+p1.teammenu.ratio2.icon.facing = 1,        ;Ikemen feature
+p1.teammenu.ratio2.icon.scale = 0.40, 0.40 ;Ikemen feature
+p1.teammenu.ratio3.icon.spr = 300, 2       ;Ikemen feature
+p1.teammenu.ratio3.icon.offset = 172, 203  ;Ikemen feature
+p1.teammenu.ratio3.icon.facing = 1,        ;Ikemen feature
+p1.teammenu.ratio3.icon.scale = 0.40, 0.40 ;Ikemen feature
+p1.teammenu.ratio4.icon.spr = 300, 3       ;Ikemen feature
+p1.teammenu.ratio4.icon.offset = 172, 203  ;Ikemen feature
+p1.teammenu.ratio4.icon.facing = 1,        ;Ikemen feature
+p1.teammenu.ratio4.icon.scale = 0.40, 0.40 ;Ikemen feature
+p1.teammenu.ratio5.icon.spr = 300, 4       ;Ikemen feature
+p1.teammenu.ratio5.icon.offset = 172, 203  ;Ikemen feature
+p1.teammenu.ratio5.icon.facing = 1,        ;Ikemen feature
+p1.teammenu.ratio5.icon.scale = 0.40, 0.40 ;Ikemen feature
+p1.teammenu.ratio6.icon.spr = 300, 5       ;Ikemen feature
+p1.teammenu.ratio6.icon.offset = 172, 203  ;Ikemen feature
+p1.teammenu.ratio6.icon.facing = 1,        ;Ikemen feature
+p1.teammenu.ratio6.icon.scale = 0.40, 0.40 ;Ikemen feature
+p1.teammenu.ratio7.icon.spr = 300, 6       ;Ikemen feature
+p1.teammenu.ratio7.icon.offset = 172, 203  ;Ikemen feature
+p1.teammenu.ratio7.icon.facing = 1,        ;Ikemen feature
+p1.teammenu.ratio7.icon.scale = 0.40, 0.40 ;Ikemen feature
+
 ;p2 team
 p2.teammenu.pos = 299, 30
 ;p2.teammenu.bg.spr =
@@ -244,10 +274,40 @@ p2.teammenu.value.empty.icon.offset = -60,1
 p2.teammenu.value.empty.icon.spr = 192,0
 p2.teammenu.value.spacing = -6,0
 
+p2.teammenu.ratio1.icon.spr = 301, 0       ;Ikemen feature
+p2.teammenu.ratio1.icon.offset = 309, 203  ;Ikemen feature
+p2.teammenu.ratio1.icon.facing = 1,        ;Ikemen feature
+p2.teammenu.ratio1.icon.scale = 0.40, 0.40 ;Ikemen feature
+p2.teammenu.ratio2.icon.spr = 301, 1       ;Ikemen feature
+p2.teammenu.ratio2.icon.offset = 309, 203  ;Ikemen feature
+p2.teammenu.ratio2.icon.facing = 1,        ;Ikemen feature
+p2.teammenu.ratio2.icon.scale = 0.40, 0.40 ;Ikemen feature
+p2.teammenu.ratio3.icon.spr = 301, 2       ;Ikemen feature
+p2.teammenu.ratio3.icon.offset = 309, 203  ;Ikemen feature
+p2.teammenu.ratio3.icon.facing = 1,        ;Ikemen feature
+p2.teammenu.ratio3.icon.scale = 0.40, 0.40 ;Ikemen feature
+p2.teammenu.ratio4.icon.spr = 301, 3       ;Ikemen feature
+p2.teammenu.ratio4.icon.offset = 309, 203  ;Ikemen feature
+p2.teammenu.ratio4.icon.facing = 1,        ;Ikemen feature
+p2.teammenu.ratio4.icon.scale = 0.40, 0.40 ;Ikemen feature
+p2.teammenu.ratio5.icon.spr = 301, 4       ;Ikemen feature
+p2.teammenu.ratio5.icon.offset = 309, 203  ;Ikemen feature
+p2.teammenu.ratio5.icon.facing = 1,        ;Ikemen feature
+p2.teammenu.ratio5.icon.scale = 0.40, 0.40 ;Ikemen feature
+p2.teammenu.ratio6.icon.spr = 301, 5       ;Ikemen feature
+p2.teammenu.ratio6.icon.offset = 309, 203  ;Ikemen feature
+p2.teammenu.ratio6.icon.facing = 1,        ;Ikemen feature
+p2.teammenu.ratio6.icon.scale = 0.40, 0.40 ;Ikemen feature
+p2.teammenu.ratio7.icon.spr = 301, 6       ;Ikemen feature
+p2.teammenu.ratio7.icon.offset = 309, 203  ;Ikemen feature
+p2.teammenu.ratio7.icon.facing = 1,        ;Ikemen feature
+p2.teammenu.ratio7.icon.scale = 0.40, 0.40 ;Ikemen feature
+
 teammenu.itemname.single = Single ;Ikemen feature
 teammenu.itemname.tag = Tag       ;Ikemen feature
 teammenu.itemname.simul = Simul   ;Ikemen feature
 teammenu.itemname.turns = Turns   ;Ikemen feature
+teammenu.itemname.ratio = Ratio   ;Ikemen feature
 
 ;Sounds
 
