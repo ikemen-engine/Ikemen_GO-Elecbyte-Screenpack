@@ -74,22 +74,93 @@ menu.pos = 159,158
 menu.item.font = 3,0,0
 menu.item.active.font = 3,5,0
 menu.item.spacing = 0, 13
+
 ; Names for each of the items in the menu. Names must be in quotes.
-; Use "" to disable an item. If all are disabled, goes straight to demo mode
-; (hold Esc to quit demos).
+; Use "" or remove itemname parameter to disable an item. If all are disabled,
+; goes straight to demo mode (hold Esc to quit demos).
+;
+; Ikemen feature: Flexible sub-menu grouping. General syntax for handling modes
+; looks as follows: menu.itemname.<optional_submenus>.item = "displayed text"
+; where:
+; * <optional_submenus>: combination of 1 or more strings, separated by commas,
+;   where each of them refer to additional level of nested menus. For example
+;   menu.itemname.extras = "EXTRAS" means we're displaying EXTRAS option on the
+;   screen (in this case right on the main menu, but it could be nested further)
+;   that opens up additional submenu with items that use menu.itemname.extras.
+;   as a prefix, e.g. menu.itemname.extras.freebattle
+; * item: one of the reserved strings used to start modes etc. Following items
+;   are reserved by the engine and should not be used for submenu names:
+;   - arcade: Arcade Mode
+;   - versus: Versus Mode
+;   - teamarcade: Team Arcade
+;   - teamversus: Team Versus
+;   - teamcoop: Team Cooperative
+;   - survival: Survival
+;   - survivalcoop: Survival Cooperative
+;   - storymode: Story Mode (reserved, not implemented yet)
+;   - timeattack: Time Attack (reserved, not implemented yet)
+;   - training: Training Mode
+;   - watch: Watch Mode
+;   - netplayversus: Online Versus
+;   - netplayteamcoop: Online Cooperative
+;   - netplaysurvivalcoop: Online Survival
+;   - options: Options
+;   - exit: Exit the game
+;   - back: Back to previous menu
+;   - freebattle: Free Battle
+;   - timechallenge: Time Challenge (reserved, not implemented yet)
+;   - scorechallenge: Score Challenge (reserved, not implemented yet)
+;   - 100kumite: VS 100 Kumite
+;   - bossrush: Boss Rush
+;   - bonusgames: Bonus Games (treated as submenu)
+;   - trials: Trials Mode (reserved, not implemented yet)
+;   - scoreranking: Score Ranking (reserved, not implemented yet)
+;   - replay: Replay
+;   - randomtest: Random AI Battles
+;   - tournament32: Tournament Mode starting from round of 32 (reserved)
+;   - tournament16: Tournament Mode starting from round of 16 (reserved)
+;   - tournament8: Tournament Mode starting from quarterfinals (reserved)
+;   - tournament4: Tournament Mode starting from semifinals (reserved)
+;   - serverhost: Host Game
+;   - serverjoin: Join Game
+;   - joinadd: New IP Address
+; Order in which menu items will show up on the screen depends on their order in
+; this file. For backward compatibility with mugen screenpacks sake, none of the
+; itemnames are available by default, which means screenpack DEF file should be
+; updated to support additional modes available in Ikemen GO.
+; Default example grouping used in this file follows vanilla mugen modes
+; selection, just with added 2 subgroups (online and extras), which open nested
+; menus with additional items.
+
+;MAIN MENU
 menu.itemname.arcade = "ARCADE"
 menu.itemname.versus = "VS MODE"
 menu.itemname.teamarcade = "TEAM ARCADE"
 menu.itemname.teamversus = "TEAM VS"
-menu.itemname.online = "NETWORK"              ;Ikemen feature
+menu.itemname.online = "NETWORK"                 ;Ikemen feature
 menu.itemname.teamcoop = "TEAM CO-OP"
 menu.itemname.survival = "SURVIVAL"
 menu.itemname.survivalcoop = "SURVIVAL CO-OP"
 menu.itemname.training = "TRAINING"
 menu.itemname.watch = "WATCH"
-menu.itemname.extras = "EXTRAS"               ;Ikemen feature
+menu.itemname.extras = "EXTRAS"                  ;Ikemen feature
 menu.itemname.options = "OPTIONS"
 menu.itemname.exit = "EXIT"
+
+;ONLINE SUBMENU
+menu.itemname.online.serverhost = "HOST GAME"    ;Ikemen feature
+menu.itemname.online.serverjoin = "JOIN GAME"    ;Ikemen feature
+menu.itemname.online.back = "BACK"               ;Ikemen feature
+
+;EXTRAS SUBMENU
+menu.itemname.extras.freebattle = "FREE BATTLE"  ;Ikemen feature
+menu.itemname.extras.100kumite = "VS 100 KUMITE" ;Ikemen feature
+menu.itemname.extras.bossrush = "BOSS RUSH"      ;Ikemen feature
+menu.itemname.extras.bonusgames = "BONUS GAMES"  ;Ikemen feature
+menu.itemname.extras.replay = "REPLAY"           ;Ikemen feature
+menu.itemname.extras.randomtest = "DEMO"         ;Ikemen feature
+menu.itemname.extras.back = "BACK"               ;Ikemen feature
+
 ; These parameters define the window in which the items are visible
 ; in.
 menu.window.margins.y = 12, 8

@@ -18,7 +18,7 @@ BankType = palette
 ; Size of font: width, height.  Width is used for spaces.
 Size = 5,8
 ; Spacing between font glyphs: width, height.
-Spacing = 1,1
+Spacing = 1,2
 ; Drawing offset: x, y.
 Offset = 0,0
 ; Filename of the sff containing the glyphs.  Use sff v2 only.
