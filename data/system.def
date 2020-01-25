@@ -101,9 +101,6 @@ menu.item.spacing = 0, 13
 ;   - timeattack: Time Attack (reserved, not implemented yet)
 ;   - training: Training Mode
 ;   - watch: Watch Mode
-;   - netplayversus: Online Versus
-;   - netplayteamcoop: Online Cooperative
-;   - netplaysurvivalcoop: Online Survival
 ;   - options: Options
 ;   - exit: Exit the game
 ;   - back: Back to previous menu
@@ -112,7 +109,6 @@ menu.item.spacing = 0, 13
 ;   - scorechallenge: Score Challenge (reserved, not implemented yet)
 ;   - 100kumite: VS 100 Kumite
 ;   - bossrush: Boss Rush
-;   - bonusgames: Bonus Games (treated as submenu)
 ;   - trials: Trials Mode (reserved, not implemented yet)
 ;   - scoreranking: Score Ranking (reserved, not implemented yet)
 ;   - replay: Replay
@@ -121,45 +117,70 @@ menu.item.spacing = 0, 13
 ;   - tournament16: Tournament Mode starting from round of 16 (reserved)
 ;   - tournament8: Tournament Mode starting from quarterfinals (reserved)
 ;   - tournament4: Tournament Mode starting from semifinals (reserved)
-;   - serverhost: Host Game
-;   - serverjoin: Join Game
 ;   - joinadd: New IP Address
+;   - serverhost: Host Game
+;   - serverjoin: Join Game (reserved submenu)
+;   - ip_ prefix: used by items automatically appended to serverjoin submenu
+;   - server: special submenu, opened automatically by serverhost/serverjoin 
+;   - netplayversus: Online Versus
+;   - netplayteamcoop: Online Cooperative
+;   - netplaysurvivalcoop: Online Survival
+;   - bonusgames: Bonus Games (reserved submenu)
+;   - bonus_ prefix: used by items automatically appended to bonusgames submenu
 ; Order in which menu items will show up on the screen depends on their order in
 ; this file. For backward compatibility with mugen screenpacks sake, none of the
 ; itemnames are available by default, which means screenpack DEF file should be
-; updated to support additional modes available in Ikemen GO.
-; Default example grouping used in this file follows vanilla mugen modes
-; selection, just with added 2 subgroups (online and extras), which open nested
-; menus with additional items.
+; updated to support additional modes available in Ikemen GO. Submenus should be
+; declared before parameters referring to items nested inside those menus.
+; Default example grouping used in this file follows vanilla mugen modes style,
+; just with 2 subgroups added (online and extras), which open nested menus.
 
-;MAIN MENU
+; MAIN MENU
 menu.itemname.arcade = "ARCADE"
 menu.itemname.versus = "VS MODE"
 menu.itemname.teamarcade = "TEAM ARCADE"
 menu.itemname.teamversus = "TEAM VS"
-menu.itemname.online = "NETWORK"                 ;Ikemen feature
+menu.itemname.online = "NETWORK"                            ;Ikemen feature
 menu.itemname.teamcoop = "TEAM CO-OP"
 menu.itemname.survival = "SURVIVAL"
 menu.itemname.survivalcoop = "SURVIVAL CO-OP"
 menu.itemname.training = "TRAINING"
 menu.itemname.watch = "WATCH"
-menu.itemname.extras = "EXTRAS"                  ;Ikemen feature
+menu.itemname.extras = "EXTRAS"                             ;Ikemen feature
 menu.itemname.options = "OPTIONS"
 menu.itemname.exit = "EXIT"
 
-;ONLINE SUBMENU
-menu.itemname.online.serverhost = "HOST GAME"    ;Ikemen feature
-menu.itemname.online.serverjoin = "JOIN GAME"    ;Ikemen feature
-menu.itemname.online.back = "BACK"               ;Ikemen feature
+; MAIN MENU -> ONLINE SUBMENU
+menu.itemname.online.serverhost = "HOST GAME"               ;Ikemen feature
+menu.itemname.online.serverjoin = "JOIN GAME"               ;Ikemen feature
+menu.itemname.online.back = "BACK"                          ;Ikemen feature
 
-;EXTRAS SUBMENU
-menu.itemname.extras.freebattle = "FREE BATTLE"  ;Ikemen feature
-menu.itemname.extras.100kumite = "VS 100 KUMITE" ;Ikemen feature
-menu.itemname.extras.bossrush = "BOSS RUSH"      ;Ikemen feature
-menu.itemname.extras.bonusgames = "BONUS GAMES"  ;Ikemen feature
-menu.itemname.extras.replay = "REPLAY"           ;Ikemen feature
-menu.itemname.extras.randomtest = "DEMO"         ;Ikemen feature
-menu.itemname.extras.back = "BACK"               ;Ikemen feature
+; MAIN MENU -> ONLINE -> SERVERJOIN SUBMENU
+; known IP addresses show up before serverjoin.back item
+menu.itemname.online.serverjoin.joinadd = "NEW ADDRESS"     ;Ikemen feature
+menu.itemname.online.serverjoin.back = "BACK"               ;Ikemen feature
+
+; MAIN MENU -> EXTRAS SUBMENU
+menu.itemname.extras.freebattle = "FREE BATTLE"             ;Ikemen feature
+menu.itemname.extras.100kumite = "VS 100 KUMITE"            ;Ikemen feature
+menu.itemname.extras.bossrush = "BOSS RUSH"                 ;Ikemen feature
+menu.itemname.extras.bonusgames = "BONUS GAMES"             ;Ikemen feature
+menu.itemname.extras.replay = "REPLAY"                      ;Ikemen feature
+menu.itemname.extras.randomtest = "DEMO"                    ;Ikemen feature
+menu.itemname.extras.back = "BACK"                          ;Ikemen feature
+
+; MAIN MENU -> EXTRAS SUBMENU -> BONUSGAMES SUBMENU
+; names of bonus characters show up before bonusgames.back item
+menu.itemname.extras.bonusgames.back = "BACK"               ;Ikemen feature
+
+; SERVER SUBMENU
+; This group is hidden and should not be moved to other menus.
+; It's opened automatically, after synchronization with online player.
+menu.itemname.server.netplayversus = "VERSUS"               ;Ikemen feature
+menu.itemname.server.netplayteamcoop = "ARCADE CO-OP"       ;Ikemen feature
+menu.itemname.server.netplaysurvivalcoop = "SURVIVAL CO-OP" ;Ikemen feature
+menu.itemname.server.back = "EXIT"                          ;Ikemen feature
+
 
 ; These parameters define the window in which the items are visible
 ; in.
