@@ -79,16 +79,16 @@ menu.item.spacing = 0, 13
 ; Use "" or remove itemname parameter to disable an item. If all are disabled,
 ; goes straight to demo mode (hold Esc to quit demos).
 ;
-; Ikemen feature: Flexible sub-menu grouping. General syntax for handling modes
-; looks as follows: menu.itemname.<optional_submenus>.item = "displayed text"
+; Ikemen feature: Flexible submenu grouping. General syntax for handling modes
+; looks as follows: menu.itemname.optional_submenus.item = "displayed text"
 ; where:
-; * <optional_submenus>: combination of 1 or more strings, separated by commas,
+; * optional_submenus: combination of 1 or more strings, separated by dots,
 ;   where each of them refer to additional level of nested menus. For example
 ;   menu.itemname.extras = "EXTRAS" means we're displaying EXTRAS option on the
 ;   screen (in this case right on the main menu, but it could be nested further)
 ;   that opens up additional submenu with items that use menu.itemname.extras.
 ;   as a prefix, e.g. menu.itemname.extras.freebattle
-; * item: one of the reserved strings used to start modes etc. Following items
+; * item: strings used to start modes and control menus. Following item names
 ;   are reserved by the engine and should not be used for submenu names:
 ;   - arcade: Arcade Mode
 ;   - versus: Versus Mode
@@ -130,8 +130,8 @@ menu.item.spacing = 0, 13
 ; Order in which menu items will show up on the screen depends on their order in
 ; this file. For backward compatibility with mugen screenpacks sake, none of the
 ; itemnames are available by default, which means screenpack DEF file should be
-; updated to support additional modes available in Ikemen GO. Submenus should be
-; declared before parameters referring to items nested inside those menus.
+; updated to support additional modes available in Ikemen GO. Submenus should
+; be declared before parameters referring to items nested inside those menus.
 ; Default example grouping used in this file follows vanilla mugen modes style,
 ; just with 2 subgroups added (online and extras), which open nested menus.
 
