@@ -656,6 +656,7 @@ team1.pos = 10,80         ;Coords to show
 team1.start.x = -40       ;Starting x-coords
 team1.counter.font = 2,4,1
 team1.counter.shake = 1   ;Set to 1 to shake count on hit
+; Ikemen feature (text format %i = combo count, %d = combo damage, %p = combo damage percentage)
 team1.text.text = Rush!   ;You can use %i to show count in the text, eg "%i Hit!"
 team1.text.font = 1,0,1
 team1.text.offset = 3,0   ;Offset of text
@@ -664,10 +665,15 @@ team2.pos = 309,80         ;Coords to show
 team2.start.x = 359       ;Starting x-coords
 team2.counter.font = 2,4,-1
 team2.counter.shake = 1   ;Set to 1 to shake count on hit
+; Ikemen feature (text format %i = combo count, %d = combo damage, %p = combo damage percentage)
 team2.text.text = Rush!   ;You can use %i to show count in the text, eg "%i Hit!"
 team2.text.font = 1,0,-1
 team2.text.offset = 3,0   ;Offset of text
 team2.displaytime = 90    ;Time to show text
+
+; Ikemen feature (format combo damage percentage presentation)
+format.decimal.places = 0
+format.decimal.separator = .
 
 ;-----------------------------------------------------------
 [Round]
@@ -746,25 +752,6 @@ draw.offset = 160, 70
 draw.font = 1,0
 draw.text = Draw Game
 draw.displaytime = 540
-; Ikemen feature (works the same as KO, DKO, TO, alongside them)
-; Win by normal
-;n.spr = 
-; Win by special
-;s.spr = 
-; Win by hyper (super)
-;h.spr = 
-; Win by normal throw
-;throw.spr = 
-; Win by cheese
-;c.spr = 
-; Win by time over
-;t.spr = 
-; Win by suicide (here's a fun one)
-;suicide.spr = 
-; Opponent beaten by his own teammate (another fun one)
-;teammate.spr = 
-; Win by perfect
-;perfect.spr = 
 
 ;"Fight!" Animation
 [Begin Action 80]
@@ -847,18 +834,18 @@ useiconupto = 4
 ;-----------------------------------------------------------
 ; Ikemen feature
 [Challenger]
-pos         = 0, 0
-bg.anim     = 300
-bg.layerno  = 2
-offset      = 160, 70
-font        = 1,5
-;text        = Here Comes A New Challenger!!
-layerno     = 2
-displaytime = 60
-snd         = 300,0
-sndtime     = 0
-over.pause  = 0 ;Time to wait before characters and background is paused
-over.time   = 100 ;Time to wait before round ends
+pos          = 0, 0
+bg.anim      = 300
+bg.layerno   = 2
+;text.font    = 1,5, 0
+;text.text    = Here Comes A New Challenger!!
+;text.offset  = 160, 120
+;text.layerno = 2
+displaytime  = 60
+snd          = 300,0
+sndtime      = 0
+over.pause   = 0 ;Time to wait before characters and background is paused
+over.time    = 100 ;Time to wait before round ends
 
 ;"Here Comes A New Challenger!!" Animation
 [Begin Action 300]
@@ -913,14 +900,63 @@ p2.level4.spr   = 400, 3
 p2.level4.scale = 0.5, 0.5
 
 ;-----------------------------------------------------------
-; Background definition
-[BGdef]
+; Ikemen feature
+[Timer]
+pos = 141,8
+;bg.spr = 
+text.font = 3,0, -1
+; Time format: %m = minutes, %s = seconds, %x = milliseconds
+text.text = TIME:%m:%s.%x
 
-[BG somename]
+;-----------------------------------------------------------
+; Ikemen feature
+[Score]
+p1.pos = 141,8
+;p1.bg.spr = 
+p1.text.font = 3,0, -1
+p1.text.text = %s
 
-[BGCtrlDef somename]
+p2.pos = 178,8
+;p2.bg.spr = 
+p2.text.font = 3,0, 1
+p2.text.text = %s
 
-[BGCtrl somename]
+score.min = 0
+score.max = 9999999
+format.integer.pad = 1
+format.integer.separator = 
+format.decimal.places = 0
+format.decimal.separator = .
+
+;-----------------------------------------------------------
+; Ikemen feature
+[Match]
+pos = 141,8
+;bg.spr = 
+text.font = 3,0, -1
+text.text = STAGE %s
+
+;-----------------------------------------------------------
+; Ikemen feature
+[AILevel]
+p1.pos = 141,8
+;p1.bg.spr = 
+p1.text.font = 3,0, -1
+; %s = integer value, %p = percentage
+p1.text.text = CPU-%s
+
+p2.pos = 178,8
+;p2.bg.spr = 
+p2.text.font = 3,0, 1
+p2.text.text = CPU-%s
+
+;-----------------------------------------------------------
+; Ikemen feature
+[Mode]
+demo.pos = 305,10
+;demo.bg.spr = 
+demo.text.font = 3,0, -1
+demo.text.text = Demo Mode
 
 ;-----------------------------------------------------------
 ; How to customize

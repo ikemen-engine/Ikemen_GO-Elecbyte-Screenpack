@@ -23,8 +23,8 @@ localcoord = 320,240      ;Local coordinate space width and height (new in MUGEN
 [Files]
 spr = system.sff          ;Filename of sprite data
 snd = system.snd          ;Filename of sound data
-logo.storyboard = logo.def   ;Logo storyboard definition (optional)
-intro.storyboard = intro.def ;Intro storyboard definition (optional)
+logo.storyboard = kfm/logo.def   ;Logo storyboard definition (optional)
+intro.storyboard = kfm/intro.def ;Intro storyboard definition (optional)
 select = select.def       ;Character and stage selection list
 fight = fight.def         ;Fight definition filename
 font1 = f-4x6.def         ;System fonts
@@ -83,13 +83,13 @@ menu.item.spacing = 0, 13
 ; looks as follows: menu.itemname.optional_submenus.item = "displayed text"
 ; where:
 ; * optional_submenus: combination of 1 or more strings, separated by dots,
-;   where each of them refer to additional level of nested menus. For example
-;   menu.itemname.extras = "EXTRAS" means we're displaying EXTRAS option on the
-;   screen (in this case right on the main menu, but it could be nested further)
-;   that opens up additional submenu with items that use menu.itemname.extras.
-;   as a prefix, e.g. menu.itemname.extras.freebattle
+;   where each of them refers to additional level of nested menus. For example
+;   menu.itemname.menuextras = "EXTRAS" means we're displaying EXTRAS option on
+;   the screen (in this case right on the main menu) that opens up additional
+;   submenu with items using menuextras as a prefix, e.g. 
+;   menu.itemname.menuextras.freebattle
 ; * item: strings used to start modes and control menus. Following item names
-;   are reserved by the engine and should not be used for submenu names:
+;   are reserved by the engine:
 ;   - arcade: Arcade Mode
 ;   - versus: Versus Mode
 ;   - teamarcade: Team Arcade
@@ -98,89 +98,118 @@ menu.item.spacing = 0, 13
 ;   - survival: Survival
 ;   - survivalcoop: Survival Cooperative
 ;   - storymode: Story Mode (reserved, not implemented yet)
-;   - timeattack: Time Attack (reserved, not implemented yet)
+;   - timeattack: Time Attack
 ;   - training: Training Mode
 ;   - watch: Watch Mode
 ;   - options: Options
 ;   - exit: Exit the game
 ;   - back: Back to previous menu
-;   - freebattle: Free Battle
-;   - timechallenge: Time Challenge (reserved, not implemented yet)
-;   - scorechallenge: Score Challenge (reserved, not implemented yet)
-;   - 100kumite: VS 100 Kumite
+;   - freebattle: Free Battle (Quick Match)
+;   - timechallenge: Time Challenge
+;   - scorechallenge: Score Challenge
+;   - vs100kumite: VS 100 Kumite
 ;   - bossrush: Boss Rush
 ;   - trials: Trials Mode (reserved, not implemented yet)
-;   - scoreranking: Score Ranking (reserved, not implemented yet)
+;   - records: Overall score records (reserved, not implemented yet)
+;   - ranking: Rankings/leaderboards data (reserved, not implemented yet)
 ;   - replay: Replay
 ;   - randomtest: Random AI Battles
 ;   - tournament32: Tournament Mode starting from round of 32 (reserved)
 ;   - tournament16: Tournament Mode starting from round of 16 (reserved)
 ;   - tournament8: Tournament Mode starting from quarterfinals (reserved)
-;   - tournament4: Tournament Mode starting from semifinals (reserved)
 ;   - joinadd: New IP Address
 ;   - serverhost: Host Game
 ;   - serverjoin: Join Game (reserved submenu)
-;   - ip_ prefix: used by items automatically appended to serverjoin submenu
+;   - connect: start items appended to serverjoin submenu (with 'ip_' prefix)
 ;   - server: special submenu, opened automatically by serverhost/serverjoin 
 ;   - netplayversus: Online Versus
 ;   - netplayteamcoop: Online Cooperative
 ;   - netplaysurvivalcoop: Online Survival
 ;   - bonusgames: Bonus Games (reserved submenu)
-;   - bonus_ prefix: used by items automatically appended to bonusgames submenu
+;   - bonus: start items appended to bonusgames submenu (with 'bonus_' prefix)
 ; Order in which menu items will show up on the screen depends on their order in
-; this file. For backward compatibility with mugen screenpacks sake, none of the
-; itemnames are available by default, which means screenpack DEF file should be
-; updated to support additional modes available in Ikemen GO. Submenus should
-; be declared before parameters referring to items nested inside those menus.
-; Default example grouping used in this file follows vanilla mugen modes style,
-; just with 2 subgroups added (online and extras), which open nested menus.
+; screenpack DEF file. Submenus should be declared before parameters referring
+; to items nested inside those menus. Itemnames added via external modules also
+; work with this system.
 
-; MAIN MENU
-menu.itemname.arcade = "ARCADE"
-menu.itemname.versus = "VS MODE"
-menu.itemname.teamarcade = "TEAM ARCADE"
-menu.itemname.teamversus = "TEAM VS"
-menu.itemname.online = "NETWORK"                            ;Ikemen feature
-menu.itemname.teamcoop = "TEAM CO-OP"
-menu.itemname.survival = "SURVIVAL"
-menu.itemname.survivalcoop = "SURVIVAL CO-OP"
-menu.itemname.training = "TRAINING"
-menu.itemname.watch = "WATCH"
-menu.itemname.extras = "EXTRAS"                             ;Ikemen feature
-menu.itemname.options = "OPTIONS"
-menu.itemname.exit = "EXIT"
+; Arcade
+menu.itemname.menuarcade = "ARCADE"                          ;Ikemen feature
+menu.itemname.menuarcade.teamarcade = "TEAM ARCADE"
+menu.itemname.menuarcade.teamcoop = "TEAM CO-OP"
+menu.itemname.menuarcade.back = "BACK"                       ;Ikemen feature
 
-; MAIN MENU -> ONLINE SUBMENU
-menu.itemname.online.serverhost = "HOST GAME"               ;Ikemen feature
-menu.itemname.online.serverjoin = "JOIN GAME"               ;Ikemen feature
-menu.itemname.online.back = "BACK"                          ;Ikemen feature
+; Versus
+menu.itemname.teamversus = "VS MODE"
 
-; MAIN MENU -> ONLINE -> SERVERJOIN SUBMENU
+; Story Mode
+;menu.itemname.storymode = "STORY MODE"                      ;Ikemen feature (not implemented yet)
+; names of story arcs show up before storymode.back item
+;menu.itemname.storymode.back = "BACK"                       ;Ikemen feature
+
+; Network
+menu.itemname.menunetwork = "NETWORK"                        ;Ikemen feature
+menu.itemname.menunetwork.serverhost = "HOST GAME"           ;Ikemen feature
+menu.itemname.menunetwork.serverjoin = "JOIN GAME"           ;Ikemen feature
+menu.itemname.menunetwork.back = "BACK"                      ;Ikemen feature
+
 ; known IP addresses show up before serverjoin.back item
-menu.itemname.online.serverjoin.joinadd = "NEW ADDRESS"     ;Ikemen feature
-menu.itemname.online.serverjoin.back = "BACK"               ;Ikemen feature
+menu.itemname.menunetwork.serverjoin.joinadd = "NEW ADDRESS" ;Ikemen feature
+menu.itemname.menunetwork.serverjoin.back = "BACK"           ;Ikemen feature
 
-; MAIN MENU -> EXTRAS SUBMENU
-menu.itemname.extras.freebattle = "FREE BATTLE"             ;Ikemen feature
-menu.itemname.extras.100kumite = "VS 100 KUMITE"            ;Ikemen feature
-menu.itemname.extras.bossrush = "BOSS RUSH"                 ;Ikemen feature
-menu.itemname.extras.bonusgames = "BONUS GAMES"             ;Ikemen feature
-menu.itemname.extras.replay = "REPLAY"                      ;Ikemen feature
-menu.itemname.extras.randomtest = "DEMO"                    ;Ikemen feature
-menu.itemname.extras.back = "BACK"                          ;Ikemen feature
-
-; MAIN MENU -> EXTRAS SUBMENU -> BONUSGAMES SUBMENU
-; names of bonus characters show up before bonusgames.back item
-menu.itemname.extras.bonusgames.back = "BACK"               ;Ikemen feature
-
-; SERVER SUBMENU
 ; This group is hidden and should not be moved to other menus.
 ; It's opened automatically, after synchronization with online player.
-menu.itemname.server.netplayversus = "VERSUS"               ;Ikemen feature
-menu.itemname.server.netplayteamcoop = "ARCADE CO-OP"       ;Ikemen feature
-menu.itemname.server.netplaysurvivalcoop = "SURVIVAL CO-OP" ;Ikemen feature
-menu.itemname.server.back = "EXIT"                          ;Ikemen feature
+menu.itemname.server.netplayversus = "VERSUS"                ;Ikemen feature
+menu.itemname.server.netplayteamcoop = "ARCADE CO-OP"        ;Ikemen feature
+menu.itemname.server.netplaysurvivalcoop = "SURVIVAL CO-OP"  ;Ikemen feature
+menu.itemname.server.back = "EXIT"                           ;Ikemen feature
 
+; Tournament
+menu.itemname.menutournament = "TOURNAMENT"                  ;Ikemen feature
+menu.itemname.menutournament.tournament32 = "ROUND OF 32"    ;Ikemen feature (not implemented yet)
+menu.itemname.menutournament.tournament16 = "ROUND OF 16"    ;Ikemen feature (not implemented yet)
+menu.itemname.menutournament.tournament8 = "QUARTERFINALS"   ;Ikemen feature (not implemented yet)
+menu.itemname.menutournament.back = "BACK"                   ;Ikemen feature
+
+; Practice
+menu.itemname.menupractice = "PRACTICE"                      ;Ikemen feature
+menu.itemname.menupractice.training = "TRAINING"             ;Ikemen feature
+menu.itemname.menupractice.freebattle = "QUICK MATCH"        ;Ikemen feature
+menu.itemname.menupractice.trials = "TRIALS"                 ;Ikemen feature (not implemented yet)
+menu.itemname.menupractice.back = "BACK"                     ;Ikemen feature
+
+; Mission
+menu.itemname.menumission = "MISSION"                        ;Ikemen feature
+menu.itemname.menumission.timeattack = "TIME ATTACK"         ;Ikemen feature
+menu.itemname.menumission.survival = "SURVIVAL"
+menu.itemname.menumission.survivalcoop = "SURVIVAL CO-OP"
+menu.itemname.menumission.bossrush = "BOSS RUSH"             ;Ikemen feature
+menu.itemname.menumission.vs100kumite = "VS 100 KUMITE"      ;Ikemen feature
+menu.itemname.menumission.timechallenge = "TIME CHALLENGE"   ;Ikemen feature (not implemented yet)
+menu.itemname.menumission.scorechallenge = "SCORE CHALLENGE" ;Ikemen feature (not implemented yet)
+menu.itemname.menumission.bonusgames = "BONUS GAMES"         ;Ikemen feature
+menu.itemname.menumission.back = "BACK"                      ;Ikemen feature
+
+; names of bonus characters show up before bonusgames.back item
+menu.itemname.menumission.bonusgames.back = "BACK"           ;Ikemen feature
+
+; WATCH MODE
+menu.itemname.menuwatch = "WATCH MODE"                       ;Ikemen feature
+menu.itemname.menuwatch.watch = "SELECT"
+menu.itemname.menuwatch.randomtest = "RANDOM"                ;Ikemen feature
+menu.itemname.menuwatch.replay = "REPLAY"                    ;Ikemen feature
+menu.itemname.menuwatch.back = "BACK"                        ;Ikemen feature
+
+; Profile
+menu.itemname.menuprofile = "PROFILE"                        ;Ikemen feature
+menu.itemname.menuprofile.records = "RECORDS"                ;Ikemen feature (not implemented yet)
+menu.itemname.menuprofile.ranking = "RANKING"                ;Ikemen feature (not implemented yet)
+menu.itemname.menuprofile.back = "BACK"                      ;Ikemen feature
+
+; Options
+menu.itemname.options = "OPTIONS"
+
+;Exit Game
+menu.itemname.exit = "EXIT"
 
 ; These parameters define the window in which the items are visible
 ; in.
@@ -571,7 +600,7 @@ enabled = 1               ;Set to 1 to show continue screen, 0 to disable
 ;Game over screen definition
 [Game Over Screen]
 enabled = 1               ;Set to 1 to show game over screen, 0 to disable
-storyboard = gameover.def ;Game over storyboard filename
+storyboard = kfm/gameover.def ;Game over storyboard filename
 
 ;-------------------------------------------------------------------
 ;Victory screen definition
@@ -580,7 +609,7 @@ storyboard = gameover.def ;Game over storyboard filename
 [Victory Screen]
 enabled = 1
 time = 300                ;Time to show screen
-fadein.time = 8
+fadein.time = 0
 fadeout.time = 15
 ;Winner's portrait and name
 p1.offset = 100,20
@@ -654,7 +683,7 @@ storyboard =              ;Default ending storyboard filename
 ;This screen shows up after the Win Screen and Ending
 [End Credits]
 enabled = 1               ;Set to 1 to show credits, 0 to disable
-storyboard = credits.def  ;Credits storyboard filename
+storyboard = kfm/credits.def  ;Credits storyboard filename
 
 ;-------------------------------------------------------------------
 ;Survival mode results screen definition
@@ -667,7 +696,7 @@ winstext.font = 3,0,0
 winstext.offset = 159,70
 winstext.displaytime = -1
 winstext.layerno = 2
-fadein.time = 32
+fadein.time = 0
 show.time = 300
 fadeout.time = 64
 roundstowin = 5           ;Number of rounds to get win pose (lose pose otherwise)
