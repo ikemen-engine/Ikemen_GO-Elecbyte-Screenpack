@@ -431,6 +431,21 @@ teammenu.itemname.simul = Simul   ;Ikemen feature
 teammenu.itemname.turns = Turns   ;Ikemen feature
 teammenu.itemname.ratio = Ratio   ;Ikemen feature
 
+timer.enabled = 0                 ;Ikemen feature
+timer.offset = 159, 39            ;Ikemen feature
+timer.font = 2, 0, 0              ;Ikemen feature
+timer.font.scale = 1.0, 1.0       ;Ikemen feature
+timer.count = 99                  ;Ikemen feature
+timer.framespercount = 60         ;Ikemen feature
+timer.displaytime = 10            ;Ikemen feature
+
+record.offset = 159, 39
+record.font = 3, 0, 0
+record.font.scale = 1.0, 1.0
+; format: %m = minutes, %s = seconds, %x = milliseconds, %p = score, %c = char name, %n = player name, \n = newline
+record.text.scorechallenge = "- BEST RECORD -\n%c %p PTS: %n" ;Ikemen feature
+record.text.timechallenge = "- BEST RECORD -\n%c %m:%s.%x: %n" ;Ikemen feature
+
 ;Sounds
 
 [Begin Action 180] ;P1 Team mode cursor
