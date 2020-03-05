@@ -134,6 +134,7 @@ menu.item.spacing = 0, 13
 
 ; Submenu: Arcade
 menu.itemname.menuarcade = "ARCADE"                          ;Ikemen feature
+;menu.itemname.menuarcade.arcade = "ARCADE"
 menu.itemname.menuarcade.teamarcade = "TEAM ARCADE"
 menu.itemname.menuarcade.teamcoop = "TEAM CO-OP"
 menu.itemname.menuarcade.back = "BACK"                       ;Ikemen feature
@@ -164,17 +165,17 @@ menu.itemname.server.netplayversus = "VERSUS"                ;Ikemen feature
 menu.itemname.server.back = "EXIT"                           ;Ikemen feature
 
 ; Submenu: Tournament
-menu.itemname.menutournament = "TOURNAMENT"                  ;Ikemen feature
-menu.itemname.menutournament.tournament32 = "ROUND OF 32"    ;Ikemen feature (not implemented yet)
-menu.itemname.menutournament.tournament16 = "ROUND OF 16"    ;Ikemen feature (not implemented yet)
-menu.itemname.menutournament.tournament8 = "QUARTERFINALS"   ;Ikemen feature (not implemented yet)
-menu.itemname.menutournament.back = "BACK"                   ;Ikemen feature
+;menu.itemname.menutournament = "TOURNAMENT"                  ;Ikemen feature
+;menu.itemname.menutournament.tournament32 = "ROUND OF 32"    ;Ikemen feature (not implemented yet)
+;menu.itemname.menutournament.tournament16 = "ROUND OF 16"    ;Ikemen feature (not implemented yet)
+;menu.itemname.menutournament.tournament8 = "QUARTERFINALS"   ;Ikemen feature (not implemented yet)
+;menu.itemname.menutournament.back = "BACK"                   ;Ikemen feature
 
 ; Submenu: Practice
 menu.itemname.menupractice = "PRACTICE"                      ;Ikemen feature
 menu.itemname.menupractice.training = "TRAINING"             ;Ikemen feature
 menu.itemname.menupractice.freebattle = "QUICK MATCH"        ;Ikemen feature
-menu.itemname.menupractice.trials = "TRIALS"                 ;Ikemen feature (not implemented yet)
+;menu.itemname.menupractice.trials = "TRIALS"                 ;Ikemen feature (not implemented yet)
 menu.itemname.menupractice.back = "BACK"                     ;Ikemen feature
 
 ; Submenu: Mission
@@ -200,10 +201,10 @@ menu.itemname.menuwatch.replay = "REPLAY"                    ;Ikemen feature
 menu.itemname.menuwatch.back = "BACK"                        ;Ikemen feature
 
 ; Submenu: Profile
-menu.itemname.menuprofile = "PROFILE"                        ;Ikemen feature
-menu.itemname.menuprofile.records = "RECORDS"                ;Ikemen feature (not implemented yet)
-menu.itemname.menuprofile.ranking = "RANKING"                ;Ikemen feature (not implemented yet)
-menu.itemname.menuprofile.back = "BACK"                      ;Ikemen feature
+;menu.itemname.menuprofile = "PROFILE"                        ;Ikemen feature
+;menu.itemname.menuprofile.records = "RECORDS"                ;Ikemen feature (not implemented yet)
+;menu.itemname.menuprofile.ranking = "RANKING"                ;Ikemen feature (not implemented yet)
+;menu.itemname.menuprofile.back = "BACK"                      ;Ikemen feature
 
 ; Options
 menu.itemname.options = "OPTIONS"
