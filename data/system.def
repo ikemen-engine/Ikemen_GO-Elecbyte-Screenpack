@@ -1,5 +1,18 @@
 ﻿; Definitions of system screens
 
+; *** DO NOT MODIFY OR OVERWRITE THIS FILE ***
+; To customize, make a copy of this file in a subdirectory of your motif's name.
+; The images and sounds used on this screenpack are under CC BY-NC 3.0 (Non-Commercial) with atribution to Elecbyte.
+
+; Notes about fonts:
+;   - up to 10 fonts can be specified in the [Files] section.
+;   - fonts indexed here do not refer to the ones in fight.def
+;   - fonts are search in directories in the following order:
+;     1. system directory
+;     2. mugen program directory (not recommended to keep custom fonts here)
+;     3. data/ (not recommended to keep custom fonts here)
+;     4. font/
+
 ;----------------------------
 [Info]
 name = "Default"          ;Name of motif
