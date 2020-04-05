@@ -428,48 +428,9 @@ p2.counter.font = 1,0, 0
 level1.snd = 21,0
 level2.snd = 21,0
 level3.snd = 21,0
-; Ikemen feature: use 'pX.' prefix in order to differentiate levelX sounds among
-; players or set the paramvalue to '-1, 0' to disable it for particular player
 
 [Begin Action 40] ;Darkened powerbar background 
 40,0, 0,0, 1, , S
-
-; Ikemen feature
-;[Simul Powerbar]
-;Player 1
-;Player 2
-;Player 3
-;Player 4
-
-; Ikemen feature
-;[Simul_3P Powerbar]
-;Player 1
-;Player 2
-;Player 3
-;Player 4
-;Player 5
-;Player 6
-
-; Ikemen feature
-;[Simul_4P Powerbar]
-;Player 1
-;Player 2
-;Player 3
-;Player 4
-;Player 5
-;Player 6
-;Player 7
-;Player 8
-
-; Ikemen feature
-;[Tag Powerbar]
-;Player 1
-;Player 2
-
-; Ikemen feature
-;[Turns Powerbar]
-;Player 1
-;Player 2
 
 ;-----------------------------------------------------------
 [Face]
@@ -548,17 +509,6 @@ p8.face.scale = 0.6,0.6
 p8.face.facing = -1
 p8.face.offset = -11,26
 
-; Ikemen feature
-;[Tag Face]
-;Player 1
-;Player 2
-;Player 3
-;Player 4
-;Player 5
-;Player 6
-;Player 7
-;Player 8
-
 [Turns Face]
 ;Player 1
 p1.pos    = 2,12
@@ -620,17 +570,6 @@ p7.name.font = 3,0, -1
 p8.pos = 181,20
 p8.name.font = 3,0, 1
 
-; Ikemen feature
-;[Tag Name]
-;Player 1
-;Player 2
-;Player 3
-;Player 4
-;Player 5
-;Player 6
-;Player 7
-;Player 8
-
 [Turns Name]
 p1.pos = 14,10
 ;p1.bg. =
@@ -661,7 +600,10 @@ team1.text.text = Rush!   ;You can use %i to show count in the text, eg "%i Hit!
 team1.text.font = 1,0,1
 team1.text.offset = 3,0   ;Offset of text
 team1.displaytime = 90    ;Time to show text
-team2.pos = 309,80         ;Coords to show
+team1.showspeed = 8       ;Ikemen feature: decreases text showing up speed
+team1.hidespeed = 4       ;Ikemen feature: increases text hiding speed
+
+team2.pos = 309,80        ;Coords to show
 team2.start.x = 359       ;Starting x-coords
 team2.counter.font = 2,4,-1
 team2.counter.shake = 1   ;Set to 1 to shake count on hit
@@ -670,6 +612,8 @@ team2.text.text = Rush!   ;You can use %i to show count in the text, eg "%i Hit!
 team2.text.font = 1,0,-1
 team2.text.offset = 3,0   ;Offset of text
 team2.displaytime = 90    ;Time to show text
+team2.showspeed = 8       ;Ikemen feature: decreases text showing up speed
+team2.hidespeed = 4       ;Ikemen feature: increases text hiding speed
 
 ; Ikemen feature (format combo damage percentage presentation)
 format.decimal.places = 0
@@ -748,6 +692,16 @@ win2.offset = 160, 70
 win2.font = 1,0
 win2.text = %s and %s Win
 win2.displaytime = 540
+; Ikemen feature: 3-player win text
+win3.offset = 160, 70
+win3.font = 1,0
+win3.text = %s Team Wins
+win3.displaytime = 540
+; Ikemen feature: 4-player win text
+win4.offset = 160, 70
+win4.font = 1,0
+win4.text = %s Team Wins
+win4.displaytime = 540
 ; Draw text
 draw.offset = 160, 70
 draw.font = 1,0
@@ -879,8 +833,7 @@ over.time    = 100 ;Time to wait before round ends
 ;-----------------------------------------------------------
 ; Ikemen feature
 [Ratio]
-p1.pos          = 0, 0
-p1.offset       = 7, 15
+p1.pos          = 7, 15
 p1.level1.spr   = 400, 0
 p1.level1.scale = 0.5, 0.5
 p1.level2.spr   = 400, 1
@@ -889,8 +842,7 @@ p1.level3.spr   = 400, 2
 p1.level3.scale = 0.5, 0.5
 p1.level4.spr   = 400, 3
 p1.level4.scale = 0.5, 0.5
-p2.pos          = 0, 0
-p2.offset       = 311, 15
+p2.pos          = 311, 15
 p2.level1.spr   = 400, 0
 p2.level1.scale = 0.5, 0.5
 p2.level2.spr   = 400, 1

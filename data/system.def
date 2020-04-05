@@ -75,62 +75,8 @@ menu.item.font = 3,0,0
 menu.item.active.font = 3,5,0
 menu.item.spacing = 0, 13
 
-; Names for each of the items in the menu. Names must be in quotes.
-; Use "" or remove itemname parameter to disable an item. If all are disabled,
-; goes straight to demo mode (hold Esc to quit demos).
-;
-; Ikemen feature: Flexible submenu grouping. General syntax for handling modes
-; looks as follows: menu.itemname.optional_submenus.item = "displayed text"
-; where:
-; * optional_submenus: combination of 1 or more strings, separated by dots,
-;   where each of them refers to additional level of nested menus. For example
-;   menu.itemname.menuextras = "EXTRAS" means we're displaying EXTRAS option on
-;   the screen (in this case right on the main menu) that opens up additional
-;   submenu with items using menuextras as a prefix, e.g. 
-;   menu.itemname.menuextras.freebattle
-; * item: strings used to start modes and control menus. Following item names
-;   are reserved by the engine:
-;   - arcade: Arcade Mode
-;   - versus: Versus Mode
-;   - teamarcade: Team Arcade
-;   - teamversus: Team Versus
-;   - teamcoop: Team Cooperative
-;   - survival: Survival
-;   - survivalcoop: Survival Cooperative
-;   - storymode: Story Mode (reserved, not implemented yet)
-;   - timeattack: Time Attack
-;   - training: Training Mode
-;   - watch: Watch Mode
-;   - options: Options
-;   - exit: Exit the game
-;   - back: Back to previous menu
-;   - freebattle: Free Battle (Quick Match)
-;   - timechallenge: Time Challenge
-;   - scorechallenge: Score Challenge
-;   - vs100kumite: VS 100 Kumite
-;   - bossrush: Boss Rush
-;   - trials: Trials Mode (reserved, not implemented yet)
-;   - records: Overall score records (reserved, not implemented yet)
-;   - ranking: Rankings/leaderboards data (reserved, not implemented yet)
-;   - replay: Replay
-;   - randomtest: Random AI Battles
-;   - tournament32: Tournament Mode starting from round of 32 (reserved)
-;   - tournament16: Tournament Mode starting from round of 16 (reserved)
-;   - tournament8: Tournament Mode starting from quarterfinals (reserved)
-;   - joinadd: New IP Address
-;   - serverhost: Host Game
-;   - serverjoin: Join Game (reserved submenu)
-;   - connect: start items appended to serverjoin submenu (with 'ip_' prefix)
-;   - server: special submenu, opened automatically by serverhost/serverjoin 
-;   - netplayversus: Online Versus
-;   - netplayteamcoop: Online Cooperative
-;   - netplaysurvivalcoop: Online Survival
-;   - bonusgames: Bonus Games (reserved submenu)
-;   - bonus: start items appended to bonusgames submenu (with 'bonus_' prefix)
-; Order in which menu items will show up on the screen depends on their order in
-; screenpack DEF file. Submenus should be declared before parameters referring
-; to items nested inside those menus. Itemnames added via external modules also
-; work with this system.
+;Ikemen feature: Flexible submenu grouping.
+;Full documentation of this feature is available on Ikemen GO features wiki
 
 ; Submenu: Arcade
 menu.itemname.menuarcade = "ARCADE"                          ;Ikemen feature
@@ -185,8 +131,8 @@ menu.itemname.menumission.survival = "SURVIVAL"
 menu.itemname.menumission.survivalcoop = "SURVIVAL CO-OP"
 menu.itemname.menumission.bossrush = "BOSS RUSH"             ;Ikemen feature
 menu.itemname.menumission.vs100kumite = "VS 100 KUMITE"      ;Ikemen feature
-menu.itemname.menumission.timechallenge = "TIME CHALLENGE"   ;Ikemen feature (not implemented yet)
-menu.itemname.menumission.scorechallenge = "SCORE CHALLENGE" ;Ikemen feature (not implemented yet)
+menu.itemname.menumission.timechallenge = "TIME CHALLENGE"   ;Ikemen feature
+menu.itemname.menumission.scorechallenge = "SCORE CHALLENGE" ;Ikemen feature
 menu.itemname.menumission.bonusgames = "BONUS GAMES"         ;Ikemen feature
 menu.itemname.menumission.back = "BACK"                      ;Ikemen feature
 
@@ -439,9 +385,9 @@ timer.count = 99                  ;Ikemen feature
 timer.framespercount = 60         ;Ikemen feature
 timer.displaytime = 10            ;Ikemen feature
 
-record.offset = 159, 39
-record.font = 3, 0, 0
-record.font.scale = 1.0, 1.0
+record.offset = 159, 39      ;Ikemen feature
+record.font = 3, 0, 0        ;Ikemen feature
+record.font.scale = 1.0, 1.0 ;Ikemen feature
 ; format: %m = minutes, %s = seconds, %x = milliseconds, %p = score, %c = char name, %n = player name, \n = newline
 record.text.scorechallenge = "- BEST RECORD -\n%c %p PTS: %n" ;Ikemen feature
 record.text.timechallenge = "- BEST RECORD -\n%c %m:%s.%x: %n" ;Ikemen feature
@@ -541,10 +487,10 @@ p2.offset = 299,31
 p2.facing = -1
 p2.scale = 1,1
 ;Names
-p1.name.offset  =  78,190
-p1.name.font =   3,0,0
-p2.name.offset  = 241,190
-p2.name.font =   3,0,0
+p1.name.offset =  78,190
+p1.name.font = 3,0,0
+p2.name.offset = 241,190
+p2.name.font = 3,0,0
 
 ;-----------------------
 ;VS Match up screen background
@@ -625,7 +571,7 @@ storyboard = kfm/gameover.def ;Game over storyboard filename
 [Victory Screen]
 enabled = 1
 time = 300                ;Time to show screen
-fadein.time = 0
+fadein.time = 8
 fadeout.time = 15
 ;Winner's portrait and name
 p1.offset = 100,20
@@ -641,7 +587,6 @@ winquote.offset = 20,192
 winquote.font = 2,0,1
 winquote.window = 18,171, 301,228
 winquote.textwrap = w     ;Word wrap
-winquote.length = 280     ;Ikemen feature
 
 ;-----------------------
 ;Victory screen background
@@ -847,4 +792,3 @@ spriteno = 100,0
 start = 0,0
 tile  = 1,1
 velocity = -1, -1
-
