@@ -650,6 +650,102 @@ p4.bg1.facing = -1
 p4.face.spr = 9000,0
 p4.face.scale = 0.4,0.4
 p4.face.facing = -1
+;Player 5
+p5.pos    = 194,80
+p5.bg0.spr = 70,0
+p5.bg1.anim = 71
+p5.face.spr = 9000,0
+p5.face.scale = 0.4,0.4
+p5.face.facing = 1
+;Player 6
+p6.pos    = 1086,80
+p6.bg0.spr = 70,0
+p6.bg0.facing = -1
+p6.bg1.anim = 71
+p6.bg1.facing = -1
+p6.face.spr = 9000,0
+p6.face.scale = 0.4,0.4
+p6.face.facing = -1
+;Player 7
+p7.pos    = 244,80
+p7.bg0.spr = 70,0
+p7.bg1.anim = 71
+p7.face.spr = 9000,0
+p7.face.scale = 0.4,0.4
+p7.face.facing = 1
+;Player 8
+p8.pos    = 1036,80
+p8.bg0.spr = 70,0
+p8.bg0.facing = -1
+p8.bg1.anim = 71
+p8.bg1.facing = -1
+p8.face.spr = 9000,0
+p8.face.scale = 0.4,0.4
+p8.face.facing = -1
+
+[Tag Face]
+;Player 1
+p1.pos    = 20,20
+p1.bg0.spr = 50,0
+p1.bg1.anim = 51
+p1.face.spr = 9000,0
+p1.face.facing = 1
+;Player 2
+p2.pos    = 1260,20
+p2.bg0.spr = 50,0
+p2.bg0.facing = -1
+p2.bg1.anim = 51
+p2.bg1.facing = -1
+p2.face.spr = 9000,0
+p2.face.facing = -1
+;Player 3
+p3.pos    = 144,80
+p3.bg0.spr = 70,0
+p3.bg1.anim = 71
+p3.face.spr = 9000,0
+p3.face.scale = 0.4,0.4
+p3.face.facing = 1
+;Player 4
+p4.pos    = 1136,80
+p4.bg0.spr = 70,0
+p4.bg0.facing = -1
+p4.bg1.anim = 71
+p4.bg1.facing = -1
+p4.face.spr = 9000,0
+p4.face.scale = 0.4,0.4
+p4.face.facing = -1
+;Player 5
+p5.pos    = 194,80
+p5.bg0.spr = 70,0
+p5.bg1.anim = 71
+p5.face.spr = 9000,0
+p5.face.scale = 0.4,0.4
+p5.face.facing = 1
+;Player 6
+p6.pos    = 1086,80
+p6.bg0.spr = 70,0
+p6.bg0.facing = -1
+p6.bg1.anim = 71
+p6.bg1.facing = -1
+p6.face.spr = 9000,0
+p6.face.scale = 0.4,0.4
+p6.face.facing = -1
+;Player 7
+p7.pos    = 244,80
+p7.bg0.spr = 70,0
+p7.bg1.anim = 71
+p7.face.spr = 9000,0
+p7.face.scale = 0.4,0.4
+p7.face.facing = 1
+;Player 8
+p8.pos    = 1036,80
+p8.bg0.spr = 70,0
+p8.bg0.facing = -1
+p8.bg1.anim = 71
+p8.bg1.facing = -1
+p8.face.spr = 9000,0
+p8.face.scale = 0.4,0.4
+p8.face.facing = -1
 
 [Turns Face]
 ;Player 1
