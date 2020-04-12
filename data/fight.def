@@ -450,33 +450,33 @@ p2.face.offset = 0,10
 
 [Simul Face]
 ;Player 1
-p1.pos    = 1,12
-p1.bg.spr = 60,0
+p1.pos    = 2,12
+p1.bg.spr = 50,0
 p1.face.spr = 9000,0
-p1.face.scale = 0.53,0.53
 p1.face.facing = 1
 p1.face.offset = 0,10
 ;Player 2
-p2.pos    = 317,12
-p2.bg.spr = 60,0
+p2.pos    = 316,12
+p2.bg.spr = 50,0
 p2.bg.facing = -1
 p2.face.spr = 9000,0
-p2.face.scale = 0.53,0.53
 p2.face.facing = -1
 p2.face.offset = 0,10
 ;Player 3
-p3.pos    = 3,12
+p3.pos = 30,30
+p3.bg.spr = 70,0
 p3.face.spr = 9000,0
-p3.face.scale = 0.53,0.53
+p3.face.scale = 0.64,0.64
 p3.face.facing = 1
-p3.face.offset = 11,10
+p3.face.offset = 1,1
 ;Player 4
-p4.pos    = 315,12
+p4.pos = 288,30
+p4.bg.spr = 70,0
 p4.bg.facing = -1
 p4.face.spr = 9000,0
-p4.face.scale = 0.53,0.53
+p4.face.scale = 0.64,0.64
 p4.face.facing = -1
-p4.face.offset = -11,10
+p4.face.offset = -1,1
 
 ; Ikemen feature
 [Simul_3P Face]
@@ -494,35 +494,35 @@ p2.face.spr = 9000,0
 p2.face.facing = -1
 p2.face.offset = 0,10
 ;Player 3
-p3.pos = 1,48
+p3.pos = 30,30
 p3.bg.spr = 70,0
 p3.face.spr = 9000,0
-p3.face.scale = 0.5,0.53
+p3.face.scale = 0.64,0.64
 p3.face.facing = 1
-p3.face.offset = 1,0
+p3.face.offset = 1,1
 ;Player 4
-p4.pos = 317,48
+p4.pos = 288,30
 p4.bg.spr = 70,0
 p4.bg.facing = -1
 p4.face.spr = 9000,0
-p4.face.scale = 0.5,0.53
+p4.face.scale = 0.64,0.64
 p4.face.facing = -1
-p4.face.offset = -1,0
+p4.face.offset = -1,1
 ;Player 5
-p5.pos = 14,48
+p5.pos = 50,30
 p5.bg.spr = 70,0
 p5.face.spr = 9000,0
-p5.face.scale = 0.5,0.53
+p5.face.scale = 0.64,0.64
 p5.face.facing = 1
-p5.face.offset = 1,0
+p5.face.offset = 1,1
 ;Player 6
-p6.pos = 304,48
+p6.pos = 268,30
 p6.bg.spr = 70,0
 p6.bg.facing = -1
 p6.face.spr = 9000,0
-p6.face.scale = 0.5,0.53
+p6.face.scale = 0.64,0.64
 p6.face.facing = -1
-p6.face.offset = -1,0
+p6.face.offset = -1,1
 
 ; Ikemen feature
 [Simul_4P Face]
@@ -540,50 +540,50 @@ p2.face.spr = 9000,0
 p2.face.facing = -1
 p2.face.offset = 0,10
 ;Player 3
-p3.pos = 1,48
+p3.pos = 30,30
 p3.bg.spr = 70,0
 p3.face.spr = 9000,0
-p3.face.scale = 0.5,0.53
+p3.face.scale = 0.64,0.64
 p3.face.facing = 1
-p3.face.offset = 1,0
+p3.face.offset = 1,1
 ;Player 4
-p4.pos = 317,48
+p4.pos = 288,30
 p4.bg.spr = 70,0
 p4.bg.facing = -1
 p4.face.spr = 9000,0
-p4.face.scale = 0.5,0.53
+p4.face.scale = 0.64,0.64
 p4.face.facing = -1
-p4.face.offset = -1,0
+p4.face.offset = -1,1
 ;Player 5
-p5.pos = 14,48
+p5.pos = 50,30
 p5.bg.spr = 70,0
 p5.face.spr = 9000,0
-p5.face.scale = 0.5,0.53
+p5.face.scale = 0.64,0.64
 p5.face.facing = 1
-p5.face.offset = 1,0
+p5.face.offset = 1,1
 ;Player 6
-p6.pos = 304,48
+p6.pos = 268,30
 p6.bg.spr = 70,0
 p6.bg.facing = -1
 p6.face.spr = 9000,0
-p6.face.scale = 0.5,0.53
+p6.face.scale = 0.64,0.64
 p6.face.facing = -1
-p6.face.offset = -1,0
+p6.face.offset = -1,1
 ;Player 7
-p7.pos = 27,48
+p7.pos = 70,30
 p7.bg.spr = 70,0
 p7.face.spr = 9000,0
-p7.face.scale = 0.5,0.53
+p7.face.scale = 0.64,0.64
 p7.face.facing = 1
-p7.face.offset = 1,0
+p7.face.offset = 1,1
 ;Player 8
-p8.pos = 291,48
+p8.pos = 248,30
 p8.bg.spr = 70,0
 p8.bg.facing = -1
 p8.face.spr = 9000,0
-p8.face.scale = 0.5,0.53
+p8.face.scale = 0.64,0.64
 p8.face.facing = -1
-p8.face.offset = -1,0
+p8.face.offset = -1,1
 
 ; Ikemen feature
 [Tag Face]
@@ -601,59 +601,145 @@ p2.face.spr = 9000,0
 p2.face.facing = -1
 p2.face.offset = 0,10
 ;Player 3
-p3.pos = 1,48
+p3.pos = 30,30
 p3.bg.spr = 70,0
 p3.ko.spr = 71,0
 p3.face.spr = 9000,0
-p3.face.scale = 0.5,0.53
+p3.face.scale = 0.64,0.64
 p3.face.facing = 1
-p3.face.offset = 1,0
+p3.face.offset = 1,1
 ;Player 4
-p4.pos = 317,48
+p4.pos = 288,30
 p4.bg.spr = 70,0
 p4.bg.facing = -1
 p4.ko.spr = 71,0
 p4.ko.facing = -1
 p4.face.spr = 9000,0
-p4.face.scale = 0.5,0.53
+p4.face.scale = 0.64,0.64
 p4.face.facing = -1
-p4.face.offset = -1,0
+p4.face.offset = -1,1
+
+; Ikemen feature
+[Tag_3P Face]
+;Player 1
+p1.pos    = 2,12
+p1.bg.spr = 50,0
+p1.face.spr = 9000,0
+p1.face.facing = 1
+p1.face.offset = 0,10
+;Player 2
+p2.pos    = 316,12
+p2.bg.spr = 50,0
+p2.bg.facing = -1
+p2.face.spr = 9000,0
+p2.face.facing = -1
+p2.face.offset = 0,10
+;Player 3
+p3.pos = 30,30
+p3.bg.spr = 70,0
+p3.ko.spr = 71,0
+p3.face.spr = 9000,0
+p3.face.scale = 0.64,0.64
+p3.face.facing = 1
+p3.face.offset = 1,1
+;Player 4
+p4.pos = 288,30
+p4.bg.spr = 70,0
+p4.bg.facing = -1
+p4.ko.spr = 71,0
+p4.ko.facing = -1
+p4.face.spr = 9000,0
+p4.face.scale = 0.64,0.64
+p4.face.facing = -1
+p4.face.offset = -1,1
 ;Player 5
-p5.pos = 14,48
+p5.pos = 50,30
 p5.bg.spr = 70,0
 p5.ko.spr = 71,0
 p5.face.spr = 9000,0
-p5.face.scale = 0.5,0.53
+p5.face.scale = 0.64,0.64
 p5.face.facing = 1
-p5.face.offset = 1,0
+p5.face.offset = 1,1
 ;Player 6
-p6.pos = 304,48
+p6.pos = 268,30
 p6.bg.spr = 70,0
 p6.bg.facing = -1
 p6.ko.spr = 71,0
 p6.ko.facing = -1
 p6.face.spr = 9000,0
-p6.face.scale = 0.5,0.53
+p6.face.scale = 0.64,0.64
 p6.face.facing = -1
-p6.face.offset = -1,0
+p6.face.offset = -1,1
+
+; Ikemen feature
+[Tag_4P Face]
+;Player 1
+p1.pos    = 2,12
+p1.bg.spr = 50,0
+p1.face.spr = 9000,0
+p1.face.facing = 1
+p1.face.offset = 0,10
+;Player 2
+p2.pos    = 316,12
+p2.bg.spr = 50,0
+p2.bg.facing = -1
+p2.face.spr = 9000,0
+p2.face.facing = -1
+p2.face.offset = 0,10
+;Player 3
+p3.pos = 30,30
+p3.bg.spr = 70,0
+p3.ko.spr = 71,0
+p3.face.spr = 9000,0
+p3.face.scale = 0.64,0.64
+p3.face.facing = 1
+p3.face.offset = 1,1
+;Player 4
+p4.pos = 288,30
+p4.bg.spr = 70,0
+p4.bg.facing = -1
+p4.ko.spr = 71,0
+p4.ko.facing = -1
+p4.face.spr = 9000,0
+p4.face.scale = 0.64,0.64
+p4.face.facing = -1
+p4.face.offset = -1,1
+;Player 5
+p5.pos = 50,30
+p5.bg.spr = 70,0
+p5.ko.spr = 71,0
+p5.face.spr = 9000,0
+p5.face.scale = 0.64,0.64
+p5.face.facing = 1
+p5.face.offset = 1,1
+;Player 6
+p6.pos = 268,30
+p6.bg.spr = 70,0
+p6.bg.facing = -1
+p6.ko.spr = 71,0
+p6.ko.facing = -1
+p6.face.spr = 9000,0
+p6.face.scale = 0.64,0.64
+p6.face.facing = -1
+p6.face.offset = -1,1
 ;Player 7
-p7.pos = 27,48
+p7.pos = 70,30
 p7.bg.spr = 70,0
 p7.ko.spr = 71,0
 p7.face.spr = 9000,0
-p7.face.scale = 0.5,0.53
+p7.face.scale = 0.64,0.64
 p7.face.facing = 1
-p7.face.offset = 1,0
+p7.face.offset = 1,1
 ;Player 8
-p8.pos = 291,48
+p8.pos = 248,30
 p8.bg.spr = 70,0
 p8.bg.facing = -1
 p8.ko.spr = 71,0
 p8.ko.facing = -1
 p8.face.spr = 9000,0
-p8.face.scale = 0.5,0.53
+p8.face.scale = 0.64,0.64
 p8.face.facing = -1
-p8.face.offset = -1,0
+p8.face.offset = -1,1
 
 [Turns Face]
 ;Player 1
@@ -662,14 +748,14 @@ p1.bg.spr = 50,0
 p1.face.spr = 9000,0
 p1.face.facing = 1
 p1.face.offset = 0,10
-p1.teammate.pos = 1,48
-p1.teammate.spacing = 13,0
+p1.teammate.pos = 30,30
+p1.teammate.spacing = 20,0
 p1.teammate.bg.spr = 70,0
 p1.teammate.ko.spr = 71,0
 p1.teammate.face.spr = 9000,0
-p1.teammate.face.scale = 0.5,0.53
+p1.teammate.face.scale = 0.64,0.64
 p1.teammate.face.facing = 1
-p1.teammate.face.offset = 1,0
+p1.teammate.face.offset = 1,1
 ;Player 2
 p2.pos    = 316,12
 p2.bg.spr = 50,0
@@ -677,16 +763,16 @@ p2.bg.facing = -1
 p2.face.spr = 9000,0
 p2.face.facing = -1
 p2.face.offset = 0,10
-p2.teammate.pos = 317,48
-p2.teammate.spacing = -13,0
+p2.teammate.pos = 288,30
+p2.teammate.spacing = -20,0
 p2.teammate.bg.spr = 70,0
 p2.teammate.bg.facing = -1
 p2.teammate.ko.spr = 71,0
 p2.teammate.ko.facing = -1
 p2.teammate.face.spr = 9000,0
-p2.teammate.face.scale = 0.5,0.53
+p2.teammate.face.scale = 0.64,0.64
 p2.teammate.face.facing = -1
-p2.teammate.face.offset = -1,0
+p2.teammate.face.offset = -1,1
 
 ;-----------------------------------------------------------
 [Name]
@@ -904,43 +990,63 @@ draw.displaytime = 540
 
 ;-----------------------------------------------------------
 [WinIcon]
-p1.pos = 34,43    ;33,43
-p2.pos = 284,43   ;286,43
+p1.pos = 136,34
+p2.pos = 182,34
 ; Offset for next icon (x,y)
-p1.iconoffset = 12,0  
-p2.iconoffset = -12,0
+p1.iconoffset = -8,0  
+p2.iconoffset = 8,0
 ; Counter text font and offset for representing wins
 p1.counter.offset = 0,0
 p1.counter.font = 2,1
+p1.counter.scale = 0.5,0.5
 p2.counter.offset = 0,0
 p2.counter.font = 2,1
+p2.counter.scale = 0.5,0.5
 ; Win by normal
 p1.n.spr = 100,0
+p1.n.scale = 0.5,0.5
 p2.n.spr = 100,0
+p2.n.scale = 0.5,0.5
 ; Win by special
 p1.s.spr = 101,0
+p1.s.scale = 0.5,0.5
 p2.s.spr = 101,0
+p2.s.scale = 0.5,0.5
 ; Win by hyper (super)
 p1.h.spr = 102,0
+p1.h.scale = 0.5,0.5
 p2.h.spr = 102,0
+p2.h.scale = 0.5,0.5
 ; Win by normal throw
 p1.throw.spr = 103,0
+p1.throw.scale = 0.5,0.5
 p2.throw.spr = 103,0
+p2.throw.scale = 0.5,0.5
 ; Win by cheese
 p1.c.spr = 104,0
+p1.c.scale = 0.5,0.5
 p2.c.spr = 104,0
+p2.c.scale = 0.5,0.5
 ; Win by time over
 p1.t.spr = 105,0
+p1.t.scale = 0.5,0.5
 p2.t.spr = 105,0
+p2.t.scale = 0.5,0.5
 ; Win by suicide (here's a fun one)
 p1.suicide.spr = 106,0
+p1.suicide.scale = 0.5,0.5
 p2.suicide.spr = 106,0
+p2.suicide.scale = 0.5,0.5
 ; Opponent beaten by his own teammate (another fun one)
 p1.teammate.spr = 107,0
+p1.teammate.scale = 0.5,0.5
 p2.teammate.spr = 107,0
+p2.teammate.scale = 0.5,0.5
 ; Win by perfect (overlay icon)
 p1.perfect.spr = 110,0
+p1.perfect.scale = 0.5,0.5
 p2.perfect.spr = 110,0
+p2.perfect.scale = 0.5,0.5
 ; Use icons up until this number of wins
 useiconupto = 4
 
