@@ -650,6 +650,7 @@ p4.bg1.facing = -1
 p4.face.spr = 9000,0
 p4.face.scale = 0.4,0.4
 p4.face.facing = -1
+; Ikemen feature
 ;Player 5
 p5.pos    = 194,80
 p5.bg0.spr = 70,0
@@ -683,6 +684,7 @@ p8.face.spr = 9000,0
 p8.face.scale = 0.4,0.4
 p8.face.facing = -1
 
+; Ikemen feature
 [Tag Face]
 ;Player 1
 p1.pos    = 20,20
@@ -820,6 +822,7 @@ p4.pos = 1080,85
 p4.name.font = 3,1, -1
 p4.name.scale = 0.5,1
 
+; Ikemen feature
 [Simul_3P Name]
 p1.pos = 142,35
 ;p1.bg. =
@@ -828,6 +831,7 @@ p1.name.font = 3,3, 1
 p2.pos = 1138,35
 p2.name.font = 3,1, -1
 
+; Ikemen feature
 [Simul_4P Name]
 p1.pos = 142,35
 ;p1.bg. =
@@ -836,6 +840,7 @@ p1.name.font = 3,3, 1
 p2.pos = 1138,35
 p2.name.font = 3,1, -1
 
+; Ikemen feature
 [Tag Name]
 p1.pos = 142,35
 p1.name.font = 3,3, 1

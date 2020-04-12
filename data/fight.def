@@ -453,7 +453,7 @@ p2.face.offset = 0,10
 p1.pos    = 1,12
 p1.bg.spr = 60,0
 p1.face.spr = 9000,0
-p1.face.scale = 0.6,0.6
+p1.face.scale = 0.53,0.53
 p1.face.facing = 1
 p1.face.offset = 0,10
 ;Player 2
@@ -461,53 +461,199 @@ p2.pos    = 317,12
 p2.bg.spr = 60,0
 p2.bg.facing = -1
 p2.face.spr = 9000,0
-p2.face.scale = 0.6,0.6
+p2.face.scale = 0.53,0.53
 p2.face.facing = -1
 p2.face.offset = 0,10
 ;Player 3
-p3.pos    = 2,12
+p3.pos    = 3,12
 p3.face.spr = 9000,0
-p3.face.scale = 0.6,0.6
+p3.face.scale = 0.53,0.53
 p3.face.facing = 1
 p3.face.offset = 11,10
 ;Player 4
-p4.pos    = 316,12
+p4.pos    = 315,12
 p4.bg.facing = -1
 p4.face.spr = 9000,0
-p4.face.scale = 0.6,0.6
+p4.face.scale = 0.53,0.53
 p4.face.facing = -1
 p4.face.offset = -11,10
+
 ; Ikemen feature
+[Simul_3P Face]
+;Player 1
+p1.pos    = 2,12
+p1.bg.spr = 50,0
+p1.face.spr = 9000,0
+p1.face.facing = 1
+p1.face.offset = 0,10
+;Player 2
+p2.pos    = 316,12
+p2.bg.spr = 50,0
+p2.bg.facing = -1
+p2.face.spr = 9000,0
+p2.face.facing = -1
+p2.face.offset = 0,10
+;Player 3
+p3.pos = 1,48
+p3.bg.spr = 70,0
+p3.face.spr = 9000,0
+p3.face.scale = 0.5,0.53
+p3.face.facing = 1
+p3.face.offset = 1,0
+;Player 4
+p4.pos = 317,48
+p4.bg.spr = 70,0
+p4.bg.facing = -1
+p4.face.spr = 9000,0
+p4.face.scale = 0.5,0.53
+p4.face.facing = -1
+p4.face.offset = -1,0
 ;Player 5
-p5.pos    = 1,12
-p5.bg.spr = 60,0
-p5.bg.offset = 0,16
+p5.pos = 14,48
+p5.bg.spr = 70,0
 p5.face.spr = 9000,0
-p5.face.scale = 0.6,0.6
+p5.face.scale = 0.5,0.53
 p5.face.facing = 1
-p5.face.offset = 0,26
+p5.face.offset = 1,0
 ;Player 6
-p6.pos    = 317,12
-p6.bg.spr = 60,0
-p6.bg.offset = 0,16
+p6.pos = 304,48
+p6.bg.spr = 70,0
 p6.bg.facing = -1
 p6.face.spr = 9000,0
-p6.face.scale = 0.6,0.6
+p6.face.scale = 0.5,0.53
 p6.face.facing = -1
-p6.face.offset = 0,26
+p6.face.offset = -1,0
+
+; Ikemen feature
+[Simul_4P Face]
+;Player 1
+p1.pos    = 2,12
+p1.bg.spr = 50,0
+p1.face.spr = 9000,0
+p1.face.facing = 1
+p1.face.offset = 0,10
+;Player 2
+p2.pos    = 316,12
+p2.bg.spr = 50,0
+p2.bg.facing = -1
+p2.face.spr = 9000,0
+p2.face.facing = -1
+p2.face.offset = 0,10
+;Player 3
+p3.pos = 1,48
+p3.bg.spr = 70,0
+p3.face.spr = 9000,0
+p3.face.scale = 0.5,0.53
+p3.face.facing = 1
+p3.face.offset = 1,0
+;Player 4
+p4.pos = 317,48
+p4.bg.spr = 70,0
+p4.bg.facing = -1
+p4.face.spr = 9000,0
+p4.face.scale = 0.5,0.53
+p4.face.facing = -1
+p4.face.offset = -1,0
+;Player 5
+p5.pos = 14,48
+p5.bg.spr = 70,0
+p5.face.spr = 9000,0
+p5.face.scale = 0.5,0.53
+p5.face.facing = 1
+p5.face.offset = 1,0
+;Player 6
+p6.pos = 304,48
+p6.bg.spr = 70,0
+p6.bg.facing = -1
+p6.face.spr = 9000,0
+p6.face.scale = 0.5,0.53
+p6.face.facing = -1
+p6.face.offset = -1,0
 ;Player 7
-p7.pos    = 2,12
+p7.pos = 27,48
+p7.bg.spr = 70,0
 p7.face.spr = 9000,0
-p7.face.scale = 0.6,0.6
+p7.face.scale = 0.5,0.53
 p7.face.facing = 1
-p7.face.offset = 11,26
+p7.face.offset = 1,0
 ;Player 8
-p8.pos    = 316,12
+p8.pos = 291,48
+p8.bg.spr = 70,0
 p8.bg.facing = -1
 p8.face.spr = 9000,0
-p8.face.scale = 0.6,0.6
+p8.face.scale = 0.5,0.53
 p8.face.facing = -1
-p8.face.offset = -11,26
+p8.face.offset = -1,0
+
+; Ikemen feature
+[Tag Face]
+;Player 1
+p1.pos    = 2,12
+p1.bg.spr = 50,0
+p1.face.spr = 9000,0
+p1.face.facing = 1
+p1.face.offset = 0,10
+;Player 2
+p2.pos    = 316,12
+p2.bg.spr = 50,0
+p2.bg.facing = -1
+p2.face.spr = 9000,0
+p2.face.facing = -1
+p2.face.offset = 0,10
+;Player 3
+p3.pos = 1,48
+p3.bg.spr = 70,0
+p3.ko.spr = 71,0
+p3.face.spr = 9000,0
+p3.face.scale = 0.5,0.53
+p3.face.facing = 1
+p3.face.offset = 1,0
+;Player 4
+p4.pos = 317,48
+p4.bg.spr = 70,0
+p4.bg.facing = -1
+p4.ko.spr = 71,0
+p4.ko.facing = -1
+p4.face.spr = 9000,0
+p4.face.scale = 0.5,0.53
+p4.face.facing = -1
+p4.face.offset = -1,0
+;Player 5
+p5.pos = 14,48
+p5.bg.spr = 70,0
+p5.ko.spr = 71,0
+p5.face.spr = 9000,0
+p5.face.scale = 0.5,0.53
+p5.face.facing = 1
+p5.face.offset = 1,0
+;Player 6
+p6.pos = 304,48
+p6.bg.spr = 70,0
+p6.bg.facing = -1
+p6.ko.spr = 71,0
+p6.ko.facing = -1
+p6.face.spr = 9000,0
+p6.face.scale = 0.5,0.53
+p6.face.facing = -1
+p6.face.offset = -1,0
+;Player 7
+p7.pos = 27,48
+p7.bg.spr = 70,0
+p7.ko.spr = 71,0
+p7.face.spr = 9000,0
+p7.face.scale = 0.5,0.53
+p7.face.facing = 1
+p7.face.offset = 1,0
+;Player 8
+p8.pos = 291,48
+p8.bg.spr = 70,0
+p8.bg.facing = -1
+p8.ko.spr = 71,0
+p8.ko.facing = -1
+p8.face.spr = 9000,0
+p8.face.scale = 0.5,0.53
+p8.face.facing = -1
+p8.face.offset = -1,0
 
 [Turns Face]
 ;Player 1
@@ -516,7 +662,7 @@ p1.bg.spr = 50,0
 p1.face.spr = 9000,0
 p1.face.facing = 1
 p1.face.offset = 0,10
-p1.teammate.pos = 1,49
+p1.teammate.pos = 1,48
 p1.teammate.spacing = 13,0
 p1.teammate.bg.spr = 70,0
 p1.teammate.ko.spr = 71,0
@@ -531,7 +677,7 @@ p2.bg.facing = -1
 p2.face.spr = 9000,0
 p2.face.facing = -1
 p2.face.offset = 0,10
-p2.teammate.pos = 317,49
+p2.teammate.pos = 317,48
 p2.teammate.spacing = -13,0
 p2.teammate.bg.spr = 70,0
 p2.teammate.bg.facing = -1
@@ -556,19 +702,31 @@ p1.pos = 14,10
 p1.name.font = 3,0, 1
 p2.pos = 305,10
 p2.name.font = 3,0, -1
-p3.pos = 138,10
-p3.name.font = 3,0, -1
-p4.pos = 181,10
-p4.name.font = 3,0, 1
+p3.pos = 14,20
+p3.name.font = 3,0, 1
+p4.pos = 305,20
+p4.name.font = 3,0, -1
+
 ; Ikemen feature
-p5.pos = 14,20
-p5.name.font = 3,0, 1
-p6.pos = 305,20
-p6.name.font = 3,0, -1
-p7.pos = 138,20
-p7.name.font = 3,0, -1
-p8.pos = 181,20
-p8.name.font = 3,0, 1
+[Simul_3P Name]
+p1.pos = 14,10
+p1.name.font = 3,0, 1
+p2.pos = 305,10
+p2.name.font = 3,0, -1
+
+; Ikemen feature
+[Simul_4P Name]
+p1.pos = 14,10
+p1.name.font = 3,0, 1
+p2.pos = 305,10
+p2.name.font = 3,0, -1
+
+; Ikemen feature
+[Tag Name]
+p1.pos = 14,10
+p1.name.font = 3,0, 1
+p2.pos = 305,10
+p2.name.font = 3,0, -1
 
 [Turns Name]
 p1.pos = 14,10
