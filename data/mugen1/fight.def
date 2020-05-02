@@ -304,7 +304,7 @@ p8.range.x = 6,433
 [Tag Lifebar]
 mid.freeze = 0        ;Ikemen feature: 0 disables mid element wait during gethit/combo (default: 1)
 mid.delay = 0         ;Ikemen feature: frames before mid element starts decreasing (default: 30)
-mid.mult = 1.0        ;Ikemen feature: moving moving relation between mid value and life (default: 1.0)
+mid.mult = 1.0        ;Ikemen feature: moving relation between mid value and life (default: 1.0)
 mid.steps = 16        ;Ikemen feature: mid value decreasing steps (default: 8)
 ;Player 1
 p1.draworder = 1      ;Ikemen feature
