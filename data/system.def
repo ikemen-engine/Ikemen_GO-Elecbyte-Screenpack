@@ -697,6 +697,7 @@ menu.itemname.menuvideo.resolution.empty = ""
 menu.itemname.menuvideo.resolution.customres = "Custom"
 menu.itemname.menuvideo.resolution.back = "Back"
 menu.itemname.menuvideo.fullscreen = "Fullscreen"
+menu.itemname.menuvideo.vretrace = "VSync"
 menu.itemname.menuvideo.msaa = "MSAA"
 menu.itemname.menuvideo.shaders = "Shaders" ;reserved submenu
 ; This list is populated with shaders existing in 'external/shaders' directory
