@@ -1,0 +1,138 @@
+;0 always import the palette, 1 import only if all colors doesn't match to any existing palette
+noDuplicatePal = 0
+
+[PaletteDef]
+group = 300
+number = 0
+file = 300-0.act
+
+[PaletteDef]
+group = 400
+number = 0
+file = 400-0.act
+
+[SpriteDef]
+group = 300
+image = 0
+xaxis = -25
+yaxis = -100
+flags = 0
+palette = 300,0
+file = 300-0.png
+
+[SpriteDef]
+group = 300
+image = 1
+xaxis = -25
+yaxis = -100
+flags = 0
+palette = 300,0
+file = 300-1.png
+
+[SpriteDef]
+group = 300
+image = 2
+xaxis = -25
+yaxis = -100
+flags = 0
+palette = 300,0
+file = 300-2.png
+
+[SpriteDef]
+group = 300
+image = 3
+xaxis = -25
+yaxis = -100
+flags = 0
+palette = 300,0
+file = 300-3.png
+
+[SpriteDef]
+group = 300
+image = 4
+xaxis = -25
+yaxis = -100
+flags = 0
+palette = 300,0
+file = 300-4.png
+
+[SpriteDef]
+group = 300
+image = 5
+xaxis = -25
+yaxis = -100
+flags = 0
+palette = 300,0
+file = 300-5.png
+
+[SpriteDef]
+group = 300
+image = 6
+xaxis = -25
+yaxis = -100
+flags = 0
+palette = 300,0
+file = 300-6.png
+
+[SpriteDef]
+group = 300
+image = 7
+xaxis = -25
+yaxis = -100
+flags = 0
+palette = 300,0
+file = 300-7.png
+
+[SpriteDef]
+group = 300
+image = 8
+xaxis = -25
+yaxis = -100
+flags = 0
+palette = 300,0
+file = 300-8.png
+
+[SpriteDef]
+group = 300
+image = 9
+xaxis = -25
+yaxis = -100
+flags = 0
+palette = 300,0
+file = 300-9.png
+
+[SpriteDef]
+group = 400
+image = 0
+xaxis = 15
+yaxis = 14
+flags = 0
+palette = 400,0
+file = 400-0.png
+
+[SpriteDef]
+group = 400
+image = 1
+xaxis = 15
+yaxis = 14
+flags = 0
+palette = 400,0
+file = 400-1.png
+
+[SpriteDef]
+group = 400
+image = 2
+xaxis = 15
+yaxis = 14
+flags = 0
+palette = 400,0
+file = 400-2.png
+
+[SpriteDef]
+group = 400
+image = 3
+xaxis = 15
+yaxis = 14
+flags = 0
+palette = 400,0
+file = 400-3.png
