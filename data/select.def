@@ -188,6 +188,7 @@
  ;Insert your characters below.
 
 kfm, stages/kfm.def
+kfm720, stages/kfm.def
 randomselect
 
 ;-------------------------------------------------------------------------------
