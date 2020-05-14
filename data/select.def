@@ -188,7 +188,7 @@
  ;Insert your characters below.
 
 kfm, stages/kfm.def
-kfm720, stages/kfm.def
+kfm720, stages/stage0-720.def, order=0 ;order=0 removes it from arcade AI pool.
 randomselect
 
 ;-------------------------------------------------------------------------------
