@@ -119,7 +119,7 @@ p3.front.scale = 1,0.5
 p3.range.x  = -6,-433
 ;Player 4
 p4.pos    = 690,49
-p4.mid.spr = 12,0
+p4.mid.anim = 12
 p4.mid.offset = 6,6
 p4.mid.facing = -1
 p4.mid.scale = 1,0.5
@@ -173,7 +173,7 @@ p3.front.scale = 1,0.33
 p3.range.x  = -6,-433
 ;Player 4
 p4.pos    = 690,46
-p4.mid.spr = 12,0
+p4.mid.anim = 12
 p4.mid.offset = 6,6
 p4.mid.facing = -1
 p4.mid.scale = 1,0.33
@@ -193,7 +193,7 @@ p5.front.scale = 1,0.33
 p5.range.x  = -6,-433
 ;Player 6
 p6.pos    = 690,52
-p6.mid.spr = 12,0
+p6.mid.anim = 12
 p6.mid.offset = 6,6
 p6.mid.facing = -1
 p6.mid.scale = 1,0.33
@@ -247,7 +247,7 @@ p3.front.scale = 1,0.25
 p3.range.x  = -6,-433
 ;Player 4
 p4.pos    = 690,45
-p4.mid.spr = 12,0
+p4.mid.anim = 12
 p4.mid.offset = 6,6
 p4.mid.facing = -1
 p4.mid.scale = 1,0.25
@@ -267,7 +267,7 @@ p5.front.scale = 1,0.25
 p5.range.x  = -6,-433
 ;Player 6
 p6.pos    = 690,50
-p6.mid.spr = 12,0
+p6.mid.anim = 12
 p6.mid.offset = 6,6
 p6.mid.facing = -1
 p6.mid.scale = 1,0.25
@@ -287,7 +287,7 @@ p7.front.scale = 1,0.25
 p7.range.x  = -6,-433
 ;Player 8
 p8.pos    = 690,55
-p8.mid.spr = 12,0
+p8.mid.anim = 12
 p8.mid.offset = 6,6
 p8.mid.facing = -1
 p8.mid.scale = 1,0.25
@@ -300,51 +300,78 @@ p8.range.x = 6,433
 [Begin Action 34] ;Darkened lifebar background (team size 4)
 34,0, 0,0, 1, , AS224D32
 
+; Ikemen feature
 [Tag Lifebar]
+mid.freeze = 0        ;Ikemen feature: 0 disables mid element wait during gethit/combo (default: 1)
+mid.delay = 0         ;Ikemen feature: frames before mid element starts decreasing (default: 30)
+mid.mult = 1.0        ;Ikemen feature: moving relation between mid value and life (default: 1.0)
+mid.steps = 16        ;Ikemen feature: mid value decreasing steps (default: 8)
 ;Player 1
+p1.draworder = 1      ;Ikemen feature
 p1.pos    = 590,40
 p1.bg0.anim = 20
 p1.bg0.offset = -6,6
 p1.bg1.spr = 11,0
-p1.mid.anim = 12
+p1.red.spr = 12,0     ;Ikemen feature
+p1.red.offset = -6,6  ;Ikemen feature
+p1.red.scale = 1,0.5  ;Ikemen feature
+;p1.mid.anim = 12
+p1.mid.spr = 13,0
 p1.mid.offset = -6,6
 p1.mid.scale = 1,0.5
-p1.front.spr = 13,0
+p1.front.spr = 14,0 ;13,0
 p1.front.offset = -6,6
 p1.front.scale = 1,0.5
 p1.range.x  = -6,-433
 ;Player 2
+p2.draworder = 2      ;Ikemen feature
 p2.pos    = 690,40
 p2.bg0.anim = 20
 p2.bg0.offset = 6,6
 p2.bg0.facing = -1
 p2.bg1.spr = 11,0
 p2.bg1.facing = -1
-p2.mid.anim = 12
+p2.red.spr = 12,0     ;Ikemen feature
+p2.red.offset = 6,6   ;Ikemen feature
+p2.red.scale = 1,0.5  ;Ikemen feature
+p2.red.facing = -1    ;Ikemen feature
+;p2.mid.anim = 12
+p2.mid.spr = 13,0
 p2.mid.offset = 6,6
 p2.mid.facing = -1
 p2.mid.scale = 1,0.5
-p2.front.spr = 13,0
+p2.front.spr = 14,0 ;13,0
 p2.front.offset = 6,6
 p2.front.facing = -1
 p2.front.scale = 1,0.5
 p2.range.x = 6,433
 ;Player 3
+p3.draworder = 3      ;Ikemen feature
 p3.pos    = 590,49
-p3.mid.anim = 12
+p3.red.spr = 12,0     ;Ikemen feature
+p3.red.offset = -6,6  ;Ikemen feature
+p3.red.scale = 1,0.5  ;Ikemen feature
+;p3.mid.anim = 12
+p3.mid.spr = 13,0
 p3.mid.offset = -6,6
 p3.mid.scale = 1,0.5
-p3.front.spr = 13,0
+p3.front.spr = 14,0 ;13,0
 p3.front.offset = -6,6
 p3.front.scale = 1,0.5
 p3.range.x  = -6,-433
 ;Player 4
+p4.draworder = 4      ;Ikemen feature
 p4.pos    = 690,49
-p4.mid.spr = 12,0
+p4.red.spr = 12,0     ;Ikemen feature
+p4.red.offset = 6,6   ;Ikemen feature
+p4.red.scale = 1,0.5  ;Ikemen feature
+p4.red.facing = -1    ;Ikemen feature
+;p4.mid.anim = 12
+p4.mid.spr = 13,0
 p4.mid.offset = 6,6
 p4.mid.facing = -1
 p4.mid.scale = 1,0.5
-p4.front.spr = 13,0
+p4.front.spr = 14,0 ;13,0
 p4.front.offset = 6,6
 p4.front.facing = -1
 p4.front.scale = 1,0.5
@@ -352,70 +379,107 @@ p4.range.x = 6,433
 
 ; Ikemen feature
 [Tag_3P Lifebar]
+mid.freeze = 0        ;Ikemen feature: 0 disables mid element wait during gethit/combo (default: 1)
+mid.delay = 0         ;Ikemen feature: frames before mid element starts decreasing (default: 30)
+mid.mult = 1.0        ;Ikemen feature: moving relation between mid value and life (default: 1.0)
+mid.steps = 16        ;Ikemen feature: mid value decreasing steps (default: 8)
 ;Player 1
+p1.draworder = 1      ;Ikemen feature
 p1.pos    = 590,40
 p1.bg0.anim = 30
 p1.bg0.offset = -6,6
 p1.bg1.spr = 11,0
-p1.mid.anim = 12
+p1.red.spr = 12,0     ;Ikemen feature
+p1.red.offset = -6,6  ;Ikemen feature
+p1.red.scale = 1,0.33 ;Ikemen feature
+;p1.mid.anim = 12
+p1.mid.spr = 13,0
 p1.mid.offset = -6,6
 p1.mid.scale = 1,0.33
-p1.front.spr = 13,0
+p1.front.spr = 14,0 ;13,0
 p1.front.offset = -6,6
 p1.front.scale = 1,0.33
 p1.range.x  = -6,-433
 ;Player 2
+p2.draworder = 2      ;Ikemen feature
 p2.pos    = 690,40
 p2.bg0.anim = 30
 p2.bg0.offset = 6,6
 p2.bg0.facing = -1
 p2.bg1.spr = 11,0
 p2.bg1.facing = -1
-p2.mid.anim = 12
+p2.red.spr = 12,0     ;Ikemen feature
+p2.red.offset = 6,6   ;Ikemen feature
+p2.red.scale = 1,0.33 ;Ikemen feature
+p2.red.facing = -1    ;Ikemen feature
+;p2.mid.anim = 12
+p2.mid.spr = 13,0
 p2.mid.offset = 6,6
 p2.mid.facing = -1
 p2.mid.scale = 1,0.33
-p2.front.spr = 13,0
+p2.front.spr = 14,0 ;13,0
 p2.front.offset = 6,6
 p2.front.facing = -1
 p2.front.scale = 1,0.33
 p2.range.x = 6,433
 ;Player 3
+p3.draworder = 3      ;Ikemen feature
 p3.pos    = 590,46
-p3.mid.anim = 12
+p3.red.spr = 12,0     ;Ikemen feature
+p3.red.offset = -6,6  ;Ikemen feature
+p3.red.scale = 1,0.33 ;Ikemen feature
+;p3.mid.anim = 12
+p3.mid.spr = 13,0
 p3.mid.offset = -6,6
 p3.mid.scale = 1,0.33
-p3.front.spr = 13,0
+p3.front.spr = 14,0 ;13,0
 p3.front.offset = -6,6
 p3.front.scale = 1,0.33
 p3.range.x  = -6,-433
 ;Player 4
+p4.draworder = 4      ;Ikemen feature
 p4.pos    = 690,46
-p4.mid.spr = 12,0
+p4.red.spr = 12,0     ;Ikemen feature
+p4.red.offset = 6,6   ;Ikemen feature
+p4.red.scale = 1,0.33 ;Ikemen feature
+p4.red.facing = -1    ;Ikemen feature
+;p4.mid.anim = 12
+p4.mid.spr = 13,0
 p4.mid.offset = 6,6
 p4.mid.facing = -1
 p4.mid.scale = 1,0.33
-p4.front.spr = 13,0
+p4.front.spr = 14,0 ;13,0
 p4.front.offset = 6,6
 p4.front.facing = -1
 p4.front.scale = 1,0.33
 p4.range.x = 6,433
 ;Player 5
+p5.draworder = 5      ;Ikemen feature
 p5.pos    = 590,52
-p5.mid.anim = 12
+p5.red.spr = 12,0     ;Ikemen feature
+p5.red.offset = -6,6  ;Ikemen feature
+p5.red.scale = 1,0.33 ;Ikemen feature
+;p5.mid.anim = 12
+p5.mid.spr = 13,0
 p5.mid.offset = -6,6
 p5.mid.scale = 1,0.33
-p5.front.spr = 13,0
+p5.front.spr = 14,0 ;13,0
 p5.front.offset = -6,6
 p5.front.scale = 1,0.33
 p5.range.x  = -6,-433
 ;Player 6
+p6.draworder = 6      ;Ikemen feature
 p6.pos    = 690,52
-p6.mid.spr = 12,0
+p6.red.spr = 12,0     ;Ikemen feature
+p6.red.offset = 6,6   ;Ikemen feature
+p6.red.scale = 1,0.33 ;Ikemen feature
+p6.red.facing = -1    ;Ikemen feature
+;p6.mid.anim = 12
+p6.mid.spr = 13,0
 p6.mid.offset = 6,6
 p6.mid.facing = -1
 p6.mid.scale = 1,0.33
-p6.front.spr = 13,0
+p6.front.spr = 14,0 ;13,0
 p6.front.offset = 6,6
 p6.front.facing = -1
 p6.front.scale = 1,0.33
@@ -423,90 +487,138 @@ p6.range.x = 6,433
 
 ; Ikemen feature
 [Tag_4P Lifebar]
+mid.freeze = 0        ;Ikemen feature: 0 disables mid element wait during gethit/combo (default: 1)
+mid.delay = 0         ;Ikemen feature: frames before mid element starts decreasing (default: 30)
+mid.mult = 1.0        ;Ikemen feature: moving relation between mid value and life (default: 1.0)
+mid.steps = 16        ;Ikemen feature: mid value decreasing steps (default: 8)
 ;Player 1
+p1.draworder = 1      ;Ikemen feature
 p1.pos    = 590,40
 p1.bg0.anim = 34
 p1.bg0.offset = -6,6
 p1.bg1.spr = 35,0
-p1.mid.anim = 12
+p1.red.spr = 12,0     ;Ikemen feature
+p1.red.offset = -6,6  ;Ikemen feature
+p1.red.scale = 1,0.25 ;Ikemen feature
+;p1.mid.anim = 12
+p1.mid.spr = 13,0
 p1.mid.offset = -6,6
 p1.mid.scale = 1,0.25
-p1.front.spr = 13,0
+p1.front.spr = 14,0 ;13,0
 p1.front.offset = -6,6
 p1.front.scale = 1,0.25
 p1.range.x  = -6,-433
 ;Player 2
+p2.draworder = 2      ;Ikemen feature
 p2.pos    = 690,40
 p2.bg0.anim = 34
 p2.bg0.offset = 6,6
 p2.bg0.facing = -1
 p2.bg1.spr = 35,0
 p2.bg1.facing = -1
-p2.mid.anim = 12
+p2.red.spr = 12,0     ;Ikemen feature
+p2.red.offset = 6,6   ;Ikemen feature
+p2.red.scale = 1,0.25 ;Ikemen feature
+p2.red.facing = -1    ;Ikemen feature
+;p2.mid.anim = 12
+p2.mid.spr = 13,0
 p2.mid.offset = 6,6
 p2.mid.facing = -1
 p2.mid.scale = 1,0.25
-p2.front.spr = 13,0
+p2.front.spr = 14,0 ;13,0
 p2.front.offset = 6,6
 p2.front.facing = -1
 p2.front.scale = 1,0.25
 p2.range.x = 6,433
 ;Player 3
+p3.draworder = 3      ;Ikemen feature
 p3.pos    = 590,45
-p3.mid.anim = 12
+p3.red.spr = 12,0     ;Ikemen feature
+p3.red.offset = -6,6  ;Ikemen feature
+p3.red.scale = 1,0.25 ;Ikemen feature
+;p3.mid.anim = 12
+p3.mid.spr = 13,0
 p3.mid.offset = -6,6
 p3.mid.scale = 1,0.25
-p3.front.spr = 13,0
+p3.front.spr = 14,0 ;13,0
 p3.front.offset = -6,6
 p3.front.scale = 1,0.25
 p3.range.x  = -6,-433
 ;Player 4
+p4.draworder = 4      ;Ikemen feature
 p4.pos    = 690,45
-p4.mid.spr = 12,0
+p4.red.spr = 12,0     ;Ikemen feature
+p4.red.offset = 6,6   ;Ikemen feature
+p4.red.scale = 1,0.25 ;Ikemen feature
+p4.red.facing = -1    ;Ikemen feature
+;p4.mid.anim = 12
+p4.mid.spr = 13,0
 p4.mid.offset = 6,6
 p4.mid.facing = -1
 p4.mid.scale = 1,0.25
-p4.front.spr = 13,0
+p4.front.spr = 14,0 ;13,0
 p4.front.offset = 6,6
 p4.front.facing = -1
 p4.front.scale = 1,0.25
 p4.range.x = 6,433
 ;Player 5
+p5.draworder = 5      ;Ikemen feature
 p5.pos    = 590,50
-p5.mid.anim = 12
+p5.red.spr = 12,0     ;Ikemen feature
+p5.red.offset = -6,6  ;Ikemen feature
+p5.red.scale = 1,0.25 ;Ikemen feature
+;p5.mid.anim = 12
+p5.mid.spr = 13,0
 p5.mid.offset = -6,6
 p5.mid.scale = 1,0.25
-p5.front.spr = 13,0
+p5.front.spr = 14,0 ;13,0
 p5.front.offset = -6,6
 p5.front.scale = 1,0.25
 p5.range.x  = -6,-433
 ;Player 6
+p6.draworder = 6      ;Ikemen feature
 p6.pos    = 690,50
-p6.mid.spr = 12,0
+p6.red.spr = 12,0     ;Ikemen feature
+p6.red.offset = 6,6   ;Ikemen feature
+p6.red.scale = 1,0.25 ;Ikemen feature
+p6.red.facing = -1    ;Ikemen feature
+;p6.mid.anim = 12
+p6.mid.spr = 13,0
 p6.mid.offset = 6,6
 p6.mid.facing = -1
 p6.mid.scale = 1,0.25
-p6.front.spr = 13,0
+p6.front.spr = 14,0 ;13,0
 p6.front.offset = 6,6
 p6.front.facing = -1
 p6.front.scale = 1,0.25
 p6.range.x = 6,433
 ;Player 7
+p7.draworder = 7      ;Ikemen feature
 p7.pos    = 590,55
-p7.mid.anim = 12
+p7.red.spr = 12,0     ;Ikemen feature
+p7.red.offset = -6,6  ;Ikemen feature
+p7.red.scale = 1,0.25 ;Ikemen feature
+;p7.mid.anim = 12
+p7.mid.spr = 13,0
 p7.mid.offset = -6,6
 p7.mid.scale = 1,0.25
-p7.front.spr = 13,0
+p7.front.spr = 14,0 ;13,0
 p7.front.offset = -6,6
 p7.front.scale = 1,0.25
 p7.range.x  = -6,-433
 ;Player 8
+p8.draworder = 8      ;Ikemen feature
 p8.pos    = 690,55
-p8.mid.spr = 12,0
+p8.red.spr = 12,0     ;Ikemen feature
+p8.red.offset = 6,6   ;Ikemen feature
+p8.red.scale = 1,0.25 ;Ikemen feature
+p8.red.facing = -1    ;Ikemen feature
+;p8.mid.anim = 12
+p8.mid.spr = 13,0
 p8.mid.offset = 6,6
 p8.mid.facing = -1
 p8.mid.scale = 1,0.25
-p8.front.spr = 13,0
+p8.front.spr = 14,0 ;13,0
 p8.front.offset = 6,6
 p8.front.facing = -1
 p8.front.scale = 1,0.25
@@ -596,6 +708,13 @@ level3.snd = 21,0
 43,16, 0,0, 1
 43,17, 0,0, 1
 
+;-----------------------------------------------------------
+;Ikemen feature
+;[Guardbar]
+
+;-----------------------------------------------------------
+;Ikemen feature
+;[Stunbar]
 
 ;-----------------------------------------------------------
 [Face]
@@ -687,12 +806,14 @@ p8.face.facing = -1
 ; Ikemen feature
 [Tag Face]
 ;Player 1
+p1.draworder = 1      ;Ikemen feature
 p1.pos    = 20,20
 p1.bg0.spr = 50,0
 p1.bg1.anim = 51
 p1.face.spr = 9000,0
 p1.face.facing = 1
 ;Player 2
+p2.draworder = 2      ;Ikemen feature
 p2.pos    = 1260,20
 p2.bg0.spr = 50,0
 p2.bg0.facing = -1
@@ -701,6 +822,7 @@ p2.bg1.facing = -1
 p2.face.spr = 9000,0
 p2.face.facing = -1
 ;Player 3
+p3.draworder = 3      ;Ikemen feature
 p3.pos    = 144,80
 p3.bg0.spr = 70,0
 p3.bg1.anim = 71
@@ -709,6 +831,7 @@ p3.face.spr = 9000,0
 p3.face.scale = 0.4,0.4
 p3.face.facing = 1
 ;Player 4
+p4.draworder = 4      ;Ikemen feature
 p4.pos    = 1136,80
 p4.bg0.spr = 70,0
 p4.bg0.facing = -1
@@ -720,6 +843,7 @@ p4.face.spr = 9000,0
 p4.face.scale = 0.4,0.4
 p4.face.facing = -1
 ;Player 5
+p5.draworder = 5      ;Ikemen feature
 p5.pos    = 194,80
 p5.bg0.spr = 70,0
 p5.bg1.anim = 71
@@ -728,6 +852,7 @@ p5.face.spr = 9000,0
 p5.face.scale = 0.4,0.4
 p5.face.facing = 1
 ;Player 6
+p6.draworder = 6      ;Ikemen feature
 p6.pos    = 1086,80
 p6.bg0.spr = 70,0
 p6.bg0.facing = -1
@@ -739,6 +864,7 @@ p6.face.spr = 9000,0
 p6.face.scale = 0.4,0.4
 p6.face.facing = -1
 ;Player 7
+p7.draworder = 7      ;Ikemen feature
 p7.pos    = 244,80
 p7.bg0.spr = 70,0
 p7.bg1.anim = 71
@@ -747,6 +873,7 @@ p7.face.spr = 9000,0
 p7.face.scale = 0.4,0.4
 p7.face.facing = 1
 ;Player 8
+p8.draworder = 8      ;Ikemen feature
 p8.pos    = 1036,80
 p8.bg0.spr = 70,0
 p8.bg0.facing = -1
@@ -803,56 +930,78 @@ p2.teammate.face.facing = -1
 
 ;-----------------------------------------------------------
 [Name]
+;Player 1
 p1.pos = 142,35
 ;p1.bg. =
 p1.name.font = 3,3, 1
-;p2.bg. =
+;Player 2
 p2.pos = 1138,35
+;p2.bg. =
 p2.name.font = 3,1, -1
 
 [Simul Name]
+;Player 1
 p1.pos = 142,35
+;p1.bg. =
 p1.name.font = 3,3, 1
+;Player 2
 p2.pos = 1138,35
+;p2.bg. =
 p2.name.font = 3,1, -1
+;Player 3
 p3.pos = 200,85
+;p3.bg. =
 p3.name.font = 3,3, 1
 p3.name.scale = 0.5,1
+;Player 4
 p4.pos = 1080,85
+;p4.bg. =
 p4.name.font = 3,1, -1
 p4.name.scale = 0.5,1
 
 ; Ikemen feature
 [Simul_3P Name]
+;Player 1
 p1.pos = 142,35
 ;p1.bg. =
 p1.name.font = 3,3, 1
-;p2.bg. =
+;Player 2
 p2.pos = 1138,35
+;p2.bg. =
 p2.name.font = 3,1, -1
 
 ; Ikemen feature
 [Simul_4P Name]
+;Player 1
 p1.pos = 142,35
 ;p1.bg. =
 p1.name.font = 3,3, 1
-;p2.bg. =
+;Player 2
 p2.pos = 1138,35
+;p2.bg. =
 p2.name.font = 3,1, -1
 
 ; Ikemen feature
 [Tag Name]
-p1.pos = 142,35
-p1.name.font = 3,3, 1
-p2.pos = 1138,35
-p2.name.font = 3,1, -1
-
-[Turns Name]
+;Player 1
+p1.draworder = 1      ;Ikemen feature
 p1.pos = 142,35
 ;p1.bg. =
 p1.name.font = 3,3, 1
-;p2.bg. =
+;Player 2
+p2.draworder = 2      ;Ikemen feature
 p2.pos = 1138,35
+;p2.bg. =
+p2.name.font = 3,1, -1
+
+[Turns Name]
+;Player 1
+p1.pos = 142,35
+;p1.bg. =
+p1.name.font = 3,3, 1
+;Player 2
+p2.pos = 1138,35
+;p2.bg. =
 p2.name.font = 3,1, -1
 
 ;-----------------------------------------------------------
