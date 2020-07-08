@@ -449,8 +449,8 @@ p2.teammenu.ratio7.icon.facing = 1         ;Ikemen feature
 p2.teammenu.ratio7.icon.scale = 1.0, 1.0   ;Ikemen feature
 
 teammenu.itemname.single = Single ;Ikemen feature
-teammenu.itemname.tag = Tag       ;Ikemen feature
 teammenu.itemname.simul = Simul   ;Ikemen feature
+teammenu.itemname.tag = Tag       ;Ikemen feature
 teammenu.itemname.turns = Turns   ;Ikemen feature
 teammenu.itemname.ratio = Ratio   ;Ikemen feature
 
@@ -466,8 +466,8 @@ record.offset = 640, 640     ;Ikemen feature
 record.font = 2, 0, 0        ;Ikemen feature
 record.font.scale = 1.0, 1.0 ;Ikemen feature
 ; format: %m = minutes, %s = seconds, %x = milliseconds, %p = score, %c = char name, %n = player name, \n = newline
-record.text.scorechallenge = "- BEST RECORD -\n%c %p PTS: %n" ;Ikemen feature
-record.text.timechallenge = "- BEST RECORD -\n%c %m:%s.%x: %n" ;Ikemen feature
+record.scorechallenge.text = "- BEST RECORD -\n%c %p PTS: %n" ;Ikemen feature
+record.timechallenge.text = "- BEST RECORD -\n%c %m:%s.%x: %n" ;Ikemen feature
 
 [Begin Action 160] ;P1 active cursor
 160,6, 0,0, 1
@@ -745,6 +745,8 @@ debuginfo = 0             ;Set to 0 to hide debugging info (debug mode only)
 ;Continue screen definition
 [Continue Screen]
 enabled = 1               ;Set to 1 to show continue screen, 0 to disable
+fadein.time = 8
+fadeout.time = 120
 pos = 640,240             ;Position
 ;***Known issue*** The display elements below use the fight.def resources
 ;instead of the ones defined in this file.
@@ -864,7 +866,7 @@ winstext.font = 3,0,0
 winstext.offset = 640,240
 winstext.displaytime = -1
 winstext.layerno = 2
-fadein.time = 0
+fadein.time = 32
 show.time = 300
 fadeout.time = 64
 roundstowin = 5 ;Number of rounds to get win pose (lose pose otherwise)
@@ -1009,8 +1011,8 @@ menu.itemname.menugameplay.menuteam = "Team Settings"
 menu.itemname.menugameplay.menuteam.singlevsteamlife = "Single VS Team Life"
 menu.itemname.menugameplay.menuteam.teamlifeadjustment = "Team Life Adjustment"
 menu.itemname.menugameplay.menuteam.teampowershare = "Team Power Share"
-menu.itemname.menugameplay.menuteam.simulloseko = "Simul Player KOed Lose"
-menu.itemname.menugameplay.menuteam.tagloseko = "Tag Partner KOed Lose"
+menu.itemname.menugameplay.menuteam.losekosimul = "Simul Player KOed Lose"
+menu.itemname.menugameplay.menuteam.losekotag = "Tag Partner KOed Lose"
 menu.itemname.menugameplay.menuteam.turnsrecoverybase = "Turns Recovery Base"
 menu.itemname.menugameplay.menuteam.turnsrecoverybonus = "Turns Recovery Bonus"
 menu.itemname.menugameplay.menuteam.empty = ""

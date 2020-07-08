@@ -6,6 +6,11 @@ group = 300
 number = 0
 file = 300-0.act
 
+[PaletteDef]
+group = 310
+number = 0
+file = 310-0.act
+
 [SpriteDef]
 group = 300
 image = 0
@@ -131,3 +136,39 @@ yaxis = 0
 flags = 0
 palette = 300,0
 file = 300-6.png
+
+[SpriteDef]
+group = 310
+image = 0
+xaxis = 0
+yaxis = 0
+flags = 0
+palette = 310,0
+file = 310-0.png
+
+[SpriteDef]
+group = 311
+image = 0
+xaxis = 0
+yaxis = 0
+flags = 0
+palette = 310,0
+file = 311-0.png
+
+[SpriteDef]
+group = 312
+image = 0
+xaxis = 0
+yaxis = 0
+flags = 0
+palette = 310,0
+file = 312-0.png
+
+[SpriteDef]
+group = 313
+image = 0
+xaxis = 0
+yaxis = 0
+flags = 0
+palette = 310,0
+file = 313-0.png

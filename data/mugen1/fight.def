@@ -17,6 +17,11 @@
 ; this file.
 
 ;-----------------------------------------------------------
+; Ikemen feature
+[Info]
+localcoord = 1280,720 ;Local coordinate space width and height
+
+;-----------------------------------------------------------
 ;Directories are checked in this order:
 ;1. current directory fight.def is in
 ;2. data/
@@ -1101,14 +1106,18 @@ TO.text    = "Time Over"
 TO.displaytime = 60
 TO.snd     = 2,2
 KO.sndtime = 0             ;Time to play sound for KO, DKO and TO.
-slow.time  = 60            ;Time for KO slowdown (in ticks)
+
+slow.time = 60             ;Total KO slowdown length (in ticks)
+slow.fadetime = 45         ;Ikemen feature: KO slowdown fade length (default: 75% of slow.time)
+slow.speed = 0.25          ;Ikemen feature: KO slowdown game speed adjustment (default: 0.25)
+
 over.waittime = 45         ;Time to wait after KO before player control is stopped
 over.hittime = 10          ;Time after KO that players can still damage each other (for double KO)
 over.wintime = 45          ;Time to wait before players change to win states
 over.time = 210            ;Time to wait before round ends
-; Time to wait before showing win/draw message
-win.time = 60
+
 ; Win text
+win.time = 60              ;Time to wait before showing win/draw message
 win.offset = 640, 320
 win.font = 1,0
 win.text = "%s Wins"
@@ -1133,6 +1142,14 @@ draw.offset = 640, 320
 draw.font = 1,0
 draw.text = "Draw Game"
 draw.displaytime = 540
+
+; Fade
+fadein.time = 30           ;Ikemen feature: round start fade time (default: 30)
+fadein.col = 0, 0, 0       ;Ikemen feature: round start fade color (default: 0,0,0)
+fadeout.time = 30          ;Ikemen feature: round end fade time (default: 30, extends over.time if fadeout.time is longer)
+fadeout.col = 0, 0, 0      ;Ikemen feature: round end fade color (default: 0,0,0)
+shutter.time = 15          ;Ikemen feature: skip intro fade time (default: 15, whole anim is twice as long)
+shutter.col = 0, 0, 0      ;Ikemen feature: skip intro fade color (default: 0,0,0)
 
 ;"Fight!" Animation
 [Begin Action 80]

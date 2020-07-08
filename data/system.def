@@ -1,18 +1,5 @@
 ﻿; Definitions of system screens
 
-; *** DO NOT MODIFY OR OVERWRITE THIS FILE ***
-; To customize, make a copy of this file in a subdirectory of your motif's name.
-; The images and sounds used on this screenpack are under CC BY-NC 3.0 (Non-Commercial) with atribution to Elecbyte.
-
-; Notes about fonts:
-;   - up to 10 fonts can be specified in the [Files] section.
-;   - fonts indexed here do not refer to the ones in fight.def
-;   - fonts are search in directories in the following order:
-;     1. system directory
-;     2. mugen program directory (not recommended to keep custom fonts here)
-;     3. data/ (not recommended to keep custom fonts here)
-;     4. font/
-
 ;----------------------------
 [Info]
 name = "Default"          ;Name of motif
@@ -43,6 +30,7 @@ fight = fight.def         ;Fight definition filename
 font1 = f-4x6.def         ;System fonts
 font2 = f-6x9.def         ;System fonts
 font3 = jg.fnt            ;System fonts
+font4 = Open_Sans.def
 
 ;----------------------------
 [Music]
@@ -385,8 +373,8 @@ p2.teammenu.ratio7.icon.facing = 1         ;Ikemen feature
 p2.teammenu.ratio7.icon.scale = 0.40, 0.40 ;Ikemen feature
 
 teammenu.itemname.single = Single ;Ikemen feature
-teammenu.itemname.tag = Tag       ;Ikemen feature
 teammenu.itemname.simul = Simul   ;Ikemen feature
+teammenu.itemname.tag = Tag       ;Ikemen feature
 teammenu.itemname.turns = Turns   ;Ikemen feature
 teammenu.itemname.ratio = Ratio   ;Ikemen feature
 
@@ -402,8 +390,8 @@ record.offset = 159, 39      ;Ikemen feature
 record.font = 3, 0, 0        ;Ikemen feature
 record.font.scale = 1.0, 1.0 ;Ikemen feature
 ; format: %m = minutes, %s = seconds, %x = milliseconds, %p = score, %c = char name, %n = player name, \n = newline
-record.text.scorechallenge = "- BEST RECORD -\n%c %p PTS: %n" ;Ikemen feature
-record.text.timechallenge = "- BEST RECORD -\n%c %m:%s.%x: %n" ;Ikemen feature
+record.scorechallenge.text = "- BEST RECORD -\n%c %p PTS: %n" ;Ikemen feature
+record.timechallenge.text = "- BEST RECORD -\n%c %m:%s.%x: %n" ;Ikemen feature
 
 ;Sounds
 
@@ -561,7 +549,7 @@ vsscreen.enabled = 0      ;Set to 1 to display versus screen, 0 to disable
 title.waittime = 600      ;Time to wait at title before starting demo mode
 fight.endtime = 1500      ;Time to display the fight before returning to title
 fight.playbgm = 0         ;Set to 1 to enable in-fight BGM, 0 to disable
-fight.stopbgm = 1		  ;Set to 1 to stop title BGM (only if playbgm = 0)
+fight.stopbgm = 1         ;Set to 1 to stop title BGM (only if playbgm = 0)
 fight.bars.display = 0    ;Set to 1 to display lifebar, 0 to disable
 intro.waitcycles = 1      ;Cycles to wait before intro cutscene is played again
 debuginfo = 0             ;Set to 0 to hide debugging info (debug mode only)
@@ -570,6 +558,8 @@ debuginfo = 0             ;Set to 0 to hide debugging info (debug mode only)
 ;Continue screen definition
 [Continue Screen]
 enabled = 1               ;Set to 1 to show continue screen, 0 to disable
+fadein.time = 8
+fadeout.time = 120
 
 ;-------------------------------------------------------------------
 ;Game over screen definition
@@ -671,7 +661,7 @@ winstext.font = 3,0,0
 winstext.offset = 159,70
 winstext.displaytime = -1
 winstext.layerno = 2
-fadein.time = 0
+fadein.time = 32
 show.time = 300
 fadeout.time = 64
 roundstowin = 5           ;Number of rounds to get win pose (lose pose otherwise)
@@ -747,8 +737,8 @@ menu.itemname.menugameplay.menuteam = "Team Settings"
 menu.itemname.menugameplay.menuteam.singlevsteamlife = "Single VS Team Life"
 menu.itemname.menugameplay.menuteam.teamlifeadjustment = "Team Life Adjustment"
 menu.itemname.menugameplay.menuteam.teampowershare = "Team Power Share"
-menu.itemname.menugameplay.menuteam.simulloseko = "Simul Player KOed Lose"
-menu.itemname.menugameplay.menuteam.tagloseko = "Tag Partner KOed Lose"
+menu.itemname.menugameplay.menuteam.losekosimul = "Simul Player KOed Lose"
+menu.itemname.menugameplay.menuteam.losekotag = "Tag Partner KOed Lose"
 menu.itemname.menugameplay.menuteam.turnsrecoverybase = "Turns Recovery Base"
 menu.itemname.menugameplay.menuteam.turnsrecoverybonus = "Turns Recovery Bonus"
 menu.itemname.menugameplay.menuteam.empty = ""
@@ -805,3 +795,177 @@ spriteno = 100,0
 start = 0,0
 tile  = 1,1
 velocity = -1, -1
+
+;-------------------------------------------------------------------
+;Replay select screen definition
+[Replay Info] ;Ikemen feature
+fadein.time = 10
+fadein.col = 0, 0, 0
+fadeout.time = 10
+fadeout.col = 0, 0, 0
+title.offset = 159, 19
+title.font = 2, 0, 0
+title.font.scale = 1.0, 1.0
+;title.font.height = -1
+title.text = "REPLAY SELECT"
+menu.pos = 85, 33
+menu.item.font = 2, 0, 1, 191, 191, 191
+menu.item.font.scale = 1.0, 1.0
+;menu.item.font.height = -1
+menu.item.active.font = 2, 0, 1
+menu.item.active.font.scale = 1.0, 1.0
+;menu.item.active.font.height = -1
+menu.item.spacing = 150, 13
+menu.itemname.back = "Back"
+;menu.window.margins.y = 0, 0
+menu.window.visibleitems = 15
+;menu.arrow.up.anim = 
+menu.arrow.up.spr = 310, 0
+menu.arrow.up.offset = 372, -7
+menu.arrow.up.facing = 1
+menu.arrow.up.scale = 0.5, 0.5
+;menu.arrow.down.anim = 
+menu.arrow.down.spr = 311, 0
+menu.arrow.down.offset = 372, 412
+menu.arrow.down.facing = 1
+menu.arrow.down.scale = 0.5, 0.5
+menu.boxcursor.visible = 1
+menu.boxcursor.coords = -5, -10, 154, 2
+menu.boxcursor.col = 255, 255, 255
+menu.boxcursor.alpharange = 10, 40, 2, 255, 255, 0
+menu.boxbg.visible = 1
+menu.boxbg.col = 0, 0, 0
+menu.boxbg.alpha = 20, 100
+menu.title.uppercase = 1
+cursor.move.snd = 100, 0
+cursor.done.snd = 100, 1
+cancel.snd = 100, 2
+
+;-------------------
+;Replay select screen background
+[ReplayBGdef] ;Ikemen feature
+
+[ReplayBG 1]
+type  = normal
+spriteno = 100,0
+start = 0,0
+tile  = 1,1
+velocity = -1, -1
+
+;-------------------------------------------------------------------
+;ESC menu screen definition (currently forced to 320x240 localcoord)
+[Menu Info] ;Ikemen feature
+
+fadein.time = 0
+fadein.col = 0, 0, 0
+fadeout.time = 0
+fadeout.col = 0, 0, 0
+title.offset = 159, 19
+title.font = 2, 0, 0
+title.font.scale = 1.0, 1.0
+title.font.height = -1
+title.text = "PAUSE"
+menu.pos = 85, 33
+menu.item.font = 2, 0, 1, 191, 191, 191, 255, 0
+menu.item.font.scale = 1.0, 1.0
+menu.item.font.height = -1
+menu.item.active.font = 2, 0, 1
+menu.item.active.font.scale = 1.0, 1.0
+menu.item.active.font.height = -1
+menu.item.selected.font = 2, 0, 1, 0, 247, 247, 255, 0
+menu.item.selected.font.scale = 1.0, 1.0
+menu.item.selected.font.height = -1
+menu.item.selected.active.font = 2, 0, 1, 0, 247, 247, 255, 0
+menu.item.selected.active.font.scale = 1.0, 1.0
+menu.item.selected.active.font.height = -1
+menu.item.value.font = 2, 0, -1, 191, 191, 191, 255, 0
+menu.item.value.font.scale = 1.0, 1.0
+menu.item.value.font.height = -1
+menu.item.value.active.font = 2, 0, -1
+menu.item.value.active.font.scale = 1.0, 1.0
+menu.item.value.active.font.height = -1
+menu.item.spacing = 150, 13
+menu.window.margins.y = 0, 0
+menu.window.visibleitems = 15
+;menu.arrow.up.anim = 
+;menu.arrow.up.spr = 
+menu.arrow.up.offset = 0, 0
+menu.arrow.up.facing = 1
+menu.arrow.up.scale = 1.0, 1.0
+;menu.arrow.down.anim = 
+;menu.arrow.down.spr = 
+menu.arrow.down.offset = 0, 0
+menu.arrow.down.facing = 1
+menu.arrow.down.scale = 1.0, 1.0
+menu.boxcursor.visible = 1
+menu.boxcursor.coords = -5, -10, 154, 2
+menu.boxcursor.col = 255, 255, 255
+menu.boxcursor.alpharange = 10, 40, 2, 255, 255, 0
+menu.boxbg.visible = 1
+menu.boxbg.col = 0, 0, 0
+menu.boxbg.alpha = 20, 100
+menu.title.uppercase = 1
+boxbg.coords = 0, 0, 320, 240
+boxbg.col = 0, 0, 0
+boxbg.alpha = 20, 100
+cursor.move.snd = 100, 0
+cursor.done.snd = 100, 1
+cancel.snd = 100, 2
+enter.snd = -1, -1
+movelist.pos = 10, 20
+movelist.label.offset = 150, 0
+movelist.label.font = 4, 0, 0
+movelist.label.font.scale = 0.3, 0.3
+movelist.label.font.height = -1
+movelist.label.text = "%s"
+movelist.label.uppercase = 0
+movelist.text.offset = 0, 12
+movelist.text.font = 4, 0, 1
+movelist.text.font.scale = 0.3, 0.3
+movelist.text.font.height = 36
+movelist.text.spacing = 1, 1
+movelist.text.text = "Command List not found."
+movelist.glyphs.offset = 0, 2
+movelist.glyphs.scale = 1.0, 1.0
+movelist.glyphs.spacing = 2
+movelist.window.width = 300
+movelist.window.margins.y = 20, 1
+movelist.window.visibleitems = 18
+movelist.boxbg.coords = 0, 0, 320, 240
+movelist.boxbg.col = 0, 0, 0
+movelist.boxbg.alpha = 20, 100
+;movelist.arrow.up.anim = 
+;movelist.arrow.up.spr = 
+movelist.arrow.up.offset = 0, 0
+movelist.arrow.up.facing = 1
+movelist.arrow.up.scale = 1.0, 1.0
+;movelist.arrow.down.anim = 
+;movelist.arrow.down.spr = 
+movelist.arrow.down.offset = 0, 0
+movelist.arrow.down.facing = 1
+movelist.arrow.down.scale = 1.0, 1.0
+
+menu.itemname.back = "Continue"
+menu.itemname.menuinput = "Button Config"
+menu.itemname.menuinput.keyboard = "Key Config"
+menu.itemname.menuinput.gamepad = "Joystick Config"
+menu.itemname.menuinput.empty = ""
+menu.itemname.menuinput.inputdefault = "Default"
+menu.itemname.menuinput.back = "Back"
+menu.itemname.commandlist = "Command List"
+menu.itemname.characterchange = "Character Change"
+menu.itemname.exit = "Exit"
+
+;-------------------
+;ESC menu screen background
+[MenuBGdef] ;Ikemen feature
+
+;-------------------------------------------------------------------
+;Training menu screen definition
+;[Training Info] ;Ikemen feature
+;uses [Menu Info] data if not declared
+
+;-------------------
+;Training menu screen background
+;[TrainingBGdef] ;Ikemen feature
+;uses [MenuBGdef] data if not declared
