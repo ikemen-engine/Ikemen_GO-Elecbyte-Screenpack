@@ -114,14 +114,6 @@ flags = 0
 file = _B.png
 
 [SpriteDef]
-group = 45
-image = 0
-xaxis = 0
-yaxis = 64
-flags = 0
-file = _0.png
-
-[SpriteDef]
 group = 46
 image = 0
 xaxis = 0
@@ -207,7 +199,7 @@ image = 0
 xaxis = 0
 yaxis = 64
 flags = 0
-file = ^SP.png
+file = ^HP.png
 
 [SpriteDef]
 group = 60
@@ -231,7 +223,7 @@ image = 0
 xaxis = 0
 yaxis = 64
 flags = 0
-file = ^SK.png
+file = ^HK.png
 
 [SpriteDef]
 group = 63
@@ -530,6 +522,14 @@ flags = 0
 file = _MAX.png
 
 [SpriteDef]
+group = 124
+image = 0
+xaxis = 0
+yaxis = 64
+flags = 0
+file = _EX.png
+
+[SpriteDef]
 group = 127
 image = 0
 xaxis = 0
@@ -560,14 +560,6 @@ xaxis = 0
 yaxis = 64
 flags = 0
 file = _(.png
-
-[SpriteDef]
-group = 133
-image = 0
-xaxis = 0
-yaxis = 64
-flags = 0
-file = ^Q.png
 
 [SpriteDef]
 group = 135

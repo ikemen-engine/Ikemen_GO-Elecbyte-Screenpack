@@ -4,6 +4,11 @@ number = 0
 file = 5000-0.act
 
 [PaletteDef]
+group = 5600
+number = 0
+file = 5600-0.act
+
+[PaletteDef]
 group = 9000
 number = 0
 file = 9000-0.act
@@ -151,6 +156,33 @@ yaxis = 21
 flags = 0
 palette = 5000,0
 file = 5410-6.png
+
+[SpriteDef]
+group = 5600
+image = 0
+xaxis = 39
+yaxis = 33
+flags = 0
+palette = 5600,0
+file = 5600-0.png
+
+[SpriteDef]
+group = 5600
+image = 1
+xaxis = 39
+yaxis = 33
+flags = 0
+palette = 5600,0
+file = 5600-1.png
+
+[SpriteDef]
+group = 5600
+image = 2
+xaxis = 39
+yaxis = 33
+flags = 0
+palette = 5600,0
+file = 5600-2.png
 
 [SpriteDef]
 group = 9000

@@ -1,0 +1,75 @@
+
+[SoundDef]
+group = 400
+sample = 0
+file = 400-0.wav
+
+[SoundDef]
+group = 500
+sample = 0
+file = 500-0.wav
+
+[SoundDef]
+group = 600
+sample = 0
+file = 600-0.wav
+
+[SoundDef]
+group = 600
+sample = 1
+file = 600-1.wav
+
+[SoundDef]
+group = 9000
+sample = 0
+file = 9000-0.wav
+
+[SoundDef]
+group = 9000
+sample = 1
+file = 9000-1.wav
+
+[SoundDef]
+group = 9000
+sample = 2
+file = 9000-2.wav
+
+[SoundDef]
+group = 9000
+sample = 3
+file = 9000-3.wav
+
+[SoundDef]
+group = 9000
+sample = 4
+file = 9000-4.wav
+
+[SoundDef]
+group = 9000
+sample = 5
+file = 9000-5.wav
+
+[SoundDef]
+group = 9000
+sample = 6
+file = 9000-6.wav
+
+[SoundDef]
+group = 9000
+sample = 7
+file = 9000-7.wav
+
+[SoundDef]
+group = 9000
+sample = 8
+file = 9000-8.wav
+
+[SoundDef]
+group = 9000
+sample = 9
+file = 9000-9.wav
+
+[SoundDef]
+group = 9000
+sample = 10
+file = 9000-10.wav
