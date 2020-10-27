@@ -22,6 +22,7 @@ sprite  = kfm720.sff        ;Sprite
 anim    = kfm720.air        ;Animation
 sound   = kfm.snd           ;Sound
 ai      = kfm720.ai         ;AI hints data (not used)
+movelist = movelist.dat     ;Ikemen feature: Movelist
 
 ; Maps character selection buttons to palette numbers.
 [Palette Keymap]

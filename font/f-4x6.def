@@ -1,7 +1,5 @@
-﻿; 4x6 variable - 6 point font
-; Indexed 1-bank
-; Bank 0 - mono
-
+﻿;[Info]
+;default debug font with black outline around characters added by inktrebuchet.
 [FNT v2]
 ; FNT v2 version number.  Don't change this.
 fntversion = 2,00
@@ -13,12 +11,10 @@ name = "4x6 variable"
 [Def]
 ; This is a bitmap font
 Type = bitmap
-; Bank numbers are mapped to palette numbers (0, bank).
-BankType = palette
 ; Size of font: width, height.  Width is used for spaces.
-Size = 3,6
+Size = 5,6
 ; Spacing between font glyphs: width, height.
-Spacing = 1,0
+Spacing = -1,0
 ; Drawing offset: x, y.
 Offset = 0,1
 ; Filename of the sff containing the glyphs.  Use sff v2 only.

@@ -1,0 +1,2631 @@
+#ZSS language: https://github.com/Windblade-GR01/Ikemen-GO/wiki/ZSS
+#ZSS syntax highlighter for Notepad++: https://github.com/K4thos/npp_zss
+#-------------------------------------------------------------------------------
+#Commenting in ZSS
+#You may notice that the ";" character is now replaced with the "#" character.
+#This is because ";" is now used to separate parameters in sctrls rather than a
+#blank space.
+
+#===============================================================================
+# Functions
+#===============================================================================
+#Used to avoid repeating change state code to reference returning to state 0 or
+#11 if crouching. $type is used to specify if it's standing or crouching.
+#1 - crouching
+#0 - standing
+[Function EndState(type)]
+if AnimTime = 0 {
+	ChangeState{value: 11 * $type; ctrl: RoundState > 1}
+}
+
+#-------------------------------------------------------------------------------
+#Used to call system sounds from the screenpack
+[Function SysSnd(b, s, c)]
+PlaySnd{value: F$b, $s; channel: $c}
+
+#-------------------------------------------------------------------------------
+#Used to call sounds coming from this character
+[Function CSnd(bank, sound, c)]
+PlaySnd{value: S$bank, $sound; channel: $c}
+
+#-------------------------------------------------------------------------------
+#Used to apply PalFX during EX moves
+[Function EXFX(time)]
+PalFx{time: $time; add: 32, 16, 0; sinadd: 64, 32, 5, 3}
+
+#===============================================================================
+# Walk Override
+#===============================================================================
+[Statedef 20; type: S; physics: S; sprpriority: 0;]
+
+if Command = "holdback"&& !AILevelF || AILevelF && Map(AIw) = -1 {
+	VelSet{x: Const(velocity.walk.back.x)}
+} else if Command = "holdfwd" && !AILevelF || AILevelF && Map(AIw) = 1 {
+	VelSet{x: Const(velocity.walk.fwd.x)}
+}
+if Vel X > 0 {
+	if Cond(Anim = 5, AnimTime = 0, Anim != 20) {
+		ChangeAnim{value: 20}
+	}
+} else if Vel X < 0 {
+	if Cond(Anim = 5, AnimTime = 0, Anim != 21) {
+		ChangeAnim{value: 21}
+	}
+}
+
+#===============================================================================
+# Run forward Override
+#===============================================================================
+[Statedef 100; type: S; physics: S; anim: 100; sprpriority: 1;]
+
+VelSet{x: Const(velocity.run.fwd.x)}
+
+AssertSpecial{flag: nowalk; flag2: noautoturn}
+
+#the AI should not crouch while running
+if AILevelF {
+	AssertSpecial{flag:nocrouch}
+}
+
+if Command != "holdfwd" && !AILevelF {
+	ChangeState{value: 0}
+}
+
+#===============================================================================
+# Lose by Time Over
+#===============================================================================
+# ZSS difficulty: basic
+#This is how statedefs are defined in ZSS. It must always end with a ";" or it
+#will result in a crash. 
+[Statedef 170;
+type: S; movetype: I; physics: S;
+anim: 170; ctrl: 0; velset: 0, 0;
+sprpriority: 1;]
+
+#If you used a trigger that normally read "trigger1 = 1" you can just declare
+#the sctrl with no condition like below.
+NotHitBy{value: SCA; time: 1}
+
+#===============================================================================
+# Win state decider
+#===============================================================================
+# ZSS difficulty: basic
+[Statedef 180;
+type: S; movetype: I; physics: S;
+anim: -2; ctrl: 0; velset: 0, 0;
+sprpriority: 1;]
+
+ChangeState{value: 181; ctrl: 0}
+
+#===============================================================================
+# Win pose 1 - Bow
+#===============================================================================
+# ZSS difficulty: basic
+[Statedef 181;
+type: S; movetype: I; physics: S;
+anim: 181; ctrl: 0; velset: 0, 0;
+sprpriority: 1;]
+
+#trigger is replaced with a simple "if". All conditions can be handled the same
+#with multiple if blocks. Optional Assert roundnotover
+if AnimTime < -2 {
+	AssertSpecial{flag: roundnotover}
+}
+
+NotHitBy{value: SCA; time: 1}
+
+#===============================================================================
+# Introduction
+#===============================================================================
+# ZSS difficulty: basic
+[Statedef 191;
+type: S; movetype: I; physics: S;
+anim: 190; ctrl: 0; velset: 0, 0;
+sprpriority: 1;]
+
+if RoundState = 0 {
+	ChangeAnim{value: 190}
+}
+
+#Assert this until you want "round 1, fight" to begin
+AssertSpecial{flag: intro}
+
+#You can delete the following two controllers if you're building your own
+#character using KFM. These are the wood pieces that KFM kicks. This is how
+#persistent = 0 is applied, if this were an sctrl that has no trigger, the
+#persistent(0) would be that trigger e.g. persistent(0){sctrl{}}
+persistent(0) if RoundState != 0 {
+	Explod{
+		anim: 191;
+		postype: p1;
+		pos: 260, -90;
+		velocity: -4.2, -7;
+		accel: 0, .32;
+		removetime: 48;
+	}
+}
+
+if AnimElemTime(7) = 1 {
+	Explod{
+		anim: 192;
+		postype: p1;
+		pos: 60, -70;
+		velocity: 2, -4;
+		accel: 0, .32;
+		removetime: 35;
+	}
+}
+
+#You can delete the following two controllers if you're building your own
+#character using KFM. These play back the sounds of the wood block being broken.
+if AnimElem = 7 {
+	#It is worth mentioning that if you want to use the rest of the parameters
+	#a PlaySnd uses, you can use it just the same as below:
+	# Playsnd{value: F5, 2; channel: 1; volume: -40}
+	call SysSnd(5, 2, 1);
+}
+
+if AnimElemTime(7) = 3 {
+	call SysSnd(5, 3, 2);
+}
+
+#Change to stand state when done
+call EndState(0);
+
+#-------------------------------------------------------------------------------
+[Statedef 195;
+type: S; movetype: I; physics: S;
+anim: 195; ctrl: 0; velset: 0, 0;
+sprpriority: 2;]
+
+if Time = 40 {
+	CtrlSet{value: 1}
+}
+
+#Change to stand state when done
+call EndState(0);
+
+#===============================================================================
+# Stand Light Punch
+#===============================================================================
+# ZSS difficulty: easy
+[Statedef 200;
+type: S;                              #State-type: S-stand, C-crouch, A-air, L-liedown
+movetype: A;                          #Move-type: A-attack, I-idle, H-gethit
+physics: S;                           #Physics: S-stand, C-crouch, A-air
+juggle: 1;                            #Number of air juggle points move takes
+#Commonly-used controllers:
+velset: 0, 0;                         #Set velocity (x, y) (Def: no change)
+ctrl: 0;                              #Set ctrl (Def: no change)
+anim: 200;                            #Change animation (Def: no change)
+poweradd: 10;                         #Power to add (Def: 0)
+sprpriority: 2;]                      #Set p1's sprite layering priority to 2 (in front)
+
+if AnimElem = 3 { 
+	#When using zss sctrls, you must have the bracket on the same line as the
+	#sctrl's name as specified below e.g. "HitDef{"
+	HitDef{
+		attr: S, NA;                  #Attribute: Standing, Normal Attack
+		damage: 23, 0;                #Damage that move inflicts, guard damage
+		animtype: Light;              #Animation type: Light, Medium, Heavy, Back (def: Light)
+		guardflag: MA;                #Flags on how move is to be guarded against
+		hitflag: MAF;                 #Flags of conditions that move can hit
+		priority: 3, Hit;             #Attack priority: 0 (least) to 7 (most), 4 default
+                                      #Hit/Miss/Dodge type (Def: Hit)
+		pausetime: 8, 8;              #Time attacker pauses, time opponent shakes
+		sparkno: 0;                   #Spark anim no (Def: set above)
+		sparkxy: -10, -76;            #X-offset for the "hit spark" rel. to p2,
+                                      #Y-offset for the spark rel. to p1
+		hitsound: 5, 0;               #Sound to play on hit
+		guardsound: 6, 0;             #Sound to play on guard
+		dizzypoints: -ceil(enemynear,DizzyPointsMax * .04); #4% of opponents max dizzy points
+		guardpoints: -ceil(enemynear,GuardPointsMax * .02); #2% of opponents guard points
+		ground.type: High;            #Type: High, Low, Trip (def: Normal)
+		ground.slidetime: 5;          #Time that the opponent slides back
+		ground.hittime: 11;           #Time opponent is in hit state
+		ground.velocity: -4;          #Velocity at which opponent is pushed
+		airguard.velocity: -1.9, -.8; #Guard velocity in air (def: (air.xvel*1.5, air.yvel/2))
+		air.type: High;               #Type: High, Low, Trip (def: same as ground.type)
+		air.velocity: -1.4, -3;       #X-velocity at which opponent is pushed,
+                                      #Y-velocity at which opponent is pushed
+		air.hittime: 15;              #Time before opponent regains control in air
+	}
+}
+
+if Time = 1 {
+	#It is worth mentioning that if you want to use the rest of the parameters
+	#a PlaySnd uses, you can use it just the same as below:
+	# Playsnd{value: S0, 0; channel: 1}
+	call CSnd(0, 0, 1);
+}
+
+#Change to stand state when done
+call EndState(0);
+
+#===============================================================================
+# Standing strong punch
+#===============================================================================
+# ZSS difficulty: easy
+# Note the width controller. It makes KFM's push box larger, so he doesn't
+# stand so close to the opponent. Hit Ctrl-C and look at the red bar at his
+# feet.
+# The sprpriority for this state is at -1, instead of the usual 2 for
+# attacks. This makes KFM appear behind the opponent initially.
+# The SprPriority controller in [State 210, 4] brings KFM to the front when
+# his arm has swung over.
+# To stop KFM from pausing in his swing frame, there is a ChangeAnim in
+# [State 210, 3] that detects if the hit has come in contact with the
+# opponent during that frame, and switches to the next animation element
+# (notice the elem=6 parameter). If you don't see what I mean, try commenting
+# out that controller, then hit someone with this attack.
+[Statedef 210;
+type: S; movetype: A; physics: S;
+juggle: 4; poweradd: 30; ctrl: 0;
+velset: 0, 0; anim: 210;
+sprpriority: -1;]
+
+if AnimElemTime(2) >= 0 && AnimElemTime(7) < 0 {
+	Width{value: 15, 0}
+}
+
+if Time = 2 {
+	#It is worth mentioning that if you want to use the rest of the parameters
+	#a PlaySnd uses, you can use it just the same as below:
+	# Playsnd{value: S0, 4; channel: 1}
+	call CSnd(0, 4, 1);
+}
+
+if AnimElem = 3 {
+	HitDef{
+		attr: S, NA;
+		animtype: Medium;
+		damage: 57;
+		guardflag: MA;
+		pausetime: 12, 12;
+		sparkno: 1;
+		sparkxy: -10, -70;
+		hitsound: 5, 2;
+		guardsound: 6, 0;
+		ground.type: High;
+		ground.slidetime: 12;
+		ground.hittime: 16;
+		dizzypoints: -ceil(enemynear,DizzyPointsMax * .14); #14% of opponents max dizzy points
+        guardpoints: -ceil(enemynear,GuardPointsMax * .11); #11% of opponents guard points
+		ground.velocity: -5.5;
+		air.velocity: -2.5, -4;
+		forcenofall: 1;
+	}
+}
+
+#This is how ignorehitpause=1 is applied in ZSS. If there were no "trigger" it
+#would act as the trigger itself EG. ignorehitpause{sctrl{}}
+ignorehitpause persistent(0) if AnimElemTime(5) > 0 && AnimElemTime(6) <= 0 && MoveContact {
+	ChangeAnim{value: 210; elem: 6}
+}
+
+if AnimElem = 5 {
+	SprPriority{value: 2}
+}
+
+#Change to stand state when done
+call EndState(0);
+
+#===============================================================================
+# Standing light kick
+#===============================================================================
+# ZSS difficulty: easy
+[Statedef 230;
+type: S; movetype: A; physics: S;
+juggle: 4; poweradd: 11; ctrl: 0;
+velset: 0, 0; anim: 230;
+sprpriority: 2;]
+
+if Time = 2 {
+	call CSnd(0, 0, 1);
+}
+
+if AnimElem = 3 {
+	HitDef{
+		attr: S, NA;
+		animtype: Medium;
+		damage: 26;
+		guardflag: MA;
+		pausetime: 12, 12;
+		sparkno: 0;
+		sparkxy: -10, -37;
+		hitsound: 5, 1;
+		guardsound: 6, 0;
+		dizzypoints: -ceil(enemynear,DizzyPointsMax * .04); #4% of opponents max dizzy points
+		guardpoints: -ceil(enemynear,GuardPointsMax * .02); #2% of opponents guard points
+		ground.type: Low;
+		ground.slidetime: 10;
+		ground.hittime: 14;
+		ground.velocity: -5;
+		air.velocity: -2.5, -3.5;
+	}
+}
+
+#Change to stand state when done
+call EndState(0);
+
+#===============================================================================
+# Standing strong kick
+#===============================================================================
+# ZSS difficulty: easy
+[Statedef 240;
+type: S; movetype: A; physics: S;
+juggle: 5; poweradd: 30; ctrl: 0;
+velset: 0, 0; anim: 240;
+sprpriority: 2;]
+
+if Time = 2 {
+	call CSnd(0, 1, 1);
+}
+
+if AnimElem = 3 {
+	HitDef{
+		attr: S, NA;
+		animtype: Medium;
+		damage: 63;
+		guardflag: MA;
+		pausetime: 12, 12;
+		sparkno: 1;
+		sparkxy: -10, -60;
+		hitsound: 5, 2;
+		guardsound: 6, 0;
+		dizzypoints: -ceil(enemynear,DizzyPointsMax * .14); #14% of opponents max dizzy points
+		guardpoints: -ceil(enemynear,GuardPointsMax * .11); #11% of opponents guard points
+		ground.type: Low;
+		ground.slidetime: 12;
+		ground.hittime: 17;
+		ground.velocity: -6;
+		air.velocity: -2.2, -3.2;
+	}
+}
+
+if AnimElem = 7 {
+	PosAdd{x: 12}
+}
+
+#Change to stand state when done
+call EndState(0);
+
+#===============================================================================
+# Crouching light punch
+#===============================================================================
+# ZSS difficulty: easy
+# Description: Simple crouching attack. The HitDef's guardflag parameter
+#     is set to "L", meaning that the move can only be guarded low
+#     (crouching), and not by standing or jumping opponents.
+#     Like for all light attacks, it's a good idea to keep the slidetime
+#     and hittime parameters at a smaller number, so the opponent isn't
+#     stunned for too long. For all crouching attacks you have to
+#     remember to set the attr parameter to indicate that it is crouching
+#     attack. In this case, "C, NA" stands for "crouching, normal attack".
+#     The HitDef's priority is set at 3, instead of the default of 4,
+#     so this attack has a lower priority than most others, meaning
+#     KFM will get hit instead of trading hits with his opponent if
+#     their attack collision boxes (Clsn1) intersect each other's Clsn2
+#     boxes at the same time.
+[Statedef 400;
+type: C; movetype: A; physics: C;
+juggle: 5; poweradd: 8; ctrl: 0;
+anim: 400; sprpriority: 2;]
+
+if Time = 1 {
+	call CSnd(0, 0, 1);
+}
+
+if AnimElem = 2 {
+	HitDef{
+		attr: C, NA;
+		damage: 23;
+		priority: 3;
+		animtype: Light;
+		hitflag: MAF;
+		guardflag: L;
+		pausetime: 10, 11;
+		sparkno: 0;
+		sparkxy: -10, -42;
+		hitsound: 5, 0;
+		guardsound: 6, 0;
+		dizzypoints: -ceil(enemynear,DizzyPointsMax * .04); #4% of opponents max dizzy points
+		guardpoints: -ceil(enemynear,GuardPointsMax * .02); #2% of opponents guard points
+		ground.type: Low;
+		ground.slidetime: 4;
+		ground.hittime: 9;
+		ground.velocity: -4;
+		air.velocity: -1.5, -3;
+	}
+}
+
+#This gives control back to kfm early. While this could be done better in a
+#number of ways, this is a 1:1 creation of kfm from elecbyte so this change is
+#left intact.
+if AnimElemTime(3) = 2 {
+	CtrlSet{value: 1}
+}
+
+#Change to stand state when done
+call EndState(1);
+
+#===============================================================================
+# Crouching strong punch
+#===============================================================================
+# ZSS difficulty: easy
+# Description: This is a 2-hit move. It is done by having two HitDefs
+#     triggered, one for each frame of animation that hits.
+#     Notice how the first hit cannot be guarded by an opponent in the
+#     air, because of the "M" in the guardflag, meaning it can only
+#     be guarded "middle". The second hit has an "MA" guardflag, so
+#     it can be guarded both on the ground and in the air.
+[Statedef 410;
+type: C; movetype: A; physics: C;
+juggle: 6; poweradd: 25; ctrl: 0;
+anim: 410; sprpriority: 2;]
+
+if Time = 1 {
+	call CSnd(0, 1, 1);
+}
+
+#This is the first hit, triggered on the 3rd element of animation.
+if AnimElem = 3 {
+	HitDef{
+		attr: C, NA;
+		damage: 37;
+		animtype: Medium;
+		hitflag: MAF;
+		guardflag: M;
+		pausetime: 12, 12;
+		sparkno: 1;
+		sparkxy: -10, -55;
+		hitsound: 5, 2;
+		guardsound: 6, 0;
+		dizzypoints: -ceil(enemynear,DizzyPointsMax * .05); #5% of opponents max dizzy points
+		guardpoints: -ceil(enemynear,GuardPointsMax * .03); #3% of opponents guard points
+		ground.type: Low;
+		ground.slidetime: 12;
+		ground.hittime: 17;
+		ground.velocity: -4;
+		air.velocity: -3, -4;
+	}
+}
+
+#This is the second hit, triggered on the 4th element of animation.
+if AnimElem = 4 {
+	HitDef{
+		attr: C, NA;
+		damage: 36;
+		animtype: Medium;
+		hitflag: MAF;
+		guardflag: MA;
+		pausetime: 12, 12;
+		sparkxy: -10, -83;
+		hitsound: 5, 2;
+		guardsound: 6, 0;
+		dizzypoints: -ceil(enemynear,DizzyPointsMax * .05); #5% of opponents max dizzy points
+		guardpoints: -ceil(enemynear,GuardPointsMax * .03); #3% of opponents guard points
+		ground.type: High;
+		ground.slidetime: 12;
+		ground.hittime: 17;
+		ground.velocity: -7;
+		air.velocity: -3, -4;
+	}
+}
+
+#Change to stand state when done
+call EndState(1);
+
+#===============================================================================
+# Crouching light kick
+#===============================================================================
+# ZSS difficulty: easy
+[Statedef 430;
+type: C; movetype: A; physics: C;
+juggle: 5; poweradd: 11; ctrl: 0;
+anim: 430; sprpriority: 2;]
+
+if Time = 1 {
+	call CSnd(0, 0, 1);
+}
+
+if AnimElem = 3 {
+	HitDef{
+		attr: C, NA;
+		damage: 28;
+		animtype: Light;
+		hitflag: MAFD;
+		guardflag: L;
+		pausetime: 12, 12;
+		sparkno: 0;
+		sparkxy: -10, -8;
+		hitsound: 5, 1;
+		guardsound: 6, 0;
+		dizzypoints: -ceil(enemynear,DizzyPointsMax * .04); #4% of opponents max dizzy points
+		guardpoints: -ceil(enemynear,GuardPointsMax * .02); #2% of opponents guard points
+		ground.type: Low;
+		ground.slidetime: 6;
+		ground.hittime: 10;
+		ground.velocity: -5;
+		air.velocity: -2, -3;
+		down.velocity: -5, 0;
+		down.hittime: 22;
+	}
+}
+
+#Change to stand state when done
+call EndState(1);
+
+#===============================================================================
+# Crouch Strong Kick
+#===============================================================================
+# ZSS difficulty: easy
+# Description: This move uses "Trip" for the "ground.type" parameter in
+#     its HitDef. It's a special type that puts the opponent in a tripped
+#     animation as he falls. Also, the hitflag parameter in the HitDef
+#     is set to "MAFD". The "D" indicates that a downed opponent can be
+#     hit by the attack.
+[Statedef 440;
+type: C; movetype: A; physics: C;
+juggle: 7; poweradd: 35; ctrl: 0;
+anim: 440; sprpriority: 2;]
+
+if Time = 1 {
+	call CSnd(0, 2, 1);
+}
+
+if AnimElem = 4 {
+	HitDef{
+		attr: C, NA;
+		damage: 72;
+		hitflag: MAFD;
+		guardflag: L;
+		pausetime: 12, 12;
+		sparkno: 1;
+		sparkxy: -5, -10;
+		hitsound: 5, 2;
+		guardsound: 6, 0;
+		ground.type: Trip;
+		dizzypoints: -ceil(enemynear,DizzyPointsMax * .14); #14% of opponents max dizzy points
+		guardpoints: -ceil(enemynear,GuardPointsMax * .11); #11% of opponents guard points
+		ground.slidetime: 10;
+		ground.hittime: 17;
+		ground.velocity: -1.5, -2;
+		air.velocity: -1.2, -3;
+		guard.velocity: -5;
+		fall: 1;
+	}
+}
+
+#Change to stand state when done
+call EndState(1);
+
+#===============================================================================
+# Jump Light Punch
+#===============================================================================
+# ZSS difficulty: easy
+[Statedef 600;
+type: A; movetype: A; physics: A;
+juggle: 2; poweradd: 5; ctrl: 0;
+anim: 600; sprpriority: 2;]
+
+if Time = 1 {
+	call CSnd(0, 0, 1);
+}
+
+if AnimElem = 2 {
+	HitDef{
+		attr: A, NA;
+		damage: 20;
+		guardflag: HA;
+		priority: 3;
+		pausetime: 7, 8;
+		sparkno: 0;
+		sparkxy: -10, -58;
+		hitsound: 5, 0;
+		guardsound: 6, 0;
+		dizzypoints: -ceil(enemynear,DizzyPointsMax * .04); #4% of opponents max dizzy points
+		guardpoints: -ceil(enemynear,GuardPointsMax * .02); #2% of opponents guard points
+		ground.type: High;
+		ground.slidetime: 5;
+		ground.hittime: 8;
+		guard.ctrltime: 8;
+		ground.velocity: -4;
+		air.velocity: -1.3, -3;
+		air.hittime: 14;
+	}
+}
+
+#This gives control back to kfm early. While this could be done better in a
+#number of ways, this is a 1:1 creation of kfm from elecbyte so this change is
+#left intact.
+if AnimElemTime(3) = 2 {
+	CtrlSet{value: 1}
+}
+
+#===============================================================================
+# Jump Strong Punch
+#===============================================================================
+# ZSS difficulty: easy
+[Statedef 610;
+type: A; movetype: A; physics: A;
+juggle: 4; poweradd: 30; ctrl: 0;
+anim: 610; sprpriority: 2;]
+
+if Time = 2 {
+	call CSnd(0, 1, 1);
+}
+
+if AnimElem = 3 {
+	HitDef{
+		attr: A, NA;
+		damage: 72;
+		guardflag: HA;
+		priority: 4;
+		pausetime: 12, 12;
+		sparkno: 1;
+		sparkxy: -10, -55;
+		hitsound: 5, 3;
+		guardsound: 6, 0;
+		dizzypoints: -ceil(enemynear,DizzyPointsMax * .14); #14% of opponents max dizzy points
+		guardpoints: -ceil(enemynear,GuardPointsMax * .11); #11% of opponents guard points
+		animtype: Med;
+		ground.type: High;
+		ground.slidetime: 12;
+		ground.hittime: 14;
+		guard.ctrltime: 14;
+		ground.velocity: -6;
+		air.velocity: -3, -4;
+	}
+}
+
+#===============================================================================
+# Jump Light Kick
+#===============================================================================
+# ZSS difficulty: easy
+[Statedef 630;
+type: A; movetype: A; physics: A;
+juggle: 3; poweradd: 10; ctrl: 0;
+anim: 630; sprpriority: 2;]
+
+if Time = 1 {
+	call CSnd(0, 0, 1);
+}
+
+if AnimElem = 2 {
+	HitDef{
+		attr: A, NA;
+		damage: 26;
+		guardflag: HA;
+		priority: 3;
+		pausetime: 8, 8;
+		sparkno: 1;
+		sparkxy: -5, -35;
+		hitsound: 5, 0;
+		guardsound: 6, 0;
+		dizzypoints: -ceil(enemynear,DizzyPointsMax * .04); #4% of opponents max dizzy points
+		guardpoints: -ceil(enemynear,GuardPointsMax * .02); #2% of opponents guard points
+		ground.type: High;
+		ground.slidetime: 6;
+		ground.hittime: 10;
+		guard.ctrltime: 10;
+		ground.velocity: -4;
+		air.velocity: -2, -3;
+		air.hittime: 14;
+	}
+}
+
+#===============================================================================
+# Jump Strong Kick
+#===============================================================================
+# ZSS difficulty: easy
+[Statedef 640;
+type: A; movetype: A; physics: A;
+juggle: 4; poweradd: 30; ctrl: 0;
+anim: 640; sprpriority: 2;]
+
+if Time = 2 {
+	call CSnd(0, 1, 1);
+}
+
+if AnimElem = 2 {
+	HitDef{
+		attr: A, NA;
+		damage: 70;
+		guardflag: HA;
+		priority: 4;
+		pausetime: 12, 12;
+		sparkno: 1;
+		sparkxy: -10, -40;
+		hitsound: 5, 3;
+		guardsound: 6, 0;
+		dizzypoints: -ceil(enemynear,DizzyPointsMax * .14); #14% of opponents max dizzy points
+		guardpoints: -ceil(enemynear,GuardPointsMax * .11); #11% of opponents guard points
+		animtype: Med;
+		ground.type: High;
+		ground.slidetime: 12;
+		ground.hittime: 15;
+		guard.ctrltime: 15;
+		ground.velocity: -7;
+		air.velocity: -3, -4;
+	}
+}
+
+#===============================================================================
+# Kung Fu Throw - Attempt
+#===============================================================================
+# ZSS difficulty: medium-advanced
+# Description: Throws are not difficult to make, although then can be
+#     tedious at times. Throw attempt states have a HitDef of a
+#     special format. The key parameters in a throw are p1stateno
+#     and p2stateno. If the HitDef successfully connects, then
+#     the attacker will change to the state number specified by
+#     p1stateno, and the opponent will be change to the state
+#     number assigned to p2stateno. The special thing about p2stateno
+#     is that the opponent will be temporarily brought into the
+#     attacker's state file. In this case, no matter who the
+#     opponent is, he will be taken to state 820 of this file (kfm.ZSS)
+#     and remain here until the end of the throw (look at his debug
+#     information when he is being thrown; the text changes to yellow
+#     to mean that he is in another player's state file).
+[Statedef 800;
+type: S; movetype: A; physics: S;
+juggle: 0; velset: 0, 0; ctrl: 0;
+anim: 800; sprpriority: 2;]
+
+# Notes: The '-' symbol in the hitflag field means that it only affects
+#   players who are not in a hit state. This prevents KFM from combo-ing
+#   into the throw. The priority should be set to a low number, such as
+#   1 or 2, so that the throw does not take precedence over normal attacks.
+#   The type of priority must always be set to "Miss" or "Dodge" for throws,
+#   otherwise strange behavior can result.
+if Time = 0 {
+	HitDef{
+		attr: S, NT;          #Attributes: Standing, Normal Throw
+		hitflag: M-;          #Affect only ground people who are not being hit
+		priority: 1, Miss;    #Throw has low priority, must be miss or dodge type.
+		sparkno: -1;          #No spark
+		p1sprpriority: 1;     #Draw p1's sprite in front of p2
+							  #p2's sprite priority is set to 0 by default
+		p1facing: 1;
+		p2facing: 1;          #Force p2 to face KFM
+		p1stateno: 810;       #On success, KFM changes to state 810
+		p2stateno: 820;       #If hit, p2 changes to state 820 in KFM's ZSS
+		guard.dist: 0;        #This prevents p2 from going into a guard state if close
+		fall: 1;              #Force p2 into falling down
+	}
+}
+
+call EndState(0);
+
+#===============================================================================
+# Kung Fu Throw - Throwing the opponent
+#===============================================================================
+# Description: In this state, KFM throws the opponent by binding him to
+#     various offsets based on his current frame of animation. For
+#     example, [State 810, Bind 1] binds the opponent to an offset of
+#     28 pixels in front of KFM. That puts him around where KFM's hand
+#     is at. Is is important to keep the opponent bound using a
+#     TargetBind controller at all times, until you let him go. This
+#     is especially important if your player has a Clsn2 box that
+#     allows him to get hit while throwing someone. Each time a player
+#     gets hit, all his bound targets will be set to a fall state. If
+#     the opponent is not bound, then he may get stuck in his thrown
+#     state when his attacker is knocked out of the throw halfway.
+# Notes: There is a TargetLifeAdd controller to decrease the opponent's
+#     life, and a TargetState controller to change his state to a
+#     falling state when KFM lets go of him.
+[Statedef 810;
+type: S; movetype: A; physics: N;
+anim: 810; poweradd: 0;]
+
+# Here a variable, var(2), is used to remember whether or not the
+# player was holding forward at the start of the state. This variable
+# is checked later on to turn KFM around if necessary.
+if Time = 0 {
+	#This is how variables are set in ZSS. They must always end with a ";"
+	#If this were a VarAdd equivalent it would say:
+	#var(2) := var(2) + (Command = "holdfwd");
+	var(2) := Command = "holdfwd";
+}
+
+if AnimElem = 2 {
+	call CSnd(1, 1, 1);
+}
+
+if AnimElem = 7 {
+	call CSnd(800, 0, 1);
+}
+
+if AnimElemTime(2) < 0 {
+	TargetBind{pos: 28, 0}
+}
+
+if AnimElemTime(2) >= 0 && AnimElemTime(12) < 0 {
+	Width{edge: 60, 0}
+	#Because triggers are done in if{} blocks, conditions can be grouped
+	#together to prevent repeating code. This still means 
+	#"AnimElemTime(2) >= 0 && AnimElemTime(5) < 0" but we're under an if{} block
+	#saying AnimElemTime(2) >= 0 already, so we don't need to specify it again. 
+	if AnimElemTime(5) < 0 {
+		TargetBind{pos: 58, 0}
+	}
+}
+
+if AnimElemTime(5) >= 0 && AnimElemTime(6) < 0 {
+	TargetBind{pos: 47, 0}
+}
+
+#It is possible to group sctrls together if they had the same triggers in ZSS.
+#Saving time and space.
+if var(2) && AnimElem = 6 {
+	Turn{}                  #If was holding fwd before, turn now
+	PosAdd{x: -37}          #If was holding fwd before, move a little
+	TargetFacing{value: -1} #If was holding fwd before, turn target too
+}
+
+#For optimization, else if is used to make sure the code below the first if
+#condition is the only code checked. The second the animation looks for the
+#second condition, that if statement will be the only one checked until it goes
+#through the entire animation.
+if AnimElemTime(6) >= 0 && AnimElemTime(7) < 0 {
+	TargetBind{pos: 41, -60}
+} else if AnimElemTime(7) >= 0 && AnimElemTime(8) < 0 {
+	TargetBind{pos: 25, -75}
+} else if AnimElemTime(8) >= 0 && AnimElemTime(9) < 0 {
+	TargetBind{pos: 15, -90}
+} else if AnimElemTime(9) >= 0 && AnimElemTime(10) < 0 {
+	TargetBind{pos: -5, -96}
+} else if AnimElemTime(10) >= 0 && AnimElemTime(11) < 0 {
+	TargetBind{pos: -14, -90}
+}
+
+if AnimElem = 11 {
+	TargetBind{pos: -50, -50}
+	TargetLifeAdd{value: -78}
+	TargetState{value: 821}
+}
+
+if AnimElem = 12 {
+	Turn{}
+}
+
+if AnimElem = 15 {
+	PosAdd{x: -10}
+}
+
+call EndState(0);
+
+#===============================================================================
+# Kung Fu Palm
+#===============================================================================
+# ZSS difficulty: medium
+# Description: This is like a standard attack, but with some differences.
+#   There are two HitDefs in this attack. One is triggered when the
+#   opponent is near (using a P2BodyDist trigger), and the other
+#   when the opponent is farther away. The main differences between
+#   the near and far versions of the HitDefs is that the near version
+#   has a "fall" parameter set to 1, causing the opponent to be knocked
+#   down. Other minor differences are the damage, and the velocity to
+#   give the opponent.
+#   The line "attr = S, SA" line means this is a Standing, Special Attack.
+#   It is important you have the attr parameter set correctly for all
+#   you HitDefs.
+[Statedef 1000;
+type: S; movetype: A; physics: S;
+juggle: 4; poweradd: 55; velset: 0, 0;
+anim: 1000; ctrl: 0; sprpriority: 2;]
+
+if Time = 8 {
+	call CSnd(0, 3, 1);
+}
+
+if AnimElem = 2 {
+	PosAdd{x: 20}
+}
+
+if AnimElem = 3 || AnimElem = 13 {
+	PosAdd{x: 10}
+}
+
+if AnimElem = 5 {
+	PosAdd{x: 5}
+	if P2BodyDist X < 40 {
+		HitDef{
+			attr: S, SA;
+			animtype: Hard;
+			damage: 90, 4;
+			priority: 5;
+			guardflag: MA;
+			pausetime: 15, 15;
+			sparkxy: -10, -60;
+			hitsound: 5, 4;
+			guardsound: 6, 0;
+			dizzypoints: -ceil(enemynear,DizzyPointsMax * .06); #6% of opponents max dizzy points
+			guardpoints: -ceil(enemynear,GuardPointsMax * .0225); #2.25% of opponents guard points
+			ground.type: Low;
+			ground.slidetime: 12;
+			ground.hittime: 17;
+			ground.velocity: -4, -3.5;
+			air.velocity: -4, -3;
+			fall: 1;
+		}
+	} else {
+		HitDef{
+			attr: S, SA;
+			animtype: Hard;
+			damage: 85, 4;
+			priority: 4;
+			guardflag: MA;
+			pausetime: 15, 15;
+			sparkxy: -10, -60;
+			hitsound: 5, 4;
+			guardsound: 6, 0;
+			dizzypoints: -ceil(enemynear,DizzyPointsMax * .04); #4% of opponents max dizzy points
+			guardpoints: -ceil(enemynear,GuardPointsMax * .005); #.5% of opponents guard points
+			ground.type: Low;
+			ground.slidetime: 12;
+			ground.hittime: 17;
+			ground.velocity: -7;
+			air.velocity: -4, -2.5;
+		}
+	}
+}
+
+if AnimElem = 9 {
+	PosAdd{x: -5}
+}
+
+call EndState(0);
+
+#===============================================================================
+# Strong Kung Fu Palm
+#===============================================================================
+# ZSS difficulty: medium
+[Statedef 1010;
+type: S; movetype: A; physics: S;
+juggle: 4; poweradd: 60; velset: 0, 0;
+anim: 1010; ctrl: 0; sprpriority: 2;]
+
+if Time = 9 {
+	call CSnd(0, 3, 1);
+}
+
+if AnimElem = 2 {
+	PosAdd{x: 20}
+}
+
+if AnimElem = 3 || AnimElem = 13 {
+	PosAdd{x: 10}
+}
+
+if AnimElem = 5 {
+	PosAdd{x: 5}
+	VelSet{x: 4}
+	if P2BodyDist X < 40 {
+		HitDef{
+			attr: S, SA;
+			animtype: Hard;
+			damage: 90, 4;
+			priority: 5;
+			guardflag: MA;
+			pausetime: 15, 15;
+			sparkxy: -10, -60;
+			hitsound: 5, 4;
+			guardsound: 6, 0;
+			dizzypoints: -ceil(enemynear,DizzyPointsMax * .06); #6% of opponents max dizzy points
+			guardpoints: -ceil(enemynear,GuardPointsMax * .0225); #2.25% of opponents guard points
+			ground.type: Low;
+			ground.slidetime: 12;
+			ground.hittime: 17;
+			ground.velocity: -4, -3.5;
+			air.velocity: -4, -3;
+			fall: 1;
+		}
+	} else {
+		HitDef{
+			attr: S, SA;
+			animtype: Hard;
+			damage: 85, 4;
+			priority: 4;
+			guardflag: MA;
+			pausetime: 15, 15;
+			sparkxy: -10, -60;
+			hitsound: 5, 4;
+			guardsound: 6, 0;
+			dizzypoints: -ceil(enemynear,DizzyPointsMax * .04); #4% of opponents max dizzy points
+			guardpoints: -ceil(enemynear,GuardPointsMax * .005); #.5% of opponents guard points
+			ground.type: Low;
+			ground.slidetime: 12;
+			ground.hittime: 17;
+			ground.velocity: -7;
+			air.velocity: -4, -2.5;
+		}
+	}
+}
+
+call EndState(0);
+
+#===============================================================================
+# Fast Kung Fu Palm
+#===============================================================================
+# ZSS difficulty: advanced
+# Description: This is a complicated attack move. If you're a beginner,
+#     you should skip looking at this for now and check it later when
+#     you are more comfortable with the ZSS.
+#     This move puts the other player in a custom get-hit state.
+#     The line "p2stateno = 1025" in the HitDef does this. KFM has some
+#     palette effects as well as after-image effects.
+[Statedef 1020;
+type: S; movetype: A; physics: N;
+juggle: 6; poweradd: -330; velset: 0, 0;
+anim: 1020; ctrl: 0; sprpriority: 2;]
+
+VelMul{x: .85 * ifelse (AnimElemTime(6) < 0, 1, .8)}
+
+if Time = 0 {
+	AfterImage{
+		length: 13;
+		palbright: 30, 30, 0;
+		palcontrast: 70, 70, 20;
+		paladd: -10, -10, -10;
+		palmul: .85, .85, .50;
+		timegap: 1;
+		framegap: 2;
+		trans: Add;
+		time: 2;
+	}
+	call EXFX(20);
+}
+
+if AnimElemTime(8) < 0 {
+	AfterImageTime{time: 2}
+}
+
+if Time = 2 {
+	call CSnd(0, 3, 1);
+}
+
+if AnimElem = 2 {
+	PosAdd{x: 20}
+}
+
+if AnimElem = 3 || AnimElem = 12 {
+	PosAdd{x: 10}
+}
+
+if AnimElem = 4 {
+	PosAdd{x: 5}
+	VelSet{x: 13}
+	HitDef{
+		attr: S, SA;
+		animtype: Hard;
+		damage: 95, 5;
+		getpower: 0;
+		priority: 4;
+		guardflag: MA;
+		pausetime: 8, 7;
+		sparkxy: -10, -60;
+		hitsound: 5, 4;
+		guardsound: 6, 0;
+		ground.type: Low;
+		ground.slidetime: 20;
+		ground.hittime: 22;
+		dizzypoints: -ceil(enemynear,DizzyPointsMax * .07); #7% of opponents max dizzy points
+		guardpoints: -ceil(enemynear,GuardPointsMax * .03); #3% of opponents guard points
+		ground.velocity: -8, -7;
+		guard.velocity: -7;
+		air.velocity: -8, -7;
+		airguard.velocity: -5, -4;
+		fall: 1;
+		p2stateno: 1025; #Make p2 go to state 1025 on hit
+		p2facing: 1;     #Force to face p1
+	}
+}
+
+call EndState(0);
+
+#===============================================================================
+# Kung Fu Knee
+#===============================================================================
+# ZSS difficulty: medium
+# Description: Like the Kung Fu Palm, this is a special attack. This attack
+#     begins on the ground, launches KFM into the air, then ends when KFM
+#     lands on the ground. To achieve this, we use three states. The first
+#     has KFM starting on the ground (note that type = S in the Statedef).
+#     The ChangeState controller brings KFM into the second state (state
+#     1051) when his ground animation ends. The second state controls KFM's
+#     movement into the air and back towards the ground. The last state
+#     (state 1052) stops KFM from moving when he touches the ground, and
+#     brings him back to his stand state (state 0) when the animation is
+#     over. More details are given in comments before each of the following
+#     states.
+[Statedef 1050;
+type: S; movetype: A; physics: S;
+juggle: 4; poweradd: 55; velset: 0, 0;
+anim: 1050; ctrl: 0; sprpriority: 2;]
+
+if Time = 1 {
+	call CSnd(0, 2, 1);
+}
+
+if AnimElem = 4 {
+	PosAdd{x: 20}
+}
+
+if AnimElem = 4 {
+	HitDef{
+		attr: A, SA;
+		animtype: Medium;
+		damage: 80, 4;
+		priority: 5;
+		guardflag: MA;
+		pausetime: 12, 12;
+		sparkxy: -10, -70;
+		hitsound: 5, 3;
+		guardsound: 6, 0;
+		dizzypoints: -ceil(enemynear,DizzyPointsMax * .04); #4% of opponents max dizzy points
+		guardpoints: -ceil(enemynear,GuardPointsMax * .008); #.8% of opponents guard points
+		ground.type: Low;
+		ground.slidetime: 20;
+		ground.hittime: 22;
+		ground.velocity: -3.5, -7;
+		guard.velocity: -7;
+		air.velocity: -3.5, -7;
+		fall: 1;
+	}
+}
+
+if AnimTime = 0 {
+	ChangeState{value: 1051}
+}
+
+#-------------------------------------------------------------------------------
+# Light Kung Fu Knee - jump
+# Description: This state uses a velset parameter in the Statedef to make
+#     KFM move upwards. A value of 2, -6 means 2 pixels/tick forwards, and
+#     6 pixels/tick upwards. Since this is an aerial state, the type is set
+#     to A in the Statedef.
+#     Notice that physics = N (N for None) here. This means we are not using
+#     the built-in aerial physics model (physics = A), so we have complete
+#     control over what KFM does in this state. Since we do not have
+#     physics = A to take care of gravity for us, we need to put in our own
+#     controller for that. Controller 1051, 1 does the work of pulling KFM
+#     down towards the ground. Controller 1051, 2 checks if KFM has reached
+#     the ground, and changes to state 1052 if so.
+#     In this state's Statedef, we will use the hitdefpersist parameter to
+#     retain the HitDef information from the last state. If we did not have
+#     hitdefpersist, the HitDef will be turned off between state changes.
+[Statedef 1051;
+type: A; movetype: A; physics: N;
+velset: 2, -6; anim: 1051;
+hitdefpersist: 1 ;] #Keep the HitDef from previous state active
+
+#Gravity
+VelAdd{y: .45}
+
+if (Command = "a" || Command = "b") && !AILevelF && Vel Y < -1 {
+	ChangeState{value: 1055}
+}
+
+#Change state when KFM is close to ground
+if Vel Y > 0 && Pos Y >= -10 {
+	ChangeState{value: 1052}
+}
+
+#-------------------------------------------------------------------------------
+# Light Kung Fu Knee - land
+# Description: This is KFM's landing state. There is a velset in the
+#     Statedef to stop KFM from moving. Since KFM's y-position can be any
+#     number greater than -10 upon entering this state (see the ChangeState
+#     controller in State 1051), we need to reset it to 0, the ground
+#     level. That is what controller 1052, 1 is for.
+[Statedef 1052;
+type: S; movetype: I; physics: S;
+anim: 1052; sprpriority: 1;
+velset: 0, 0;]
+
+#Reset y-position to ground level
+if Time = 0 {
+	PosSet{y: 0}
+	call CSnd(40, 0, 1); #Play a sound for landing
+}
+
+#Give KFM back control early
+if AnimElem = 3, -1 {
+	CtrlSet{value: 1}
+}
+
+if AnimElem = 4 {
+	Posadd{x: -15}
+}
+
+call EndState(0);
+
+#-------------------------------------------------------------------------------
+# Kung Fu Knee - kick
+[Statedef 1055;
+type: A; movetype: A; physics: N;
+anim: 1055;]
+
+if Time = 0 {
+	#Channel 0 is reserved for voices here but it is not a requirement.
+	call CSnd(100, 0, 0);
+	call CSnd(0, 1, 1);
+	Posadd{x: 10; y: -10}
+}
+
+#Gravity
+VelAdd{y: .45}
+
+if AnimElem = 5 {
+	HitDef{
+		attr: A, SA;
+		animtype: Med;
+		damage: 35 + (prevstateno = 1061)*5, 2;
+		priority: 4;
+		guardflag: MA;
+		pausetime: 12, 12;
+		sparkxy: 0, -90;
+		hitsound: 5, 2;
+		guardsound: 6, 0;
+		ground.type: High;
+		dizzypoints: -ceil(enemynear,DizzyPointsMax * .04); #4% of opponents max dizzy points
+		guardpoints: -ceil(enemynear,GuardPointsMax * .008); #.8% of opponents guard points
+		ground.slidetime: 15;
+		ground.hittime: 18;
+		ground.velocity: -6;
+		guard.velocity: -8;
+		guard.ctrltime: 12;
+		air.velocity: -4, -5;
+		airguard.velocity: -4, -4.5;
+		air.fall: 1;
+	}
+}
+
+#Change state when KFM is close to ground
+if Vel Y > 0 && Pos Y >= -5 {
+	ChangeState{value: 1056}
+}
+
+#-------------------------------------------------------------------------------
+# Kung Fu Knee - land from kick
+[Statedef 1056;
+type: S; movetype: I; physics: S;
+anim: 1056; sprpriority: 1;
+velset: 0, 0;]
+
+if Time = 0 {
+	Posset{y: 0} #Reset y-position to ground level
+	call CSnd(40, 0, 1); #Play a sound for landing
+}
+
+call EndState(0);
+
+#===============================================================================
+# Strong Kung Fu Knee
+#===============================================================================
+[Statedef 1060;
+type: S; movetype: A; physics: S;
+juggle: 4; poweradd: 60; velset: 0, 0;
+anim: 1060; ctrl: 0; sprpriority: 2;]
+
+if Time = 1 {
+	call CSnd(0, 2, 1);
+}
+
+if AnimElem = 2 {
+	PosAdd{x: 6}
+}
+
+if AnimElem = 4 {
+	PosAdd{x: 21}
+}
+
+if AnimElem = 4 {
+	HitDef{
+		attr: A, SA;
+		animtype: Medium;
+		damage: 90, 4;
+		priority: 5;
+		guardflag: MA;
+		pausetime: 12, 12;
+		sparkxy: -10, -70;
+		hitsound: 5, 3;
+		guardsound: 6, 0;
+		dizzypoints: -ceil(enemynear,DizzyPointsMax * .04); #4% of opponents max dizzy points
+		guardpoints: -ceil(enemynear,GuardPointsMax * .008); #.8% of opponents guard points
+		ground.type: Low;
+		ground.slidetime: 20;
+		ground.hittime: 22;
+		ground.velocity: -3.5, -7.5;
+		guard.velocity: -7;
+		air.velocity: -3.5, -7.5;
+		fall: 1;
+	}
+}
+
+if AnimTime = 0 {
+	ChangeState{value: 1061}
+}
+
+#-------------------------------------------------------------------------------
+# Strong Kung Fu Knee - jump
+[Statedef 1061;
+type: A; movetype: A; physics: N;
+velset: 2, -7.5; anim: 1051;
+hitdefpersist: 1;] #Keep the HitDef from previous state active
+
+#Gravity
+VelAdd{y: .45}
+
+if (Command = "a" || Command = "b") && !AILevelF && Vel Y < -1 {
+	ChangeState{value: 1055}
+}
+
+#Change state when KFM is close to ground
+if Vel Y > 0 && Pos Y >= -10 {
+	ChangeState{value: 1052}
+}
+
+#===============================================================================
+# Fast Kung Fu Knee
+#===============================================================================
+# Description: This version of the Kung Fu Knee hits up to 3 times (including
+#     the kick).
+[Statedef 1070;
+type: S; movetype: A; physics: S;
+juggle: 6; poweradd: -330;
+velset: 0, 0; anim: 1070; ctrl: 0;
+sprpriority: 2;]
+
+AfterImageTime{time: 2}
+
+if Time = 0 {
+	AfterImage{
+		length: 13;
+		palbright: 30, 30, 0;
+		palcontrast: 70, 70, 20;
+		paladd: -10, -10, -10;
+		palmul: .85, .85, .50;
+		timegap: 1;
+		framegap: 2;
+		trans: Add;
+		time: 2;
+	}
+	call EXFX(20);
+}
+
+if Time = 1 {
+	call CSnd(0, 2, 1);
+}
+
+if AnimElem = 2 {
+	PosAdd{x: 6}
+}
+
+if AnimElem = 4 {
+	PosAdd{x: 21}
+}
+
+if AnimElem = 4 {
+	HitDef{
+		attr: S, SA;
+		animtype: Medium;
+		getpower: 0;
+		damage: 35, 3;
+		priority: 5;
+		hitflag: MA;
+		guardflag: MA;
+		pausetime: 8, 7;
+		sparkxy: -10, -70;
+		hitsound: 5, 2;
+		guardsound: 6, 0;
+		dizzypoints: -ceil(enemynear,DizzyPointsMax * .04); #4% of opponents max dizzy points
+		guardpoints: -ceil(enemynear,GuardPointsMax * .025); #2.5% of opponents guard points
+		ground.type: Low;
+		ground.slidetime: 18;
+		ground.hittime: 20;
+		ground.velocity: -2, -6;
+		guard.velocity: -7;
+		air.velocity: -2, -6;
+		fall: 1;
+		fall.animtype: Med;
+		fall.recovertime: 30;
+	}
+}
+
+if AnimTime = 0 {
+	ChangeState{value: 1071}
+}
+
+#-------------------------------------------------------------------------------
+# Fast Kung Fu Knee - jump
+[Statedef 1071;
+type: A; movetype: A; physics: N;
+velset: 2.5, -9; anim: 1071;]
+
+if Time = 0 {
+	call EXFX(18);
+	HitDef{
+		attr: A, SA;
+		animtype: Medium;
+		getpower: 0;
+		damage: 68, 4;
+		priority: 5;
+		guardflag: MA;
+		pausetime: 12, 12;
+		sparkxy: -10, -70;
+		dizzypoints: -ceil(enemynear,DizzyPointsMax * .04); #4% of opponents max dizzy points
+		guardpoints: -ceil(enemynear,GuardPointsMax * .025); #2.5% of opponents guard points
+		hitsound: 5, 3;
+		guardsound: 6, 0;
+		ground.type: Low;
+		ground.slidetime: 18;
+		ground.hittime: 20;
+		ground.velocity: -3, -9.5;
+		guard.velocity: -7;
+		air.velocity: -3, -9.5;
+		fall: 1;
+		fall.recovertime: 30;
+	}
+}
+
+if Vel Y < 0 {
+	AfterImageTime{time: 2}
+}
+
+VelAdd{y: .5}
+
+if Vel Y >= -1 {
+	VelAdd{y: .2}
+}
+
+if (Command = "a" || Command = "b") && Vel Y < -1 && Time > 0 {
+	ChangeState{value: 1075}
+}
+
+#Change state when KFM is close to ground
+if Vel Y > 0 && Pos Y >= -10 {
+	ChangeState{value: 1052}
+}
+
+#-------------------------------------------------------------------------------
+# Fast Kung Fu Knee - kick
+[Statedef 1075;
+type: A; movetype: A; physics: N;
+anim: 1055;]
+
+AfterImageTime{time: 2}
+
+if Time = 0 {
+	call EXFX(18);
+	call CSnd(100, 0, 0);
+	call CSnd(0, 1, 1);
+	PosAdd{x: 10; y: -10}
+	HitDef{
+		attr: A, SA;
+		animtype: Med;
+		damage: 42, 2;
+		getpower: 0;
+		priority: 4;
+		guardflag: MA;
+		pausetime: 12, 12;
+		sparkxy: 0, -90;
+		hitsound: 5, 2;
+		dizzypoints: -ceil(enemynear,DizzyPointsMax * .04); #4% of opponents max dizzy points
+		guardpoints: -ceil(enemynear,GuardPointsMax * .025); #2.5% of opponents guard points
+		guardsound: 6, 0;
+		ground.type: High;
+		ground.slidetime: 15;
+		ground.hittime: 20;
+		ground.velocity: -6;
+		guard.velocity: -6;
+		air.velocity: -4, -6;
+		airguard.velocity: -4, -4.5;
+		air.fall: 1;
+	}
+}
+
+#Gravity
+VelAdd{y: .5}
+
+if Vel Y >= -1 {
+	VelAdd{y: .2}
+}
+
+#Change state when KFM is close to ground
+if Vel Y > 0 && Pos Y >= -5 {
+	ChangeState{value: 1056}
+}
+
+#===============================================================================
+# Light Kung Fu Upper
+#===============================================================================
+# ZSS difficulty: easy
+# Description: This is a simple special attack that can hit twice. Notice
+#     the use of the Width controller to keep opponents from getting too
+#     close to KFM during his uppercut (press Ctrl-C, and look at the
+#     yellow bar at KFM's feet during the move).
+#     The second HitDef has some interesting parameters. fall.recovertime
+#     is used to prevent the opponent (p2) from recovering immediately
+#     after being hit (eg. press x+y with KFM to recover). This gives the
+#     attacking KFM a chance to follow up with an extra attack, such as
+#     a Kung Fu Knee. The yaccel parameter, set at 0.4, makes p2 fall at a
+#     greater value of acceleration than the default, which is 0.35.
+[Statedef 1100;
+type: S; movetype: A; physics: S;
+juggle: 4; poweradd: 55; velset: 0, 0;
+anim: 1100; ctrl: 0; sprpriority: 2;]
+
+if AnimElemTime(4) >= 0 && AnimElemTime(13) < 0 {
+	Width{value: 5, 0}
+}
+
+if AnimElem = 4 {
+	call CSnd(0, 2, 1);
+}
+
+if Time = 0 {
+	HitDef{
+		attr: S, SA;
+		animtype: Med;
+		damage: 52, 4;
+		priority: 5;
+		guardflag: MA;
+		pausetime: 4, 8;
+		sparkxy: 0, -48;
+		hitsound: 5, 2;
+		guardsound: 6, 0;
+		ground.type: Low;
+		dizzypoints: -ceil(enemynear,DizzyPointsMax * .04); #4% of opponents max dizzy points
+		guardpoints: -ceil(enemynear,GuardPointsMax * .0075); #.75% of opponents guard points
+		ground.slidetime: 15;
+		ground.hittime: 20;
+		ground.velocity: -3;
+		guard.velocity: -6;
+		air.velocity: -2, -2;
+		airguard.velocity: -4, -4.5;
+		p2facing: 1;
+		forcestand: 1; #Force p2 into a standing state if hit
+	}
+}
+
+if AnimElem = 7 {
+	HitDef{
+		attr: S, SA;
+		animtype: Up;
+		damage: 55, 4;
+		priority: 5;
+		guardflag: MA;
+		pausetime: 12, 12;
+		sparkxy: 0, -110;
+		hitsound: 5, 2;
+		guardsound: 6, 0;
+		ground.type: Low;
+		dizzypoints: -ceil(enemynear,DizzyPointsMax * .04); #4% of opponents max dizzy points
+		guardpoints: -ceil(enemynear,GuardPointsMax * .0075); #.75% of opponents guard points
+		ground.slidetime: 15;
+		ground.hittime: 20;
+		ground.velocity: -1, -9.5;
+		guard.velocity: -6;
+		air.velocity: -1, -7.5;
+		airguard.velocity: -4, -4.5;
+		p2facing: 1;
+		fall: 1;              #Make p2 fall down
+		fall.recovertime: 40; #40 ticks before p2 can recover from fall
+		yaccel: .4;           #p2 will accelerate down at .4 pixels/sec^2 when falling
+	}
+}
+
+call EndState(0);
+
+#===============================================================================
+# Strong Kung Fu Upper
+#===============================================================================
+[Statedef 1110;
+type: S; movetype: A; physics: S;
+juggle: 4; poweradd: 60; velset: 0, 0;
+anim: 1110; ctrl: 0; sprpriority: 2;]
+
+if AnimElemTime(4) >= 0 && AnimElemTime(14) < 0 {
+	Width{value: 5, 0}
+}
+
+if AnimElem = 4 {
+	call CSnd(0, 2, 1);
+}
+
+if Time = 0 {
+	HitDef{
+		attr: S, SA;
+		animtype: Med;
+		damage: 57, 4;
+		priority: 5;
+		guardflag: MA;
+		pausetime: 4, 8;
+		sparkxy: 0, -48;
+		hitsound: 5, 2;
+		guardsound: 6, 0;
+		dizzypoints: -ceil(enemynear,DizzyPointsMax * .04); #4% of opponents max dizzy points
+		guardpoints: -ceil(enemynear,GuardPointsMax * .0075); #.75% of opponents guard points
+		ground.type: Low;
+		ground.slidetime: 15;
+		ground.hittime: 20;
+		ground.velocity: -3;
+		guard.velocity: -6;
+		air.velocity: -2, -2;
+		airguard.velocity: -4, -4.5;
+		p2facing: 1;
+		forcestand: 1;
+	}
+}
+
+if AnimElem = 7 {
+	HitDef{
+		attr: S, SA;
+		animtype: Up;
+		damage: 60, 4;
+		priority: 5;
+		guardflag: MA;
+		pausetime: 12, 12;
+		sparkxy: 0, -110;
+		hitsound: 5, 2;
+		dizzypoints: -ceil(enemynear,DizzyPointsMax * .04); #4% of opponents max dizzy points
+		guardpoints: -ceil(enemynear,GuardPointsMax * .0075); #.75% of opponents guard points
+		guardsound: 6, 0;
+		ground.type: Low;
+		ground.slidetime: 15;
+		ground.hittime: 20;
+		ground.velocity: -1, -10.5;
+		guard.velocity: -6;
+		air.velocity: -1, -8.5;
+		airguard.velocity: -4, -4.5;
+		p2facing: 1;
+		fall: 1;
+		fall.recovertime: 50;
+		yaccel: .4;
+	}
+}
+
+call EndState(0);
+
+#===============================================================================
+# Fast Kung Fu Upper
+#===============================================================================
+[Statedef 1120;
+type: S; movetype: A; physics: S;
+juggle: 6; poweradd: -330; velset: 0, 0;
+anim: 1120; ctrl: 0; sprpriority: 2;]
+
+if AnimElemTime(4) >= 0 && AnimElemTime(14) < 0 {
+	Width{value: 5, 0}
+}
+
+if AnimElem = 4 {
+	call CSnd(0, 2, 1);
+}
+
+if Time = 0 {
+	AfterImage{
+		length: 13;
+		palbright: 30, 30, 0;
+		palcontrast: 70, 70, 20;
+		paladd: -10, -10, -10;
+		palmul: .85, .85, .50;
+		timegap: 1;
+		framegap: 2;
+		trans: Add;
+		time: 2;
+	}
+	call EXFX(20);
+}
+
+if AnimTime < -2 {
+	AfterImageTime{time: 2}
+}
+
+if Time = 0 || AnimElem = 4 {
+	HitDef{
+		attr: S, SA;
+		animtype: Med;
+		damage: 30, 4;
+		getpower: 0;
+		priority: 5;
+		guardflag: MA;
+		pausetime: 6, 10;
+		sparkxy: 0, ifelse(Time = 0, -48, -55);
+		hitsound: 5, 2;
+		guardsound: 6, 0;
+		dizzypoints: -ceil(enemynear,DizzyPointsMax * .025); #2.5% of opponents max dizzy points
+		guardpoints: -ceil(enemynear,GuardPointsMax * .02); #2% of opponents guard points
+		ground.type: Low;
+		ground.slidetime: 18;
+		ground.hittime: 23;
+		ground.velocity: -3;
+		guard.velocity: -6;
+		air.velocity: -2, -2;
+		airguard.velocity: -4, -4.5;
+		p2facing: 1;
+		forcestand: 1;
+	}
+}
+
+if AnimElem = 7 {
+	HitDef{
+		attr: S, SA;
+		animtype: Up;
+		damage: 68, 4;
+		getpower: 0;
+		priority: 5;
+		guardflag: MA;
+		pausetime: 12, 12;
+		sparkxy: 0, -110;
+		hitsound: 5, 2;
+		dizzypoints: -ceil(enemynear,DizzyPointsMax * .025); #2.5% of opponents max dizzy points
+		guardpoints: -ceil(enemynear,GuardPointsMax * .02); #2% of opponents guard points
+		guardsound: 6, 0;
+		ground.type: Low;
+		ground.slidetime: 18;
+		ground.hittime: 23;
+		ground.velocity: -1.2, -11;
+		guard.velocity: -6;
+		air.velocity: -1.2, -9;
+		airguard.velocity: -4, -4.5;
+		p2facing: 1;
+		fall: 1;
+		fall.recovertime: 60;
+		yaccel: .4;
+	}
+}
+
+call EndState(0);
+
+#===============================================================================
+# Light Kung Fu Blow
+#===============================================================================
+# ZSS difficulty: easy
+# Notes: This uses the EnvShake controller to shake the screen. It makes the
+#        move look stronger.
+[Statedef 1200;
+type: S; movetype: A; physics: S;
+juggle: 4; poweradd: 50; velset: 0, 0;
+anim: 1200; ctrl: 0; sprpriority: 2;]
+
+if AnimElem = 4 {
+	call CSnd(0, 3, 1);
+}
+
+if AnimElemTime(5) >= 0 && AnimElemTime(6) < 0 {
+	Width{value: 10, 0}
+}
+
+if AnimElemTime(6) >= 0 && AnimElemTime(9) < 0 {
+	Width{value: 20, 0}
+}
+
+if AnimElem = 6 {
+	EnvShake{
+		time: 4;   #Time to shake screen
+		ampl: 2;   #Amount to shake
+		freq: 180; #A frequency of 180 shakes the screen rapidly
+	}
+}
+
+if Time = 0 {
+	HitDef{
+		attr: S, SA;
+		animtype: Hard;
+		damage: 100, 6;
+		priority: 5;
+		guardflag: MA;
+		pausetime: 12, 12;
+		sparkxy: 0, -65;
+		hitsound: 5, 3;
+		dizzypoints: -ceil(enemynear,DizzyPointsMax * .085); #8.5% of opponents max dizzy points
+		guardpoints: -ceil(enemynear,GuardPointsMax * .06); #6% of opponents guard points
+		guardsound: 6, 0;
+		ground.type: Low;
+		ground.slidetime: 16;
+		ground.hittime: 20;
+		ground.velocity: -10;
+		ground.cornerpush.veloff: -12; #To push far away when p2 is in corner
+		guard.velocity: -7;
+		air.velocity: -3.5, -4.5;
+		airguard.velocity: -3.5, -4.5;
+	}
+}
+
+call EndState(0);
+
+#===============================================================================
+# Strong Kung Fu Blow
+#===============================================================================
+# ZSS difficulty: easy
+[Statedef 1210;
+type: S; movetype: A; physics: S;
+juggle: 4; poweradd: 60; velset: 0, 0;
+anim: 1210; ctrl: 0; sprpriority: 2;]
+
+if AnimElem = 4 {
+	call CSnd(0, 3, 1);
+}
+
+if AnimElemTime(5) >= 0 && AnimElemTime(6) < 0 {
+	Width{value: 10, 0}
+}
+
+if AnimElemTime(6) >= 0 && AnimElemTime(9) < 0 {
+	Width{value: 20, 0}
+}
+
+if AnimElem = 6 {
+	EnvShake{
+		time: 8;   #Time to shake screen
+		ampl: 2;   #Amount to shake
+		freq: 170; #A frequency of less than 180 causes a dampening effect
+	}
+}
+
+if Time = 0 {
+	HitDef{
+		attr: S, SA;
+		animtype: Hard;
+		damage: 125, 9;
+		priority: 5;
+		guardflag: MA;
+		pausetime: 12, 12;
+		sparkxy: 0, -65;
+		hitsound: 5, 3;
+		guardsound: 6, 0;
+		dizzypoints: -ceil(enemynear,DizzyPointsMax * .09); #9% of opponents max dizzy points
+		guardpoints: -ceil(enemynear,GuardPointsMax * .07); #7% of opponents guard points
+		ground.type: Low;
+		ground.slidetime: 18;
+		ground.hittime: 22;
+		ground.velocity: -10;
+		ground.cornerpush.veloff: -15; #To push far away when p2 is in corner
+		guard.velocity: -8;
+		air.velocity: -4, -4.5;
+		airguard.velocity: -4, -4.5;
+	}
+}
+
+call EndState(0);
+
+#===============================================================================
+# Fast Kung Fu Blow
+#===============================================================================
+# ZSS difficulty: easy
+[Statedef 1220;
+type: S; movetype: A; physics: S;
+juggle: 6; poweradd: -330; velset: 0, 0;
+anim: 1220; ctrl: 0; sprpriority: 2;]
+
+if Time = 0 {
+	AfterImage{
+		length: 13;
+		palbright: 30, 30, 0;
+		palcontrast: 70, 70, 20;
+		paladd: -10, -10, -10;
+		palmul: .85, .85, .50;
+		timegap: 1;
+		framegap: 2;
+		trans: Add;
+		time: 2;
+	}
+	call EXFX(20);
+}
+
+if AnimTime < -2 {
+	AfterImageTime{time: 2}
+}
+
+if AnimElem = 4 {
+	call CSnd(0, 3, 1);
+}
+
+if AnimElemTime(5) >= 0 && AnimElemTime(6) < 0 {
+	Width{value: 10, 0}
+}
+
+if AnimElemTime(6) >= 0 && AnimElemTime(9) < 0 {
+	Width{value: 20, 0}
+}
+
+if AnimElem = 6 {
+	EnvShake{
+		time: 8;   #Time to shake screen
+		ampl: 3;   #Amount to shake
+		freq: 170; #A frequency of less than 180 causes a dampening effect
+	}
+}
+
+if Time = 0 {
+	HitDef{
+		attr: S, SA;
+		animtype: Hard;
+		damage: 125, 9;
+		getpower: 0;
+		priority: 5;
+		guardflag: MA;
+		pausetime: 15, 15;
+		sparkxy: 0, -65;
+		hitsound: 5, 4;
+		guardsound: 6, 0;
+		ground.type: Low;
+		dizzypoints: -ceil(enemynear,DizzyPointsMax * .14); #14% of opponents max dizzy points
+		guardpoints: -ceil(enemynear,GuardPointsMax * .11); #11% of opponents guard points
+		ground.slidetime: 20;
+		ground.hittime: 32;
+		ground.velocity: -15;
+		ground.cornerpush.veloff: -20; #To push far away when p2 is in corner
+		guard.velocity: -9;
+		air.velocity: -5, -5;
+		airguard.velocity: -5, -5;
+		air.fall: 1;
+		fall.animtype: Hard;           #Show "hard" animtype when hit for a fall
+		yaccel: .4;                    #Fall faster
+	}
+}
+
+call EndState(0);
+
+#===============================================================================
+# Kung Fu Blocking High
+#===============================================================================
+# ZSS difficulty: medium
+# Notes: This move uses a ReversalDef controller to counter attacks. Any
+#        attacks not caught by the ReversalDef are handled by the HitOverride.
+#        The movetype is Idle because this is not an attack.
+
+[Statedef 1300;
+type: S; movetype: I; physics: S;
+velset: 0, 0; anim: 1300; ctrl: 0;
+sprpriority: 1;]
+
+if AnimElemTime(3) < 0 {
+	Width{value: 15, 0}
+}
+
+if Time = 0 {
+	call CSnd(0, 1, 1);
+	ReversalDef{
+		reversal.attr: SA, AA;
+		pausetime: 0, 0;
+		sparkno: 40;
+		sparkxy: 40, 0;
+		hitsound: 6, 0;
+		p1stateno: 1310;
+		p1sprpriority: 2; #Set P1's sprite in front of P2's
+		p2sprpriority: 1;
+	}
+	HitOverride{attr: SA, AP; stateno: 1310; time: 8}
+	HitOverride{attr: ; time: 0}
+}
+
+if AnimElemTime(2) = 1 && Time = Command = "holdfwd" || Time = 8 {
+	ReversalDef{reversal.attr: } #Stop
+}
+
+call EndState(0);
+
+#===============================================================================
+# Kung Fu Blocking High (blocked)
+#===============================================================================
+# Notes: This state uses a Pause controller to freeze the action dramatically.
+[Statedef 1310;
+type: S; movetype: I; physics: S;
+velset: 0, 0; anim: 1310; ctrl: 0;
+sprpriority: 2;]
+
+if Time = 0 {
+	#Buffer commands input during the pause
+	#Don't pause backgrounds
+	Pause{time: 20; endcmdbuftime: 20; pausebg: 0}
+	NotHitBy{value: SCA; time: 1}
+}
+
+if Time = 1 && Command = "holdback" {
+	ChangeState{value: 130; ctrl: 1}
+}
+
+call EndState(0);
+
+#===============================================================================
+# Kung Fu Blocking Low
+#===============================================================================
+[Statedef 1320;
+type: C; movetype: I; physics: C;
+velset: 0, 0; anim: 1320; ctrl: 0;
+sprpriority: 1;]
+
+if AnimElemTime(3) < 0 {
+	Width{value: 10, 0}
+}
+
+if Time = 0 {
+	call CSnd(0, 1, 1);
+	ReversalDef{
+		reversal.attr: C, AA;
+		pausetime: 0, 0;
+		sparkno: 40;
+		sparkxy: 40, 0;
+		hitsound: 6, 0;
+		p1stateno: 1330;
+		p1sprpriority: 2;
+		p2sprpriority: 1;
+	}
+}
+
+if Time = 5 {
+	ReversalDef{reversal.attr: } #Stop
+}
+
+if Time < 5 {
+	HitOverride{attr: C, AP; stateno: 1330}
+}
+
+call EndState(1);
+
+#===============================================================================
+# Kung Fu Blocking Low (blocked)
+#===============================================================================
+[Statedef 1330;
+type: C; movetype: I; physics: C;
+velset: 0, 0; anim: 1330; ctrl: 0;
+sprpriority: 2;]
+
+if Time = 0 {
+	#Buffer commands input during the pause
+	#Don't pause backgrounds
+	Pause{time: 20; endcmdbuftime: 20; pausebg: 0}
+	NotHitBy{value: SCA; time: 1}
+}
+
+if Time = 1 && Command = "holdback" {
+	ChangeState{value: 131; ctrl: 1}
+}
+
+call EndState(1);
+
+#===============================================================================
+# Kung Fu Blocking Air
+#===============================================================================
+[Statedef 1340;
+type: A; movetype: I; physics: N;
+anim: 1340; ctrl: 0; sprpriority: 1;]
+
+if AnimElemTime(3) < 0 {
+	Width{value: 10, 0}
+}
+
+if Time = 0 {
+	call CSnd(0, 1, 1);
+	ReversalDef{
+		reversal.attr: A, AA;
+		pausetime: 0, 0;
+		sparkno: 40;
+		sparkxy: 40, 0;
+		hitsound: 6, 0;
+		p1stateno: 1350;
+		p1sprpriority: 2;
+		p2sprpriority: 1;
+	}
+}
+
+if Time = 5 { 
+	ReversalDef{reversal.attr: } #Stop
+}
+
+if Time < 5 {
+	HitOverride{attr: SA, AP; stateno: 1350}
+}
+
+if AnimElem = 4 {
+	CtrlSet{value: 1}
+}
+
+#Gravity
+VelAdd{y: Const(movement.yaccel)}
+
+#Land from jump
+if Pos Y >= 0 && Vel Y > 0 {
+	ChangeState{value: 1351}
+}
+
+#===============================================================================
+# Kung Fu Blocking Air (blocked)
+#===============================================================================
+[Statedef 1350;
+type: A; movetype: I; physics: N;
+anim: 1350; ctrl: 0; sprpriority: 2;]
+
+if Time = 0 {
+	#Buffer commands input during the pause
+	#Don't pause backgrounds
+	Pause{time: 20; endcmdbuftime: 20; pausebg: 0}
+	NotHitBy{value: SCA; time: 1}
+}
+
+if Time = 1 && Command = "holdback" {
+	ChangeState{value: 132; ctrl: 1}
+}
+
+#Stop KFM in the air
+if AnimElemTime(3) < 0 {
+	PosFreeze{}
+}
+
+if AnimElem = 3 {
+	CtrlSet{value: 1}
+}
+
+#Gravity
+if AnimElemTime(3) > 0 {
+	VelAdd{y: Const(movement.yaccel)}
+}
+
+#Land from jump
+if Pos Y >= 0 && Vel Y > 0 {
+	ChangeState{value: 1351}
+}
+
+#===============================================================================
+# Kung Fu Blocking Air (land)
+#===============================================================================
+[Statedef 1351;
+type: S; physics: S; ctrl: 0; anim: 47;]
+
+if Time = 0 {
+	VelSet{y: 0}
+	PosSet{y: 0}
+}
+
+if Time = 3 {
+	CtrlSet{value: 1}
+}
+
+if Command = "blocking" {
+	if Command != "holddown" {
+		ChangeState{value: 1300}
+	} else {
+		ChangeState{value: 1320}
+	}
+}
+
+call EndState(0);
+
+#===============================================================================
+# Light Kung Fu Zankou
+#===============================================================================
+# ZSS difficulty: easy
+[Statedef 1400;
+type: S; movetype: A; physics: N;
+juggle: 4; poweradd: 50; velset: 0, 0;
+anim: 1400; ctrl: 0; sprpriority: 2;]
+
+if AnimElem = 3 {
+	call CSnd(0, 3, 1);
+}
+
+VelMul{x: .5}
+
+if Time = 0 {
+	HitDef{
+		attr: S, SA;
+		animtype: Hard;
+		damage: 100, 6;
+		priority: 4;
+		guardflag: MA;
+		pausetime: 12, 12;
+		sparkxy: 0, -65;
+		hitsound: 5, 3;
+		dizzypoints: -ceil(enemynear,DizzyPointsMax * .08); #8% of opponents max dizzy points
+		guardpoints: -ceil(enemynear,GuardPointsMax * .06); #6% of opponents guard points
+		guardsound: 6, 0;
+		ground.type: Low;
+		ground.slidetime: 12;
+		ground.hittime: 17;
+		ground.velocity: -9;
+		ground.cornerpush.veloff: -15; #To push far away when p2 is in corner
+		guard.velocity: -9;
+		air.velocity: -2, -5;
+		airguard.velocity: -3.5, -4.5;
+		air.fall: 1;
+	}
+}
+
+if AnimElem = 2 || AnimElem = 3 || AnimElem = 4 || AnimElem = 8 {
+	PosAdd{x: 10}
+}
+
+if AnimElem = 4 {
+	VelSet{x: 2}
+}
+
+Call Endstate(0);
+
+#===============================================================================
+# Strong Kung Fu Zankou
+#===============================================================================
+# ZSS difficulty: easy
+[Statedef 1410;
+type: S; movetype: A; physics: N;
+juggle: 4; poweradd: 50; velset: 0, 0;
+anim: 1410; ctrl: 0; sprpriority: 2;]
+
+if AnimElem = 3 {
+	call CSnd(0, 3, 1);
+}
+VelMul{x: .65}
+
+if Time = 0 {
+	HitDef{
+		attr: S, SA;
+		animtype: Hard;
+		damage: 100, 6;
+		priority: 4;
+		guardflag: MA;
+		pausetime: 12, 12;
+		sparkxy: 0, -65;
+		hitsound: 5, 3;
+		guardsound: 6, 0;
+		dizzypoints: -ceil(enemynear,DizzyPointsMax * .09); #9% of opponents max dizzy points
+		guardpoints: -ceil(enemynear,GuardPointsMax * .07); #7% of opponents guard points
+		ground.type: Low;
+		ground.slidetime: 12;
+		ground.hittime: 17;
+		ground.velocity: -9;
+		ground.cornerpush.veloff: -15; #To push far away when p2 is in corner
+		guard.velocity: -9;
+		air.velocity: -2, -5;
+		airguard.velocity: -3.5, -4.5;
+		air.fall: 1;
+	}
+}
+
+if AnimElem = 2 || AnimElem = 3 || AnimElem = 4 || AnimElem = 9 {
+	PosAdd{x: 10}
+}
+
+if AnimElem = 4 {
+	VelSet{x: 8}
+}
+
+call EndState(0);
+
+#===============================================================================
+# Far Kung Fu Zankou
+#===============================================================================
+# ZSS difficulty: easy
+[Statedef 1420;
+type: S; movetype: A; physics: N;
+juggle: 6; poweradd: -330; velset: 0, 0;
+anim: 1420; ctrl: 0; sprpriority: 2;]
+
+if Time = 0 {
+	AfterImage{
+		length: 13;
+		palbright: 30, 30, 0;
+		palcontrast: 70, 70, 20;
+		paladd: -10, -10, -10;
+		palmul: .85, .85, .50;
+		timegap: 1;
+		framegap: 2;
+		trans: Add;
+		time: 2;
+	}
+	call EXFX(20);
+}
+
+if AnimElemTime(8) < 0 {
+	AfterImageTime{time: 2}
+}
+
+if AnimElem = 3 {
+	call CSnd(0, 3, 1);
+}
+
+VelMul{x: .7}
+
+if AnimElemTime(4) = -2 {
+	HitDef{
+		attr: S, SA;
+		animtype: Hard;
+		damage: 25, 2;
+		getpower: 0;
+		priority: 4;
+		guardflag: MA;
+		pausetime: 9, 9;
+		sparkxy: -15, -45;
+		hitsound: 5, 2;
+		guardsound: 6, 0;
+		dizzypoints: -ceil(enemynear,DizzyPointsMax * .05); #5% of opponents max dizzy points
+		guardpoints: -ceil(enemynear,GuardPointsMax * .04); #4% of opponents guard points
+		ground.type: Low;
+		ground.slidetime: 22;
+		ground.hittime: 24;
+		ground.velocity: -7;
+		ground.cornerpush.veloff: -8; #To push far away when p2 is in corner
+		guard.velocity: -9;
+		air.velocity: -5, -4;
+		airguard.velocity: -3.5, -4.5;
+	}
+}
+
+if AnimElem = 4 {
+	HitDef{
+		attr: S, SA;
+		animtype: Hard;
+		damage: 100, 8;
+		getpower: 0;
+		priority: 5;
+		guardflag: MA;
+		pausetime: 12, 12;
+		sparkxy: 0, -65;
+		hitsound: 5, 3;
+		dizzypoints: -ceil(enemynear,DizzyPointsMax * .05); #5% of opponents max dizzy points
+		guardpoints: -ceil(enemynear,GuardPointsMax * .04); #4% of opponents guard points
+		guardsound: 6, 0;
+		ground.type: Low;
+		ground.slidetime: 22;
+		ground.hittime: 24;
+		ground.velocity: -5, -4;
+		ground.cornerpush.veloff: -15; #To push far away when p2 is in corner
+		guard.velocity: -9;
+		air.velocity: -5, -4;
+		airguard.velocity: -3.5, -4.5;
+		fall: 1;
+	}
+}
+
+if AnimElem = 2 || AnimElem = 3 || AnimElem = 4 || AnimElem = 10 {
+	PosAdd{x: 10}
+}
+
+if AnimElemTime(3) = [1, 2] {
+	VelSet{x: 20}
+}
+
+call EndState(0);
+
+#===============================================================================
+# Triple Kung Fu Palm (hyper)
+#===============================================================================
+# ZSS difficulty: medium
+# Notes: Notice that the HitDefs in supers have "getpower = 0". This makes
+#        sure KFM doesn't recharge his super guage as he hits.
+#        Also, the attributes for the HitDefs is "HA" for "hyper attack",
+#        ie. "attr = S, HA".
+#        Notice how the first HitDef is reused twice by allowing it to
+#        trigger on two animation elements.
+[Statedef 3000;
+type: S; movetype: A; physics: S;
+juggle: 4; velset: 0, 0; anim: 3000;
+ctrl: 0; sprpriority: 2;]
+
+if AnimElem = 2, >= 0 {
+	Width{value: 15, 0}
+}
+
+if AnimElem = 2, 1 {
+	SuperPause{
+		pos: 25, -57;
+		anim: 100;
+		sound: 20, 0;
+		poweradd: -1000;
+	}
+	AfterImage{time: 2}
+}
+
+if AnimElemTime(2) >= 1 && AnimElemTime(25) < 4 {
+	AfterImageTime{time: 2}
+}
+
+if AnimElem = 2 {
+	NotHitBy{value: , NA, SA, AT; time: 11}
+	PosAdd{x: 20}
+}
+
+if AnimElemTime(2) >= 0 && AnimElemTime(14) < 0 {
+	NotHitBy{value: C, NA; time: 1}
+}
+
+if AnimElem = 4 || AnimElem = 12 || AnimElem = 20 {
+	call CSnd(0, 3, 1);
+}
+
+if AnimElem = 3 || AnimElem = 11 || AnimElem = 13 || AnimElem = 19 || AnimElem = 21 || AnimElem = 31 {
+	PosAdd{x: 10}
+}
+
+if AnimElem = 5 || AnimElem = 13 || AnimElem = 21 {
+	VelSet{x: 6}
+}
+
+if AnimElem = 5 {
+	PosAdd{x: 5}
+}
+
+if AnimElem = 5 || AnimElem = 13 {
+	HitDef{
+		attr: S, HA;
+		animtype: Hard;
+		damage: 72, 4;
+		getpower: 0;
+		priority: 6;
+		guardflag: MA;
+		pausetime: 15, 15;
+		sparkxy: -10, -60;
+		hitsound: 5, 4;
+		dizzypoints: -1; #we dont want this to stun
+		guardpoints: -ceil(enemynear,GuardPointsMax * .05); #5% of opponents guard points
+		guardsound: 6, 0;
+		ground.type: Low;
+		ground.slidetime: 30;
+		ground.hittime: 32;
+		ground.velocity: -6;
+		air.velocity: -3, -2.8;
+		air.fall: 1;
+		fall.animtype: Hard;
+		fall.recover: 0;
+	}
+}
+
+if AnimElem = 21 {
+	HitDef{
+		attr: S, HA;
+		animtype: Hard;
+		damage: 75, 4;
+		getpower: 0;
+		priority: 5;
+		guardflag: MA;
+		pausetime: 15, 15;
+		sparkxy: -10, -60;
+		hitsound: 5, 4;
+		dizzypoints: -1; #we dont want this to stun
+		guardpoints: -ceil(enemynear,GuardPointsMax * .05); #5% of opponents guard points
+		guardsound: 6, 0;
+		ground.type: Low;
+		ground.slidetime: 30;
+		ground.hittime: 32;
+		ground.velocity: -5, -4;
+		guard.velocity: -12;
+		air.velocity: -5, -4;
+		airguard.velocity: -3, -3;
+		fall.animtype: Hard;
+		fall: 1;
+		fall.recover: 0;
+	}
+}
+
+call EndState(0);
+
+#===============================================================================
+# Smash Kung Fu Upper (hyper)
+#===============================================================================
+# CNS difficulty: medium
+# Description: This is very similar to KFM's Strong and Light Kung Fu Uppers.
+#     There is just one HitDef, for a screen-shaking hit. The envshake
+#     parameters are used to make this effect. You can find out more about
+#     each parameter in the CNS documentation.
+#     The fall.recover parameter is set at 0, meaning that p2 cannot recover
+#     from the fall by entering his recovery command (for KFM, that is x+y).
+#     This gives the attacking KFM a chance to follow up with another attack,
+#     such as the Fast Kung Fu Palm.
+#     Note that there is a ChangeState controller used to make KFM change to
+#     a success state if he hits. The success state has KFM hold his arm
+#     up longer for a dramatic effect.
+[Statedef 3050;
+type: S; movetype: A; physics: S;
+juggle: 4; velset: 0, 0; anim: 3050;
+ctrl: 0; sprpriority: 2;]
+
+if AnimElemTime(4) >= 0 && AnimElemTime(16) < 0 {
+	Width{value: 5, 0}
+}
+
+if AnimElem = 2 {
+	SuperPause{
+		pos: -5, -55;
+		anim: 100;
+		sound: 20, 0;
+		poweradd: -1000
+	}
+	NotHitBy{value: , NA, SA, AT; time: 6}
+}
+
+if AnimElemTime(2) >= 0 {
+	AfterImageTime{time: 2}
+}
+
+if AnimElem = 4 {
+	call CSnd(0, 2, 1);
+}
+
+if Time = 0 {
+	HitDef{
+		attr: S, HA;
+		animtype: Up;                #Make p2 use "Up" type animation on hit
+		damage: 155, 12;
+		getpower: 0;
+		priority: 5;
+		guardflag: MA;
+		pausetime: 30, 30;
+		sparkno: 3;
+		sparkxy: 0, -110;
+		hitsound: 5, 4;
+		guardsound: 6, 0;
+		ground.type: Low;
+		ground.slidetime: 26;
+		dizzypoints: -1; #we dont want this to stun
+		guardpoints: -ceil(enemynear,GuardPointsMax * .15); #15% of opponents guard points
+		ground.hittime: 28;
+		ground.velocity: -1.3, -25;
+		guard.velocity: -11;
+		air.velocity: -1.3, -25;
+		airguard.velocity: -4.5, -5;
+		envshake.time: 25;           #Parameters for shaking the screen on hit
+		envshake.ampl: 7;
+		envshake.freq: 176;
+		p2facing: 1;                 #Force p2 to face p1 on hit
+		fall: 1;
+		fall.recover: 0;             #Prevent p2 from recovering
+		fall.damage: 70;             #p2 will take 70 damage on hitting the ground
+		fall.envshake.ampl: 6;       #Parameters for shaking the screen on fall
+		fall.envshake.freq: 178;
+		fall.envshake.time: 15;
+		mindist: 50, -100;           #Keep p2 a minimum of 50 pixels away from p1, and no higher than 100 pixels up
+		maxdist: 100, -10;           #Keep p2 a maximum of 100 pixels away from p1, and no lower than 10 pixels below
+		yaccel: .8;                  #Accelerate p2 downwards rapidly
+	}
+}
+
+#This controller below makes Kung Fu man change to a success state if he
+#successfully hits the Smash Kung Fu Upper.
+if MoveHit {
+	ChangeState{value: 3051}
+}
+
+call EndState(0);
+
+#-------------------------------------------------------------------------------
+# Smash Kung Fu Upper (success)
+# Description: This is the state that KFM changes to if he successfully hits
+#     with Smash Kung Fu Upper. KFM holds his arm high for a short while
+#     longer, then changes back to his idle stand state.
+[Statedef 3051;
+type: S; movetype: A; physics: S;
+anim: 3051;]
+
+if AnimTime < -2 {
+	AfterImageTime{time: 2}
+}
+
+call EndState(0);
+
+#===============================================================================
+# Override common states (use same number to override):
+#===============================================================================
+
+
+#===============================================================================
+# States that are always executed (use Statedef -2)
+#===============================================================================
+[Statedef -2]
+
+
+#===============================================================================
+# States that are executed when in self's state file (use Statedef -3)
+#===============================================================================
+[Statedef -3]
+#DisplayToClipboard{text: "p1cp: %f p2cp: %f"; params: P2BodyDist X,Map(jug)}
+
+#Landing Sound
+#This controller plays a sound every time KFM lands from a jump, or back-dash.
+#The code below is another way to represent the structure of
+#triggerall, trigger1, trigger2
+if Time = 1 && (StateNo = 52 || StateNo = 106) { #Jump land || Run-back land
+	call CSnd(40, 0, 1);
+}

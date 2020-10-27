@@ -1,0 +1,174 @@
+#===============================================================================
+# Thrown by Kung Fu Throw
+#===============================================================================
+# (a custom gethit state)
+# Description: This is the state that the opponent changes to after being
+#     hit by KFM's throw HitDef. The important thing here is to use a
+#     ChangeAnim2 controller. The difference between ChangeAnim2 and
+#     ChangeAnim is that ChangeAnim2 changes the player's animation to
+#     an action in the AIR file of the attacker (in this case, kfm.air),
+#     whereas ChangeAnim always changes the player to an action in his
+#     own AIR file. Look at Action 820 in kfm.air for some extra
+#     comments.
+[Statedef 820;
+type: A; movetype: H; physics: N;
+velset: 0, 0;]
+
+if Time = 0 {
+	ChangeAnim2{value: 820}
+}
+
+#In case attacker loses binding on player for any reason, this controller
+#guarantees that the player will never get stuck in this thrown state.
+if !GetHitVar(IsBound) {
+	SelfState{value: 5050}
+}
+
+#===============================================================================
+# Thrown by Kung Fu Throw - thrown into the air
+#===============================================================================
+# (a custom gethit state)
+# Description: This state has the opponent flying through the air and
+#     falling down onto the ground. The SelfState controller sets the
+#     opponent back using to his own state file when he his the ground.
+#     Controllers 821,2 and 821,3 allow the opponent to recover by
+#     hitting his recovery command when he is falling.
+[Statedef 821;
+type: A; movetype: H; physics: N;
+velset: 2.8, -7; poweradd: 40;]
+
+ #Gravity
+VelAdd{y: .4}
+
+#triggerall
+if Vel Y > 0 && Alive && CanRecover && (Command = "recovery" || Random%5=0 && AILevelF) {
+	#trigger1 
+	if Pos Y >= -20 {
+		# Recover near ground (use ChangeState)
+		ChangeState{value: 5200} #HITFALL_RECOVER
+	} else {
+		#Else is used when the if{} block has a either true or false statement
+		#it is not required to handle the opposite of an if but this is used to
+		#to specify that only one thing should happen as the opposite(false)
+
+		#Recover in mid air (use SelfState)
+		SelfState{value: 5210} # ;HITFALL_AIRRECOVER
+	}
+}
+
+if Pos Y >= 0 && Vel Y > 0 {
+	SelfState{value: 5100} #Hit ground
+}
+
+#===============================================================================
+# Hit by Fast Kung Fu Palm - shaking from the hit
+#===============================================================================
+# (a custom gethit state)
+# See State 1020 for details
+[Statedef 1025;
+type: A; movetype: H; physics: N;
+velset: 0, 0;]
+
+#Custom animation
+ChangeAnim2{value: 1025}
+
+if HitShakeOver = 1 {
+	ChangeState{value: 1026}
+}
+
+#===============================================================================
+# Hit by Fast Kung Fu Palm - flying through the air
+#===============================================================================
+# (a custom gethit state)
+[Statedef 1026;
+type: A; movetype: H; physics: N;]
+
+if Time = 0 {
+	HitVelSet{x: 1; y: 1}
+}
+
+VelAdd{y: .45}
+
+#No scroll
+if Pos Y < -15 {
+	if BackEdgeBodyDist < 65 || FrontEdgeBodyDist < 65 {
+		ScreenBound{value: 1; movecamera: 0, 1}
+	}
+	if BackEdgeBodyDist <= 20 || FrontEdgeBodyDist <= 20 {
+		ChangeState{value: 1027}
+	}
+}
+
+if Vel Y > 0 && Pos Y >= 0 {
+	SelfState{value: 5100}
+}
+
+#===============================================================================
+# Hit by Fast Kung Fu Palm - hit wall
+#===============================================================================
+# (a custom gethit state)
+[Statedef 1027;
+type: A; movetype: H; physics: N;]
+
+if Time = 0 {
+	if FrontEdgeBodyDist <= 30 {
+		Turn{}
+	}
+	PosAdd{x: 15 - BackEdgeBodyDist}
+	Explod{
+		anim: F72;
+		pos: 0, floor(ScreenPos Y) - 50;
+		postype: back;
+		sprpriority: 3;
+	}
+	call SysSnd(7, 0, 1);
+	ChangeAnim2{value: 1027}
+}
+
+#Stop moving
+PosFreeze{}
+
+#No scroll
+ScreenBound{value: 1; movecamera: 0, 1}
+
+if AnimTime = 0 {
+	ChangeState{value: 1028}
+}
+
+#===============================================================================
+# Hit by Fast Kung Fu Palm - bounce off wall
+#===============================================================================
+# (a custom gethit state)
+[Statedef 1028;
+type: A; movetype: H; physics: N;]
+
+NotHitBy{value: , NA, NP}
+
+if Time = 0 {
+	#Vel Y, X
+	VelSet{y: -6; x: 1.6}
+	if BackEdgeDist < 30 {
+		Turn{}
+	}
+	if !SelfAnimExist(5052) { #Self falling animation
+		ChangeAnim{value: 5050}
+	}
+	if SelfAnimExist(5052) { #Self falling animation (diagup type)
+		ChangeAnim{value: 5052}
+	}
+}
+
+VelAdd{y: .35}
+
+if Vel Y > -2 {
+	persistent(0) if Anim = 5050 && SelfAnimExist(5060) { #Coming down - normal
+		ChangeAnim{value: 5060}
+	}
+	persistent(0) if Anim = 5052 && SelfAnimExist(5062) { #Coming down - diagup type
+		ChangeAnim{value: 5062}
+	}
+}
+
+if Vel Y > 0 && Pos Y >= 0 {
+	SelfState{value: 5100}
+}

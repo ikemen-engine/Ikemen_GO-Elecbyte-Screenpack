@@ -18,14 +18,16 @@
  ;If you put "random" as the stagefilename, then a random stage will be selected
  ;for that player. e.g.
  ;    kfm, random
- ;IKEMEN feature: Not really needed since no stage = random anyway.
+ ;IKEMEN feature: Unlike mugen, stage declaration (including random, which is
+ ;default assignment) can be skipped without affecting other parameters.
  ;
- ;Optional parameters should follow on the same line, separated by commas.
- ;Each parameter has the form:
+ ;Optional parameters should follow on the same line (except 'slot' parameter),
+ ;separated by commas. Each parameter has the form:
  ;    paramname = paramvalue
  ;where paramname is the name of the parameter type, and paramvalue is the value
  ;(data) that should be assigned to that parameter.
- ;'rivals' and 'slot' parameters are the exceptions to these general rules.
+ ;With the exception of 'unlock' (which always has to be last parameter in line)
+ ;parameters can be assigned in any order (after char and stage declaration).
  ;
  ;The optional parameters are:
  ;
@@ -82,7 +84,7 @@
  ;   IKEMEN feature: Set the paramvalue to the time (in seconds) in order to
  ;   overwrite round time chosen in the settings.
  ;
- ; - onlyme
+ ; - single
  ;   IKEMEN feature: Set the paramvalue to 1 to force facing this character
  ;   individually in team modes.
  ;
@@ -96,11 +98,13 @@
  ;
  ; - boss
  ;   IKEMEN feature: Set the paramvalue to 1 to include this character in "Boss
- ;   Rush" mode.
+ ;   Rush" mode. At least 1 character needs this parameter for the mode to show
+ ;   up in modes selection menu.
  ;
  ; - bonus
  ;   IKEMEN feature: Set the paramvalue to 1 to include this character in "Bonus
- ;   Games" mode.
+ ;   Games" mode. At least 1 character needs this parameter for the mode to show
+ ;   up in modes selection menu.
  ;
  ; - exclude
  ;   IKEMEN feature: Set the paramvalue to 1 to avoid including this character
@@ -117,14 +121,13 @@
  ;      unnecessary select.def slots to do so),
  ;   2: cell can't be selected, art is not rendered (slot is ignored until
  ;      character is unlocked).
- ;   3: cell behaves like randomselect slot until character is unlocked.
- ;   TODO: Unlocking hidden characters is handled via [UnlockContent] section.
+ ;   3: cell behaves like randomselect slot until character is unlocked
  ;
  ; - order
  ;   Set the paramvalue to the ordering priority to give the character in
  ;   Arcade and Time Attack modes. A smaller value means you will fight the
  ;   character sooner (excluding 'ratio' Arcade mode, which allows more ordering
- ;   flexibility via 'arcade.ratiomatches' setting). The default order value is
+ ;   flexibility via 'arcade.ratiomatches' settings). The default order value is
  ;   1, if you omit this param. Edit *.maxmatches settings under [Options] to
  ;   customize amount of matches per order priority.
  ;   IKEMEN feature: Max 30 orders mugen limitation is lifted.
@@ -137,32 +140,27 @@
  ;   from showing up in survival modes you can set it to order group outside
  ;   configured survival.maxmatches range (e.g. ordersurvival=0).
  ;
- ; - <number> = {} (rivals)
- ;   IKEMEN feature: The parameter alters standard arcade order system and other
- ;   default match settings, allowing to force pre-defined matches along the
- ;   way. paramname refers to arcade match number (for example 4 = 4th match).
- ;   paramvalue, enclosed in {} brackets, follows the same syntax as adding a
- ;   new character with optional stage assignment and accepts following optional
- ;   char parameters: music, musicalt, musiclife, musicvictory, ai, vsscreen,
- ;   winscreen, rounds, time, onlyme. If 'onlyme' parameter is not set and
- ;   you're playing in team mode the referenced character becomes the opposite
- ;   team leader, and other characters follows order settings. Characters and
- ;   stages referenced here, if not already added as separate entries, won't be
- ;   selectable in select screen.
+ ; - arcadepath
+ ;   IKEMEN feature: Set the paramvalue to the lua file (file path relative to
+ ;   the folder of character) containing custom arcade path. This parameter
+ ;   makes the character ignore default *.maxmatches settings under [Options]
+ ;   section and use arcade path coded entirely in lua, which allows
+ ;   implementing functionality normally not possible in mugen (rival matches,
+ ;   branching paths, secret bosses etc.)
+ ;   More info: https://github.com/K4thos/Ikemen_GO/wiki#misc_arcadepath
  ;
- ; - maxmatches
- ;   IKEMEN feature: This parameter makes the character ignore default
- ;   *.maxmatches / *.ratiomatches settings under [Options] section and assign
- ;   different ones instead. paramvalue is used as a prefix to the original
- ;   names of these settings, followed by dot, so the new entries added under
- ;   [Options] section should look like this: 'paramvalue.arcade.maxmatches'
- ;   'paramvalue.arcade.ratiomatches' and so forth.
+ ; - ratiopath
+ ;   IKEMEN feature: Like 'arcadepath', but used only if the p2 team mode has
+ ;   been set to 'ratio'. If not assigned, ratio team mode arcade run defaults
+ ;   to 'arcade.ratiomatches' settings.
  ;
- ; - slot = {} (multiple chars in one slot)
- ;   IKEMEN feature: This parameter allows to assign multiple characters into a
- ;   single select screen slot. paramvalue, enclosed in {} brackets, consists
- ;   of multiple newlines, where each of them follows the usual syntax.
- ;   Characters added this way can have 3 extra parameters assigned:
+ ; - slot
+ ;   IKEMEN feature: Slot parameter, which allows to assign multiple characters
+ ;   into a single select screen slot, uses special syntax: declaration starts
+ ;   with a line containing only 'slot = {'. The next and following lines have
+ ;   characters added using the standard syntax. Closing '}' bracket in a new
+ ;   line ends current slot declaration. Characters added this way can have few
+ ;   extra parameters assigned:
  ;   - select: Set the paramvalue to the command that selects this character.
  ;     If multiple chars in this slot have the same paramvalue assigned, they
  ;     will be selected randomly.
@@ -172,13 +170,22 @@
  ;     character with the previous character that shares the same paramvalue.
  ;   Commands use the same syntax as mugen CMD files (comma is permitted)
  ;
+ ; - unlock
+ ;   IKEMEN feature: paramvalue is executed as Lua code condition, right after
+ ;   new game mode is initiated and upon returning to main menu. If it evaluates
+ ;   to boolean 'true' the character locked via 'hidden' parameter will become
+ ;   selectable. On 'false' it will be hidden. Due to parameters syntax,
+ ;   'unlock' has to be the very last parameter used in line (everything that
+ ;   follows is treated as a pure Lua code). Default: true (if character is not
+ ;   hidden, otherwise: false)
+ ;   More info: https://github.com/K4thos/Ikemen_GO/wiki#misc_lua_unlock
+ ;
  ;You can also add a randomize icon to the select screen. To do this, put the
  ;word "randomselect" on a line of its own, with no extra parameters.
  ;
  ;Examples:
  ; kfm, stages/mybg.def, includestage=0
- ; kfm, stages/mybg.def, maxmatches=somename
- ; kfm, stages/mybg.def, 3={SuaveDude, stages/mybg2.def}
+ ; kfm, stages/mybg.def, arcadepath=arcade.lua
  ; kfm, stages/mybg.def, music=sound/song.mp3, order=3, ai=8, hidden=2
  ; slot = {
  ;      kfm, stages/mybg.def, previous=d, next=w
@@ -188,13 +195,12 @@
  ;Insert your characters below.
 
 kfm, stages/kfm.def
-kfm720, stages/stage0-720.def, order=0 ;order=0 removes it from arcade AI pool.
 randomselect
 
 ;-------------------------------------------------------------------------------
 [ExtraStages]
- ;Put extra stages here. They will be available in VS and Watch modes.
- ;For example, you can insert "stages/mybg.def".
+ ;Put extra stages here. They will be available in modes that allow selecting
+ ;stage manually. For example, you can insert "stages/mybg.def".
  ;
  ;Optional parameters may follow on the same line, separated by commas.
  ;Each parameter has the form:
@@ -236,9 +242,18 @@ randomselect
  ;
  ; - order
  ;   IKEMEN feature: Set the paramvalue to the ordering priority to give the
- ;   stage in arcade modes. If there is at least 1 stage with assigned order,
- ;   facing opponent with the exact order paramvalue will result in stage being
- ;   randomly chosen from a pool of stages with the matching order.
+ ;   stage in Arcade and Time Attack modes. If there is at least 1 stage with
+ ;   assigned order, facing opponent with the exact order paramvalue will result
+ ;   in stage being randomly chosen from stages with the matching order.
+ ;
+ ; - unlock
+ ;   IKEMEN feature: paramvalue is executed as Lua code condition, right after
+ ;   new game mode is initiated and upon returning to main menu. If it evaluates
+ ;   to boolean 'true' the stage will become manually selectable. On 'false' it
+ ;   will be hidden. Due to parameters syntax, 'unlock' has to be the very last
+ ;   parameter used in line (everything that follows is treated as a pure Lua
+ ;   code). Default: true.
+ ;   More info: https://github.com/K4thos/Ikemen_GO/wiki#misc_lua_unlock
  ;
  ;Examples:
  ; stages/mybg.def, music=sound/song.mp3, music=sound/song2.mp3
@@ -340,3 +355,43 @@ ratio.AIramp.end   = 3, 2
 
 survival.AIramp.start = 0, -3
 survival.AIramp.end   = 16, 4
+
+;-------------------------------------------------------------------------------
+[StoryMode]
+ ;Story Mode arcs declaration. Assigned arcs are selectable via Story Mode
+ ;submenu ('menu.itemname.storymode' parameter in screenpack DEF file)
+ ;
+ ;Declaring arcs consists of setting up following parameters:
+ ; - name
+ ;   IKEMEN feature: Set to name that should be returned by GameMode trigger.
+ ;   This parameter also initiates new story arc declaration, so it has to be
+ ;   assigned before any other parameter used by the same arc. All arcs should
+ ;   have unique names.
+ ;
+ ; - displayname
+ ;   IKEMEN feature: Set to name that should be displayed in Story Mode submenu.
+ ;
+ ; - path
+ ;   IKEMEN feature: Path to file with lua extension (relative to game
+ ;   directory), containing story mode arc coded in Lua language.
+ ;   More info: https://github.com/K4thos/Ikemen_GO/wiki#misc_story
+ ;
+ ; - unlock
+ ;   IKEMEN feature: Pure Lua code, executed exactly as is, each time upon
+ ;   loading main menu. If the code returns boolean 'true' the story arc will be
+ ;   selectable from story mode submenu. On 'false' it will be hidden. Default:
+ ;   true. More info: https://github.com/K4thos/Ikemen_GO/wiki#misc_lua_unlock
+ ;
+ ;Examples:
+ ; name = storymode_arc1
+ ; displayname = Kung Fu Story Part I
+ ; path = data/story/arc1.lua
+ ; unlock = true
+ ;
+ ; name = storymode_arc2
+ ; displayname = Kung Fu Story Part II
+ ; path = data/story/arc2.lua
+ ; unlock = true
+ ;
+ ;Declare your Story Mode arcs below.
+
