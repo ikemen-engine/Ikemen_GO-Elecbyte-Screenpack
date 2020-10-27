@@ -171,12 +171,13 @@
  ;   Commands use the same syntax as mugen CMD files (comma is permitted)
  ;
  ; - unlock
- ;   IKEMEN feature: paramvalue is executed as Lua code condition, each time
- ;   upon loading main menu. If it evaluates to boolean 'true' the character
- ;   locked via 'hidden' parameter will become selectable. Due to parameters
- ;   syntax, 'unlock' has to be the very last parameter used in line (everything
- ;   that follows is treated as a pure Lua code). Default: true (if character is
- ;   not hidden, otherwise: false)
+ ;   IKEMEN feature: paramvalue is executed as Lua code condition, right after
+ ;   new game mode is initiated and upon returning to main menu. If it evaluates
+ ;   to boolean 'true' the character locked via 'hidden' parameter will become
+ ;   selectable. On 'false' it will be hidden. Due to parameters syntax,
+ ;   'unlock' has to be the very last parameter used in line (everything that
+ ;   follows is treated as a pure Lua code). Default: true (if character is not
+ ;   hidden, otherwise: false)
  ;   More info: https://github.com/K4thos/Ikemen_GO/wiki#misc_lua_unlock
  ;
  ;You can also add a randomize icon to the select screen. To do this, put the
@@ -246,11 +247,12 @@ randomselect
  ;   in stage being randomly chosen from stages with the matching order.
  ;
  ; - unlock
- ;   IKEMEN feature: paramvalue is executed as Lua code condition, each time
- ;   upon loading main menu. If it evaluates to boolean 'true' the stage will
- ;   become manually selectable. On 'false' it will be hidden. Due to parameters
- ;   syntax, 'unlock' has to be the very last parameter used in line (everything
- ;   that follows is treated as a pure Lua code). Default: true.
+ ;   IKEMEN feature: paramvalue is executed as Lua code condition, right after
+ ;   new game mode is initiated and upon returning to main menu. If it evaluates
+ ;   to boolean 'true' the stage will become manually selectable. On 'false' it
+ ;   will be hidden. Due to parameters syntax, 'unlock' has to be the very last
+ ;   parameter used in line (everything that follows is treated as a pure Lua
+ ;   code). Default: true.
  ;   More info: https://github.com/K4thos/Ikemen_GO/wiki#misc_lua_unlock
  ;
  ;Examples:
