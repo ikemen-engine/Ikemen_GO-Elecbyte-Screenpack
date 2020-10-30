@@ -198,7 +198,7 @@
  ;
  ;Insert your characters below.
 
-kfm, stages/kfm.def
+kfmZ, stages/kfm.def
 randomselect
 
 ;-------------------------------------------------------------------------------
