@@ -1683,6 +1683,7 @@ overlay.alpha = 20, 100
 ;Rank definition
 [Rank Info] ;Ikemen feature
 enabled = 1
+bars.display = 0
 snd.time = 8
 snd = 600, 0
 p1.score.offset = 43, 43
