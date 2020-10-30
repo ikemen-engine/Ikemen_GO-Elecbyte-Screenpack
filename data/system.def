@@ -1180,7 +1180,7 @@ fadeout.time = 64
 roundstowin = 5           ;Number of rounds to get win pose (lose pose otherwise)
 
 ;-------------------------------------------------------------------
-;Options screen definition (TODO: currently forced to 320x240 localcoord)
+;Options screen definition
 [Option Info]
 fadein.time = 10
 fadein.col = 0, 0, 0                              ;Ikemen feature
@@ -1193,6 +1193,7 @@ title.font = 2,0,0
 title.font.scale = 1.0, 1.0
 title.font.height = -1                            ;Ikemen feature
 title.text = "OPTIONS"                            ;Ikemen feature
+menu.uselocalcoord = 0                            ;Ikemen feature
 menu.pos = 85, 33                                 ;Ikemen feature
 menu.item.font = 2,0,1, 191,191,191               ;Ikemen feature
 menu.item.font.scale = 1.0, 1.0                   ;Ikemen feature
@@ -1420,7 +1421,7 @@ tile  = 1,1
 velocity = -1, -1
 
 ;-------------------------------------------------------------------
-;Replay select screen definition (TODO: currently forced to 320x240 localcoord)
+;Replay select screen definition
 [Replay Info] ;Ikemen feature
 fadein.time = 10
 fadein.col = 0, 0, 0
@@ -1431,6 +1432,7 @@ title.font = 2,0,0
 title.font.scale = 1.0, 1.0
 ;title.font.height = -1
 title.text = "REPLAY SELECT"
+menu.uselocalcoord = 0
 menu.pos = 85, 33
 menu.item.font = 2,0,1, 191,191,191
 menu.item.font.scale = 1.0, 1.0
@@ -1476,7 +1478,7 @@ tile  = 1,1
 velocity = -1, -1
 
 ;-------------------------------------------------------------------
-;Pause menu screen definition (TODO: currently forced to 320x240 localcoord)
+;Pause menu screen definition
 [Menu Info] ;Ikemen feature
 fadein.time = 0
 fadein.col = 0, 0, 0
@@ -1487,6 +1489,7 @@ title.font = 2,0,0
 title.font.scale = 1.0, 1.0
 title.font.height = -1
 title.text = "PAUSE"
+menu.uselocalcoord = 0
 menu.pos = 85, 33
 menu.item.font = 2,0,1, 191,191,191
 menu.item.font.scale = 1.0, 1.0
