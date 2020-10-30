@@ -615,6 +615,7 @@ counter.starttime = 0             ;Ikemen feature
 counter.anim = 9000               ;Ikemen feature
 counter.offset = 0, 0             ;Ikemen feature
 counter.scale = 1.0, 1.0          ;Ikemen feature
+counter.default.snd = -1, 0       ;Ikemen feature
 counter.skipstart = 71            ;Ikemen feature
 counter.9.skiptime = 135          ;Ikemen feature
 counter.9.snd = 9000, 9           ;Ikemen feature
