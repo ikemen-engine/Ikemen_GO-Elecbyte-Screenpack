@@ -604,7 +604,7 @@ p1.statedef.no = 5520, 170        ;Ikemen feature
 p2.statedef.continue =            ;Ikemen feature
 p2.statedef.yes =                 ;Ikemen feature
 p2.statedef.no =                  ;Ikemen feature
-credits.text = "Credits: %i"      ;Ikemen feature
+credits.text = "Credits: %2i"     ;Ikemen feature
 credits.offset = 20, 20           ;Ikemen feature
 credits.font = 3,0,1              ;Ikemen feature
 credits.font.scale = 1.0, 1.0     ;Ikemen feature
@@ -1601,10 +1601,42 @@ menu.itemname.exit = "Exit"
 ;Attract mode definition
 [Attract Mode] ;Ikemen feature
 enabled = 0
+fadein.time = 10
+fadein.col = 0, 0, 0
+fadeout.time = 10
+fadeout.col = 0, 0, 0
 credits.key = "5"
 options.key = "F11"
-credits.snd = 400,0
-storyboard = 
+credits.snd = 400, 0
+storyboard = ""
+start.time = 600
+start.insert.text = "Insert coin"
+start.insert.offset = 159, 185
+start.insert.font = 3,0,0
+start.insert.font.scale = 1.0, 1.0
+start.insert.font.height = -1
+start.insert.blinktime = 30
+start.press.text = "Press Start"
+start.press.offset = 159, 185
+start.press.font = 3,0,0
+start.press.font.scale = 1.0, 1.0
+start.press.font.height = -1
+start.press.blinktime = 30
+start.timer.enabled = 1
+start.timer.offset = 310, 234
+start.timer.font = 1,0,-1
+start.timer.font.scale = 1.0, 1.0
+start.timer.font.height = -1
+start.timer.font.text = "%s"
+start.timer.count = 60
+start.timer.framespercount = 60
+start.timer.displaytime = 10
+start.done.snd = 100, 1
+credits.text = "Credits: %2i"
+credits.offset = 159, 234
+credits.font = 1,0,0
+credits.font.scale = 1.0, 1.0
+credits.font.height = -1
 
 ;Ikemen feature: Flexible submenu grouping.
 ;Full documentation of this feature is available on Ikemen GO features wiki
@@ -1614,7 +1646,38 @@ menu.itemname.arcade = "ARCADE" ;Ikemen feature
 ;-------------------
 ;Attract mode screen background
 [AttractBGdef] ;Ikemen feature
+bgclearcolor = 0,0,0
 
+[AttractBG 0]
+type  = parallax
+spriteno = 5, 1
+start = 0, 145
+width = 400, 1200
+yscalestart = 100
+yscaledelta = 1
+tile  = 1,1
+velocity = -1
+
+[AttractBG 1]
+type  = normal
+spriteno = 5, 2
+start = -160, 145
+trans = sub
+
+[AttractBG 2]
+type  = normal
+spriteno = 5,0
+start = 0, 10
+tile = 1,2
+velocity = -1
+mask = 0
+
+[AttractBG 3]
+type  = normal
+spriteno = 0,0
+start = 0, 40
+mask = 1
+trans = add
 
 ;-------------------------------------------------------------------
 ;Challenger definition
@@ -2073,7 +2136,7 @@ fadein.col = 0, 0, 0
 fadeout.time = 50
 fadeout.col = 0, 0, 0
 ;fadeout.anim = 
-time = 600
+time = 360
 pos = 0, 0
 title.offset = 160, 28
 title.font = 3,0,0
