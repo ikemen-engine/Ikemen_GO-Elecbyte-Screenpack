@@ -295,6 +295,11 @@ timeattack.maxmatches = 6,1,1,0,0,0,0,0,0,0
  ;below (in such case you can actually "complete" the mode).
 survival.maxmatches = -1,0,0,0,0,0,0,0,0,0
 
+ ;IKEMEN feature: Maximum number of normal and ratio matches to fight before
+ ;game ends in Boss Rush mode. Can be left empty, if player is meant to fight
+ ;against all boss characters (in such case order parameter is still respected)
+bossrush.maxmatches = 
+
  ;IKEMEN feature: A 'Ratio' mode allows each team to select up to 3 characters
  ;and distribute 4 "ratio levels" amongst them, affecting their life and damage
  ;(ratio 2 is the default to which other ratios are compared, percentages are
