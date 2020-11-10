@@ -1215,6 +1215,72 @@ show.time = 300
 fadeout.time = 64
 roundstowin = 5           ;Number of rounds to get win pose (lose pose otherwise)
 
+; Ikemen feature
+[VS100 Kumite Results Screen]
+enabled = 1
+winstext.text = "Wins: %i\nLoses: %i"
+winstext.font = 3,0,0
+winstext.offset = 159,70
+winstext.displaytime = -1
+winstext.layerno = 2
+fadein.time = 0
+show.time = 300
+fadeout.time = 64
+roundstowin = 51
+
+; Ikemen feature
+[Time Attack Results Screen]
+enabled = 1
+winstext.text = "Clear Time: %m:%s.%x"
+winstext.font = 3,0,0
+winstext.offset = 159,70
+winstext.displaytime = -1
+winstext.layerno = 2
+fadein.time = 0
+show.time = 300
+fadeout.time = 64
+
+; Ikemen feature
+[Time Challenge Results Screen]
+enabled = 1
+winstext.text = "Clear Time: %m:%s.%x"
+winstext.font = 3,0,0
+winstext.offset = 159,70
+winstext.displaytime = -1
+winstext.layerno = 2
+fadein.time = 0
+show.time = 300
+fadeout.time = 64
+
+; Ikemen feature
+[Score Challenge Results Screen]
+enabled = 1
+winstext.text = "Score: %i"
+winstext.font = 3,0,0
+winstext.offset = 159,70
+winstext.displaytime = -1
+winstext.layerno = 2
+fadein.time = 0
+show.time = 300
+fadeout.time = 64
+
+; Ikemen feature
+[Boss Rush Results Screen]
+enabled = 1
+winstext.text = "Congratulations!"
+winstext.font = 3,0,0
+winstext.offset = 159,70
+winstext.displaytime = -1
+winstext.layerno = 2
+fadein.time = 0
+show.time = 300
+fadeout.time = 64
+
+;-------------------
+;Result screen background
+; Ikemen feature
+[ResultsBGdef]
+
 ;-------------------------------------------------------------------
 ;Options screen definition
 [Option Info]

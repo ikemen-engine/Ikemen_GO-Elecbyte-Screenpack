@@ -1379,6 +1379,72 @@ show.time = 300
 fadeout.time = 64
 roundstowin = 5 ;Number of rounds to get win pose (lose pose otherwise)
 
+; Ikemen feature
+[VS100 Kumite Results Screen]
+enabled = 1
+winstext.text = "Wins: %i\nLoses: %i"
+winstext.font = 3,0,0
+winstext.offset = 640,240
+winstext.displaytime = -1
+winstext.layerno = 2
+fadein.time = 0
+show.time = 300
+fadeout.time = 64
+roundstowin = 51
+
+; Ikemen feature
+[Time Attack Results Screen]
+enabled = 1
+winstext.text = "Clear Time: %m:%s.%x"
+winstext.font = 3,0,0
+winstext.offset = 640,240
+winstext.displaytime = -1
+winstext.layerno = 2
+fadein.time = 0
+show.time = 300
+fadeout.time = 64
+
+; Ikemen feature
+[Time Challenge Results Screen]
+enabled = 1
+winstext.text = "Clear Time: %m:%s.%x"
+winstext.font = 3,0,0
+winstext.offset = 640,240
+winstext.displaytime = -1
+winstext.layerno = 2
+fadein.time = 0
+show.time = 300
+fadeout.time = 64
+
+; Ikemen feature
+[Score Challenge Results Screen]
+enabled = 1
+winstext.text = "Score: %i"
+winstext.font = 3,0,0
+winstext.offset = 640,240
+winstext.displaytime = -1
+winstext.layerno = 2
+fadein.time = 0
+show.time = 300
+fadeout.time = 64
+
+; Ikemen feature
+[Boss Rush Results Screen]
+enabled = 1
+winstext.text = "Congratulations!"
+winstext.font = 3,0,0
+winstext.offset = 640,240
+winstext.displaytime = -1
+winstext.layerno = 2
+fadein.time = 0
+show.time = 300
+fadeout.time = 64
+
+;-------------------
+;Result screen background
+; Ikemen feature
+[ResultsBGdef]
+
 ;-------------------------------------------------------------------
 ;Options screen definition
 [Option Info]
@@ -1825,7 +1891,7 @@ start.press.font.scale = 1.0, 1.0
 ;start.press.font.height = -1
 start.press.blinktime = 30
 start.timer.enabled = 1
-start.timer.offset = 1089, 702
+start.timer.offset = 1089, 696
 start.timer.font = 2,0,-1
 start.timer.font.scale = 1.0, 1.0
 ;start.timer.font.height = -1
@@ -1835,7 +1901,7 @@ start.timer.framespercount = 60
 start.timer.displaytime = 10
 start.done.snd = 100, 1
 credits.text = "CREDITS: %2i"
-credits.offset = 640, 702
+credits.offset = 640, 696
 credits.font = 2,0,0
 credits.font.scale = 1.0, 1.0
 ;credits.font.height = -1
@@ -2469,7 +2535,7 @@ face.unknown.facing = 1
 face.unknown.scale = 0.25, 0.25
 timer.enabled = 1
 timer.offset = 930, 696
-timer.font = 5,0,-1
+timer.font = 2,0,-1
 timer.font.scale = 1.0, 1.0
 ;timer.font.height = -1
 timer.font.text = "%i"
