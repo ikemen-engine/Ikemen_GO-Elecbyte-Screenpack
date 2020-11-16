@@ -199,6 +199,7 @@
  ;Insert your characters below.
 
 kfmZ, stages/kfm.def
+kfm720, stages/kfm.def, order=0
 randomselect
 
 ;-------------------------------------------------------------------------------
@@ -266,6 +267,7 @@ randomselect
  ;Insert your stages below.
 
 stages/kfm.def
+stages/stage0.def
 stages/stage0-720.def
 
 ;-------------------------------------------------------------------------------
