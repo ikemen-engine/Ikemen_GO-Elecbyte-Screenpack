@@ -125,6 +125,25 @@ menu.item.font = 4,0,0
 menu.item.active.font = 4,5,0, 224,240,240
 menu.item.spacing = 0, 54
 
+connecting.offset = 640, 393                          ;Ikemen feature
+connecting.font = 7,0,0                               ;Ikemen feature
+connecting.font.scale = 1.0, 1.0                      ;Ikemen feature
+;connecting.font.height = -1                           ;Ikemen feature
+connecting.host.text = "Waiting for player 2... (%s)" ;Ikemen feature
+connecting.join.text = "Now connecting to %s... (%s)" ;Ikemen feature
+;connecting.overlay.window = 0, 0, 1280, 720           ;Ikemen feature
+connecting.overlay.col = 0, 0, 0                      ;Ikemen feature
+connecting.overlay.alpha = 20, 100                    ;Ikemen feature
+textinput.offset = 189, 393                           ;Ikemen feature
+textinput.font = 7,0,1                                ;Ikemen feature
+textinput.font.scale = 1.0, 1.0                       ;Ikemen feature
+;textinput.font.height = -1                           ;Ikemen feature
+textinput.name.text = "Enter Host display name, e.g. John.\nExisting entries can be removed with DELETE button." ;Ikemen feature
+textinput.address.text = "Enter Host IP address, e.g. 127.0.0.1\nCopied text can be pasted with INSERT button."  ;Ikemen feature
+;textinput.overlay.window = 0, 0, 1280, 720            ;Ikemen feature
+textinput.overlay.col = 0, 0, 0                       ;Ikemen feature
+textinput.overlay.alpha = 20, 100                     ;Ikemen feature
+
 ; These parameters define the window in which the items are visible
 ; in.
 menu.window.margins.y = 40, 34
@@ -275,10 +294,29 @@ mask = 1
 
 ;----------------------------
 [Infobox] ;(new in MUGEN 1.0)
-text.font = 6,0,1
+title.offset = 640,38             ;Ikemen feature
+title.font = 4,0,0                ;Ikemen feature
+title.font.scale = 1.0, 1.0       ;Ikemen feature
+;title.font.height = -1            ;Ikemen feature
+title.text =                      ;Ikemen feature
+text.offset = 189, 393            ;Ikemen feature
+text.font = 7,0,1
+text.font.scale = 1.0, 1.0        ;Ikemen feature
+;text.font.height = -1             ;Ikemen feature
+;overlay.window = 0, 0, 1280, 720  ;Ikemen feature
+overlay.col = 0, 0, 0             ;Ikemen feature
+overlay.alpha = 20, 100           ;Ikemen feature
 
 ;----------------------------
-[Infobox Text] ;not used in Ikemen
+[Infobox Text]
+Welcome to SUEHIRO's I.K.E.M.E.N GO engine!
+
+* This is a public development release, for testing purposes.
+* This build may contain bugs and incomplete features.
+* Your help and cooperation are appreciated!
+* Original repo source code: https://osdn.net/users/supersuehiro/
+* Bug reports: https://github.com/Windblade-GR01/Ikemen-GO/issues
+* Features wiki: https://github.com/K4thos/Ikemen_GO/wiki
 
 ;-------------------------------------------------------------------
 ;Character select definition
@@ -294,17 +332,23 @@ moveoveremptyboxes = 1    ;1 to allow cursor to move over empty boxes
 cell.size = 100,100       ;x,y size of each cell (in pixels)
 cell.spacing = 10         ;Space between each cell
 cell.bg.spr = 150,0       ;Note: Don't use animation for cells
+cell.bg.scale = 1,1
 cell.random.spr = 151,0   ;Icon for random select (don't use animation)
 cell.random.switchtime = 4;Time to wait before changing to another random portrait
+cell.random.scale = 1,1
 p1.cursor.startcell = 0,0
 p1.cursor.active.anim = 160
+p1.cursor.active.scale = 1,1
 p1.cursor.done.spr = 161,0
+p1.cursor.done.scale = 1,1
 p1.cursor.move.snd = 100,0
 p1.cursor.done.snd = 100,1
 p1.random.move.snd = 100,0
 p2.cursor.startcell = 0,0
 p2.cursor.active.anim = 170
+p2.cursor.active.scale = 1,1
 p2.cursor.done.spr = 171,0
+p2.cursor.done.scale = 1,1
 p2.cursor.blink = 0       ;1 to blink p2's cursor if overlapping p1's
 p2.cursor.move.snd = 100,0
 p2.cursor.done.snd = 100,1
@@ -318,6 +362,7 @@ portrait.offset = 0,0
 portrait.scale = 1,1
 title.offset = 640,38     ;Position of title (Arcade Mode, etc)
 title.font = 4,0,0        ;Font of title (-1 for none)
+
 ;Big portraits
 p1.face.spr = 9000,1
 p1.face.offset = 0,0      ;Position to put big portrait
@@ -329,6 +374,7 @@ p2.face.offset = 1279,0
 p2.face.scale = 1,1
 p2.face.facing = -1
 p2.face.window = 540,0, 1279,959
+
 ;Name
 p1.name.offset = 50,620   ;Position to put name
 p1.name.font = 3,3,1      ;Set to -1 for no display
@@ -336,11 +382,28 @@ p1.name.spacing = 15,25   ;Space between each name for players on the same team
 p2.name.offset = 1230,620
 p2.name.font = 3,1,-1
 p2.name.spacing = -15,25
+
 ;Stage select
 stage.pos = 640,700
 stage.active.font = 3,0,0
 stage.active2.font = 3,2  ;Second font color for blinking
 stage.done.font = 3,0
+
+;Stage portraits (enabling anim/spr parameters increases initial loading time)
+;stage.portrait.anim =                    ;Ikemen feature
+;stage.portrait.spr = 9000,1              ;Ikemen feature
+stage.portrait.offset = -640, -700       ;Ikemen feature
+stage.portrait.scale = 0.5, 0.5          ;Ikemen feature
+stage.portrait.bg.anim =                 ;Ikemen feature
+stage.portrait.bg.spr =                  ;Ikemen feature
+stage.portrait.bg.offset = 0, 0          ;Ikemen feature
+stage.portrait.bg.scale = 1.0, 1.0       ;Ikemen feature
+stage.portrait.random.anim = -1          ;Ikemen feature
+stage.portrait.random.spr =              ;Ikemen feature
+stage.portrait.random.offset = 0, 0      ;Ikemen feature
+stage.portrait.random.scale = 1.0, 1.0   ;Ikemen feature
+;stage.portrait.window = 0, 0, 1280, 720  ;Ikemen feature
+
 ;Team menu
 teammenu.move.wrapping = 1
 p1.teammenu.pos = 80, 130
@@ -561,23 +624,33 @@ match.text = "Match %i"   ;%i can be used for the match number
 match.offset = 20, 709
 match.font = 2,0,1
 ;Big portraits
-p1.spr = 9000, 1
-p1.offset =  60,30
+p1.num = 4                   ;Ikemen feature
+p1.anim = 0                  ;Ikemen feature
+;p1.spr = 9000, 1
+p1.offset = 144,540 ;60,30
 p1.facing = 1
 p1.scale = 1,1
 p1.window = 60,30, 539,589
-p2.spr = 9000, 1
-p2.offset = 1220,30
+p1.spacing = 75              ;Ikemen feature
+p1.padding = 1               ;Ikemen feature
+p2.num = 4                   ;Ikemen feature
+p2.anim = 0                  ;Ikemen feature
+;p2.spr = 9000, 1
+p2.offset = 1136,540 ;1220,30
 p2.facing = -1
 p2.scale = 1,1
 p2.window = 741,30, 1220,589
+p2.spacing = -75             ;Ikemen feature
+p2.padding = 1               ;Ikemen feature
 ;Names
-p1.name.offset = 110,650  ;Position to put name
-p1.name.font = 3,3,1      ;Set to -1 for no display
-p1.name.spacing = 0,44    ;Space between each name for players on the same team
-p2.name.offset = 1170,650
-p2.name.font = 3,1,-1
-p2.name.spacing = 0,44
+p1.name.offset = 110,635 ;110,650  ;Position to put name
+p1.name.font = 3,0,1      ;Set to -1 for no display
+p1.name.spacing = 15,25 ;0,44    ;Space between each name for players on the same team
+p1.name.active.font = 3,3,1  ;Ikemen feature
+p2.name.offset = 1170,635 ;1170,650
+p2.name.font = 3,0,-1
+p2.name.spacing = -15,25 ;0,44
+p2.name.active.font = 3,1,-1 ;Ikemen feature
 
 ;-----------------------
 ;VS Match up screen background
@@ -1275,6 +1348,7 @@ storyboard =              ;Game over storyboard filename
 ;It will not be displayed on the last match of arcade mode.
 [Victory Screen]
 enabled = 1
+sounds.enabled = 0        ;Ikemen feature
 time = 300                ;Time to show screen
 fadein.time = 8
 fadeout.time = 15
@@ -1328,14 +1402,14 @@ velocity = 0,1.5
 ;It will not be displayed if the winning character has an ending.
 [Win Screen]
 enabled = 1               ;Set to 1 to show win screen, 0 to disable
+fadein.time = 32
+fadeout.time = 64
+pose.time = 300
 wintext.text = "Congratulations!"
 wintext.font = 3,0,0
 wintext.offset = 640,240
 wintext.displaytime = -1
 wintext.layerno = 2
-fadein.time = 32
-pose.time = 300
-fadeout.time = 64
 
 ;-------------------------------------------------------------------
 ;Game ending screen definition
@@ -1358,76 +1432,76 @@ storyboard =              ;Credits storyboard filename
 ;It will not be displayed if the winning character has an ending.
 [Survival Results Screen]
 enabled = 1
+fadein.time = 32
+fadeout.time = 64
+show.time = 300
 winstext.text = "Rounds survived: %i"  ;Use %i for win counter
 winstext.font = 3,0,0
 winstext.offset = 640,240
 winstext.displaytime = -1
 winstext.layerno = 2
-fadein.time = 32
-show.time = 300
-fadeout.time = 64
 roundstowin = 5 ;Number of rounds to get win pose (lose pose otherwise)
 
 ; Ikemen feature
 [VS100 Kumite Results Screen]
 enabled = 1
+fadein.time = 0
+fadeout.time = 64
+show.time = 300
 winstext.text = "Wins: %i\nLoses: %i"
 winstext.font = 3,0,0
 winstext.offset = 640,240
 winstext.displaytime = -1
 winstext.layerno = 2
-fadein.time = 0
-show.time = 300
-fadeout.time = 64
 roundstowin = 51
 
 ; Ikemen feature
 [Time Attack Results Screen]
 enabled = 1
+fadein.time = 0
+fadeout.time = 64
+show.time = 300
 winstext.text = "Clear Time: %m:%s.%x"
 winstext.font = 3,0,0
 winstext.offset = 640,240
 winstext.displaytime = -1
 winstext.layerno = 2
-fadein.time = 0
-show.time = 300
-fadeout.time = 64
 
 ; Ikemen feature
 [Time Challenge Results Screen]
 enabled = 1
+fadein.time = 0
+fadeout.time = 64
+show.time = 300
 winstext.text = "Clear Time: %m:%s.%x"
 winstext.font = 3,0,0
 winstext.offset = 640,240
 winstext.displaytime = -1
 winstext.layerno = 2
-fadein.time = 0
-show.time = 300
-fadeout.time = 64
 
 ; Ikemen feature
 [Score Challenge Results Screen]
 enabled = 1
+fadein.time = 0
+fadeout.time = 64
+show.time = 300
 winstext.text = "Score: %i"
 winstext.font = 3,0,0
 winstext.offset = 640,240
 winstext.displaytime = -1
 winstext.layerno = 2
-fadein.time = 0
-show.time = 300
-fadeout.time = 64
 
 ; Ikemen feature
 [Boss Rush Results Screen]
 enabled = 1
+fadein.time = 0
+fadeout.time = 64
+show.time = 300
 winstext.text = "Congratulations!"
 winstext.font = 3,0,0
 winstext.offset = 640,240
 winstext.displaytime = -1
 winstext.layerno = 2
-fadein.time = 0
-show.time = 300
-fadeout.time = 64
 
 ;-------------------
 ;Result screen background
@@ -1438,46 +1512,55 @@ fadeout.time = 64
 ;Options screen definition
 [Option Info]
 fadein.time = 10
-fadein.col = 0, 0, 0                              ;Ikemen feature
-;fadein.anim =                                    ;Ikemen feature
+fadein.col = 0, 0, 0                               ;Ikemen feature
+;fadein.anim =                                     ;Ikemen feature
 fadeout.time = 10
-fadeout.col = 0, 0, 0                             ;Ikemen feature
-;fadeout.anim =                                   ;Ikemen feature
+fadeout.col = 0, 0, 0                              ;Ikemen feature
+;fadeout.anim =                                    ;Ikemen feature
 title.offset = 640,38
 title.font = 4,0,0
 title.font.scale = 1.0, 1.0
-;title.font.height = -1                            ;Ikemen feature
-title.text = "OPTIONS"                            ;Ikemen feature
-menu.uselocalcoord = 1                            ;Ikemen feature
-menu.pos = 414, 99                                ;Ikemen feature
-menu.item.font = 7,0,1, 191,191,191               ;Ikemen feature
-menu.item.font.scale = 0.75, 0.75                 ;Ikemen feature
-;menu.item.font.height = -1                        ;Ikemen feature
-menu.item.active.font = 7,0,1                     ;Ikemen feature
-menu.item.active.font.scale = 0.75, 0.75          ;Ikemen feature
-;menu.item.active.font.height = -1                 ;Ikemen feature
-menu.item.selected.font = 7,0,1, 0,247,247        ;Ikemen feature
-menu.item.selected.font.scale = 0.75, 0.75        ;Ikemen feature
-;menu.item.selected.font.height = -1               ;Ikemen feature
-menu.item.selected.active.font = 7,0,1, 0,247,247 ;Ikemen feature
-menu.item.selected.active.font.scale = 0.75, 0.75 ;Ikemen feature
-;menu.item.selected.active.font.height = -1        ;Ikemen feature
-menu.item.value.font = 7,0,-1, 191,191,191        ;Ikemen feature
-menu.item.value.font.scale = 0.75, 0.75           ;Ikemen feature
-;menu.item.value.font.height = -1                  ;kemen feature
-menu.item.value.active.font = 7,0,-1              ;Ikemen feature
-menu.item.value.active.font.scale = 0.75, 0.75    ;Ikemen feature
-;menu.item.value.active.font.height = -1           ;Ikemen feature
-menu.item.value.conflict.font = 7,0,-1, 247,0,0   ;Ikemen feature
-menu.item.value.conflict.font.scale = 0.75, 0.75  ;Ikemen feature
-;menu.item.value.conflict.font.height = -1         ;Ikemen feature
-menu.item.info.font = 7,0,-1, 247,247,0           ;Ikemen feature
-menu.item.info.font.scale = 0.75, 0.75            ;Ikemen feature
-;menu.item.info.font.height = -1                   ;Ikemen feature
-menu.item.info.active.font = 7,0,-1, 247,247,0    ;Ikemen feature
-menu.item.info.active.font.scale = 0.75, 0.75     ;Ikemen feature
-;menu.item.info.active.font.height = -1            ;Ikemen feature
-menu.item.spacing = 450, 42                        ;Ikemen feature
+;title.font.height = -1                             ;Ikemen feature
+title.text = "OPTIONS"                             ;Ikemen feature
+menu.uselocalcoord = 1                             ;Ikemen feature
+menu.pos = 414, 99                                 ;Ikemen feature
+menu.item.offset = 0, 0                            ;Ikemen feature
+menu.item.font = 7,0,1, 191,191,191                ;Ikemen feature
+menu.item.font.scale = 1.0, 1.0                    ;Ikemen feature
+;menu.item.font.height = -1                         ;Ikemen feature
+menu.item.active.offset = 0, 0                     ;Ikemen feature
+menu.item.active.font = 7,0,1                      ;Ikemen feature
+menu.item.active.font.scale = 1.0, 1.0             ;Ikemen feature
+;menu.item.active.font.height = -1                  ;Ikemen feature
+menu.item.selected.offset = 0, 0                   ;Ikemen feature
+menu.item.selected.font = 7,0,1, 0,247,247         ;Ikemen feature
+menu.item.selected.font.scale = 1.0, 1.0           ;Ikemen feature
+;menu.item.selected.font.height = -1                ;Ikemen feature
+menu.item.selected.active.offset = 0, 0            ;Ikemen feature
+menu.item.selected.active.font = 7,0,1, 0,247,247  ;Ikemen feature
+menu.item.selected.active.font.scale = 1.0, 1.0    ;Ikemen feature
+;menu.item.selected.active.font.height = -1         ;Ikemen feature
+menu.item.value.offset = 450, 0                    ;Ikemen feature
+menu.item.value.font = 7,0,-1, 191,191,191         ;Ikemen feature
+menu.item.value.font.scale = 1.0, 1.0              ;Ikemen feature
+;menu.item.value.font.height = -1                   ;kemen feature
+menu.item.value.active.offset = 450, 0             ;Ikemen feature
+menu.item.value.active.font = 7,0,-1               ;Ikemen feature
+menu.item.value.active.font.scale = 1.0, 1.0       ;Ikemen feature
+;menu.item.value.active.font.height = -1            ;Ikemen feature
+menu.item.value.conflict.offset = 450, 0           ;Ikemen feature
+menu.item.value.conflict.font = 7,0,-1, 247,0,0    ;Ikemen feature
+menu.item.value.conflict.font.scale = 1.0, 1.0     ;Ikemen feature
+;menu.item.value.conflict.font.height = -1          ;Ikemen feature
+menu.item.info.offset = 450, 0                     ;Ikemen feature
+menu.item.info.font = 7,0,-1, 247,247,0            ;Ikemen feature
+menu.item.info.font.scale = 1.0, 1.0               ;Ikemen feature
+;menu.item.info.font.height = -1                    ;Ikemen feature
+menu.item.info.active.offset = 450, 0              ;Ikemen feature
+menu.item.info.active.font = 7,0,-1, 247,247,0     ;Ikemen feature
+menu.item.info.active.font.scale = 1.0, 1.0        ;Ikemen feature
+;menu.item.info.active.font.height = -1             ;Ikemen feature
+menu.item.spacing = 0, 42                          ;Ikemen feature
 ;menu.window.margins.y = 0, 0                       ;Ikemen feature
 menu.window.visibleitems = 13                      ;Ikemen feature
 menu.boxcursor.visible = 1                         ;Ikemen feature
@@ -1513,13 +1596,21 @@ keymenu.p1.pos = 276, 99                           ;Ikemen feature
 keymenu.p2.pos = 693, 99                           ;Ikemen feature
 keymenu.item.p1.offset = 156, 0                    ;Ikemen feature
 keymenu.item.p1.font = 7,0,0, 0,247,247            ;Ikemen feature
-keymenu.item.p1.font.scale = 0.75, 0.75            ;Ikemen feature
+keymenu.item.p1.font.scale = 1.0, 1.0              ;Ikemen feature
 ;keymenu.item.p1.font.height = -1                   ;Ikemen feature
 keymenu.item.p2.offset = 156, 0                    ;Ikemen feature
 keymenu.item.p2.font = 7,0,0, 247,0,0              ;Ikemen feature
-keymenu.item.p2.font.scale = 0.75, 0.75            ;Ikemen feature
+keymenu.item.p2.font.scale = 1.0, 1.0              ;Ikemen feature
 ;keymenu.item.p2.font.height = -1                   ;Ikemen feature
-keymenu.item.spacing = 303, 36                     ;Ikemen feature
+
+; unassigned 'keymenu.item' parameters use corresponding 'menu.item' values
+keymenu.item.spacing = 0, 36                       ;Ikemen feature
+keymenu.item.value.offset = 303, 0                 ;Ikemen feature
+keymenu.item.value.active.offset = 303, 0          ;Ikemen feature
+keymenu.item.value.conflict.offset = 303, 0        ;Ikemen feature
+keymenu.item.info.offset = 303, 0                  ;Ikemen feature
+keymenu.item.info.active.offset = 303, 0           ;Ikemen feature
+
 keymenu.boxcursor.coords = -15, -27, 318, 8        ;Ikemen feature
 keymenu.itemname.playerno = "PLAYER %i"            ;Ikemen feature
 keymenu.itemname.configall = "Config all"          ;Ikemen feature
@@ -1539,10 +1630,18 @@ keymenu.itemname.w = "W"                           ;Ikemen feature
 keymenu.itemname.menu = "Menu"                     ;Ikemen feature
 keymenu.itemname.back = "Back"                     ;Ikemen feature
 keymenu.itemname.page = "Page"                     ;Ikemen feature
-input.port.text = "Type in Host Port, e.g. 7500.\nPress ENTER to accept.\nPress ESC to cancel."       ;Ikemen feature
-input.reswidth.text = "Type in screen width.\nPress ENTER to accept.\nPress ESC to cancel."           ;Ikemen feature
-input.resheight.text = "Type in screen height.\nPress ENTER to accept.\nPress ESC to cancel."         ;Ikemen feature
-input.key.text = "Press a key to assign to entry.\nPress SPACE to disable key.\nPress ESC to cancel." ;Ikemen feature
+
+textinput.offset = 75, 96                          ;Ikemen feature
+textinput.font = 7,0,1                             ;Ikemen feature
+textinput.font.scale = 1.0, 1.0                    ;Ikemen feature
+;textinput.font.height = -1                         ;Ikemen feature
+textinput.port.text = "Type in Host Port, e.g. 7500.\nPress ENTER to accept.\nPress ESC to cancel." ;Ikemen feature
+textinput.reswidth.text = "Type in screen width.\nPress ENTER to accept.\nPress ESC to cancel."     ;Ikemen feature
+textinput.resheight.text = "Type in screen height.\nPress ENTER to accept.\nPress ESC to cancel."   ;Ikemen feature
+;textinput.overlay.window = 0, 0, 1280, 720         ;Ikemen feature
+textinput.overlay.col = 0, 0, 0                    ;Ikemen feature
+textinput.overlay.alpha = 20, 100                  ;Ikemen feature
+
 cursor.move.snd = 100, 0
 cursor.done.snd = 100, 1
 cancel.snd = 100, 2
@@ -1642,12 +1741,13 @@ menu.itemname.menuaudio.back = "Back"
 menu.itemname.menuinput = "Input Settings"
 menu.itemname.menuinput.keyboard = "Key Config"
 menu.itemname.menuinput.gamepad = "Joystick Config"
-menu.itemname.menuinput.players = "Players"
+
 menu.itemname.menuinput.empty = ""
 menu.itemname.menuinput.inputdefault = "Default"
 menu.itemname.menuinput.back = "Back"
 
 menu.itemname.menuengine = "Engine Settings"
+menu.itemname.menuengine.players = "Players"
 menu.itemname.menuengine.debugkeys = "Debug Keys"
 menu.itemname.menuengine.empty = ""
 menu.itemname.menuengine.helpermax = "HelperMax"
@@ -1689,13 +1789,15 @@ title.font.scale = 1.0, 1.0
 title.text = "REPLAY SELECT"
 menu.uselocalcoord = 1
 menu.pos = 414, 99
+menu.item.offset = 0, 0
 menu.item.font = 7,0,1, 191,191,191
-menu.item.font.scale = 0.75, 0.75
+menu.item.font.scale = 1.0, 1.0  
 ;menu.item.font.height = -1
+menu.item.active.offset = 0, 0
 menu.item.active.font = 7,0,1
-menu.item.active.font.scale = 0.75, 0.75
+menu.item.active.font.scale = 1.0, 1.0  
 ;menu.item.active.font.height = -1
-menu.item.spacing = 450, 42
+menu.item.spacing = 0, 42
 ;menu.window.margins.y = 0, 0
 menu.window.visibleitems = 13
 menu.boxcursor.visible = 1
@@ -1746,25 +1848,31 @@ title.font.scale = 1.0, 1.0
 title.text = "PAUSE"
 menu.uselocalcoord = 1
 menu.pos = 414, 99
+menu.item.offset = 0, 0
 menu.item.font = 7,0,1, 191,191,191
-menu.item.font.scale = 0.75, 0.75
+menu.item.font.scale = 1.0, 1.0  
 ;menu.item.font.height = -1
+menu.item.active.offset = 0, 0
 menu.item.active.font = 7,0,1
-menu.item.active.font.scale = 0.75, 0.75
+menu.item.active.font.scale = 1.0, 1.0  
 ;menu.item.active.font.height = -1
+menu.item.selected.offset = 0, 0
 menu.item.selected.font = 7,0,1, 0,247,247
-menu.item.selected.font.scale = 0.75, 0.75
+menu.item.selected.font.scale = 1.0, 1.0  
 ;menu.item.selected.font.height = -1
+menu.item.selected.active.offset = 0, 0
 menu.item.selected.active.font = 7,0,1, 0,247,247
-menu.item.selected.active.font.scale = 0.75, 0.75
+menu.item.selected.active.font.scale = 1.0, 1.0  
 ;menu.item.selected.active.font.height = -1
+menu.item.value.offset = 450, 0
 menu.item.value.font = 7,0,-1, 191,191,191
-menu.item.value.font.scale = 0.75, 0.75
+menu.item.value.font.scale = 1.0, 1.0  
 ;menu.item.value.font.height = -1
+menu.item.value.active.offset = 450, 0
 menu.item.value.active.font = 7,0,-1
-menu.item.value.active.font.scale = 0.75, 0.75
+menu.item.value.active.font.scale = 1.0, 1.0  
 ;menu.item.value.active.font.height = -1
-menu.item.spacing = 450, 42
+menu.item.spacing = 0, 42
 ;menu.window.margins.y = 0, 0
 menu.window.visibleitems = 13
 menu.boxcursor.visible = 1
@@ -1801,8 +1909,8 @@ movelist.title.text = "%s"
 movelist.title.uppercase = 0
 movelist.text.offset = 0, 36
 movelist.text.font = 7,0,1
-movelist.text.font.scale = 0.75, 0.75
-movelist.text.font.height = 36
+movelist.text.font.scale = 1.0, 1.0  
+;movelist.text.font.height = -1
 movelist.text.spacing = 3, 3
 movelist.text.text = "Command List not found."
 movelist.glyphs.offset = 0, 6
@@ -2017,6 +2125,7 @@ overlay.alpha = 20, 100
 500,9, 0,0, 1,, AS48D208
 500,9, 0,0, 1,, AS32D224
 500,9, 0,0, -1,, AS16D240
+-1,0, 0,0, -1
 
 ;-------------------
 ;Challenger background
@@ -2357,15 +2466,15 @@ p2.face.scale = 0.75, 0.75
 ;p2.face.window = 0, 0, 1280, 720
 p1.name.offset = 270, 135
 p1.name.font = 7,0,1
-p1.name.font.scale = 0.75, 0.75
+p1.name.font.scale = 1.0, 1.0  
 ;p1.name.font.height = -1
 p2.name.offset = 30, 471
 p2.name.font = 7,0,1
-p2.name.font.scale = 0.75, 0.75
+p2.name.font.scale = 1.0, 1.0  
 ;p2.name.font.height = -1
 p1.text.offset = 270, 177
 p1.text.font = 7,0,1
-p1.text.font.scale = 0.75, 0.75
+p1.text.font.scale = 1.0, 1.0  
 ;p1.text.font.height = -1
 p1.text.spacing = 0, 0
 p1.text.delay = 3
@@ -2373,7 +2482,7 @@ p1.text.textwrap = w
 p1.text.window = 270,96, 1200,288
 p2.text.offset = 30, 513
 p2.text.font = 7,0,1
-p2.text.font.scale = 0.75, 0.75
+p2.text.font.scale = 1.0, 1.0  
 ;p2.text.font.height = -1
 p2.text.spacing = 0, 0
 p2.text.delay = 3
@@ -2440,7 +2549,7 @@ title.text = "Ranking %s"
 title.uppercase = 0
 rank.title.offset = 105, 150
 rank.title.font = 7,0,0
-rank.title.font.scale = 0.75, 0.75
+rank.title.font.scale = 1.0, 1.0  
 ;rank.title.font.height = -1
 rank.title.text = "Rank"
 rank.text.offset = 126, 210
@@ -2461,7 +2570,7 @@ rank.text.active2.font.scale = 1.0, 1.0
 ;rank.text.active2.font.height = -1
 data.title.offset = 336, 150
 data.title.font = 7,0,0
-data.title.font.scale = 0.75, 0.75
+data.title.font.scale = 1.0, 1.0  
 ;data.title.font.height = -1
 data.title.text = "Result"
 data.text.offset = 399, 210
@@ -2481,7 +2590,7 @@ data.text.active2.font.scale = 1.0, 1.0
 ;data.text.active2.font.height = -1
 name.title.offset = 558, 150
 name.title.font = 7,0,0
-name.title.font.scale = 0.75, 0.75
+name.title.font.scale = 1.0, 1.0  
 ;name.title.font.height = -1
 name.title.text = "Name"
 name.text.offset = 531, 210
@@ -2501,7 +2610,7 @@ name.text.uppercase = 1
 name.text.glyphs = "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "!", "?", ".", "<", ">"
 face.title.offset = 774, 150
 face.title.font = 7,0,0
-face.title.font.scale = 0.75, 0.75
+face.title.font.scale = 1.0, 1.0  
 ;face.title.font.height = -1
 face.title.text = "Character"
 ;face.anim = 
@@ -2551,3 +2660,20 @@ spriteno = 100,0
 start = 0,0
 tile  = 1,1
 velocity = -1, -1
+
+;-------------------------------------------------------------------
+;Warning screen definition
+[Warning Info] ;Ikemen feature
+title.offset = 640, 38
+title.font = 4,0,0
+title.font.scale = 1.0, 1.0
+;title.font.height = -1
+text.offset = 75, 99
+text.font = 7,0,1
+text.font.scale = 1.0, 1.0
+;text.font.height = -1
+;overlay.window = 0, 0, 1280, 720
+overlay.col = 0, 0, 0
+overlay.alpha = 20, 100
+done.snd = 100, 0
+cancel.snd = 100, 2
