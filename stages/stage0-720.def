@@ -112,6 +112,10 @@ localcoord = 1280, 720
 xscale = 1
 yscale = 1
 
+  ;Specifies the display scale of the portrait for screenpack rendering
+  ;This value overwrites localcoord-compliant display scale
+portraitscale = 1
+
 ;--------------------------------------------------------
 [Shadow]
  ;This is the shadow darkening intensity. Valid values range from
