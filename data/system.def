@@ -1897,13 +1897,13 @@ trans = add
 ;Challenger definition
 [Challenger Info] ;Ikemen feature
 enabled = 1
-time = 85
 fadein.time = 0
 fadein.col = 0, 0, 0
 ;fadein.anim = 
 fadeout.time = 15
 fadeout.col = 0, 0, 0
 ;fadeout.anim = 
+time = 85
 pause.time = 0 ;Time to wait before pausing characters and background
 snd.time = 0
 snd = 500,0
