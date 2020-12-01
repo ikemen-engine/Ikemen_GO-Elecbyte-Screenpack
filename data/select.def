@@ -72,11 +72,11 @@
  ;   IKEMEN feature: Set the paramvalue to 0 to avoid displaying versus screen
  ;   when facing this character.
  ;
- ; - winscreen
+ ; - victoryscreen
  ;   IKEMEN feature: Set the paramvalue to 0 to avoid displaying victory screen
  ;   after beating this character.
  ;
- ; - rank
+ ; - rankdisplay
  ;   IKEMEN feature: Set the paramvalue to 0 to avoid displaying rank data when
  ;   playing as or facing this character.
  ;
@@ -392,12 +392,12 @@ survival.AIramp.end   = 16, 4
  ;   https://github.com/K4thos/Ikemen_GO/wiki/Miscellaneous-Info#lua_unlock
  ;
  ;Examples:
- ; name = storymode_arc1
+ ; name = arc1
  ; displayname = Kung Fu Story Part I
  ; path = data/story/arc1.lua
  ; unlock = true
  ;
- ; name = storymode_arc2
+ ; name = arc2
  ; displayname = Kung Fu Story Part II
  ; path = data/story/arc2.lua
  ; unlock = true
