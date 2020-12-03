@@ -346,20 +346,20 @@ stage.active.font = 3,0,0
 stage.active2.font = 3,2  ;Second font color for blinking
 stage.done.font = 3,0
 
-;Stage portraits (enabling anim/spr parameters increases initial loading time)
-;stage.portrait.anim =                  ;Ikemen feature
-;stage.portrait.spr = 9000,1            ;Ikemen feature
-stage.portrait.offset = -160, -237     ;Ikemen feature
-stage.portrait.scale = 0.5, 0.5        ;Ikemen feature
-stage.portrait.bg.anim =               ;Ikemen feature
-stage.portrait.bg.spr =                ;Ikemen feature
-stage.portrait.bg.offset = 0, 0        ;Ikemen feature
-stage.portrait.bg.scale = 1.0, 1.0     ;Ikemen feature
-stage.portrait.random.anim = -1        ;Ikemen feature
-stage.portrait.random.spr =            ;Ikemen feature
-stage.portrait.random.offset = 0, 0    ;Ikemen feature
-stage.portrait.random.scale = 1.0, 1.0 ;Ikemen feature
-;stage.portrait.window = 0, 0, 320, 240 ;Ikemen feature
+;Stage portraits
+;stage.portrait.anim =                      ;Ikemen feature
+stage.portrait.spr = 9000,1                ;Ikemen feature
+stage.portrait.offset = -60,-66            ;Ikemen feature
+stage.portrait.scale = 0.5, 0.5            ;Ikemen feature
+stage.portrait.bg.anim = 110               ;Ikemen feature
+;stage.portrait.bg.spr =                    ;Ikemen feature
+stage.portrait.bg.offset = -75, -71        ;Ikemen feature
+stage.portrait.bg.scale = 1.0, 1.0         ;Ikemen feature
+;stage.portrait.random.anim =               ;Ikemen feature
+stage.portrait.random.spr = 111, 0         ;Ikemen feature
+stage.portrait.random.offset = -45, -65    ;Ikemen feature
+stage.portrait.random.scale = 1.0, 1.0     ;Ikemen feature
+stage.portrait.window = 115, 172, 205, 223 ;Ikemen feature
 
 ;Team menu
 teammenu.move.wrapping = 1
@@ -490,6 +490,11 @@ record.scorechallenge.text = "- BEST RECORD -\n%c %p PTS: %n" ;Ikemen feature
 record.timechallenge.text = "- BEST RECORD -\n%c %m:%s.%x: %n" ;Ikemen feature
 
 ;Sounds
+
+[Begin Action 110] ;Stage Background
+110,0, 0,0, 8
+110,1, 0,0, 8
+110,2, 0,0, 8
 
 [Begin Action 180] ;P1 Team mode cursor
 180,0, 0,0, 1
@@ -1897,13 +1902,13 @@ trans = add
 ;Challenger definition
 [Challenger Info] ;Ikemen feature
 enabled = 1
-time = 85
 fadein.time = 0
 fadein.col = 0, 0, 0
 ;fadein.anim = 
 fadeout.time = 15
 fadeout.col = 0, 0, 0
 ;fadeout.anim = 
+time = 85
 pause.time = 0 ;Time to wait before pausing characters and background
 snd.time = 0
 snd = 500,0

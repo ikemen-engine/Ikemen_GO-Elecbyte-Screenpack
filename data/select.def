@@ -72,11 +72,11 @@
  ;   IKEMEN feature: Set the paramvalue to 0 to avoid displaying versus screen
  ;   when facing this character.
  ;
- ; - winscreen
+ ; - victoryscreen
  ;   IKEMEN feature: Set the paramvalue to 0 to avoid displaying victory screen
  ;   after beating this character.
  ;
- ; - rank
+ ; - rankdisplay
  ;   IKEMEN feature: Set the paramvalue to 0 to avoid displaying rank data when
  ;   playing as or facing this character.
  ;
@@ -146,12 +146,12 @@
  ;
  ; - arcadepath
  ;   IKEMEN feature: Set the paramvalue to the lua file (file path relative to
- ;   the folder of character) containing custom arcade path. This parameter
- ;   makes the character ignore default *.maxmatches settings under [Options]
- ;   section and use arcade path coded entirely in lua, which allows
- ;   implementing functionality normally not possible in mugen (rival matches,
- ;   branching paths, secret bosses etc.)
- ;   More info: https://github.com/K4thos/Ikemen_GO/wiki#misc_arcadepath
+ ;   game directory) containing custom arcade path. This parameter makes the
+ ;   character ignore default *.maxmatches settings under [Options] section and
+ ;   use arcade path coded entirely in lua, which allows implementing
+ ;   functionality normally not possible in mugen (rival matches, branching
+ ;   paths, secret bosses etc.)
+ ;   https://github.com/K4thos/Ikemen_GO/wiki/Miscellaneous-Info#arcs
  ;
  ; - ratiopath
  ;   IKEMEN feature: Like 'arcadepath', but used only if the p2 team mode has
@@ -182,14 +182,14 @@
  ;   'unlock' has to be the very last parameter used in line (everything that
  ;   follows is treated as a pure Lua code). Default: true (if character is not
  ;   hidden, otherwise: false)
- ;   More info: https://github.com/K4thos/Ikemen_GO/wiki#misc_lua_unlock
+ ;   https://github.com/K4thos/Ikemen_GO/wiki/Miscellaneous-Info#lua_unlock
  ;
  ;You can also add a randomize icon to the select screen. To do this, put the
  ;word "randomselect" on a line of its own, with no extra parameters.
  ;
  ;Examples:
  ; kfm, stages/mybg.def, includestage=0
- ; kfm, stages/mybg.def, arcadepath=arcade.lua
+ ; kfm, stages/mybg.def, arcadepath=data/arcade.lua
  ; kfm, stages/mybg.def, music=sound/song.mp3, order=3, ai=8, hidden=2
  ; slot = {
  ;      kfm, stages/mybg.def, previous=d, next=w
@@ -258,7 +258,7 @@ randomselect
  ;   will be hidden. Due to parameters syntax, 'unlock' has to be the very last
  ;   parameter used in line (everything that follows is treated as a pure Lua
  ;   code). Default: true.
- ;   More info: https://github.com/K4thos/Ikemen_GO/wiki#misc_lua_unlock
+ ;   https://github.com/K4thos/Ikemen_GO/wiki/Miscellaneous-Info#lua_unlock
  ;
  ;Examples:
  ; stages/mybg.def, music=sound/song.mp3, music=sound/song2.mp3
@@ -385,21 +385,21 @@ survival.AIramp.end   = 16, 4
  ; - path
  ;   IKEMEN feature: Path to file with lua extension (relative to game
  ;   directory), containing story mode arc coded in Lua language.
- ;   More info: https://github.com/K4thos/Ikemen_GO/wiki#misc_story
+ ;   https://github.com/K4thos/Ikemen_GO/wiki/Miscellaneous-Info#arcs
  ;
  ; - unlock
  ;   IKEMEN feature: Pure Lua code, executed exactly as is, each time upon
- ;   loading main menu. If the code returns boolean 'true' the story arc will be
- ;   selectable from story mode submenu. On 'false' it will be hidden. Default:
- ;   true. More info: https://github.com/K4thos/Ikemen_GO/wiki#misc_lua_unlock
+ ;   loading main menu. If it evaluates to boolean 'true' the story arc will be
+ ;   selectable from story mode submenu, or hidden on 'false'. Default: true.
+ ;   https://github.com/K4thos/Ikemen_GO/wiki/Miscellaneous-Info#lua_unlock
  ;
  ;Examples:
- ; name = storymode_arc1
+ ; name = arc1
  ; displayname = Kung Fu Story Part I
  ; path = data/story/arc1.lua
  ; unlock = true
  ;
- ; name = storymode_arc2
+ ; name = arc2
  ; displayname = Kung Fu Story Part II
  ; path = data/story/arc2.lua
  ; unlock = true

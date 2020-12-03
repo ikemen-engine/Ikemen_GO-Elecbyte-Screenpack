@@ -384,25 +384,25 @@ p2.name.font = 3,1,-1
 p2.name.spacing = -15,25
 
 ;Stage select
-stage.pos = 640,700
+stage.pos = 640,707
 stage.active.font = 3,0,0
 stage.active2.font = 3,2  ;Second font color for blinking
 stage.done.font = 3,0
 
-;Stage portraits (enabling anim/spr parameters increases initial loading time)
-;stage.portrait.anim =                    ;Ikemen feature
-;stage.portrait.spr = 9000,1              ;Ikemen feature
-stage.portrait.offset = -640, -700       ;Ikemen feature
-stage.portrait.scale = 0.5, 0.5          ;Ikemen feature
-stage.portrait.bg.anim =                 ;Ikemen feature
-stage.portrait.bg.spr =                  ;Ikemen feature
-stage.portrait.bg.offset = 0, 0          ;Ikemen feature
-stage.portrait.bg.scale = 1.0, 1.0       ;Ikemen feature
-stage.portrait.random.anim = -1          ;Ikemen feature
-stage.portrait.random.spr =              ;Ikemen feature
-stage.portrait.random.offset = 0, 0      ;Ikemen feature
-stage.portrait.random.scale = 1.0, 1.0   ;Ikemen feature
-;stage.portrait.window = 0, 0, 1280, 720  ;Ikemen feature
+;Stage portraits
+;stage.portrait.anim =                     ;Ikemen feature
+stage.portrait.spr = 9000,1               ;Ikemen feature
+stage.portrait.offset = -120, -142        ;Ikemen feature
+stage.portrait.scale = 0.25, 0.25         ;Ikemen feature
+stage.portrait.bg.anim = 110              ;Ikemen feature
+;stage.portrait.bg.spr =                   ;Ikemen feature
+stage.portrait.bg.offset = -321, -145     ;Ikemen feature
+stage.portrait.bg.scale = 1.0, 1.0        ;Ikemen feature
+;stage.portrait.random.anim =              ;Ikemen feature
+stage.portrait.random.spr = 111,0         ;Ikemen feature
+stage.portrait.random.offset = -279, -142 ;Ikemen feature
+stage.portrait.random.scale = 1.0, 1.0    ;Ikemen feature
+;stage.portrait.window = 0, 0, 1280, 720   ;Ikemen feature
 
 ;Team menu
 teammenu.move.wrapping = 1
@@ -531,6 +531,11 @@ record.font.scale = 1.0, 1.0 ;Ikemen feature
 ; format: %m = minutes, %s = seconds, %x = milliseconds, %p = score, %c = char name, %n = player name, \n = newline
 record.scorechallenge.text = "- BEST RECORD -\n%c %p PTS: %n" ;Ikemen feature
 record.timechallenge.text = "- BEST RECORD -\n%c %m:%s.%x: %n" ;Ikemen feature
+
+[Begin Action 110] ;Stage Background
+110,0, 0,0, 8
+110,1, 0,0, 8
+110,2, 0,0, 8
 
 [Begin Action 160] ;P1 active cursor
 160,6, 0,0, 1
@@ -2071,13 +2076,13 @@ mask = 1
 ;Challenger definition
 [Challenger Info] ;Ikemen feature
 enabled = 1
-time = 85
 fadein.time = 0
 fadein.col = 0, 0, 0
 ;fadein.anim = 
 fadeout.time = 15
 fadeout.col = 0, 0, 0
 ;fadeout.anim = 
+time = 85
 pause.time = 0 ;Time to wait before pausing characters and background
 snd.time = 0
 snd = 500,0
