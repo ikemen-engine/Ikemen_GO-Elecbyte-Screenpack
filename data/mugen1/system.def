@@ -390,19 +390,19 @@ stage.active2.font = 3,2  ;Second font color for blinking
 stage.done.font = 3,0
 
 ;Stage portraits
-;stage.portrait.anim =                     ;Ikemen feature
-stage.portrait.spr = 9000,1               ;Ikemen feature
-stage.portrait.offset = -120, -142        ;Ikemen feature
-stage.portrait.scale = 0.25, 0.25         ;Ikemen feature
-stage.portrait.bg.anim = 110              ;Ikemen feature
-;stage.portrait.bg.spr =                   ;Ikemen feature
-stage.portrait.bg.offset = -321, -145     ;Ikemen feature
-stage.portrait.bg.scale = 1.0, 1.0        ;Ikemen feature
-;stage.portrait.random.anim =              ;Ikemen feature
-stage.portrait.random.spr = 111,0         ;Ikemen feature
-stage.portrait.random.offset = -279, -142 ;Ikemen feature
-stage.portrait.random.scale = 1.0, 1.0    ;Ikemen feature
-;stage.portrait.window = 0, 0, 1280, 720   ;Ikemen feature
+;stage.portrait.anim =                      ;Ikemen feature
+stage.portrait.spr = 9000,1                ;Ikemen feature
+stage.portrait.offset = -120, -142         ;Ikemen feature
+stage.portrait.scale = 0.25, 0.25          ;Ikemen feature
+stage.portrait.bg.anim = 110               ;Ikemen feature
+;stage.portrait.bg.spr =                    ;Ikemen feature
+stage.portrait.bg.offset = -321, -145      ;Ikemen feature
+stage.portrait.bg.scale = 1.0, 1.0         ;Ikemen feature
+;stage.portrait.random.anim =               ;Ikemen feature
+stage.portrait.random.spr = 111,0          ;Ikemen feature
+stage.portrait.random.offset = -279, -142  ;Ikemen feature
+stage.portrait.random.scale = 1.0, 1.0     ;Ikemen feature
+stage.portrait.window = 521, 565, 761, 665 ;Ikemen feature
 
 ;Team menu
 teammenu.move.wrapping = 1
