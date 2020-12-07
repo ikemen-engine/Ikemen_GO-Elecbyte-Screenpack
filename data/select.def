@@ -57,12 +57,13 @@
  ;   multiple musiclife parameters for random selection.
  ;
  ; - musicvictory
- ;   IKEMEN feature: Set the paramvalue to the music file path that should kick
- ;   in right after this character scores final round K.O. and continue
- ;   throughout the victory screen. Music volume, loopstart and loopend values
- ;   can follow, separated by spaces. paramvalue overrides stage DEF
- ;   bgmusic.victory assignment. You can use multiple musicvictory parameters
- ;   for random selection.
+ ;   IKEMEN feature: Set the paramvalue to the music file that should start
+ ;   right after this character scores final round K.O. and continue throughout
+ ;   the victory screen. Music volume, loopstart and loopend values can follow,
+ ;   separated by spaces. paramvalue overrides stage DEF bgmusic.victory
+ ;   assignment. You can use multiple musicvictory parameters for random
+ ;   selection. Unlike other music character parameters, musicvictory also works
+ ;   in Versus type modes.
  ;
  ; - ai
  ;   IKEMEN feature: Set the paramvalue between 1 and 8 to force AI Level
