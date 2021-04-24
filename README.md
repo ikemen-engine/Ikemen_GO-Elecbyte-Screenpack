@@ -6,7 +6,7 @@ Electbyte's Mugen screenpack and font files are licensed under a
 Creative Commons 3.0 Non-commercial License, with optional attribution.  
 http://creativecommons.org/licenses/by-nc/3.0/
 
-==============================================================================
+----------------------------------------------------------------------------
 
 Work contributed to Ikemen GO by various artists is licensed under a  
 Creative Commons Attribution 3.0 Unported License.  
