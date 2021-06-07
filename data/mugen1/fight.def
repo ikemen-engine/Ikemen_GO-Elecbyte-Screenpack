@@ -1176,7 +1176,7 @@ team2.hidespeed = 8       ;Message hiding speed (the larger value, the faster sp
 
 ;-----------------------------------------------------------
 [Round]
-match.wins = 2              ;Rounds needed to win a match  (Ikemen feature: depreciated, this setting can be configured in in-game options)
+match.wins = 2              ;Rounds needed to win a match (Ikemen feature: depreciated, this setting can be configured in in-game options)
 match.maxdrawgames = 1      ;Max number of drawgames allowed (-1 for infinite)
 start.waittime = 30         ;Time to wait before starting intro
 

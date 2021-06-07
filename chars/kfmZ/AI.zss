@@ -127,8 +127,8 @@ if Ctrl && !enemynear,Ctrl && (enemynear,GetHitVar(hittime) > 0) {
 #Neutral attacks and combo conditions are separated to prevent accidental code preventing either from working
 #properly.
 
-if StateNo = 100 && ( RoundState != 2) && AILevelF {
-    ChangeState{value: 0; ctrl: 1}
+if StateNo = 100 && RoundState != 2 && AILevelF {
+	ChangeState{value: 0; ctrl: 1}
 }
 
 if (Ctrl && StateNo != 105 || StateNo = 20 || StateNo = 100 || StateNo = 1310 || StateNo = 1330 || StateNo = 1330 || StateNo = 1350) && Random < (500 * (AILevelF ** 2 / 64.0)) {
@@ -512,7 +512,7 @@ if StateType != A && (Ctrl || StateNo = 20) && StateNo != 100 && Random <= (496 
 #this will make kfm stop running. If you are making your own character with a stop running animation,
 #be sure to change this value: 0 to whatever that state is.
 if StateNo = 100 && ($p2dx < 40 - 20 * (!$grounded) && enemynear,StateNo != 5040 || $p2dx < - 65 || RoundState != 2) {
-    ChangeState{value: 0; ctrl: 1}
+	ChangeState{value: 0; ctrl: 1}
 }
 
 #------------|jumping|----------------------------------------------------------
