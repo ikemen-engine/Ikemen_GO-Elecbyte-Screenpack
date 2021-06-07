@@ -1,4 +1,4 @@
-Electbyte's Mugen screenpack and font files are licensed under a Creative
+Electbyte's Mugen motif sprites, audio and font files are licensed under a Creative
 Commons Noncommercial License, with optional attribution.
 http://creativecommons.org/licenses/by-nc/3.0/
 
