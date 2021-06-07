@@ -9,6 +9,6 @@ Commons Attribution 3.0 Unported License.
 http://creativecommons.org/licenses/by/3.0/deed.en_US
 The license applies to following assets:
 - Lifebar messages, rank backgrounds and icons by President Devon and Rurouni
-- Command list glyphs by Rurouni
+- Command list glyphs and Ikemen logo text on default screenpack by Rurouni
 - Dizzy, guard break, tag switch effects by Shiyo Kakuge
 - Title screen motif logos by Cylia Margatroid and Rurouni
