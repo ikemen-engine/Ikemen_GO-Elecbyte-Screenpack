@@ -178,9 +178,6 @@ menu.itemname.server.netplayteamcoop = "ARCADE CO-OP"        ;Ikemen feature
 menu.itemname.server.netplaysurvivalcoop = "SURVIVAL CO-OP"  ;Ikemen feature
 menu.itemname.server.back = "EXIT"                           ;Ikemen feature
 
-; Tournament
-;menu.itemname.tournament = "TOURNAMENT"                      ;Ikemen feature (not implemented yet)
-
 ; Submenu: Practice
 menu.itemname.menupractice = "PRACTICE"                      ;Ikemen feature
 menu.itemname.menupractice.training = "TRAINING"             ;Ikemen feature
