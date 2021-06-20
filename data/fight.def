@@ -1173,25 +1173,16 @@ useiconupto = 4
 
 ;-----------------------------------------------------------
 ; Ikemen feature
-[Ratio]
-p1.pos          = 7, 15
-p1.level1.spr   = 300, 0
-p1.level1.scale = 0.5, 0.5
-p1.level2.spr   = 300, 1
-p1.level2.scale = 0.5, 0.5
-p1.level3.spr   = 300, 2
-p1.level3.scale = 0.5, 0.5
-p1.level4.spr   = 300, 3
-p1.level4.scale = 0.5, 0.5
-p2.pos          = 311, 15
-p2.level1.spr   = 300, 0
-p2.level1.scale = 0.5, 0.5
-p2.level2.spr   = 300, 1
-p2.level2.scale = 0.5, 0.5
-p2.level3.spr   = 300, 2
-p2.level3.scale = 0.5, 0.5
-p2.level4.spr   = 300, 3
-p2.level4.scale = 0.5, 0.5
+[WinCount]
+p1.pos = 141,8
+;p1.bg.spr = 
+p1.text.font = 3,0, -1
+p1.text.text = WINS %s
+
+p2.pos = 178,8
+;p2.bg.spr = 
+p2.text.font = 3,0, 1
+p2.text.text = WINS %s
 
 ;-----------------------------------------------------------
 ; Ikemen feature
@@ -1254,6 +1245,28 @@ demo.pos = 305,10
 ;demo.bg.spr = 
 demo.text.font = 3,0, -1
 demo.text.text = Demo Mode
+
+;-----------------------------------------------------------
+; Ikemen feature
+[Ratio]
+p1.pos          = 7, 15
+p1.level1.spr   = 300, 0
+p1.level1.scale = 0.5, 0.5
+p1.level2.spr   = 300, 1
+p1.level2.scale = 0.5, 0.5
+p1.level3.spr   = 300, 2
+p1.level3.scale = 0.5, 0.5
+p1.level4.spr   = 300, 3
+p1.level4.scale = 0.5, 0.5
+p2.pos          = 311, 15
+p2.level1.spr   = 300, 0
+p2.level1.scale = 0.5, 0.5
+p2.level2.spr   = 300, 1
+p2.level2.scale = 0.5, 0.5
+p2.level3.spr   = 300, 2
+p2.level3.scale = 0.5, 0.5
+p2.level4.spr   = 300, 3
+p2.level4.scale = 0.5, 0.5
 
 ;-----------------------------------------------------------
 ; How to customize
