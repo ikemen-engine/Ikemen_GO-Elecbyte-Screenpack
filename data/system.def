@@ -1586,6 +1586,8 @@ menu.itemname.menuaudio.mastervolume = "Master Volume"
 menu.itemname.menuaudio.bgmvolume = "BGM Volume"
 menu.itemname.menuaudio.sfxvolume = "SFX Volume"
 menu.itemname.menuaudio.audioducking = "Audio Ducking"
+menu.itemname.menuaudio.stereoeffects = "Stereo Effects"
+menu.itemname.menuaudio.panningrange = "Panning Range"
 menu.itemname.menuaudio.empty = ""
 menu.itemname.menuaudio.back = "Back"
 
