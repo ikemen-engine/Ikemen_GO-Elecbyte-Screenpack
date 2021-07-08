@@ -1,7 +1,12 @@
 #===============================================================================
-#Global states (not halted by pause/SuperPause, no helper limitations)
+#Global states (not halted by pause/superPause, no helper limitations)
 #===============================================================================
 [StateDef -4]
+
+if stateNo = 100 && roundState != 2 && aiLevelF {
+	changeState{value: 0; ctrl: 1}
+}
+
 # this ZSS AI file is used to define and implement AI for kung fu man.
 #it can also be used a guide for you to create your own AI using IKEMEN GO.
 
@@ -28,7 +33,6 @@ ignoreHitPause if !isHelper {
 ignoreHitPause if gameTime%2 = 0 {
 	mapSet{map: "ppx"; value: enemyNear,pos x}
 }
-
 
 #------------|Juggle point|-----------------------------------------------------
 #Currently, juggle points cannot be detected, so this hackish way of doing so will help the AI
@@ -126,10 +130,6 @@ if ctrl && !enemyNear,ctrl && (enemyNear,getHitVar(hittime) > 0) {
 #things to do in neutral(not attacking)
 #Neutral attacks and combo conditions are separated to prevent accidental code preventing either from working
 #properly.
-
-if stateNo = 100 && roundState != 2 && aiLevelF {
-	changeState{value: 0; ctrl: 1}
-}
 
 if (ctrl && stateNo != 105 || stateNo = 20 || stateNo = 100 || stateNo = 1310 || stateNo = 1330 || stateNo = 1330 || stateNo = 1350) && random < (500 * (aiLevelF ** 2 / 64.0)) {
 	if stateType != A {
@@ -587,7 +587,7 @@ if alive && canRecover && random%5 = 0 && hitFall && stateNo = 5050 {
 		changeState{value: 5210}
 	}
 }
-displayToClipboard{text: "%d %d %d %d %d"; params: $p2dx, sysvar(1), $jugpt, $CC, $AI_JI}
+#displayToClipboard{text: "%v %v %v %v %v"; params: $p2dx, sysvar(1), $jugpt, $CC, $AI_JI}
 
 #End of file: AI
 }
