@@ -1362,12 +1362,13 @@ p2.pos = 696,35
 p2.text.font = 3,0, 1
 p2.text.text = WINS %s
 
-enabled.netplayversus.p1 = 1
-enabled.netplayversus.p2 = 1
-enabled.versus.p1 = 1
-enabled.versus.p2 = 1
-enabled.versuscoop.p1 = 1
-enabled.versuscoop.p2 = 1
+p1.enabled.netplayversus = 1
+p1.enabled.versus = 1
+p1.enabled.versuscoop = 1
+
+p2.enabled.netplayversus = 1
+p2.enabled.versus = 1
+p2.enabled.versuscoop = 1
 
 ;-----------------------------------------------------------
 ; Ikemen feature
@@ -1401,13 +1402,13 @@ format.integer.separator =
 format.decimal.places = 0
 format.decimal.separator = .
 
-enabled.arcade.p1 = 1
-enabled.bossrush.p1 = 1
-enabled.freebattle.p1 = 1
-enabled.netplayteamcoop.p1 = 1
-enabled.scorechallenge.p1 = 1
-enabled.teamcoop.p1 = 1
-enabled.training.p1 = 1
+p1.enabled.arcade = 1
+p1.enabled.bossrush = 1
+p1.enabled.freebattle = 1
+p1.enabled.netplayteamcoop = 1
+p1.enabled.scorechallenge = 1
+p1.enabled.teamcoop = 1
+p1.enabled.training = 1
 
 ;-----------------------------------------------------------
 ; Ikemen feature
@@ -1439,20 +1440,21 @@ p2.text.text = CPU-%s
 format.decimal.places = 0
 format.decimal.separator = .
 
-enabled.arcade.p2 = 1
-enabled.bossrush.p2 = 1
-enabled.freebattle.p2 = 1
-enabled.netplaysurvivalcoop.p2 = 1
-enabled.netplayteamcoop.p2 = 1
-enabled.scorechallenge.p2 = 1
-enabled.survival.p2 = 1
-enabled.survivalcoop.p2 = 1
-enabled.teamcoop.p2 = 1
-enabled.timeattack.p2 = 1
-enabled.timechallenge.p2 = 1
-enabled.vs100kumite.p2 = 1
-enabled.watch.p1 = 1
-enabled.watch.p2 = 1
+p1.enabled.watch = 1
+
+p2.enabled.arcade = 1
+p2.enabled.bossrush = 1
+p2.enabled.freebattle = 1
+p2.enabled.netplaysurvivalcoop = 1
+p2.enabled.netplayteamcoop = 1
+p2.enabled.scorechallenge = 1
+p2.enabled.survival = 1
+p2.enabled.survivalcoop = 1
+p2.enabled.teamcoop = 1
+p2.enabled.timeattack = 1
+p2.enabled.timechallenge = 1
+p2.enabled.vs100kumite = 1
+p2.enabled.watch = 1
 
 ;-----------------------------------------------------------
 ; Ikemen feature
