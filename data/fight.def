@@ -1184,6 +1184,13 @@ p2.pos = 178,8
 p2.text.font = 3,0, 1
 p2.text.text = WINS %s
 
+enabled.netplayversus.p1 = 1
+enabled.netplayversus.p2 = 1
+enabled.versus.p1 = 1
+enabled.versus.p2 = 1
+enabled.versuscoop.p1 = 1
+enabled.versuscoop.p2 = 1
+
 ;-----------------------------------------------------------
 ; Ikemen feature
 [Timer]
@@ -1192,6 +1199,9 @@ pos = 141,8
 text.font = 3,0, -1
 ; Time format: %m = minutes, %s = seconds, %x = milliseconds
 text.text = TIME:%m:%s.%x
+
+enabled.timeattack = 1
+enabled.timechallenge = 1
 
 ;-----------------------------------------------------------
 ; Ikemen feature
@@ -1213,6 +1223,14 @@ format.integer.separator =
 format.decimal.places = 0
 format.decimal.separator = .
 
+enabled.arcade.p1 = 1
+enabled.bossrush.p1 = 1
+enabled.freebattle.p1 = 1
+enabled.netplayteamcoop.p1 = 1
+enabled.scorechallenge.p1 = 1
+enabled.teamcoop.p1 = 1
+enabled.training.p1 = 1
+
 ;-----------------------------------------------------------
 ; Ikemen feature
 [Match]
@@ -1220,6 +1238,11 @@ pos = 141,8
 ;bg.spr = 
 text.font = 3,0, -1
 text.text = STAGE %s
+
+enabled.netplaysurvivalcoop = 1
+enabled.survival = 1
+enabled.survivalcoop = 1
+enabled.vs100kumite = 1
 
 ;-----------------------------------------------------------
 ; Ikemen feature
@@ -1237,6 +1260,21 @@ p2.text.text = CPU-%s
 
 format.decimal.places = 0
 format.decimal.separator = .
+
+enabled.arcade.p2 = 1
+enabled.bossrush.p2 = 1
+enabled.freebattle.p2 = 1
+enabled.netplaysurvivalcoop.p2 = 1
+enabled.netplayteamcoop.p2 = 1
+enabled.scorechallenge.p2 = 1
+enabled.survival.p2 = 1
+enabled.survivalcoop.p2 = 1
+enabled.teamcoop.p2 = 1
+enabled.timeattack.p2 = 1
+enabled.timechallenge.p2 = 1
+enabled.vs100kumite.p2 = 1
+enabled.watch.p1 = 1
+enabled.watch.p2 = 1
 
 ;-----------------------------------------------------------
 ; Ikemen feature
