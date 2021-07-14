@@ -570,7 +570,6 @@ velocity = -6, 0
 ;-------------------------------------------------------------------
 [VS Screen]
 time = 150                ;Time to show screen
-time.order = 60
 fadein.time = 15
 fadeout.time = 15
 ;Match text in arcade modes
