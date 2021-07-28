@@ -395,11 +395,11 @@ stage.portrait.offset = -120, -142         ;Ikemen feature
 stage.portrait.scale = 0.25, 0.25          ;Ikemen feature
 stage.portrait.bg.anim = 110               ;Ikemen feature
 ;stage.portrait.bg.spr =                    ;Ikemen feature
-stage.portrait.bg.offset = -321, -145      ;Ikemen feature
+stage.portrait.bg.offset = -162, -145      ;Ikemen feature
 stage.portrait.bg.scale = 1.0, 1.0         ;Ikemen feature
 ;stage.portrait.random.anim =               ;Ikemen feature
 stage.portrait.random.spr = 111,0          ;Ikemen feature
-stage.portrait.random.offset = -279, -142  ;Ikemen feature
+stage.portrait.random.offset = -120, -142  ;Ikemen feature
 stage.portrait.random.scale = 1.0, 1.0     ;Ikemen feature
 stage.portrait.window = 521, 565, 761, 665 ;Ikemen feature
 
@@ -428,31 +428,31 @@ p1.teammenu.value.empty.icon.spr = 182,0
 p1.teammenu.value.spacing = 30,0
 
 p1.teammenu.ratio1.icon.spr = 300, 0       ;Ikemen feature
-p1.teammenu.ratio1.icon.offset = 38, 205   ;Ikemen feature
+p1.teammenu.ratio1.icon.offset = 197, 205  ;Ikemen feature
 p1.teammenu.ratio1.icon.facing = 1         ;Ikemen feature
 p1.teammenu.ratio1.icon.scale = 1.0, 1.0   ;Ikemen feature
 p1.teammenu.ratio2.icon.spr = 300, 1       ;Ikemen feature
-p1.teammenu.ratio2.icon.offset = 38, 205   ;Ikemen feature
+p1.teammenu.ratio2.icon.offset = 197, 205  ;Ikemen feature
 p1.teammenu.ratio2.icon.facing = 1         ;Ikemen feature
 p1.teammenu.ratio2.icon.scale = 1.0, 1.0   ;Ikemen feature
 p1.teammenu.ratio3.icon.spr = 300, 2       ;Ikemen feature
-p1.teammenu.ratio3.icon.offset = 38, 205   ;Ikemen feature
+p1.teammenu.ratio3.icon.offset = 197, 205  ;Ikemen feature
 p1.teammenu.ratio3.icon.facing = 1         ;Ikemen feature
 p1.teammenu.ratio3.icon.scale = 1.0, 1.0   ;Ikemen feature
 p1.teammenu.ratio4.icon.spr = 300, 3       ;Ikemen feature
-p1.teammenu.ratio4.icon.offset = 38, 205   ;Ikemen feature
+p1.teammenu.ratio4.icon.offset = 197, 205  ;Ikemen feature
 p1.teammenu.ratio4.icon.facing = 1         ;Ikemen feature
 p1.teammenu.ratio4.icon.scale = 1.0, 1.0   ;Ikemen feature
 p1.teammenu.ratio5.icon.spr = 300, 4       ;Ikemen feature
-p1.teammenu.ratio5.icon.offset = 38, 205   ;Ikemen feature
+p1.teammenu.ratio5.icon.offset = 197, 205  ;Ikemen feature
 p1.teammenu.ratio5.icon.facing = 1         ;Ikemen feature
 p1.teammenu.ratio5.icon.scale = 1.0, 1.0   ;Ikemen feature
 p1.teammenu.ratio6.icon.spr = 300, 5       ;Ikemen feature
-p1.teammenu.ratio6.icon.offset = 38, 205   ;Ikemen feature
+p1.teammenu.ratio6.icon.offset = 197, 205  ;Ikemen feature
 p1.teammenu.ratio6.icon.facing = 1         ;Ikemen feature
 p1.teammenu.ratio6.icon.scale = 1.0, 1.0   ;Ikemen feature
 p1.teammenu.ratio7.icon.spr = 300, 6       ;Ikemen feature
-p1.teammenu.ratio7.icon.offset = 38, 205   ;Ikemen feature
+p1.teammenu.ratio7.icon.offset = 197, 205  ;Ikemen feature
 p1.teammenu.ratio7.icon.facing = 1         ;Ikemen feature
 p1.teammenu.ratio7.icon.scale = 1.0, 1.0   ;Ikemen feature
 
@@ -480,31 +480,31 @@ p2.teammenu.value.empty.icon.spr = 192,0
 p2.teammenu.value.spacing = -30,0
 
 p2.teammenu.ratio1.icon.spr = 301, 0       ;Ikemen feature
-p2.teammenu.ratio1.icon.offset = -354, 205 ;Ikemen feature
+p2.teammenu.ratio1.icon.offset = -195, 205 ;Ikemen feature
 p2.teammenu.ratio1.icon.facing = 1         ;Ikemen feature
 p2.teammenu.ratio1.icon.scale = 1.0, 1.0   ;Ikemen feature
 p2.teammenu.ratio2.icon.spr = 301, 1       ;Ikemen feature
-p2.teammenu.ratio2.icon.offset = -354, 205 ;Ikemen feature
+p2.teammenu.ratio2.icon.offset = -195, 205 ;Ikemen feature
 p2.teammenu.ratio2.icon.facing = 1         ;Ikemen feature
 p2.teammenu.ratio2.icon.scale = 1.0, 1.0   ;Ikemen feature
 p2.teammenu.ratio3.icon.spr = 301, 2       ;Ikemen feature
-p2.teammenu.ratio3.icon.offset = -354, 205 ;Ikemen feature
+p2.teammenu.ratio3.icon.offset = -195, 205 ;Ikemen feature
 p2.teammenu.ratio3.icon.facing = 1         ;Ikemen feature
 p2.teammenu.ratio3.icon.scale = 1.0, 1.0   ;Ikemen feature
 p2.teammenu.ratio4.icon.spr = 301, 3       ;Ikemen feature
-p2.teammenu.ratio4.icon.offset = -354, 205 ;Ikemen feature
+p2.teammenu.ratio4.icon.offset = -195, 205 ;Ikemen feature
 p2.teammenu.ratio4.icon.facing = 1         ;Ikemen feature
 p2.teammenu.ratio4.icon.scale = 1.0, 1.0   ;Ikemen feature
 p2.teammenu.ratio5.icon.spr = 301, 4       ;Ikemen feature
-p2.teammenu.ratio5.icon.offset = -354, 205 ;Ikemen feature
+p2.teammenu.ratio5.icon.offset = -195, 205 ;Ikemen feature
 p2.teammenu.ratio5.icon.facing = 1         ;Ikemen feature
 p2.teammenu.ratio5.icon.scale = 1.0, 1.0   ;Ikemen feature
 p2.teammenu.ratio6.icon.spr = 301, 5       ;Ikemen feature
-p2.teammenu.ratio6.icon.offset = -354, 205 ;Ikemen feature
+p2.teammenu.ratio6.icon.offset = -195, 205 ;Ikemen feature
 p2.teammenu.ratio6.icon.facing = 1         ;Ikemen feature
 p2.teammenu.ratio6.icon.scale = 1.0, 1.0   ;Ikemen feature
 p2.teammenu.ratio7.icon.spr = 301, 6       ;Ikemen feature
-p2.teammenu.ratio7.icon.offset = -354, 205 ;Ikemen feature
+p2.teammenu.ratio7.icon.offset = -195, 205 ;Ikemen feature
 p2.teammenu.ratio7.icon.facing = 1         ;Ikemen feature
 p2.teammenu.ratio7.icon.scale = 1.0, 1.0   ;Ikemen feature
 
@@ -878,7 +878,7 @@ credits.font.scale = 1.0, 1.0     ;Ikemen feature
 counter.endtime = 1593            ;Ikemen feature
 counter.starttime = 0             ;Ikemen feature
 counter.anim = 9000               ;Ikemen feature
-counter.offset = -53, 0           ;Ikemen feature
+counter.offset = 0, 0           ;Ikemen feature
 counter.scale = 3.0, 3.0          ;Ikemen feature
 counter.default.snd = -1, 0       ;Ikemen feature
 counter.skipstart = 71            ;Ikemen feature
@@ -1971,12 +1971,12 @@ snd.time = 0
 snd = 500,0
 bg.anim = 500
 ;bg.spr = 
-bg.offset = 25, 100
+bg.offset = 78, 100
 bg.facing = 1
 bg.scale = 3.0, 3.0
 bg.displaytime = 0
 ;text.text = "Here Comes A New Challenger!!"
-text.offset = 160, 120
+text.offset = 213, 120
 text.font = 2,5,0
 text.font.scale = 3.0, 3.0
 ;text.font.height = -1
@@ -2027,8 +2027,8 @@ enabled = 1
 bars.display = 0
 snd.time = 8
 snd = 600, 0
-p1.pos = -107, 0
-p2.pos = 107, 0
+p1.pos = 52, 0
+p2.pos = 266, 0
 
 p1.score.offset = 133, 126
 p1.score.font = 2,0,0
@@ -2378,44 +2378,44 @@ p2.text.textwrap = w
 p2.text.window = 30,432, 930,624
 
 [Begin Action 700]
-700,0, -478,0, 1, ,AS192D64
-700,0, -453,0, 1, ,AS192D64
-700,0, -428,0, 1, ,AS192D64
-700,0, -403,0, 1, ,AS192D64
-700,0, -378,0, 1, ,AS192D64
-700,0, -353,0, 1, ,AS192D64
-700,0, -328,0, 1, ,AS192D64
-700,0, -303,0, 1, ,AS192D64
-700,0, -278,0, 1, ,AS192D64
-700,0, -253,0, 1, ,AS192D64
-700,0, -228,0, 1, ,AS192D64
-700,0, -203,0, 1, ,AS192D64
-700,0, -178,0, 1, ,AS192D64
-700,0, -153,0, 1, ,AS192D64
-700,0, -128,0, 1, ,AS192D64
-700,0, -103,0, 1, ,AS192D64
-700,0, -78,0, 1, ,AS192D64
-700,0, -53,0, -1, ,AS192D64
+700,0, -425,0, 1, ,AS192D64
+700,0, -400,0, 1, ,AS192D64
+700,0, -375,0, 1, ,AS192D64
+700,0, -350,0, 1, ,AS192D64
+700,0, -325,0, 1, ,AS192D64
+700,0, -300,0, 1, ,AS192D64
+700,0, -275,0, 1, ,AS192D64
+700,0, -250,0, 1, ,AS192D64
+700,0, -225,0, 1, ,AS192D64
+700,0, -200,0, 1, ,AS192D64
+700,0, -175,0, 1, ,AS192D64
+700,0, -150,0, 1, ,AS192D64
+700,0, -125,0, 1, ,AS192D64
+700,0, -100,0, 1, ,AS192D64
+700,0, -75,0, 1, ,AS192D64
+700,0, -50,0, 1, ,AS192D64
+700,0, -25,0, 1, ,AS192D64
+700,0, 0,0, -1, ,AS192D64
 
 [Begin Action 701]
-700,0, 372,0, 1, ,AS192D64
-700,0, 347,0, 1, ,AS192D64
-700,0, 322,0, 1, ,AS192D64
-700,0, 297,0, 1, ,AS192D64
-700,0, 272,0, 1, ,AS192D64
-700,0, 247,0, 1, ,AS192D64
-700,0, 222,0, 1, ,AS192D64
-700,0, 197,0, 1, ,AS192D64
-700,0, 172,0, 1, ,AS192D64
-700,0, 147,0, 1, ,AS192D64
-700,0, 122,0, 1, ,AS192D64
-700,0, 97,0, 1, ,AS192D64
-700,0, 72,0, 1, ,AS192D64
-700,0, 47,0, 1, ,AS192D64
-700,0, 22,0, 1, ,AS192D64
-700,0, -3,0, 1, ,AS192D64
-700,0, -28,0, 1, ,AS192D64
-700,0, -53,0, -1, ,AS192D64
+700,0, 425,0, 1, ,AS192D64
+700,0, 400,0, 1, ,AS192D64
+700,0, 375,0, 1, ,AS192D64
+700,0, 350,0, 1, ,AS192D64
+700,0, 325,0, 1, ,AS192D64
+700,0, 300,0, 1, ,AS192D64
+700,0, 275,0, 1, ,AS192D64
+700,0, 250,0, 1, ,AS192D64
+700,0, 225,0, 1, ,AS192D64
+700,0, 200,0, 1, ,AS192D64
+700,0, 175,0, 1, ,AS192D64
+700,0, 150,0, 1, ,AS192D64
+700,0, 125,0, 1, ,AS192D64
+700,0, 100,0, 1, ,AS192D64
+700,0, 75,0, 1, ,AS192D64
+700,0, 50,0, 1, ,AS192D64
+700,0, 25,0, 1, ,AS192D64
+700,0, 0,0, -1, ,AS192D64
 
 ;-------------------------------------------------------------------
 ;Hiscore definition
