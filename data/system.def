@@ -251,7 +251,7 @@ trans = add
 
 ;----------------------------
 [Infobox] ;(new in MUGEN 1.0)
-title.offset = 159, 19           ;Ikemen feature
+title.offset = 159, 15           ;Ikemen feature
 title.font = 2,0,0               ;Ikemen feature
 title.font.scale = 1.0, 1.0      ;Ikemen feature
 ;title.font.height = -1           ;Ikemen feature
@@ -1367,7 +1367,7 @@ fadein.col = 0, 0, 0                              ;Ikemen feature
 fadeout.time = 10
 fadeout.col = 0, 0, 0                             ;Ikemen feature
 ;fadeout.anim =                                   ;Ikemen feature
-title.offset = 159, 19
+title.offset = 159, 15
 title.font = 2,0,0
 title.font.scale = 1.0, 1.0
 ;title.font.height = -1                            ;Ikemen feature
@@ -1517,7 +1517,7 @@ fadein.time = 10
 fadein.col = 0, 0, 0
 fadeout.time = 10
 fadeout.col = 0, 0, 0
-title.offset = 159, 19
+title.offset = 159, 15
 title.font = 2,0,0
 title.font.scale = 1.0, 1.0
 ;title.font.height = -1
@@ -1576,7 +1576,7 @@ fadein.time = 0
 fadein.col = 0, 0, 0
 fadeout.time = 0
 fadeout.col = 0, 0, 0
-title.offset = 159, 19
+title.offset = 159, 15
 title.font = 2,0,0
 title.font.scale = 1.0, 1.0
 ;title.font.height = -1
@@ -2375,7 +2375,7 @@ velocity = -1, -1
 ;-------------------------------------------------------------------
 ;Warning screen definition
 [Warning Info] ;Ikemen feature
-title.offset = 159, 19
+title.offset = 159, 15
 title.font = 2,0,0
 title.font.scale = 1.0, 1.0
 ;title.font.height = -1
