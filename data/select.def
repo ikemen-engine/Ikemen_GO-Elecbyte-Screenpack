@@ -252,7 +252,8 @@ randomselect
  ;   IKEMEN feature: Set the paramvalue to the ordering priority to give the
  ;   stage in Arcade and Time Attack modes. If there is at least 1 stage with
  ;   assigned order, facing opponent with the exact order paramvalue will result
- ;   in stage being randomly chosen from stages with the matching order.
+ ;   in stage being randomly chosen from stages with the matching order. Stages
+ ;   can have multiple order parameters assigned at the same time.
  ;
  ; - unlock
  ;   IKEMEN feature: paramvalue is executed as Lua code condition, right after

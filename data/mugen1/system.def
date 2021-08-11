@@ -2061,6 +2061,11 @@ p2.icon.displaytime = 0
 p1.icon.spacing = 0, 0
 p2.icon.spacing = 0, 0
 
+; gauge window parameter (x1,y1,x2,y2) is used not only to set drawing space,
+; but also to define gauge range (how much meter should be filled based on match
+; result, cutting portion of the art between x1 and x2 values, if needed). Gauge
+; art must be perfectly surrounded by rectangular window box to work correctly.
+
 ;p1.gauge.tech.anim = 
 p1.gauge.tech.spr = 600,11
 p1.gauge.tech.offset = 365, 60
@@ -2093,6 +2098,7 @@ p1.gauge.life.scale = 1.0, 1.0
 p1.gauge.life.window = 366, 126, 482, 136
 p1.gauge.life.ticks = 30
 p1.gauge.life.max = 30
+
 ;p1.rank.1.anim = 
 p1.rank.1.spr = 601,0
 p1.rank.1.offset = 0, 0
@@ -2163,6 +2169,7 @@ p1.rank.14.spr = 614,0
 p1.rank.14.offset = 0, 0
 p1.rank.14.facing = 1
 p1.rank.14.scale = 1.0, 1.0
+
 ;p1.icon.fa.anim = 
 p1.icon.fa.spr = -1,0
 p1.icon.fa.offset = 0, 0
@@ -2216,6 +2223,7 @@ p2.gauge.life.scale = 1.0, 1.0
 p2.gauge.life.window = 798, 126, 914, 136
 p2.gauge.life.ticks = 30
 p2.gauge.life.max = 30
+
 ;p2.rank.1.anim = 
 p2.rank.1.spr = 601,0
 p2.rank.1.offset = 1024, 0
@@ -2286,6 +2294,7 @@ p2.rank.14.spr = 614,0
 p2.rank.14.offset = 1024, 0
 p2.rank.14.facing = 1
 p2.rank.14.scale = 1.0, 1.0
+
 ;p2.icon.fa.anim = 
 p2.icon.fa.spr = -1,0
 p2.icon.fa.offset = 266, 0
