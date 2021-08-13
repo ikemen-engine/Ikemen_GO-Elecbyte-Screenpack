@@ -1261,6 +1261,12 @@ wintext.offset = 159,70
 wintext.displaytime = -1
 wintext.layerno = 2
 
+;-----------------------
+;Win screen background
+[WinBGdef] ;Ikemen feature
+
+; results screens variants reuse WinBgDef if dedicated ResultsBgDef is not set
+
 ;-------------------------------------------------------------------
 ;Game ending screen definition
 ;This screen shows up after the Win Screen.
@@ -1292,8 +1298,13 @@ winstext.displaytime = -1
 winstext.layerno = 2
 roundstowin = 5           ;Number of rounds to get win pose (lose pose otherwise)
 
-; Ikemen feature
-[VS100 Kumite Results Screen]
+;-----------------------
+;Survival mode results screen background
+[SurvivalResultsBGdef] ;Ikemen feature
+
+
+;-------------------------------------------------------------------
+[VS100 Kumite Results Screen] ;Ikemen feature
 enabled = 1
 fadein.time = 0
 fadeout.time = 64
@@ -1305,8 +1316,13 @@ winstext.displaytime = -1
 winstext.layerno = 2
 roundstowin = 51
 
-; Ikemen feature
-[Time Attack Results Screen]
+;-----------------------
+;VS100 Kumite results screen background
+[VS100KumiteResultsBGdef] ;Ikemen feature
+
+
+;-------------------------------------------------------------------
+[Time Attack Results Screen] ;Ikemen feature
 enabled = 1
 fadein.time = 0
 fadeout.time = 64
@@ -1317,8 +1333,13 @@ winstext.offset = 159,70
 winstext.displaytime = -1
 winstext.layerno = 2
 
-; Ikemen feature
-[Time Challenge Results Screen]
+;-----------------------
+;Time Attack results screen background
+[TimeAttackResultsBGdef] ;Ikemen feature
+
+
+;-------------------------------------------------------------------
+[Time Challenge Results Screen] ;Ikemen feature
 enabled = 1
 fadein.time = 0
 fadeout.time = 64
@@ -1329,8 +1350,13 @@ winstext.offset = 159,70
 winstext.displaytime = -1
 winstext.layerno = 2
 
-; Ikemen feature
-[Score Challenge Results Screen]
+;-----------------------
+;Time Challenge results screen background
+[TimeChallengeBGdef] ;Ikemen feature
+
+
+;-------------------------------------------------------------------
+[Score Challenge Results Screen] ;Ikemen feature
 enabled = 1
 fadein.time = 0
 fadeout.time = 64
@@ -1341,6 +1367,12 @@ winstext.offset = 159,70
 winstext.displaytime = -1
 winstext.layerno = 2
 
+;-----------------------
+;Score Challenge results screen background
+[ScoreChallengeResultsBGdef] ;Ikemen feature
+
+
+;-------------------------------------------------------------------
 ; Ikemen feature
 [Boss Rush Results Screen]
 enabled = 1
@@ -1353,10 +1385,10 @@ winstext.offset = 159,70
 winstext.displaytime = -1
 winstext.layerno = 2
 
-;-------------------
-;Result screen background
-; Ikemen feature
-[ResultsBGdef]
+;-----------------------
+;Boss Rush results screen background
+[BossRushResultsBGdef] ;Ikemen feature
+
 
 ;-------------------------------------------------------------------
 ;Options screen definition
@@ -1842,6 +1874,7 @@ overlay.alpha = 20, 100
 ;-------------------
 ;Challenger background
 [ChallengerBGdef] ;Ikemen feature
+
 
 ;-------------------------------------------------------------------
 ;Rank definition
