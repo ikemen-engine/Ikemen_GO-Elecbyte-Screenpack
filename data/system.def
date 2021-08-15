@@ -18,7 +18,7 @@ localcoord = 320,240      ;Local coordinate space width and height (new in MUGEN
 ;    for ~/mugen/data/mymotif/system.sff. If it does not find
 ;    it there, it looks for ~/mugen/data/system.sff (the default).
 ;    Finally, if that is not found, it will look for
-;    ~/mugen/system.sff. 
+;    ~/mugen/system.sff.
 
 [Files]
 spr = system.sff          ;Filename of sprite data
@@ -605,9 +605,9 @@ p2.name.active.font = 3,1,0 ;Ikemen feature
 
 ;-----------------------
 ;VS Match up screen background
-[VersusBGdef] 
+[VersusBGdef]
 
-[VersusBG 1] 
+[VersusBG 1]
 type  = normal
 spriteno = 100,0
 start = 0,0
@@ -1219,9 +1219,9 @@ winquote.textwrap = w     ;Word wrap
 
 ;-----------------------
 ;Victory screen background
-[VictoryBGdef] 
+[VictoryBGdef]
 
-[VictoryBG 1] 
+[VictoryBG 1]
 type  = normal
 spriteno = 100,0
 start = 0,0
@@ -2373,7 +2373,7 @@ item.face.offset = 240, 61
 item.face.facing = 1
 item.face.scale = 0.5, 0.5
 ;item.face.window = 0, 0, 320, 240
-item.face.num = 1
+item.face.num = 4
 item.face.spacing = 15, 16
 ;item.face.bg.anim = 
 item.face.bg.spr = 150,0

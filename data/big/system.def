@@ -33,7 +33,7 @@ localcoord = 1280,720     ;Local coordinate space width and height (new in MUGEN
 ;    for ~/mugen/data/mymotif/system.sff. If it does not find
 ;    it there, it looks for ~/mugen/data/system.sff (the default).
 ;    Finally, if that is not found, it will look for
-;    ~/mugen/system.sff. 
+;    ~/mugen/system.sff.
 
 [Files]
 spr = ../mugen1/system.sff          ;Filename of sprite data
@@ -657,15 +657,15 @@ p2.name.active.font = 3,1,-1 ;Ikemen feature
 
 ;-----------------------
 ;VS Match up screen background
-[VersusBGdef] 
+[VersusBGdef]
 
-[VersusBG BG] 
+[VersusBG BG]
 type  = normal
 spriteno = 204,0
 start = 0,0
 mask = 0
 
-[VersusBG BG for 4:3] 
+[VersusBG BG for 4:3]
 type  = normal
 spriteno = 100,0
 start = 0,0
@@ -1373,9 +1373,9 @@ winquote.textwrap = w     ;Word wrap
 
 ;-----------------------
 ;Victory screen background
-[VictoryBGdef] 
+[VictoryBGdef]
 
-[VictoryBG 1] 
+[VictoryBG 1]
 type  = normal
 spriteno = 100,0
 start = 0,0
@@ -1711,11 +1711,11 @@ menu.uselocalcoord = 1
 menu.pos = 414, 99
 menu.item.offset = 0, 0
 menu.item.font = 7,0,1, 191,191,191
-menu.item.font.scale = 1.0, 1.0  
+menu.item.font.scale = 1.0, 1.0
 ;menu.item.font.height = -1
 menu.item.active.offset = 0, 0
 menu.item.active.font = 7,0,1
-menu.item.active.font.scale = 1.0, 1.0  
+menu.item.active.font.scale = 1.0, 1.0
 ;menu.item.active.font.height = -1
 menu.item.spacing = 0, 42
 ;menu.window.margins.y = 0, 0
@@ -1770,27 +1770,27 @@ menu.uselocalcoord = 1
 menu.pos = 414, 99
 menu.item.offset = 0, 0
 menu.item.font = 7,0,1, 191,191,191
-menu.item.font.scale = 1.0, 1.0  
+menu.item.font.scale = 1.0, 1.0
 ;menu.item.font.height = -1
 menu.item.active.offset = 0, 0
 menu.item.active.font = 7,0,1
-menu.item.active.font.scale = 1.0, 1.0  
+menu.item.active.font.scale = 1.0, 1.0
 ;menu.item.active.font.height = -1
 menu.item.selected.offset = 0, 0
 menu.item.selected.font = 7,0,1, 0,247,247
-menu.item.selected.font.scale = 1.0, 1.0  
+menu.item.selected.font.scale = 1.0, 1.0
 ;menu.item.selected.font.height = -1
 menu.item.selected.active.offset = 0, 0
 menu.item.selected.active.font = 7,0,1, 0,247,247
-menu.item.selected.active.font.scale = 1.0, 1.0  
+menu.item.selected.active.font.scale = 1.0, 1.0
 ;menu.item.selected.active.font.height = -1
 menu.item.value.offset = 450, 0
 menu.item.value.font = 7,0,-1, 191,191,191
-menu.item.value.font.scale = 1.0, 1.0  
+menu.item.value.font.scale = 1.0, 1.0
 ;menu.item.value.font.height = -1
 menu.item.value.active.offset = 450, 0
 menu.item.value.active.font = 7,0,-1
-menu.item.value.active.font.scale = 1.0, 1.0  
+menu.item.value.active.font.scale = 1.0, 1.0
 ;menu.item.value.active.font.height = -1
 menu.item.spacing = 0, 42
 ;menu.window.margins.y = 0, 0
@@ -1829,7 +1829,7 @@ movelist.title.text = "%s"
 movelist.title.uppercase = 0
 movelist.text.offset = 0, 36
 movelist.text.font = 7,0,1
-movelist.text.font.scale = 1.0, 1.0  
+movelist.text.font.scale = 1.0, 1.0
 ;movelist.text.font.height = -1
 movelist.text.spacing = 3, 3
 movelist.text.text = "Command List not found."
@@ -2395,15 +2395,15 @@ p2.face.scale = 0.75, 0.75
 ;p2.face.window = 0, 0, 1280, 720
 p1.name.offset = 270, 135
 p1.name.font = 7,0,1
-p1.name.font.scale = 1.0, 1.0  
+p1.name.font.scale = 1.0, 1.0
 ;p1.name.font.height = -1
 p2.name.offset = 30, 471
 p2.name.font = 7,0,1
-p2.name.font.scale = 1.0, 1.0  
+p2.name.font.scale = 1.0, 1.0
 ;p2.name.font.height = -1
 p1.text.offset = 270, 177
 p1.text.font = 7,0,1
-p1.text.font.scale = 1.0, 1.0  
+p1.text.font.scale = 1.0, 1.0
 ;p1.text.font.height = -1
 p1.text.spacing = 0, 0
 p1.text.delay = 3
@@ -2411,7 +2411,7 @@ p1.text.textwrap = w
 p1.text.window = 270,96, 1200,288
 p2.text.offset = 30, 513
 p2.text.font = 7,0,1
-p2.text.font.scale = 1.0, 1.0  
+p2.text.font.scale = 1.0, 1.0
 ;p2.text.font.height = -1
 p2.text.spacing = 0, 0
 p2.text.delay = 3
@@ -2478,22 +2478,22 @@ title.text = "Ranking %s"
 title.uppercase = 0
 title.rank.offset = 105, 150
 title.rank.font = 7,0,0
-title.rank.font.scale = 1.0, 1.0  
+title.rank.font.scale = 1.0, 1.0
 ;title.rank.font.height = -1
 title.rank.text = "Rank"
 title.data.offset = 336, 150
 title.data.font = 7,0,0
-title.data.font.scale = 1.0, 1.0  
+title.data.font.scale = 1.0, 1.0
 ;title.data.font.height = -1
 title.data.text = "Result"
 title.name.offset = 558, 150
 title.name.font = 7,0,0
-title.name.font.scale = 1.0, 1.0  
+title.name.font.scale = 1.0, 1.0
 ;title.name.font.height = -1
 title.name.text = "Name"
 title.face.offset = 774, 150
 title.face.font = 7,0,0
-title.face.font.scale = 1.0, 1.0  
+title.face.font.scale = 1.0, 1.0
 ;title.face.font.height = -1
 title.face.text = "Character"
 item.offset = 0, 0
@@ -2502,7 +2502,7 @@ item.rank.offset = 126, 210
 item.rank.font = 2,0,-1
 item.rank.font.scale = 1.0, 1.0
 ;item.rank.font.height = -1
-item.rank.spacing = 0, 18
+item.rank.spacing = 0, 26
 item.rank.text = "%sth"
 item.rank.1.text = "%sst"
 item.rank.2.text = "%snd"
@@ -2518,7 +2518,7 @@ item.data.offset = 399, 210
 item.data.font = 2,0,-1
 item.data.font.scale = 1.0, 1.0
 ;item.data.font.height = -1
-item.data.spacing = 0, 18
+item.data.spacing = 0, 26
 item.data.score.text = "%8s"
 item.data.time.text = "%m'%s''%x"
 item.data.win.text = "Round %s"
@@ -2533,7 +2533,7 @@ item.name.offset = 531, 210
 item.name.font = 2,0,1
 item.name.font.scale = 1.0, 1.0
 ;item.name.font.height = -1
-item.name.spacing = 0, 18
+item.name.spacing = 0, 26
 item.name.text = "%3s"
 item.name.active.font = 2,0,1, 191,191,191
 item.name.active.font.scale = 1.0, 1.0
@@ -2545,22 +2545,22 @@ item.name.active2.font.scale = 1.0, 1.0
 item.name.uppercase = 1
 ;item.face.anim = 
 item.face.spr = 9000, 0
-item.face.offset = 720, 193
+item.face.offset = 720, 189
 item.face.facing = 1
-item.face.scale = 0.25, 0.25
+item.face.scale = 0.33, 0.33
 ;item.face.window = 0, 0, 1280, 720
-item.face.num = 1
-item.face.spacing = 30, 33
+item.face.num = 4
+item.face.spacing = 38, 41
 ;item.face.bg.anim = 
 item.face.bg.spr = 150,0
 item.face.bg.offset = 0, 0
 item.face.bg.facing = 1
-item.face.bg.scale = 0.25, 0.25
+item.face.bg.scale = 0.33, 0.33
 ;item.face.unknown.anim = 
 item.face.unknown.spr = 151,0
 item.face.unknown.offset = 0, 0
 item.face.unknown.facing = 1
-item.face.unknown.scale = 0.25, 0.25
+item.face.unknown.scale = 0.33, 0.33
 timer.enabled = 1
 timer.offset = 930, 696
 timer.font = 2,0,-1
@@ -2572,7 +2572,7 @@ timer.framespercount = 60
 timer.displaytime = 10
 window.width = 900
 window.margins.y = 60, 3
-window.visibleitems = 15
+window.visibleitems = 10
 ;overlay.window = 0, 0, 1280, 720
 overlay.col = 0, 0, 0
 overlay.alpha = 20, 100
