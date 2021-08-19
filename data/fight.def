@@ -1313,14 +1313,12 @@ p2.level4.scale = 0.5, 0.5
 ;-----------------------------------------------------------
 ; First of all, set filenames under [Files].
 ; 
-; Next, you can customize each component of the fight screen.
-; A component can be anything from a piece of the lifebar,
-; to the text that signals a K.O.
+; Next, you can customize each component of the fight screen. A component can be
+; anything from a piece of the lifebar, to the text that signals a K.O.
 ;
-; Each component starts with its name, followed by a period,
-; and then the names of its elements. For example, a
-; component named "bg" with an element of "anim" looks
-; like "bg.anim".
+; Each component starts with its name, followed by a period, and then the names
+; of its elements. For example, a component named "bg" with an element of "anim"
+; looks like "bg.anim".
 ;
 ; There are several main element types:
 ;   1. anim (animation)
@@ -1330,72 +1328,60 @@ p2.level4.scale = 0.5, 0.5
 ; 
 ; 1. anim
 ;    Format: anim = actionno
-;    actionno is the number of the action to use. You must
-;    specify a valid action that is defined within this file.
-;    The sprites for the animation come from the file given
-;    for the "sff" parameter in the [Files] group below.
-;    You can define your animation actions anywhere in this
-;    file, as long as it does not come in the middle of a
-;    group (an example of a group is the block of text
-;    starting with [Files], and ending on the next group
-;    [Lifebar]).
+;    actionno is the number of the action to use. You must specify a valid
+;    action that is defined within this file. The sprites for the animation come
+;    from the file given for the "sff" parameter in the [Files] group below. You
+;    can define your animation actions anywhere in this file, as long as it does
+;    not come in the middle of a group (an example of a group is the block of
+;    text starting with [Files], and ending on the next group [Lifebar]).
 ;    For example, to use action 5 for the p1.bg0 component:
 ;      p1.bg0.anim = 5
 ;
 ; 2. spr
 ;    Format: spr = spritegrp, spriteno
-;    This is the identifier pair for the sprite you to
-;    display.
-;    For example, to show sprite 103,0 for a component named
-;    p1.throw:
+;    This is the identifier pair for the sprite you to display.
+;    For example, to show sprite 103,0 for a component named p1.throw:
 ;      p1.throw.spr = 103,0
 ;
 ; 3. font
 ;    Format: font = fontno, fontbank, alignmnt, R, G, B
 ;            text = text
-;    This lets you set the font (and optionally the content
-;    text). fontno is the number of the font defined under
-;    [Files]. For instance, for the line "font2 = font/num1.fnt",
-;    the fontno is 2.
-;    fontbank is the color bank of the font to use. Refer to
-;    the font for what color banks it has.
-;    alignmt is a number representing the text alignment.
-;    1 is left, 0 means center, and -1 is for right-alignment.
-;    R, G, B are the color adjustment values for the font.
-;    RGB values default to 256,256,256 (no color adjustment).
-;    All font values are optional.  If fontno is omitted, no
-;    text will be drawn.
+;    This lets you set the font (and optionally the content text).
+;    * fontno is the number of the font defined under [Files]. For instance, for
+;    the line "font2 = font/num1.fnt", the fontno is 2.
+;    * fontbank is the color bank of the font to use. Refer to the font for what
+;    color banks it has.
+;    * alignmt is a number representing the text alignment. 1 is left, 0 means
+;    center, and -1 is for right-alignment.
+;    * R, G, B are the color adjustment values for the font. RGB values default
+;    to 256,256,256 (no color adjustment).
+;    All font values are optional. If fontno is omitted, no text will be drawn.
 ;
-;    The "text" element should accompany the "font" element
-;    wherever necessary. The following example will display
-;    "FIGHT!" using font 1, bank 1, with center-alignment.
+;    The "text" element should accompany the "font" element wherever necessary.
+;    The following example will display "FIGHT!" using font 1, bank 1, with
+;    center-alignment.
 ;      fight.font = 1,1, 0
 ;      fight.text = FIGHT!
 ;
 ; 4. snd
 ;    Format: snd = sndgrp, sndno
-;    This is the identifier pair for the sound effect to
-;    play. The .snd file that the sound is played from
-;    is given in the "snd" parameter in the [Files] group.
-;    This plays sound 21,0 for the "level1" component.
+;    This is the identifier pair for the sound effect to play. The .snd file
+;    that the sound is played from is given in the "snd" parameter in the
+;    [Files] group. This plays sound 21,0 for the "level1" component.
 ;      level1.snd = 21,0
 ; 
-; Take note that the anim, spr and font element types are
-; mutually exclusive; you can only use one of them per
-; component.
+; Take note that the anim, spr and font element types are mutually exclusive;
+; you can only use one of them per component.
 ;
-; The types of elements supported vary with the component.
-; Usually the anim, spr and font elements are interchangeable
-; for a component. However, in some cases only one element
-; type may be used. An example of this is found under [Combo]:
+; The types of elements supported vary with the component. Usually the anim, spr
+; and font elements are interchangeable for a component. However, in some cases
+; only one element type may be used. An example of this is found under [Combo]:
 ;   counter.font = 2,4  ;Font for combo counter
-; You cannot use an animation or a sprite to represent a
-; numeric counter, so it only makes sense to define a font
-; for use.
+; You cannot use an animation or a sprite to represent a numeric counter, so it
+; only makes sense to define a font for use.
 ;
-; There are other element types that do nothing on their
-; own. They can be used with display element types
-; (spr, anim and font) to gain more control. These
+; There are other element types that do nothing on their own. They can be used
+; with display element types (spr, anim and font) to gain more control. These
 ; have no meaning when used with the snd element.
 ;   5.  offset
 ;   6.  displaytime
@@ -1403,59 +1389,65 @@ p2.level4.scale = 0.5, 0.5
 ;   8.  vfacing
 ;   9.  layerno
 ;   10. scale
+;   11. angle
+;   12. window (Ikemen feature)
 ;
 ; 5. offset
 ;   Format: offset = x, y
-;   Displaces the display element horizontally by x pixels,
-;   and vertically by y pixels.
-;   If this element is omitted, the offset is assumed to
-;   be 0,0.
+;   Displaces the display element horizontally by x pixels, and vertically by y
+;   pixels. If this element is omitted, the offset is assumed to be 0,0.
 ;
 ; 6. displaytime
 ;   Format: displaytime = time_in_ticks
-;   This element defines the time to display the component.
-;   If omitted, the default display time varies with element
-;   type. For spr and font elements, the default displaytime
-;   is 1. For anim, it is the looptime of the animation.
-;   This example displays the text "FIGHT!" for 45 game
-;   ticks:
+;   This element defines the time to display the component. If omitted, the
+;   default display time varies with element type. For spr and font elements,
+;   the default displaytime is 1. For anim, it is the looptime of the animation.
+;   This example displays the text "FIGHT!" for 45 game ticks:
 ;     fight.font = 1,1, 0
 ;     fight.text = FIGHT!
 ;     fight.displaytime = 45
 ;
 ; 7. facing
 ;   Format: facing = dir
-;   Sets the horizontal flipping of the display element.
-;   1 means no flipping, and -1 means flip horizontally.
-;   Does not affect "font" elements. Defaults to 1 if
-;   omitted.
+;   Sets the horizontal flipping of the display element. 1 means no flipping,
+;   and -1 means flip horizontally. Does not affect "font" elements. Defaults to
+;   1 if omitted.
 ;
 ; 8. vfacing
 ;   Format: vfacing = dir
-;   Sets the vertical flipping of the display element.
-;   1 means no flipping, and -1 means flip vertically.
-;   Does not affect "font" elements. Defaults to 1 if
+;   Sets the vertical flipping of the display element. 1 means no flipping, and
+;   -1 means flip vertically. Does not affect "font" elements. Defaults to 1 if
 ;   omitted.
 ;
 ; 9. layerno
 ;   Format: layerno = no
-;   This element lets you set the layer to which the
-;   display element will be drawn on. 0 is in front of
-;   the background, but behind the players. 1 is in
-;   front of the players, but behind the foreground.
-;   2 is in front of the foreground. The default is 0
-;   in most cases.
-;   An example of where this might be useful is when
-;   you want to have the life or power bars appear
-;   on top. In that case, set all the components to
-;   have layerno = 2.
+;   This element lets you set the layer to which the display element will be
+;   drawn on. 0 is in front of the background, but behind the players. 1 is in
+;   front of the players, but behind the foreground. 2 is in front of the
+;   foreground. The default is 0 in most cases.
+;   An example of where this might be useful is when you want to have the life
+;   or power bars appear on top. In that case, set all the components to have
+;   layerno = 2.
 ;
 ; 10. scale
 ;   Format: scale = xscale, yscale
-;   Scales the display element by a horizontal scale
-;   factor of xscale, and vertically by a factor of
-;   yscale. Defaults to 1,1 if omitted.
+;   Scales the display element by a horizontal scale factor of xscale, and
+;   vertically by a factor of yscale. Defaults to 1,1 if omitted.
+;   Ikemen feature: Unlike mugen, scale does affect "font" elements.
+;
+; 11. angle
+;   Format: angle = degrees
+;   Draws the element rotated by the specified angle.
 ;   Currently does not affect "font" elements.
+;
+; 12. window (Ikemen feature)
+;   Format: window = x1, y1, x2, y2
+;   Specify window with four coordinates x1, y1, x2, and y2 respectively.
+;   Considering the upper left corner of the screen as (0,0), these coordinates
+;   are taken to form a rectangular box with (x1,y1) and (x2,y2) at opposite
+;   corners. Only the part of the display element type that comes within this
+;   box (the "window") will be drawn. If you do not need the windowing effect,
+;   omit this line entirely.
 ;
 ; Some components have additional elements specific
 ; to themselves.
