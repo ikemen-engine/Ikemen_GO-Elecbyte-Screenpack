@@ -1433,7 +1433,6 @@ p2.level4.scale = 0.5, 0.5
 ;   Format: scale = xscale, yscale
 ;   Scales the display element by a horizontal scale factor of xscale, and
 ;   vertically by a factor of yscale. Defaults to 1,1 if omitted.
-;   Ikemen feature: Unlike mugen, scale does affect "font" elements.
 ;
 ; 11. angle
 ;   Format: angle = degrees
