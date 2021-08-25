@@ -32,6 +32,7 @@ font2 = f-6x9.def         ;System fonts
 font3 = jg.fnt            ;System fonts
 font4 = Open_Sans.def
 font5 = default-3x5-bold.def
+font6 = default-3x5.def
 module =                  ;Ikemen feature: External Lua code
 
 ;----------------------------

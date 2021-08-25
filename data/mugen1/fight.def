@@ -13,8 +13,7 @@
 ;     3. data/ (not recommended to keep custom fonts here)
 ;     4. font/
 ;
-; See the section "How to Customize" at the end of
-; this file.
+; See the section "How to Customize" at the end of this file.
 
 ;-----------------------------------------------------------
 ; Ikemen feature
@@ -1525,13 +1524,13 @@ p2.level4.scale = 1.0, 1.0
 ;    Format: font = fontno, fontbank, alignmnt, R, G, B
 ;            text = text
 ;    This lets you set the font (and optionally the content text).
-;    * fontno is the number of the font defined under [Files]. For instance, for
+;    - fontno is the number of the font defined under [Files]. For instance, for
 ;    the line "font2 = font/num1.fnt", the fontno is 2.
-;    * fontbank is the color bank of the font to use. Refer to the font for what
+;    - fontbank is the color bank of the font to use. Refer to the font for what
 ;    color banks it has.
-;    * alignmt is a number representing the text alignment. 1 is left, 0 means
+;    - alignmt is a number representing the text alignment. 1 is left, 0 means
 ;    center, and -1 is for right-alignment.
-;    * R, G, B are the color adjustment values for the font. RGB values default
+;    - R, G, B are the color adjustment values for the font. RGB values default
 ;    to 256,256,256 (no color adjustment).
 ;    All font values are optional. If fontno is omitted, no text will be drawn.
 ;
