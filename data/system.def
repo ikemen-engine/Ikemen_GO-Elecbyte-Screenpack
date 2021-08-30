@@ -1701,18 +1701,8 @@ movelist.arrow.down.offset = 0, 0
 movelist.arrow.down.facing = 1
 movelist.arrow.down.scale = 1.0, 1.0
 
-menu.itemname.back = "Continue"
-menu.itemname.menuinput = "Button Config"
-menu.itemname.menuinput.keyboard = "Key Config"
-menu.itemname.menuinput.gamepad = "Joystick Config"
-menu.itemname.menuinput.empty = ""
-menu.itemname.menuinput.inputdefault = "Default"
-menu.itemname.menuinput.back = "Back"
-;menu.itemname.reset = "Round Reset"
-;menu.itemname.reload = "Rematch"
-menu.itemname.commandlist = "Command List"
-menu.itemname.characterchange = "Character Change"
-menu.itemname.exit = "Exit"
+; If custom menus are not declared, default menu screen layout is loaded.
+; Refer to system.base.def for an example how to modify pause screen menus.
 
 ;-------------------
 ;Pause menu screen background
@@ -1720,13 +1710,17 @@ menu.itemname.exit = "Exit"
 
 ;-------------------------------------------------------------------
 ;Training menu screen definition
-;[Training Info] ;Ikemen feature
-;uses [Menu Info] data if not declared
+[Training Info] ;Ikemen feature
+
+; If not overridden, values used for [Menu Info] are shared with [Training Info]
+; If custom menus are not declared, default menu screen layout is loaded.
+; Refer to system.base.def for an example how to modify pause screen menus.
 
 ;-------------------
 ;Training menu screen background
 ;[TrainingBGdef] ;Ikemen feature
-;uses [MenuBGdef] data if not declared
+
+; If commented out defaults to [MenuBGdef]
 
 ;-------------------------------------------------------------------
 ;Attract mode definition
