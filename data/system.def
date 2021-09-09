@@ -1217,6 +1217,8 @@ winquote.spacing = 0, 0   ;Ikemen feature
 winquote.font = 2,0,1
 winquote.window = 18,171, 301,228
 winquote.textwrap = w     ;Word wrap
+winquote.delay = 2        ;Ikemen feature
+winquote.time = 0         ;Ikemen feature
 
 ;-----------------------
 ;Victory screen background
