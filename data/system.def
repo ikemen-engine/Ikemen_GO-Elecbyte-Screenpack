@@ -470,16 +470,6 @@ teammenu.itemname.tag = Tag       ;Ikemen feature
 teammenu.itemname.turns = Turns   ;Ikemen feature
 teammenu.itemname.ratio = Ratio   ;Ikemen feature
 
-timer.enabled = 0                 ;Ikemen feature
-timer.offset = 159, 39            ;Ikemen feature
-timer.font = 2,0,0                ;Ikemen feature
-timer.font.scale = 1.0, 1.0       ;Ikemen feature
-;timer.font.height = -1            ;Ikemen feature
-timer.font.text = "%i"            ;Ikemen feature
-timer.count = 99                  ;Ikemen feature
-timer.framespercount = 60         ;Ikemen feature
-timer.displaytime = 10            ;Ikemen feature
-
 record.offset = 159, 39      ;Ikemen feature
 record.font = 3,0,0          ;Ikemen feature
 record.font.scale = 1.0, 1.0 ;Ikemen feature
@@ -577,6 +567,7 @@ fadeout.time = 15
 match.text = "Match %i"   ;%i can be used for the match number
 match.offset = 159, 12
 match.font = 3,0,0
+
 ;Big portraits
 p1.num = 4                  ;Ikemen feature
 p1.anim = 0                 ;Ikemen feature
@@ -589,20 +580,19 @@ p1.padding = 1              ;Ikemen feature
 p2.num = 4                  ;Ikemen feature
 p2.anim = 0                 ;Ikemen feature
 ;p2.spr = 9000, 1
-p2.offset = 299,168 ;299,31
+p2.offset = 290,168 ;299,31
 p2.facing = -1
 p2.scale = 1,1
 p2.spacing = -25,0          ;Ikemen feature
 p2.padding = 1              ;Ikemen feature
+
 ;Names
 p1.name.offset =  78,190
 p1.name.font = 3,0,0
 p1.name.spacing = 0,14    ;Space between each name for players on the same team
-p1.name.active.font = 3,4,0 ;Ikemen feature
 p2.name.offset = 241,190
 p2.name.font = 3,0,0
 p2.name.spacing = 0,14
-p2.name.active.font = 3,1,0 ;Ikemen feature
 
 ;-----------------------
 ;VS Match up screen background
@@ -1751,7 +1741,6 @@ start.press.font = 3,0,0
 start.press.font.scale = 1.0, 1.0
 ;start.press.font.height = -1
 start.press.blinktime = 30
-start.timer.enabled = 1
 start.timer.offset = 310, 234
 start.timer.font = 5,0,-1
 start.timer.font.scale = 1.0, 1.0
@@ -2382,7 +2371,6 @@ item.face.unknown.spr = 151,0
 item.face.unknown.offset = 0, 0
 item.face.unknown.facing = 1
 item.face.unknown.scale = 0.5, 0.5
-timer.enabled = 1
 timer.offset = 310, 232
 timer.font = 5,0,-1
 timer.font.scale = 1.0, 1.0

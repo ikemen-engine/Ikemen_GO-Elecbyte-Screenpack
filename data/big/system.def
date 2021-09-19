@@ -514,16 +514,6 @@ teammenu.itemname.tag = Tag       ;Ikemen feature
 teammenu.itemname.turns = Turns   ;Ikemen feature
 teammenu.itemname.ratio = Ratio   ;Ikemen feature
 
-timer.enabled = 0                 ;Ikemen feature
-timer.offset = 640, 78            ;Ikemen feature
-timer.font = 2,0,0                ;Ikemen feature
-timer.font.scale = 1.0, 1.0       ;Ikemen feature
-;timer.font.height = -1            ;Ikemen feature
-timer.font.text = "%i"            ;Ikemen feature
-timer.count = 99                  ;Ikemen feature
-timer.framespercount = 60         ;Ikemen feature
-timer.displaytime = 10            ;Ikemen feature
-
 record.offset = 640, 63      ;Ikemen feature
 record.font = 2,0,0          ;Ikemen feature
 record.font.scale = 1.0, 1.0 ;Ikemen feature
@@ -626,6 +616,7 @@ fadeout.time = 25
 match.text = "Match %i"   ;%i can be used for the match number
 match.offset = 20, 709
 match.font = 2,0,1
+
 ;Big portraits
 p1.num = 4                   ;Ikemen feature
 p1.anim = 0                  ;Ikemen feature
@@ -645,15 +636,14 @@ p2.scale = 1,1
 p2.window = 741,30, 1220,589
 p2.spacing = -75,0           ;Ikemen feature
 p2.padding = 1               ;Ikemen feature
+
 ;Names
 p1.name.offset = 110,635 ;110,650  ;Position to put name
 p1.name.font = 3,0,1      ;Set to -1 for no display
 p1.name.spacing = 15,25 ;0,44    ;Space between each name for players on the same team
-p1.name.active.font = 3,3,1  ;Ikemen feature
 p2.name.offset = 1170,635 ;1170,650
 p2.name.font = 3,0,-1
 p2.name.spacing = -15,25 ;0,44
-p2.name.active.font = 3,1,-1 ;Ikemen feature
 
 ;-----------------------
 ;VS Match up screen background
@@ -1903,7 +1893,6 @@ start.press.font = 3,0,0
 start.press.font.scale = 1.0, 1.0
 ;start.press.font.height = -1
 start.press.blinktime = 30
-start.timer.enabled = 1
 start.timer.offset = 1089, 696
 start.timer.font = 2,0,-1
 start.timer.font.scale = 1.0, 1.0
@@ -2557,7 +2546,6 @@ item.face.unknown.spr = 151,0
 item.face.unknown.offset = 0, 0
 item.face.unknown.facing = 1
 item.face.unknown.scale = 0.33, 0.33
-timer.enabled = 1
 timer.offset = 930, 696
 timer.font = 2,0,-1
 timer.font.scale = 1.0, 1.0
