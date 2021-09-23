@@ -1274,6 +1274,7 @@ p2.enabled.survivalcoop = 1
 p2.enabled.teamcoop = 1
 p2.enabled.timeattack = 1
 p2.enabled.timechallenge = 1
+p2.enabled.training = 1
 p2.enabled.vs100kumite = 1
 p2.enabled.watch = 1
 
