@@ -20,56 +20,56 @@ sample = 1
 file = 600-1.wav
 
 [SoundDef]
-group = 9000
+group = 900
 sample = 0
-file = 9000-0.wav
+file = 900-0.wav
 
 [SoundDef]
-group = 9000
+group = 900
 sample = 1
-file = 9000-1.wav
+file = 900-1.wav
 
 [SoundDef]
-group = 9000
+group = 900
 sample = 2
-file = 9000-2.wav
+file = 900-2.wav
 
 [SoundDef]
-group = 9000
+group = 900
 sample = 3
-file = 9000-3.wav
+file = 900-3.wav
 
 [SoundDef]
-group = 9000
+group = 900
 sample = 4
-file = 9000-4.wav
+file = 900-4.wav
 
 [SoundDef]
-group = 9000
+group = 900
 sample = 5
-file = 9000-5.wav
+file = 900-5.wav
 
 [SoundDef]
-group = 9000
+group = 900
 sample = 6
-file = 9000-6.wav
+file = 900-6.wav
 
 [SoundDef]
-group = 9000
+group = 900
 sample = 7
-file = 9000-7.wav
+file = 900-7.wav
 
 [SoundDef]
-group = 9000
+group = 900
 sample = 8
-file = 9000-8.wav
+file = 900-8.wav
 
 [SoundDef]
-group = 9000
+group = 900
 sample = 9
-file = 9000-9.wav
+file = 900-9.wav
 
 [SoundDef]
-group = 9000
+group = 900
 sample = 10
-file = 9000-10.wav
+file = 900-10.wav

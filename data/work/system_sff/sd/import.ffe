@@ -27,9 +27,9 @@ number = 0
 file = 700-0.act
 
 [PaletteDef]
-group = 9000
+group = 900
 number = 0
-file = 9000-0.act
+file = 900-0.act
 
 [SpriteDef]
 group = 300
@@ -464,3835 +464,3835 @@ palette = 700,0
 file = 700-0.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 0
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-0.png
+palette = 900,0
+file = 909-0.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 1
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-1.png
+palette = 900,0
+file = 909-1.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 2
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-1.png
+palette = 900,0
+file = 909-1.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 3
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-3.png
+palette = 900,0
+file = 909-3.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 4
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-4.png
+palette = 900,0
+file = 909-4.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 5
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-5.png
+palette = 900,0
+file = 909-5.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 6
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-6.png
+palette = 900,0
+file = 909-6.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 7
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-7.png
+palette = 900,0
+file = 909-7.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 8
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-8.png
+palette = 900,0
+file = 909-8.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 9
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-7.png
+palette = 900,0
+file = 909-7.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 10
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-10.png
+palette = 900,0
+file = 909-10.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 11
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-11.png
+palette = 900,0
+file = 909-11.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 12
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-12.png
+palette = 900,0
+file = 909-12.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 13
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-13.png
+palette = 900,0
+file = 909-13.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 14
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-14.png
+palette = 900,0
+file = 909-14.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 15
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-15.png
+palette = 900,0
+file = 909-15.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 16
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-16.png
+palette = 900,0
+file = 909-16.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 17
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-17.png
+palette = 900,0
+file = 909-17.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 18
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-18.png
+palette = 900,0
+file = 909-18.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 19
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-19.png
+palette = 900,0
+file = 909-19.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 20
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-20.png
+palette = 900,0
+file = 909-20.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 21
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-21.png
+palette = 900,0
+file = 909-21.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 22
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-22.png
+palette = 900,0
+file = 909-22.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 23
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-23.png
+palette = 900,0
+file = 909-23.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 24
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-24.png
+palette = 900,0
+file = 909-24.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 25
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-25.png
+palette = 900,0
+file = 909-25.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 26
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-26.png
+palette = 900,0
+file = 909-26.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 27
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-27.png
+palette = 900,0
+file = 909-27.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 28
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-28.png
+palette = 900,0
+file = 909-28.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 29
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-29.png
+palette = 900,0
+file = 909-29.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 30
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-30.png
+palette = 900,0
+file = 909-30.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 31
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-31.png
+palette = 900,0
+file = 909-31.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 32
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-32.png
+palette = 900,0
+file = 909-32.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 33
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-33.png
+palette = 900,0
+file = 909-33.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 34
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-34.png
+palette = 900,0
+file = 909-34.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 35
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-35.png
+palette = 900,0
+file = 909-35.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 36
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-36.png
+palette = 900,0
+file = 909-36.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 37
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-32.png
+palette = 900,0
+file = 909-32.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 38
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-38.png
+palette = 900,0
+file = 909-38.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 39
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-39.png
+palette = 900,0
+file = 909-39.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 40
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-40.png
+palette = 900,0
+file = 909-40.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 41
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-41.png
+palette = 900,0
+file = 909-41.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 42
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-42.png
+palette = 900,0
+file = 909-42.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 43
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-43.png
+palette = 900,0
+file = 909-43.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 44
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-44.png
+palette = 900,0
+file = 909-44.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 45
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-45.png
+palette = 900,0
+file = 909-45.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 46
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-46.png
+palette = 900,0
+file = 909-46.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 47
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-47.png
+palette = 900,0
+file = 909-47.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 48
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-48.png
+palette = 900,0
+file = 909-48.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 49
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-49.png
+palette = 900,0
+file = 909-49.png
 
 [SpriteDef]
-group = 9009
+group = 909
 image = 50
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9009-50.png
+palette = 900,0
+file = 909-50.png
 
 [SpriteDef]
-group = 9008
+group = 908
 image = 0
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9008-0.png
+palette = 900,0
+file = 908-0.png
 
 [SpriteDef]
-group = 9008
+group = 908
 image = 1
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9008-1.png
+palette = 900,0
+file = 908-1.png
 
 [SpriteDef]
-group = 9008
+group = 908
 image = 2
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9008-2.png
+palette = 900,0
+file = 908-2.png
 
 [SpriteDef]
-group = 9008
+group = 908
 image = 3
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9008-3.png
+palette = 900,0
+file = 908-3.png
 
 [SpriteDef]
-group = 9008
+group = 908
 image = 4
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9008-4.png
+palette = 900,0
+file = 908-4.png
 
 [SpriteDef]
-group = 9008
+group = 908
 image = 5
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9008-5.png
+palette = 900,0
+file = 908-5.png
 
 [SpriteDef]
-group = 9008
+group = 908
 image = 6
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9008-6.png
+palette = 900,0
+file = 908-6.png
 
 [SpriteDef]
-group = 9008
+group = 908
 image = 7
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9008-7.png
+palette = 900,0
+file = 908-7.png
 
 [SpriteDef]
-group = 9008
+group = 908
 image = 8
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9008-8.png
+palette = 900,0
+file = 908-8.png
 
 [SpriteDef]
-group = 9008
+group = 908
 image = 9
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9008-9.png
+palette = 900,0
+file = 908-9.png
 
 [SpriteDef]
-group = 9008
+group = 908
 image = 10
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9008-10.png
+palette = 900,0
+file = 908-10.png
 
 [SpriteDef]
-group = 9008
+group = 908
 image = 11
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9008-11.png
+palette = 900,0
+file = 908-11.png
 
 [SpriteDef]
-group = 9008
+group = 908
 image = 12
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9008-12.png
+palette = 900,0
+file = 908-12.png
 
 [SpriteDef]
-group = 9008
+group = 908
 image = 13
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9008-13.png
+palette = 900,0
+file = 908-13.png
 
 [SpriteDef]
-group = 9008
+group = 908
 image = 14
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9008-14.png
+palette = 900,0
+file = 908-14.png
 
 [SpriteDef]
-group = 9008
+group = 908
 image = 15
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9008-15.png
+palette = 900,0
+file = 908-15.png
 
 [SpriteDef]
-group = 9008
+group = 908
 image = 16
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9008-16.png
+palette = 900,0
+file = 908-16.png
 
 [SpriteDef]
-group = 9008
+group = 908
 image = 17
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9008-12.png
+palette = 900,0
+file = 908-12.png
 
 [SpriteDef]
-group = 9008
+group = 908
 image = 18
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9008-11.png
+palette = 900,0
+file = 908-11.png
 
 [SpriteDef]
-group = 9008
+group = 908
 image = 19
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9008-19.png
+palette = 900,0
+file = 908-19.png
 
 [SpriteDef]
-group = 9008
+group = 908
 image = 20
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9008-20.png
+palette = 900,0
+file = 908-20.png
 
 [SpriteDef]
-group = 9008
+group = 908
 image = 21
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9008-21.png
+palette = 900,0
+file = 908-21.png
 
 [SpriteDef]
-group = 9008
+group = 908
 image = 22
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9008-22.png
+palette = 900,0
+file = 908-22.png
 
 [SpriteDef]
-group = 9008
+group = 908
 image = 23
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9008-23.png
+palette = 900,0
+file = 908-23.png
 
 [SpriteDef]
-group = 9008
+group = 908
 image = 24
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9008-24.png
+palette = 900,0
+file = 908-24.png
 
 [SpriteDef]
-group = 9008
+group = 908
 image = 25
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9008-25.png
+palette = 900,0
+file = 908-25.png
 
 [SpriteDef]
-group = 9008
+group = 908
 image = 26
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9008-26.png
+palette = 900,0
+file = 908-26.png
 
 [SpriteDef]
-group = 9008
+group = 908
 image = 27
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9008-27.png
+palette = 900,0
+file = 908-27.png
 
 [SpriteDef]
-group = 9008
+group = 908
 image = 28
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9008-28.png
+palette = 900,0
+file = 908-28.png
 
 [SpriteDef]
-group = 9008
+group = 908
 image = 29
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9008-29.png
+palette = 900,0
+file = 908-29.png
 
 [SpriteDef]
-group = 9008
+group = 908
 image = 30
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9008-30.png
+palette = 900,0
+file = 908-30.png
 
 [SpriteDef]
-group = 9007
+group = 907
 image = 0
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9007-0.png
+palette = 900,0
+file = 907-0.png
 
 [SpriteDef]
-group = 9007
+group = 907
 image = 1
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9007-1.png
+palette = 900,0
+file = 907-1.png
 
 [SpriteDef]
-group = 9007
+group = 907
 image = 2
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9007-2.png
+palette = 900,0
+file = 907-2.png
 
 [SpriteDef]
-group = 9007
+group = 907
 image = 3
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9007-3.png
+palette = 900,0
+file = 907-3.png
 
 [SpriteDef]
-group = 9007
+group = 907
 image = 4
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9007-4.png
+palette = 900,0
+file = 907-4.png
 
 [SpriteDef]
-group = 9007
+group = 907
 image = 5
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9007-5.png
+palette = 900,0
+file = 907-5.png
 
 [SpriteDef]
-group = 9007
+group = 907
 image = 6
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9007-6.png
+palette = 900,0
+file = 907-6.png
 
 [SpriteDef]
-group = 9007
+group = 907
 image = 7
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9007-7.png
+palette = 900,0
+file = 907-7.png
 
 [SpriteDef]
-group = 9007
+group = 907
 image = 8
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9007-8.png
+palette = 900,0
+file = 907-8.png
 
 [SpriteDef]
-group = 9007
+group = 907
 image = 9
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9007-9.png
+palette = 900,0
+file = 907-9.png
 
 [SpriteDef]
-group = 9007
+group = 907
 image = 10
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9007-10.png
+palette = 900,0
+file = 907-10.png
 
 [SpriteDef]
-group = 9007
+group = 907
 image = 11
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9007-11.png
+palette = 900,0
+file = 907-11.png
 
 [SpriteDef]
-group = 9007
+group = 907
 image = 12
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9007-12.png
+palette = 900,0
+file = 907-12.png
 
 [SpriteDef]
-group = 9007
+group = 907
 image = 13
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9007-13.png
+palette = 900,0
+file = 907-13.png
 
 [SpriteDef]
-group = 9007
+group = 907
 image = 14
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9007-14.png
+palette = 900,0
+file = 907-14.png
 
 [SpriteDef]
-group = 9007
+group = 907
 image = 15
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9007-15.png
+palette = 900,0
+file = 907-15.png
 
 [SpriteDef]
-group = 9007
+group = 907
 image = 16
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9007-16.png
+palette = 900,0
+file = 907-16.png
 
 [SpriteDef]
-group = 9007
+group = 907
 image = 17
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9007-12.png
+palette = 900,0
+file = 907-12.png
 
 [SpriteDef]
-group = 9007
+group = 907
 image = 18
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9007-11.png
+palette = 900,0
+file = 907-11.png
 
 [SpriteDef]
-group = 9007
+group = 907
 image = 19
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9007-19.png
+palette = 900,0
+file = 907-19.png
 
 [SpriteDef]
-group = 9007
+group = 907
 image = 20
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9007-20.png
+palette = 900,0
+file = 907-20.png
 
 [SpriteDef]
-group = 9007
+group = 907
 image = 21
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9007-21.png
+palette = 900,0
+file = 907-21.png
 
 [SpriteDef]
-group = 9007
+group = 907
 image = 22
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9007-22.png
+palette = 900,0
+file = 907-22.png
 
 [SpriteDef]
-group = 9007
+group = 907
 image = 23
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9007-23.png
+palette = 900,0
+file = 907-23.png
 
 [SpriteDef]
-group = 9007
+group = 907
 image = 24
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9007-24.png
+palette = 900,0
+file = 907-24.png
 
 [SpriteDef]
-group = 9007
+group = 907
 image = 25
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9007-25.png
+palette = 900,0
+file = 907-25.png
 
 [SpriteDef]
-group = 9007
+group = 907
 image = 26
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9007-26.png
+palette = 900,0
+file = 907-26.png
 
 [SpriteDef]
-group = 9007
+group = 907
 image = 27
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9007-27.png
+palette = 900,0
+file = 907-27.png
 
 [SpriteDef]
-group = 9007
+group = 907
 image = 28
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9007-28.png
+palette = 900,0
+file = 907-28.png
 
 [SpriteDef]
-group = 9007
+group = 907
 image = 29
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9007-29.png
+palette = 900,0
+file = 907-29.png
 
 [SpriteDef]
-group = 9007
+group = 907
 image = 30
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9007-30.png
+palette = 900,0
+file = 907-30.png
 
 [SpriteDef]
-group = 9006
+group = 906
 image = 0
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9006-0.png
+palette = 900,0
+file = 906-0.png
 
 [SpriteDef]
-group = 9006
+group = 906
 image = 1
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9006-1.png
+palette = 900,0
+file = 906-1.png
 
 [SpriteDef]
-group = 9006
+group = 906
 image = 2
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9006-2.png
+palette = 900,0
+file = 906-2.png
 
 [SpriteDef]
-group = 9006
+group = 906
 image = 3
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9006-3.png
+palette = 900,0
+file = 906-3.png
 
 [SpriteDef]
-group = 9006
+group = 906
 image = 4
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9006-4.png
+palette = 900,0
+file = 906-4.png
 
 [SpriteDef]
-group = 9006
+group = 906
 image = 5
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9006-5.png
+palette = 900,0
+file = 906-5.png
 
 [SpriteDef]
-group = 9006
+group = 906
 image = 6
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9006-6.png
+palette = 900,0
+file = 906-6.png
 
 [SpriteDef]
-group = 9006
+group = 906
 image = 7
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9006-7.png
+palette = 900,0
+file = 906-7.png
 
 [SpriteDef]
-group = 9006
+group = 906
 image = 8
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9006-8.png
+palette = 900,0
+file = 906-8.png
 
 [SpriteDef]
-group = 9006
+group = 906
 image = 9
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9006-9.png
+palette = 900,0
+file = 906-9.png
 
 [SpriteDef]
-group = 9006
+group = 906
 image = 10
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9006-10.png
+palette = 900,0
+file = 906-10.png
 
 [SpriteDef]
-group = 9006
+group = 906
 image = 11
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9006-11.png
+palette = 900,0
+file = 906-11.png
 
 [SpriteDef]
-group = 9006
+group = 906
 image = 12
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9006-12.png
+palette = 900,0
+file = 906-12.png
 
 [SpriteDef]
-group = 9006
+group = 906
 image = 13
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9006-13.png
+palette = 900,0
+file = 906-13.png
 
 [SpriteDef]
-group = 9006
+group = 906
 image = 14
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9006-14.png
+palette = 900,0
+file = 906-14.png
 
 [SpriteDef]
-group = 9006
+group = 906
 image = 15
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9006-15.png
+palette = 900,0
+file = 906-15.png
 
 [SpriteDef]
-group = 9006
+group = 906
 image = 16
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9006-16.png
+palette = 900,0
+file = 906-16.png
 
 [SpriteDef]
-group = 9006
+group = 906
 image = 17
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9006-12.png
+palette = 900,0
+file = 906-12.png
 
 [SpriteDef]
-group = 9006
+group = 906
 image = 18
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9006-11.png
+palette = 900,0
+file = 906-11.png
 
 [SpriteDef]
-group = 9006
+group = 906
 image = 19
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9006-19.png
+palette = 900,0
+file = 906-19.png
 
 [SpriteDef]
-group = 9006
+group = 906
 image = 20
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9006-20.png
+palette = 900,0
+file = 906-20.png
 
 [SpriteDef]
-group = 9006
+group = 906
 image = 21
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9006-21.png
+palette = 900,0
+file = 906-21.png
 
 [SpriteDef]
-group = 9006
+group = 906
 image = 22
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9006-22.png
+palette = 900,0
+file = 906-22.png
 
 [SpriteDef]
-group = 9006
+group = 906
 image = 23
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9006-23.png
+palette = 900,0
+file = 906-23.png
 
 [SpriteDef]
-group = 9006
+group = 906
 image = 24
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9006-24.png
+palette = 900,0
+file = 906-24.png
 
 [SpriteDef]
-group = 9006
+group = 906
 image = 25
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9006-25.png
+palette = 900,0
+file = 906-25.png
 
 [SpriteDef]
-group = 9006
+group = 906
 image = 26
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9006-26.png
+palette = 900,0
+file = 906-26.png
 
 [SpriteDef]
-group = 9006
+group = 906
 image = 27
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9006-27.png
+palette = 900,0
+file = 906-27.png
 
 [SpriteDef]
-group = 9006
+group = 906
 image = 28
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9006-28.png
+palette = 900,0
+file = 906-28.png
 
 [SpriteDef]
-group = 9006
+group = 906
 image = 29
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9006-29.png
+palette = 900,0
+file = 906-29.png
 
 [SpriteDef]
-group = 9006
+group = 906
 image = 30
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9006-30.png
+palette = 900,0
+file = 906-30.png
 
 [SpriteDef]
-group = 9005
+group = 905
 image = 0
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9005-0.png
+palette = 900,0
+file = 905-0.png
 
 [SpriteDef]
-group = 9005
+group = 905
 image = 1
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9005-1.png
+palette = 900,0
+file = 905-1.png
 
 [SpriteDef]
-group = 9005
+group = 905
 image = 2
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9005-2.png
+palette = 900,0
+file = 905-2.png
 
 [SpriteDef]
-group = 9005
+group = 905
 image = 3
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9005-3.png
+palette = 900,0
+file = 905-3.png
 
 [SpriteDef]
-group = 9005
+group = 905
 image = 4
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9005-4.png
+palette = 900,0
+file = 905-4.png
 
 [SpriteDef]
-group = 9005
+group = 905
 image = 5
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9005-5.png
+palette = 900,0
+file = 905-5.png
 
 [SpriteDef]
-group = 9005
+group = 905
 image = 6
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9005-6.png
+palette = 900,0
+file = 905-6.png
 
 [SpriteDef]
-group = 9005
+group = 905
 image = 7
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9005-7.png
+palette = 900,0
+file = 905-7.png
 
 [SpriteDef]
-group = 9005
+group = 905
 image = 8
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9005-8.png
+palette = 900,0
+file = 905-8.png
 
 [SpriteDef]
-group = 9005
+group = 905
 image = 9
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9005-9.png
+palette = 900,0
+file = 905-9.png
 
 [SpriteDef]
-group = 9005
+group = 905
 image = 10
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9005-10.png
+palette = 900,0
+file = 905-10.png
 
 [SpriteDef]
-group = 9005
+group = 905
 image = 11
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9005-11.png
+palette = 900,0
+file = 905-11.png
 
 [SpriteDef]
-group = 9005
+group = 905
 image = 12
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9005-12.png
+palette = 900,0
+file = 905-12.png
 
 [SpriteDef]
-group = 9005
+group = 905
 image = 13
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9005-13.png
+palette = 900,0
+file = 905-13.png
 
 [SpriteDef]
-group = 9005
+group = 905
 image = 14
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9005-14.png
+palette = 900,0
+file = 905-14.png
 
 [SpriteDef]
-group = 9005
+group = 905
 image = 15
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9005-15.png
+palette = 900,0
+file = 905-15.png
 
 [SpriteDef]
-group = 9005
+group = 905
 image = 16
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9005-16.png
+palette = 900,0
+file = 905-16.png
 
 [SpriteDef]
-group = 9005
+group = 905
 image = 17
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9005-12.png
+palette = 900,0
+file = 905-12.png
 
 [SpriteDef]
-group = 9005
+group = 905
 image = 18
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9005-11.png
+palette = 900,0
+file = 905-11.png
 
 [SpriteDef]
-group = 9005
+group = 905
 image = 19
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9005-19.png
+palette = 900,0
+file = 905-19.png
 
 [SpriteDef]
-group = 9005
+group = 905
 image = 20
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9005-20.png
+palette = 900,0
+file = 905-20.png
 
 [SpriteDef]
-group = 9005
+group = 905
 image = 21
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9005-21.png
+palette = 900,0
+file = 905-21.png
 
 [SpriteDef]
-group = 9005
+group = 905
 image = 22
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9005-22.png
+palette = 900,0
+file = 905-22.png
 
 [SpriteDef]
-group = 9005
+group = 905
 image = 23
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9005-23.png
+palette = 900,0
+file = 905-23.png
 
 [SpriteDef]
-group = 9005
+group = 905
 image = 24
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9005-24.png
+palette = 900,0
+file = 905-24.png
 
 [SpriteDef]
-group = 9005
+group = 905
 image = 25
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9005-25.png
+palette = 900,0
+file = 905-25.png
 
 [SpriteDef]
-group = 9005
+group = 905
 image = 26
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9005-26.png
+palette = 900,0
+file = 905-26.png
 
 [SpriteDef]
-group = 9005
+group = 905
 image = 27
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9005-27.png
+palette = 900,0
+file = 905-27.png
 
 [SpriteDef]
-group = 9005
+group = 905
 image = 28
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9005-28.png
+palette = 900,0
+file = 905-28.png
 
 [SpriteDef]
-group = 9005
+group = 905
 image = 29
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9005-29.png
+palette = 900,0
+file = 905-29.png
 
 [SpriteDef]
-group = 9005
+group = 905
 image = 30
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9005-30.png
+palette = 900,0
+file = 905-30.png
 
 [SpriteDef]
-group = 9004
+group = 904
 image = 0
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9004-0.png
+palette = 900,0
+file = 904-0.png
 
 [SpriteDef]
-group = 9004
+group = 904
 image = 1
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9004-1.png
+palette = 900,0
+file = 904-1.png
 
 [SpriteDef]
-group = 9004
+group = 904
 image = 2
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9004-2.png
+palette = 900,0
+file = 904-2.png
 
 [SpriteDef]
-group = 9004
+group = 904
 image = 3
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9004-3.png
+palette = 900,0
+file = 904-3.png
 
 [SpriteDef]
-group = 9004
+group = 904
 image = 4
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9004-4.png
+palette = 900,0
+file = 904-4.png
 
 [SpriteDef]
-group = 9004
+group = 904
 image = 5
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9004-5.png
+palette = 900,0
+file = 904-5.png
 
 [SpriteDef]
-group = 9004
+group = 904
 image = 6
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9004-6.png
+palette = 900,0
+file = 904-6.png
 
 [SpriteDef]
-group = 9004
+group = 904
 image = 7
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9004-7.png
+palette = 900,0
+file = 904-7.png
 
 [SpriteDef]
-group = 9004
+group = 904
 image = 8
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9004-8.png
+palette = 900,0
+file = 904-8.png
 
 [SpriteDef]
-group = 9004
+group = 904
 image = 9
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9004-9.png
+palette = 900,0
+file = 904-9.png
 
 [SpriteDef]
-group = 9004
+group = 904
 image = 10
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9004-10.png
+palette = 900,0
+file = 904-10.png
 
 [SpriteDef]
-group = 9004
+group = 904
 image = 11
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9004-11.png
+palette = 900,0
+file = 904-11.png
 
 [SpriteDef]
-group = 9004
+group = 904
 image = 12
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9004-12.png
+palette = 900,0
+file = 904-12.png
 
 [SpriteDef]
-group = 9004
+group = 904
 image = 13
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9004-13.png
+palette = 900,0
+file = 904-13.png
 
 [SpriteDef]
-group = 9004
+group = 904
 image = 14
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9004-14.png
+palette = 900,0
+file = 904-14.png
 
 [SpriteDef]
-group = 9004
+group = 904
 image = 15
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9004-15.png
+palette = 900,0
+file = 904-15.png
 
 [SpriteDef]
-group = 9004
+group = 904
 image = 16
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9004-16.png
+palette = 900,0
+file = 904-16.png
 
 [SpriteDef]
-group = 9004
+group = 904
 image = 17
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9004-12.png
+palette = 900,0
+file = 904-12.png
 
 [SpriteDef]
-group = 9004
+group = 904
 image = 18
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9004-11.png
+palette = 900,0
+file = 904-11.png
 
 [SpriteDef]
-group = 9004
+group = 904
 image = 19
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9004-19.png
+palette = 900,0
+file = 904-19.png
 
 [SpriteDef]
-group = 9004
+group = 904
 image = 20
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9004-20.png
+palette = 900,0
+file = 904-20.png
 
 [SpriteDef]
-group = 9004
+group = 904
 image = 21
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9004-21.png
+palette = 900,0
+file = 904-21.png
 
 [SpriteDef]
-group = 9004
+group = 904
 image = 22
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9004-22.png
+palette = 900,0
+file = 904-22.png
 
 [SpriteDef]
-group = 9004
+group = 904
 image = 23
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9004-23.png
+palette = 900,0
+file = 904-23.png
 
 [SpriteDef]
-group = 9004
+group = 904
 image = 24
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9004-24.png
+palette = 900,0
+file = 904-24.png
 
 [SpriteDef]
-group = 9004
+group = 904
 image = 25
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9004-25.png
+palette = 900,0
+file = 904-25.png
 
 [SpriteDef]
-group = 9004
+group = 904
 image = 26
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9004-26.png
+palette = 900,0
+file = 904-26.png
 
 [SpriteDef]
-group = 9004
+group = 904
 image = 27
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9004-27.png
+palette = 900,0
+file = 904-27.png
 
 [SpriteDef]
-group = 9004
+group = 904
 image = 28
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9004-28.png
+palette = 900,0
+file = 904-28.png
 
 [SpriteDef]
-group = 9004
+group = 904
 image = 29
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9004-29.png
+palette = 900,0
+file = 904-29.png
 
 [SpriteDef]
-group = 9004
+group = 904
 image = 30
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9004-30.png
+palette = 900,0
+file = 904-30.png
 
 [SpriteDef]
-group = 9003
+group = 903
 image = 0
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9003-0.png
+palette = 900,0
+file = 903-0.png
 
 [SpriteDef]
-group = 9003
+group = 903
 image = 1
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9003-1.png
+palette = 900,0
+file = 903-1.png
 
 [SpriteDef]
-group = 9003
+group = 903
 image = 2
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9003-2.png
+palette = 900,0
+file = 903-2.png
 
 [SpriteDef]
-group = 9003
+group = 903
 image = 3
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9003-3.png
+palette = 900,0
+file = 903-3.png
 
 [SpriteDef]
-group = 9003
+group = 903
 image = 4
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9003-4.png
+palette = 900,0
+file = 903-4.png
 
 [SpriteDef]
-group = 9003
+group = 903
 image = 5
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9003-5.png
+palette = 900,0
+file = 903-5.png
 
 [SpriteDef]
-group = 9003
+group = 903
 image = 6
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9003-6.png
+palette = 900,0
+file = 903-6.png
 
 [SpriteDef]
-group = 9003
+group = 903
 image = 7
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9003-7.png
+palette = 900,0
+file = 903-7.png
 
 [SpriteDef]
-group = 9003
+group = 903
 image = 8
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9003-8.png
+palette = 900,0
+file = 903-8.png
 
 [SpriteDef]
-group = 9003
+group = 903
 image = 9
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9003-9.png
+palette = 900,0
+file = 903-9.png
 
 [SpriteDef]
-group = 9003
+group = 903
 image = 10
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9003-10.png
+palette = 900,0
+file = 903-10.png
 
 [SpriteDef]
-group = 9003
+group = 903
 image = 11
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9003-11.png
+palette = 900,0
+file = 903-11.png
 
 [SpriteDef]
-group = 9003
+group = 903
 image = 12
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9003-12.png
+palette = 900,0
+file = 903-12.png
 
 [SpriteDef]
-group = 9003
+group = 903
 image = 13
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9003-13.png
+palette = 900,0
+file = 903-13.png
 
 [SpriteDef]
-group = 9003
+group = 903
 image = 14
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9003-14.png
+palette = 900,0
+file = 903-14.png
 
 [SpriteDef]
-group = 9003
+group = 903
 image = 15
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9003-15.png
+palette = 900,0
+file = 903-15.png
 
 [SpriteDef]
-group = 9003
+group = 903
 image = 16
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9003-16.png
+palette = 900,0
+file = 903-16.png
 
 [SpriteDef]
-group = 9003
+group = 903
 image = 17
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9003-12.png
+palette = 900,0
+file = 903-12.png
 
 [SpriteDef]
-group = 9003
+group = 903
 image = 18
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9003-11.png
+palette = 900,0
+file = 903-11.png
 
 [SpriteDef]
-group = 9003
+group = 903
 image = 19
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9003-19.png
+palette = 900,0
+file = 903-19.png
 
 [SpriteDef]
-group = 9003
+group = 903
 image = 20
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9003-20.png
+palette = 900,0
+file = 903-20.png
 
 [SpriteDef]
-group = 9003
+group = 903
 image = 21
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9003-21.png
+palette = 900,0
+file = 903-21.png
 
 [SpriteDef]
-group = 9003
+group = 903
 image = 22
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9003-22.png
+palette = 900,0
+file = 903-22.png
 
 [SpriteDef]
-group = 9003
+group = 903
 image = 23
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9003-23.png
+palette = 900,0
+file = 903-23.png
 
 [SpriteDef]
-group = 9003
+group = 903
 image = 24
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9003-24.png
+palette = 900,0
+file = 903-24.png
 
 [SpriteDef]
-group = 9003
+group = 903
 image = 25
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9003-25.png
+palette = 900,0
+file = 903-25.png
 
 [SpriteDef]
-group = 9003
+group = 903
 image = 26
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9003-26.png
+palette = 900,0
+file = 903-26.png
 
 [SpriteDef]
-group = 9003
+group = 903
 image = 27
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9003-27.png
+palette = 900,0
+file = 903-27.png
 
 [SpriteDef]
-group = 9003
+group = 903
 image = 28
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9003-28.png
+palette = 900,0
+file = 903-28.png
 
 [SpriteDef]
-group = 9003
+group = 903
 image = 29
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9003-29.png
+palette = 900,0
+file = 903-29.png
 
 [SpriteDef]
-group = 9003
+group = 903
 image = 30
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9003-30.png
+palette = 900,0
+file = 903-30.png
 
 [SpriteDef]
-group = 9002
+group = 902
 image = 0
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9002-0.png
+palette = 900,0
+file = 902-0.png
 
 [SpriteDef]
-group = 9002
+group = 902
 image = 1
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9002-1.png
+palette = 900,0
+file = 902-1.png
 
 [SpriteDef]
-group = 9002
+group = 902
 image = 2
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9002-2.png
+palette = 900,0
+file = 902-2.png
 
 [SpriteDef]
-group = 9002
+group = 902
 image = 3
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9002-3.png
+palette = 900,0
+file = 902-3.png
 
 [SpriteDef]
-group = 9002
+group = 902
 image = 4
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9002-4.png
+palette = 900,0
+file = 902-4.png
 
 [SpriteDef]
-group = 9002
+group = 902
 image = 5
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9002-5.png
+palette = 900,0
+file = 902-5.png
 
 [SpriteDef]
-group = 9002
+group = 902
 image = 6
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9002-6.png
+palette = 900,0
+file = 902-6.png
 
 [SpriteDef]
-group = 9002
+group = 902
 image = 7
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9002-7.png
+palette = 900,0
+file = 902-7.png
 
 [SpriteDef]
-group = 9002
+group = 902
 image = 8
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9002-8.png
+palette = 900,0
+file = 902-8.png
 
 [SpriteDef]
-group = 9002
+group = 902
 image = 9
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9002-9.png
+palette = 900,0
+file = 902-9.png
 
 [SpriteDef]
-group = 9002
+group = 902
 image = 10
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9002-10.png
+palette = 900,0
+file = 902-10.png
 
 [SpriteDef]
-group = 9002
+group = 902
 image = 11
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9002-11.png
+palette = 900,0
+file = 902-11.png
 
 [SpriteDef]
-group = 9002
+group = 902
 image = 12
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9002-12.png
+palette = 900,0
+file = 902-12.png
 
 [SpriteDef]
-group = 9002
+group = 902
 image = 13
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9002-13.png
+palette = 900,0
+file = 902-13.png
 
 [SpriteDef]
-group = 9002
+group = 902
 image = 14
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9002-14.png
+palette = 900,0
+file = 902-14.png
 
 [SpriteDef]
-group = 9002
+group = 902
 image = 15
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9002-15.png
+palette = 900,0
+file = 902-15.png
 
 [SpriteDef]
-group = 9002
+group = 902
 image = 16
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9002-16.png
+palette = 900,0
+file = 902-16.png
 
 [SpriteDef]
-group = 9002
+group = 902
 image = 17
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9002-12.png
+palette = 900,0
+file = 902-12.png
 
 [SpriteDef]
-group = 9002
+group = 902
 image = 18
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9002-11.png
+palette = 900,0
+file = 902-11.png
 
 [SpriteDef]
-group = 9002
+group = 902
 image = 19
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9002-19.png
+palette = 900,0
+file = 902-19.png
 
 [SpriteDef]
-group = 9002
+group = 902
 image = 20
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9002-20.png
+palette = 900,0
+file = 902-20.png
 
 [SpriteDef]
-group = 9002
+group = 902
 image = 21
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9002-21.png
+palette = 900,0
+file = 902-21.png
 
 [SpriteDef]
-group = 9002
+group = 902
 image = 22
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9002-22.png
+palette = 900,0
+file = 902-22.png
 
 [SpriteDef]
-group = 9002
+group = 902
 image = 23
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9002-23.png
+palette = 900,0
+file = 902-23.png
 
 [SpriteDef]
-group = 9002
+group = 902
 image = 24
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9002-24.png
+palette = 900,0
+file = 902-24.png
 
 [SpriteDef]
-group = 9002
+group = 902
 image = 25
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9002-25.png
+palette = 900,0
+file = 902-25.png
 
 [SpriteDef]
-group = 9002
+group = 902
 image = 26
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9002-26.png
+palette = 900,0
+file = 902-26.png
 
 [SpriteDef]
-group = 9002
+group = 902
 image = 27
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9002-27.png
+palette = 900,0
+file = 902-27.png
 
 [SpriteDef]
-group = 9002
+group = 902
 image = 28
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9002-28.png
+palette = 900,0
+file = 902-28.png
 
 [SpriteDef]
-group = 9002
+group = 902
 image = 29
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9002-29.png
+palette = 900,0
+file = 902-29.png
 
 [SpriteDef]
-group = 9002
+group = 902
 image = 30
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9002-30.png
+palette = 900,0
+file = 902-30.png
 
 [SpriteDef]
-group = 9001
+group = 901
 image = 0
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9001-0.png
+palette = 900,0
+file = 901-0.png
 
 [SpriteDef]
-group = 9001
+group = 901
 image = 1
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9001-1.png
+palette = 900,0
+file = 901-1.png
 
 [SpriteDef]
-group = 9001
+group = 901
 image = 2
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9001-2.png
+palette = 900,0
+file = 901-2.png
 
 [SpriteDef]
-group = 9001
+group = 901
 image = 3
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9001-3.png
+palette = 900,0
+file = 901-3.png
 
 [SpriteDef]
-group = 9001
+group = 901
 image = 4
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9001-4.png
+palette = 900,0
+file = 901-4.png
 
 [SpriteDef]
-group = 9001
+group = 901
 image = 5
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9001-5.png
+palette = 900,0
+file = 901-5.png
 
 [SpriteDef]
-group = 9001
+group = 901
 image = 6
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9001-6.png
+palette = 900,0
+file = 901-6.png
 
 [SpriteDef]
-group = 9001
+group = 901
 image = 7
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9001-7.png
+palette = 900,0
+file = 901-7.png
 
 [SpriteDef]
-group = 9001
+group = 901
 image = 8
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9001-8.png
+palette = 900,0
+file = 901-8.png
 
 [SpriteDef]
-group = 9001
+group = 901
 image = 9
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9001-9.png
+palette = 900,0
+file = 901-9.png
 
 [SpriteDef]
-group = 9001
+group = 901
 image = 10
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9001-10.png
+palette = 900,0
+file = 901-10.png
 
 [SpriteDef]
-group = 9001
+group = 901
 image = 11
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9001-11.png
+palette = 900,0
+file = 901-11.png
 
 [SpriteDef]
-group = 9001
+group = 901
 image = 12
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9001-12.png
+palette = 900,0
+file = 901-12.png
 
 [SpriteDef]
-group = 9001
+group = 901
 image = 13
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9001-13.png
+palette = 900,0
+file = 901-13.png
 
 [SpriteDef]
-group = 9001
+group = 901
 image = 14
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9001-14.png
+palette = 900,0
+file = 901-14.png
 
 [SpriteDef]
-group = 9001
+group = 901
 image = 15
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9001-15.png
+palette = 900,0
+file = 901-15.png
 
 [SpriteDef]
-group = 9001
+group = 901
 image = 16
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9001-16.png
+palette = 900,0
+file = 901-16.png
 
 [SpriteDef]
-group = 9001
+group = 901
 image = 17
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9001-12.png
+palette = 900,0
+file = 901-12.png
 
 [SpriteDef]
-group = 9001
+group = 901
 image = 18
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9001-11.png
+palette = 900,0
+file = 901-11.png
 
 [SpriteDef]
-group = 9001
+group = 901
 image = 19
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9001-19.png
+palette = 900,0
+file = 901-19.png
 
 [SpriteDef]
-group = 9001
+group = 901
 image = 20
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9001-20.png
+palette = 900,0
+file = 901-20.png
 
 [SpriteDef]
-group = 9001
+group = 901
 image = 21
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9001-21.png
+palette = 900,0
+file = 901-21.png
 
 [SpriteDef]
-group = 9001
+group = 901
 image = 22
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9001-22.png
+palette = 900,0
+file = 901-22.png
 
 [SpriteDef]
-group = 9001
+group = 901
 image = 23
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9001-23.png
+palette = 900,0
+file = 901-23.png
 
 [SpriteDef]
-group = 9001
+group = 901
 image = 24
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9001-24.png
+palette = 900,0
+file = 901-24.png
 
 [SpriteDef]
-group = 9001
+group = 901
 image = 25
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9001-25.png
+palette = 900,0
+file = 901-25.png
 
 [SpriteDef]
-group = 9001
+group = 901
 image = 26
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9001-26.png
+palette = 900,0
+file = 901-26.png
 
 [SpriteDef]
-group = 9001
+group = 901
 image = 27
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9001-27.png
+palette = 900,0
+file = 901-27.png
 
 [SpriteDef]
-group = 9001
+group = 901
 image = 28
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9001-28.png
+palette = 900,0
+file = 901-28.png
 
 [SpriteDef]
-group = 9001
+group = 901
 image = 29
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9001-29.png
+palette = 900,0
+file = 901-29.png
 
 [SpriteDef]
-group = 9001
+group = 901
 image = 30
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9001-30.png
+palette = 900,0
+file = 901-30.png
 
 [SpriteDef]
-group = 9000
+group = 900
 image = 0
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9000-0.png
+palette = 900,0
+file = 900-0.png
 
 [SpriteDef]
-group = 9000
+group = 900
 image = 1
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9000-1.png
+palette = 900,0
+file = 900-1.png
 
 [SpriteDef]
-group = 9000
+group = 900
 image = 2
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9000-2.png
+palette = 900,0
+file = 900-2.png
 
 [SpriteDef]
-group = 9000
+group = 900
 image = 3
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9000-3.png
+palette = 900,0
+file = 900-3.png
 
 [SpriteDef]
-group = 9000
+group = 900
 image = 4
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9000-4.png
+palette = 900,0
+file = 900-4.png
 
 [SpriteDef]
-group = 9000
+group = 900
 image = 5
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9000-5.png
+palette = 900,0
+file = 900-5.png
 
 [SpriteDef]
-group = 9000
+group = 900
 image = 6
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9000-6.png
+palette = 900,0
+file = 900-6.png
 
 [SpriteDef]
-group = 9000
+group = 900
 image = 7
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9000-7.png
+palette = 900,0
+file = 900-7.png
 
 [SpriteDef]
-group = 9000
+group = 900
 image = 8
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9000-8.png
+palette = 900,0
+file = 900-8.png
 
 [SpriteDef]
-group = 9000
+group = 900
 image = 9
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9000-9.png
+palette = 900,0
+file = 900-9.png
 
 [SpriteDef]
-group = 9000
+group = 900
 image = 10
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9000-10.png
+palette = 900,0
+file = 900-10.png
 
 [SpriteDef]
-group = 9000
+group = 900
 image = 11
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9000-11.png
+palette = 900,0
+file = 900-11.png
 
 [SpriteDef]
-group = 9000
+group = 900
 image = 12
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9000-12.png
+palette = 900,0
+file = 900-12.png
 
 [SpriteDef]
-group = 9000
+group = 900
 image = 13
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9000-13.png
+palette = 900,0
+file = 900-13.png
 
 [SpriteDef]
-group = 9000
+group = 900
 image = 14
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9000-14.png
+palette = 900,0
+file = 900-14.png
 
 [SpriteDef]
-group = 9000
+group = 900
 image = 15
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9000-15.png
+palette = 900,0
+file = 900-15.png
 
 [SpriteDef]
-group = 9000
+group = 900
 image = 16
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9000-16.png
+palette = 900,0
+file = 900-16.png
 
 [SpriteDef]
-group = 9000
+group = 900
 image = 17
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9000-12.png
+palette = 900,0
+file = 900-12.png
 
 [SpriteDef]
-group = 9000
+group = 900
 image = 18
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9000-18.png
+palette = 900,0
+file = 900-18.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 0
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-0.png
+palette = 900,0
+file = 910-0.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 1
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-1.png
+palette = 900,0
+file = 910-1.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 2
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-2.png
+palette = 900,0
+file = 910-2.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 3
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-3.png
+palette = 900,0
+file = 910-3.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 4
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-4.png
+palette = 900,0
+file = 910-4.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 5
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-5.png
+palette = 900,0
+file = 910-5.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 6
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-6.png
+palette = 900,0
+file = 910-6.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 7
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-7.png
+palette = 900,0
+file = 910-7.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 8
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-8.png
+palette = 900,0
+file = 910-8.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 9
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-9.png
+palette = 900,0
+file = 910-9.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 10
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-10.png
+palette = 900,0
+file = 910-10.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 11
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-11.png
+palette = 900,0
+file = 910-11.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 12
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-12.png
+palette = 900,0
+file = 910-12.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 13
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-13.png
+palette = 900,0
+file = 910-13.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 14
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-14.png
+palette = 900,0
+file = 910-14.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 15
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-15.png
+palette = 900,0
+file = 910-15.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 16
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-16.png
+palette = 900,0
+file = 910-16.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 17
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-17.png
+palette = 900,0
+file = 910-17.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 18
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-18.png
+palette = 900,0
+file = 910-18.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 19
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-19.png
+palette = 900,0
+file = 910-19.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 20
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-20.png
+palette = 900,0
+file = 910-20.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 21
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-21.png
+palette = 900,0
+file = 910-21.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 22
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-22.png
+palette = 900,0
+file = 910-22.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 23
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-23.png
+palette = 900,0
+file = 910-23.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 24
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-24.png
+palette = 900,0
+file = 910-24.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 25
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-25.png
+palette = 900,0
+file = 910-25.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 26
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-26.png
+palette = 900,0
+file = 910-26.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 27
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-27.png
+palette = 900,0
+file = 910-27.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 28
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-28.png
+palette = 900,0
+file = 910-28.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 29
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-29.png
+palette = 900,0
+file = 910-29.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 30
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-30.png
+palette = 900,0
+file = 910-30.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 31
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-31.png
+palette = 900,0
+file = 910-31.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 32
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-32.png
+palette = 900,0
+file = 910-32.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 33
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-33.png
+palette = 900,0
+file = 910-33.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 34
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-34.png
+palette = 900,0
+file = 910-34.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 35
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-35.png
+palette = 900,0
+file = 910-35.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 36
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-36.png
+palette = 900,0
+file = 910-36.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 37
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-37.png
+palette = 900,0
+file = 910-37.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 38
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-38.png
+palette = 900,0
+file = 910-38.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 39
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-39.png
+palette = 900,0
+file = 910-39.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 40
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-40.png
+palette = 900,0
+file = 910-40.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 41
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-41.png
+palette = 900,0
+file = 910-41.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 42
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-42.png
+palette = 900,0
+file = 910-42.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 43
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-43.png
+palette = 900,0
+file = 910-43.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 44
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-44.png
+palette = 900,0
+file = 910-44.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 45
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-45.png
+palette = 900,0
+file = 910-45.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 46
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-46.png
+palette = 900,0
+file = 910-46.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 47
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-47.png
+palette = 900,0
+file = 910-47.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 48
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-48.png
+palette = 900,0
+file = 910-48.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 49
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-49.png
+palette = 900,0
+file = 910-49.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 50
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-50.png
+palette = 900,0
+file = 910-50.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 51
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-51.png
+palette = 900,0
+file = 910-51.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 52
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-52.png
+palette = 900,0
+file = 910-52.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 53
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-53.png
+palette = 900,0
+file = 910-53.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 54
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-54.png
+palette = 900,0
+file = 910-54.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 55
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-55.png
+palette = 900,0
+file = 910-55.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 56
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-56.png
+palette = 900,0
+file = 910-56.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 57
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-57.png
+palette = 900,0
+file = 910-57.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 58
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-58.png
+palette = 900,0
+file = 910-58.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 59
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-59.png
+palette = 900,0
+file = 910-59.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 60
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-60.png
+palette = 900,0
+file = 910-60.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 61
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-61.png
+palette = 900,0
+file = 910-61.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 62
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-62.png
+palette = 900,0
+file = 910-62.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 63
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-63.png
+palette = 900,0
+file = 910-63.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 64
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-64.png
+palette = 900,0
+file = 910-64.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 65
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-65.png
+palette = 900,0
+file = 910-65.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 66
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-66.png
+palette = 900,0
+file = 910-66.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 67
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-67.png
+palette = 900,0
+file = 910-67.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 68
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-68.png
+palette = 900,0
+file = 910-68.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 69
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-69.png
+palette = 900,0
+file = 910-69.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 70
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-70.png
+palette = 900,0
+file = 910-70.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 71
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-71.png
+palette = 900,0
+file = 910-71.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 72
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-72.png
+palette = 900,0
+file = 910-72.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 73
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-73.png
+palette = 900,0
+file = 910-73.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 74
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-74.png
+palette = 900,0
+file = 910-74.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 75
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-75.png
+palette = 900,0
+file = 910-75.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 76
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-76.png
+palette = 900,0
+file = 910-76.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 77
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-77.png
+palette = 900,0
+file = 910-77.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 78
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-78.png
+palette = 900,0
+file = 910-78.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 79
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-77.png
+palette = 900,0
+file = 910-77.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 80
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-76.png
+palette = 900,0
+file = 910-76.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 81
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-77.png
+palette = 900,0
+file = 910-77.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 82
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-78.png
+palette = 900,0
+file = 910-78.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 83
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-77.png
+palette = 900,0
+file = 910-77.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 84
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-76.png
+palette = 900,0
+file = 910-76.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 85
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-77.png
+palette = 900,0
+file = 910-77.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 86
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-78.png
+palette = 900,0
+file = 910-78.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 87
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-77.png
+palette = 900,0
+file = 910-77.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 88
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-76.png
+palette = 900,0
+file = 910-76.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 89
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-77.png
+palette = 900,0
+file = 910-77.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 90
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-78.png
+palette = 900,0
+file = 910-78.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 91
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-77.png
+palette = 900,0
+file = 910-77.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 92
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-76.png
+palette = 900,0
+file = 910-76.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 93
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-77.png
+palette = 900,0
+file = 910-77.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 94
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-78.png
+palette = 900,0
+file = 910-78.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 95
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-77.png
+palette = 900,0
+file = 910-77.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 96
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-76.png
+palette = 900,0
+file = 910-76.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 97
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-77.png
+palette = 900,0
+file = 910-77.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 98
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-78.png
+palette = 900,0
+file = 910-78.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 99
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-77.png
+palette = 900,0
+file = 910-77.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 100
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-76.png
+palette = 900,0
+file = 910-76.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 101
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-77.png
+palette = 900,0
+file = 910-77.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 102
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-78.png
+palette = 900,0
+file = 910-78.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 103
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-77.png
+palette = 900,0
+file = 910-77.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 104
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-76.png
+palette = 900,0
+file = 910-76.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 105
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-77.png
+palette = 900,0
+file = 910-77.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 106
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-78.png
+palette = 900,0
+file = 910-78.png
 
 [SpriteDef]
-group = 9010
+group = 910
 image = 107
 xaxis = 0
 yaxis = 0
 flags = 0
-palette = 9000,0
-file = 9010-77.png
+palette = 900,0
+file = 910-77.png

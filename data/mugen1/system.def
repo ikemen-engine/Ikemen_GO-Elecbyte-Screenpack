@@ -31,7 +31,7 @@ localcoord = 1280,720     ;Local coordinate space width and height (new in MUGEN
 ;    for ~/mugen/data/mymotif/system.sff. If it does not find
 ;    it there, it looks for ~/mugen/data/system.sff (the default).
 ;    Finally, if that is not found, it will look for
-;    ~/mugen/system.sff. 
+;    ~/mugen/system.sff.
 
 [Files]
 spr = system.sff          ;Filename of sprite data
@@ -49,6 +49,7 @@ font5 = mssansserif-tt36.def
 ;font5.height = 36         ;Uncomment to override the size of the font (Truetype fonts only)
 font6 = infofont.def
 font7 = Open_Sans.def
+font8 = num48.def
 module =                  ;Ikemen feature: External Lua code
 
 ;----------------------------
@@ -194,9 +195,6 @@ menu.itemname.server.netplayversus = "VERSUS 2P"             ;Ikemen feature
 menu.itemname.server.netplayteamcoop = "ARCADE CO-OP"        ;Ikemen feature
 menu.itemname.server.netplaysurvivalcoop = "SURVIVAL CO-OP"  ;Ikemen feature
 menu.itemname.server.back = "EXIT"                           ;Ikemen feature
-
-; Tournament
-;menu.itemname.tournament = "TOURNAMENT"                      ;Ikemen feature (not implemented yet)
 
 ; Submenu: Practice
 menu.itemname.menupractice = "PRACTICE"                      ;Ikemen feature
@@ -396,11 +394,11 @@ stage.portrait.offset = -120, -142         ;Ikemen feature
 stage.portrait.scale = 0.25, 0.25          ;Ikemen feature
 stage.portrait.bg.anim = 110               ;Ikemen feature
 ;stage.portrait.bg.spr =                    ;Ikemen feature
-stage.portrait.bg.offset = -321, -145      ;Ikemen feature
+stage.portrait.bg.offset = -162, -145      ;Ikemen feature
 stage.portrait.bg.scale = 1.0, 1.0         ;Ikemen feature
 ;stage.portrait.random.anim =               ;Ikemen feature
 stage.portrait.random.spr = 111,0          ;Ikemen feature
-stage.portrait.random.offset = -279, -142  ;Ikemen feature
+stage.portrait.random.offset = -120, -142  ;Ikemen feature
 stage.portrait.random.scale = 1.0, 1.0     ;Ikemen feature
 stage.portrait.window = 521, 565, 761, 665 ;Ikemen feature
 
@@ -429,31 +427,31 @@ p1.teammenu.value.empty.icon.spr = 182,0
 p1.teammenu.value.spacing = 30,0
 
 p1.teammenu.ratio1.icon.spr = 300, 0       ;Ikemen feature
-p1.teammenu.ratio1.icon.offset = 38, 205   ;Ikemen feature
+p1.teammenu.ratio1.icon.offset = 197, 205  ;Ikemen feature
 p1.teammenu.ratio1.icon.facing = 1         ;Ikemen feature
 p1.teammenu.ratio1.icon.scale = 1.0, 1.0   ;Ikemen feature
 p1.teammenu.ratio2.icon.spr = 300, 1       ;Ikemen feature
-p1.teammenu.ratio2.icon.offset = 38, 205   ;Ikemen feature
+p1.teammenu.ratio2.icon.offset = 197, 205  ;Ikemen feature
 p1.teammenu.ratio2.icon.facing = 1         ;Ikemen feature
 p1.teammenu.ratio2.icon.scale = 1.0, 1.0   ;Ikemen feature
 p1.teammenu.ratio3.icon.spr = 300, 2       ;Ikemen feature
-p1.teammenu.ratio3.icon.offset = 38, 205   ;Ikemen feature
+p1.teammenu.ratio3.icon.offset = 197, 205  ;Ikemen feature
 p1.teammenu.ratio3.icon.facing = 1         ;Ikemen feature
 p1.teammenu.ratio3.icon.scale = 1.0, 1.0   ;Ikemen feature
 p1.teammenu.ratio4.icon.spr = 300, 3       ;Ikemen feature
-p1.teammenu.ratio4.icon.offset = 38, 205   ;Ikemen feature
+p1.teammenu.ratio4.icon.offset = 197, 205  ;Ikemen feature
 p1.teammenu.ratio4.icon.facing = 1         ;Ikemen feature
 p1.teammenu.ratio4.icon.scale = 1.0, 1.0   ;Ikemen feature
 p1.teammenu.ratio5.icon.spr = 300, 4       ;Ikemen feature
-p1.teammenu.ratio5.icon.offset = 38, 205   ;Ikemen feature
+p1.teammenu.ratio5.icon.offset = 197, 205  ;Ikemen feature
 p1.teammenu.ratio5.icon.facing = 1         ;Ikemen feature
 p1.teammenu.ratio5.icon.scale = 1.0, 1.0   ;Ikemen feature
 p1.teammenu.ratio6.icon.spr = 300, 5       ;Ikemen feature
-p1.teammenu.ratio6.icon.offset = 38, 205   ;Ikemen feature
+p1.teammenu.ratio6.icon.offset = 197, 205  ;Ikemen feature
 p1.teammenu.ratio6.icon.facing = 1         ;Ikemen feature
 p1.teammenu.ratio6.icon.scale = 1.0, 1.0   ;Ikemen feature
 p1.teammenu.ratio7.icon.spr = 300, 6       ;Ikemen feature
-p1.teammenu.ratio7.icon.offset = 38, 205   ;Ikemen feature
+p1.teammenu.ratio7.icon.offset = 197, 205  ;Ikemen feature
 p1.teammenu.ratio7.icon.facing = 1         ;Ikemen feature
 p1.teammenu.ratio7.icon.scale = 1.0, 1.0   ;Ikemen feature
 
@@ -481,31 +479,31 @@ p2.teammenu.value.empty.icon.spr = 192,0
 p2.teammenu.value.spacing = -30,0
 
 p2.teammenu.ratio1.icon.spr = 301, 0       ;Ikemen feature
-p2.teammenu.ratio1.icon.offset = -354, 205 ;Ikemen feature
+p2.teammenu.ratio1.icon.offset = -195, 205 ;Ikemen feature
 p2.teammenu.ratio1.icon.facing = 1         ;Ikemen feature
 p2.teammenu.ratio1.icon.scale = 1.0, 1.0   ;Ikemen feature
 p2.teammenu.ratio2.icon.spr = 301, 1       ;Ikemen feature
-p2.teammenu.ratio2.icon.offset = -354, 205 ;Ikemen feature
+p2.teammenu.ratio2.icon.offset = -195, 205 ;Ikemen feature
 p2.teammenu.ratio2.icon.facing = 1         ;Ikemen feature
 p2.teammenu.ratio2.icon.scale = 1.0, 1.0   ;Ikemen feature
 p2.teammenu.ratio3.icon.spr = 301, 2       ;Ikemen feature
-p2.teammenu.ratio3.icon.offset = -354, 205 ;Ikemen feature
+p2.teammenu.ratio3.icon.offset = -195, 205 ;Ikemen feature
 p2.teammenu.ratio3.icon.facing = 1         ;Ikemen feature
 p2.teammenu.ratio3.icon.scale = 1.0, 1.0   ;Ikemen feature
 p2.teammenu.ratio4.icon.spr = 301, 3       ;Ikemen feature
-p2.teammenu.ratio4.icon.offset = -354, 205 ;Ikemen feature
+p2.teammenu.ratio4.icon.offset = -195, 205 ;Ikemen feature
 p2.teammenu.ratio4.icon.facing = 1         ;Ikemen feature
 p2.teammenu.ratio4.icon.scale = 1.0, 1.0   ;Ikemen feature
 p2.teammenu.ratio5.icon.spr = 301, 4       ;Ikemen feature
-p2.teammenu.ratio5.icon.offset = -354, 205 ;Ikemen feature
+p2.teammenu.ratio5.icon.offset = -195, 205 ;Ikemen feature
 p2.teammenu.ratio5.icon.facing = 1         ;Ikemen feature
 p2.teammenu.ratio5.icon.scale = 1.0, 1.0   ;Ikemen feature
 p2.teammenu.ratio6.icon.spr = 301, 5       ;Ikemen feature
-p2.teammenu.ratio6.icon.offset = -354, 205 ;Ikemen feature
+p2.teammenu.ratio6.icon.offset = -195, 205 ;Ikemen feature
 p2.teammenu.ratio6.icon.facing = 1         ;Ikemen feature
 p2.teammenu.ratio6.icon.scale = 1.0, 1.0   ;Ikemen feature
 p2.teammenu.ratio7.icon.spr = 301, 6       ;Ikemen feature
-p2.teammenu.ratio7.icon.offset = -354, 205 ;Ikemen feature
+p2.teammenu.ratio7.icon.offset = -195, 205 ;Ikemen feature
 p2.teammenu.ratio7.icon.facing = 1         ;Ikemen feature
 p2.teammenu.ratio7.icon.scale = 1.0, 1.0   ;Ikemen feature
 
@@ -514,16 +512,6 @@ teammenu.itemname.simul = Simul   ;Ikemen feature
 teammenu.itemname.tag = Tag       ;Ikemen feature
 teammenu.itemname.turns = Turns   ;Ikemen feature
 teammenu.itemname.ratio = Ratio   ;Ikemen feature
-
-timer.enabled = 0                 ;Ikemen feature
-timer.offset = 640, 78            ;Ikemen feature
-timer.font = 2,0,0                ;Ikemen feature
-timer.font.scale = 1.0, 1.0       ;Ikemen feature
-;timer.font.height = -1            ;Ikemen feature
-timer.font.text = "%i"            ;Ikemen feature
-timer.count = 99                  ;Ikemen feature
-timer.framespercount = 60         ;Ikemen feature
-timer.displaytime = 10            ;Ikemen feature
 
 record.offset = 640, 78      ;Ikemen feature
 record.font = 2,0,0          ;Ikemen feature
@@ -620,54 +608,199 @@ velocity = -9, 0
 
 ;-------------------------------------------------------------------
 [VS Screen]
-time = 150                ;Time to show screen
-time.order = 60
+time = 200                ;Time to show screen
 fadein.time = 20
 fadeout.time = 25
+
 ;Match text in arcade modes
 match.text = "Match %i"   ;%i can be used for the match number
-match.offset = 20, 709
+match.offset = 20, 710
 match.font = 2,0,1
+
 ;Big portraits
 p1.num = 4                   ;Ikemen feature
 p1.anim = 0                  ;Ikemen feature
+p1.done.anim = 181           ;Ikemen feature
 ;p1.spr = 9000, 1
 p1.offset = 144,540 ;60,30
 p1.facing = 1
 p1.scale = 1,1
 p1.window = 60,30, 539,589
-p1.spacing = 75              ;Ikemen feature
+p1.spacing = 75,0            ;Ikemen feature
 p1.padding = 1               ;Ikemen feature
 p2.num = 4                   ;Ikemen feature
 p2.anim = 0                  ;Ikemen feature
+p2.done.anim = 181           ;Ikemen feature
 ;p2.spr = 9000, 1
 p2.offset = 1136,540 ;1220,30
 p2.facing = -1
 p2.scale = 1,1
 p2.window = 741,30, 1220,589
-p2.spacing = -75             ;Ikemen feature
+p2.spacing = -75,0           ;Ikemen feature
 p2.padding = 1               ;Ikemen feature
+
 ;Names
+p1.name.num = 1              ;Ikemen feature (not used for co-op)
 p1.name.offset = 110,635 ;110,650  ;Position to put name
 p1.name.font = 3,0,1      ;Set to -1 for no display
 p1.name.spacing = 15,25 ;0,44    ;Space between each name for players on the same team
-p1.name.active.font = 3,3,1  ;Ikemen feature
+p2.name.num = 1              ;Ikemen feature (not used for co-op)
 p2.name.offset = 1170,635 ;1170,650
 p2.name.font = 3,0,-1
 p2.name.spacing = -15,25 ;0,44
-p2.name.active.font = 3,1,-1 ;Ikemen feature
+
+orderselect.enabled = 1
+
+;Keys
+; By default all action buttons confirm currently selected order.
+; Assign keys to 'p<pn>.member<num>.key' parameters to enable order
+; selection on per team member basis.
+p1.member1.key = "a"             ;Ikemen feature
+p1.member2.key = "b"             ;Ikemen feature
+p1.member3.key = "x"             ;Ikemen feature
+p1.member4.key = "y"             ;Ikemen feature
+p1.accept.key = "a&b&c&x&y&z&s"  ;Ikemen feature
+p1.skip.key = "s"                ;Ikemen feature
+p2.member1.key = "a"             ;Ikemen feature
+p2.member2.key = "b"             ;Ikemen feature
+p2.member3.key = "x"             ;Ikemen feature
+p2.member4.key = "y"             ;Ikemen feature
+p2.accept.key = "a&b&c&x&y&z&s"  ;Ikemen feature
+p2.skip.key = "s"                ;Ikemen feature
+
+;Order icons
+; Icon elements are rendered on top of portraits, with positioning affected
+; by portrait num, offset, spacing, and padding. Done variants replace
+; spr/anim once order selection is completed.
+;p1.member1.icon.anim = -1        ;Ikemen feature
+p1.member1.icon.spr = 800, 0     ;Ikemen feature
+;p1.member1.icon.done.anim = -1   ;Ikemen feature
+;p1.member1.icon.done.spr =       ;Ikemen feature
+p1.member1.icon.offset = 0, 0    ;Ikemen feature
+p1.member1.icon.facing = 1       ;Ikemen feature
+p1.member1.icon.scale = 1.0, 1.0 ;Ikemen feature
+;p1.member2.icon.anim = -1        ;Ikemen feature
+p1.member2.icon.spr = 800, 1     ;Ikemen feature
+;p1.member2.icon.done.anim = -1   ;Ikemen feature
+;p1.member2.icon.done.spr =       ;Ikemen feature
+p1.member2.icon.offset = 0, 0    ;Ikemen feature
+p1.member2.icon.facing = 1       ;Ikemen feature
+p1.member2.icon.scale = 1.0, 1.0 ;Ikemen feature
+;p1.member3.icon.anim = -1        ;Ikemen feature
+p1.member3.icon.spr = 800, 2     ;Ikemen feature
+;p1.member3.icon.done.anim = -1   ;Ikemen feature
+;p1.member3.icon.done.spr =       ;Ikemen feature
+p1.member3.icon.offset = 0, 0    ;Ikemen feature
+p1.member3.icon.facing = 1       ;Ikemen feature
+p1.member3.icon.scale = 1.0, 1.0 ;Ikemen feature
+;p1.member4.icon.anim = -1        ;Ikemen feature
+p1.member4.icon.spr = 800, 3     ;Ikemen feature
+;p1.member4.icon.done.anim = -1   ;Ikemen feature
+;p1.member4.icon.done.spr =       ;Ikemen feature
+p1.member4.icon.offset = 0, 0    ;Ikemen feature
+p1.member4.icon.facing = 1       ;Ikemen feature
+p1.member4.icon.scale = 1.0, 1.0 ;Ikemen feature
+;p2.member1.icon.anim = -1        ;Ikemen feature
+p2.member1.icon.spr = 800, 0     ;Ikemen feature
+;p2.member1.icon.done.anim = -1   ;Ikemen feature
+;p2.member1.icon.done.spr =       ;Ikemen feature
+p2.member1.icon.offset = 0, 0    ;Ikemen feature
+p2.member1.icon.facing = 1       ;Ikemen feature
+p2.member1.icon.scale = 1.0, 1.0 ;Ikemen feature
+;p2.member2.icon.anim = -1        ;Ikemen feature
+p2.member2.icon.spr = 800, 1     ;Ikemen feature
+;p2.member2.icon.done.anim = -1   ;Ikemen feature
+;p2.member2.icon.done.spr =       ;Ikemen feature
+p2.member2.icon.offset = 0, 0    ;Ikemen feature
+p2.member2.icon.facing = 1       ;Ikemen feature
+p2.member2.icon.scale = 1.0, 1.0 ;Ikemen feature
+;p2.member3.icon.anim = -1        ;Ikemen feature
+p2.member3.icon.spr = 800, 2     ;Ikemen feature
+;p2.member3.icon.done.anim = -1   ;Ikemen feature
+;p2.member3.icon.done.spr =       ;Ikemen feature
+p2.member3.icon.offset = 0, 0    ;Ikemen feature
+p2.member3.icon.facing = 1       ;Ikemen feature
+p2.member3.icon.scale = 1.0, 1.0 ;Ikemen feature
+;p2.member4.icon.anim = -1        ;Ikemen feature
+p2.member4.icon.spr = 800, 3     ;Ikemen feature
+;p2.member4.icon.done.anim = -1   ;Ikemen feature
+;p2.member4.icon.done.spr =       ;Ikemen feature
+p2.member4.icon.offset = 0, 0    ;Ikemen feature
+p2.member4.icon.facing = 1       ;Ikemen feature
+p2.member4.icon.scale = 1.0, 1.0 ;Ikemen feature
+
+;Order value icons
+; Value icons are rendered on top of portraits, with positioning starting at
+; 0, 0. empty.icon elements are replaced with icon upon order selection.
+; If present, value.icon.member<num> parameters replace default value.icon
+; on per team member basis.
+;p1.value.icon.anim = -1                  ;Ikemen feature
+;p1.value.icon.spr =                      ;Ikemen feature
+p1.value.icon.member1.spr = 810, 0       ;Ikemen feature
+p1.value.icon.member2.spr = 810, 0       ;Ikemen feature
+p1.value.icon.member3.spr = 810, 0       ;Ikemen feature
+p1.value.icon.member4.spr = 810, 0       ;Ikemen feature
+p1.value.icon.offset = 417, 813          ;Ikemen feature
+p1.value.icon.facing = 1                 ;Ikemen feature
+p1.value.icon.scale = 1.0, 0.8           ;Ikemen feature
+;p1.value.empty.icon.anim = -1            ;Ikemen feature
+;p1.value.empty.icon.spr =                ;Ikemen feature
+p1.value.empty.icon.member1.spr = 810, 1 ;Ikemen feature
+p1.value.empty.icon.member2.spr = 810, 2 ;Ikemen feature
+p1.value.empty.icon.member3.spr = 810, 3 ;Ikemen feature
+p1.value.empty.icon.member4.spr = 810, 4 ;Ikemen feature
+p1.value.empty.icon.offset = 417, 813    ;Ikemen feature
+p1.value.empty.icon.facing = 1           ;Ikemen feature
+p1.value.empty.icon.scale = 1.0, 0.8     ;Ikemen feature
+p1.value.icon.spacing = -125, 0          ;Ikemen feature
+p1.value.snd = 100, 1                    ;Ikemen feature
+;p2.value.icon.anim = -1                  ;Ikemen feature
+;p2.value.icon.spr =                      ;Ikemen feature
+p2.value.icon.member1.spr = 810, 5       ;Ikemen feature
+p2.value.icon.member2.spr = 810, 5       ;Ikemen feature
+p2.value.icon.member3.spr = 810, 5       ;Ikemen feature
+p2.value.icon.member4.spr = 810, 5       ;Ikemen feature
+p2.value.icon.offset = 723, 813          ;Ikemen feature
+p2.value.icon.facing = 1                 ;Ikemen feature
+p2.value.icon.scale = 1.0, 0.8           ;Ikemen feature
+;p2.value.empty.icon.anim = -1            ;Ikemen feature
+;p2.value.empty.icon.spr =                ;Ikemen feature
+p2.value.empty.icon.member1.spr = 810, 6 ;Ikemen feature
+p2.value.empty.icon.member2.spr = 810, 7 ;Ikemen feature
+p2.value.empty.icon.member3.spr = 810, 8 ;Ikemen feature
+p2.value.empty.icon.member4.spr = 810, 9 ;Ikemen feature
+p2.value.empty.icon.offset = 723, 813    ;Ikemen feature
+p2.value.empty.icon.facing = 1           ;Ikemen feature
+p2.value.empty.icon.scale = 1.0, 0.8     ;Ikemen feature
+p2.value.icon.spacing = 125, 0           ;Ikemen feature
+p2.value.snd = 100, 1                    ;Ikemen feature
+
+;Order timer
+; Change timer.count to positive number to enable order selection timer
+timer.offset = 642,635                   ;Ikemen feature
+timer.font = 8,0, 0, 255,255,242         ;Ikemen feature
+timer.font.scale = 1.0, 1.0              ;Ikemen feature
+;timer.font.height = -1                  ;Ikemen feature
+timer.font.text = "%i"                   ;Ikemen feature
+timer.count = 30                         ;Ikemen feature
+timer.framespercount = 6                 ;Ikemen feature
+timer.displaytime = 0                    ;Ikemen feature
+
+; Time to maintain versus screen after both sides confirm their order
+; (in which order parameters are rendered using optional done variants)
+done.time = 60                           ;Ikemen feature
 
 ;-----------------------
 ;VS Match up screen background
-[VersusBGdef] 
+[VersusBGdef]
 
-[VersusBG BG] 
+[VersusBG BG]
 type  = normal
 spriteno = 204,0
 start = 0,0
 mask = 0
 
-[VersusBG BG for 4:3] 
+[VersusBG BG for 4:3]
 type  = normal
 spriteno = 100,0
 start = 0,0
@@ -865,10 +998,10 @@ fadeout.col = 0, 0, 0             ;Ikemen feature
 ;overlay.window = 0, 0, 1280, 720  ;Ikemen feature
 overlay.col = 0, 0, 0             ;Ikemen feature
 overlay.alpha = 20, 100           ;Ikemen feature
-p1.statedef.continue = 5500, 5300 ;Ikemen feature
-p1.statedef.yes = 5510, 180       ;Ikemen feature
-p1.statedef.no = 5520, 170        ;Ikemen feature
-p2.statedef.continue =            ;Ikemen feature
+p1.state.continue = 5500, 5300    ;Ikemen feature
+p1.state.yes = 5510, 180          ;Ikemen feature
+p1.state.no = 5520, 170           ;Ikemen feature
+p2.state.continue =               ;Ikemen feature
 p2.statedef.yes =                 ;Ikemen feature
 p2.statedef.no =                  ;Ikemen feature
 credits.text = "Credits: %i"      ;Ikemen feature
@@ -879,462 +1012,462 @@ credits.font.scale = 1.0, 1.0     ;Ikemen feature
 ;extended continue screen (legacymode.enabled = 0)
 counter.endtime = 1593            ;Ikemen feature
 counter.starttime = 0             ;Ikemen feature
-counter.anim = 9000               ;Ikemen feature
-counter.offset = -53, 0           ;Ikemen feature
+counter.anim = 900                ;Ikemen feature
+counter.offset = 0, 0             ;Ikemen feature
 counter.scale = 3.0, 3.0          ;Ikemen feature
 counter.default.snd = -1, 0       ;Ikemen feature
 counter.skipstart = 71            ;Ikemen feature
 counter.9.skiptime = 135          ;Ikemen feature
-counter.9.snd = 9000, 9           ;Ikemen feature
+counter.9.snd = 900, 9            ;Ikemen feature
 counter.8.skiptime = 262          ;Ikemen feature
-counter.8.snd = 9000, 8           ;Ikemen feature
+counter.8.snd = 900, 8            ;Ikemen feature
 counter.7.skiptime = 389          ;Ikemen feature
-counter.7.snd = 9000, 7           ;Ikemen feature
+counter.7.snd = 900, 7            ;Ikemen feature
 counter.6.skiptime = 516          ;Ikemen feature
-counter.6.snd = 9000, 6           ;Ikemen feature
+counter.6.snd = 900, 6            ;Ikemen feature
 counter.5.skiptime = 643          ;Ikemen feature
-counter.5.snd = 9000, 5           ;Ikemen feature
+counter.5.snd = 900, 5            ;Ikemen feature
 counter.4.skiptime = 770          ;Ikemen feature
-counter.4.snd = 9000, 4           ;Ikemen feature
+counter.4.snd = 900, 4            ;Ikemen feature
 counter.3.skiptime = 897          ;Ikemen feature
-counter.3.snd = 9000, 3           ;Ikemen feature
+counter.3.snd = 900, 3            ;Ikemen feature
 counter.2.skiptime = 1024         ;Ikemen feature
-counter.2.snd = 9000, 2           ;Ikemen feature
+counter.2.snd = 900, 2            ;Ikemen feature
 counter.1.skiptime = 1151         ;Ikemen feature
-counter.1.snd = 9000, 1           ;Ikemen feature
+counter.1.snd = 900, 1            ;Ikemen feature
 counter.0.skiptime = 1278         ;Ikemen feature
-counter.0.snd = 9000, 0           ;Ikemen feature
+counter.0.snd = 900, 0            ;Ikemen feature
 counter.end.skiptime = 1366       ;Ikemen feature
-counter.end.snd = 9000, 10        ;Ikemen feature
+counter.end.snd = 900, 10         ;Ikemen feature
 
-[Begin Action 9000]
-9009,0, 0,0, 1 ;1 (count 9 start initial animation)
-9009,1, 0,0, 1 ;2
-9009,2, 0,0, 1 ;3
-9009,3, 0,0, 3 ;6
-9009,4, 0,0, 3 ;9
-9009,5, 0,0, 1 ;10
-9009,6, 0,0, 3 ;13
-9009,7, 0,0, 2 ;15
-9009,8, 0,0, 2 ;17
-9009,9, 0,0, 2 ;19
-9009,10, 0,0, 1 ;20
-9009,11, 0,0, 5 ;25
-9009,12, 0,0, 5 ;30
-9009,13, 0,0, 1 ;31
-9009,14, 0,0, 1 ;32
-9009,15, 0,0, 3 ;35
-9009,16, 0,0, 3 ;38
-9009,17, 0,0, 1 ;39
-9009,18, 0,0, 5 ;44
-9009,19, 0,0, 1 ;45
-9009,20, 0,0, 4 ;49
-9009,21, 0,0, 1 ;50
-9009,22, 0,0, 1 ;51
-9009,23, 0,0, 1 ;52
-9009,24, 0,0, 2 ;54
-9009,25, 0,0, 1 ;55
-9009,26, 0,0, 5 ;60
-9009,27, 0,0, 5 ;65
-9009,28, 0,0, 1 ;66
-9009,29, 0,0, 3 ;69
-9009,30, 0,0, 2 ;71
-9009,31, 0,0, 6 ;77 (count 9 actual counter)
-9009,32, 0,0, 54 ;131
-9009,33, 0,0, 4 ;135
-9009,34, 0,0, 4 ;139
-9009,35, 0,0, 4 ;143
-9009,36, 0,0, 4 ;147
-9009,37, 0,0, 44 ;191
-9009,38, 0,0, 9 ;200
-9009,39, 0,0, 4 ;204
-9009,40, 0,0, 3 ;207
-9009,41, 0,0, 2 ;209
-9009,42, 0,0, 2 ;211
-9009,43, 0,0, 1 ;212
-9009,44, 0,0, 2 ;214
-9009,45, 0,0, 1 ;215
-9009,46, 0,0, 1 ;216
-9009,47, 0,0, 2 ;218
-9009,48, 0,0, 1 ;219
-9009,49, 0,0, 1 ;220
-9009,50, 0,0, 1 ;221 (count 9 end)
-9008,0, 0,0, 1 ;222 (count 8 start)
-9008,1, 0,0, 2 ;224
-9008,2, 0,0, 2 ;226
-9008,3, 0,0, 2 ;228
-9008,4, 0,0, 2 ;230
-9008,5, 0,0, 2 ;232
-9008,6, 0,0, 2 ;234
-9008,7, 0,0, 1 ;235
-9008,8, 0,0, 2 ;237
-9008,9, 0,0, 3 ;240
-9008,10, 0,0, 4 ;244
-9008,11, 0,0, 9 ;253
-9008,12, 0,0, 5 ;258
-9008,13, 0,0, 4 ;262
-9008,14, 0,0, 4 ;266
-9008,15, 0,0, 4 ;270
-9008,16, 0,0, 4 ;274
-9008,17, 0,0, 44 ;318
-9008,18, 0,0, 9 ;327
-9008,19, 0,0, 4 ;331
-9008,20, 0,0, 3 ;334
-9008,21, 0,0, 2 ;336
-9008,22, 0,0, 2 ;338
-9008,23, 0,0, 1 ;339
-9008,24, 0,0, 2 ;341
-9008,25, 0,0, 1 ;342
-9008,26, 0,0, 1 ;343
-9008,27, 0,0, 2 ;345
-9008,28, 0,0, 1 ;346
-9008,29, 0,0, 1 ;347
-9008,30, 0,0, 1 ;348 (count 8 end)
-9007,0, 0,0, 1 ;349 (count 7 start)
-9007,1, 0,0, 2 ;351
-9007,2, 0,0, 2 ;353
-9007,3, 0,0, 2 ;355
-9007,4, 0,0, 2 ;357
-9007,5, 0,0, 2 ;359
-9007,6, 0,0, 2 ;361
-9007,7, 0,0, 1 ;362
-9007,8, 0,0, 2 ;364
-9007,9, 0,0, 3 ;367
-9007,10, 0,0, 4 ;371
-9007,11, 0,0, 9 ;380
-9007,12, 0,0, 5 ;385
-9007,13, 0,0, 4 ;389
-9007,14, 0,0, 4 ;393
-9007,15, 0,0, 4 ;397
-9007,16, 0,0, 4 ;401
-9007,17, 0,0, 44 ;445
-9007,18, 0,0, 9 ;454
-9007,19, 0,0, 4 ;458
-9007,20, 0,0, 3 ;461
-9007,21, 0,0, 2 ;463
-9007,22, 0,0, 2 ;465
-9007,23, 0,0, 1 ;466
-9007,24, 0,0, 2 ;468
-9007,25, 0,0, 1 ;469
-9007,26, 0,0, 1 ;470
-9007,27, 0,0, 2 ;472
-9007,28, 0,0, 1 ;473
-9007,29, 0,0, 1 ;474
-9007,30, 0,0, 1 ;475 (count 7 end)
-9006,0, 0,0, 1 ;476 (count 6 start)
-9006,1, 0,0, 2 ;478
-9006,2, 0,0, 2 ;480
-9006,3, 0,0, 2 ;482
-9006,4, 0,0, 2 ;484
-9006,5, 0,0, 2 ;486
-9006,6, 0,0, 2 ;488
-9006,7, 0,0, 1 ;489
-9006,8, 0,0, 2 ;491
-9006,9, 0,0, 3 ;494
-9006,10, 0,0, 4 ;498
-9006,11, 0,0, 9 ;507
-9006,12, 0,0, 5 ;512
-9006,13, 0,0, 4 ;516
-9006,14, 0,0, 4 ;520
-9006,15, 0,0, 4 ;524
-9006,16, 0,0, 4 ;528
-9006,17, 0,0, 44 ;572
-9006,18, 0,0, 9 ;581
-9006,19, 0,0, 4 ;585
-9006,20, 0,0, 3 ;588
-9006,21, 0,0, 2 ;590
-9006,22, 0,0, 2 ;592
-9006,23, 0,0, 1 ;593
-9006,24, 0,0, 2 ;595
-9006,25, 0,0, 1 ;596
-9006,26, 0,0, 1 ;597
-9006,27, 0,0, 2 ;599
-9006,28, 0,0, 1 ;600
-9006,29, 0,0, 1 ;601
-9006,30, 0,0, 1 ;602 (count 6 end)
-9005,0, 0,0, 1 ;603 (count 5 start)
-9005,1, 0,0, 2 ;605
-9005,2, 0,0, 2 ;607
-9005,3, 0,0, 2 ;609
-9005,4, 0,0, 2 ;611
-9005,5, 0,0, 2 ;613
-9005,6, 0,0, 2 ;615
-9005,7, 0,0, 1 ;616
-9005,8, 0,0, 2 ;618
-9005,9, 0,0, 3 ;621
-9005,10, 0,0, 4 ;625
-9005,11, 0,0, 9 ;634
-9005,12, 0,0, 5 ;639
-9005,13, 0,0, 4 ;643
-9005,14, 0,0, 4 ;647
-9005,15, 0,0, 4 ;651
-9005,16, 0,0, 4 ;655
-9005,17, 0,0, 44 ;699
-9005,18, 0,0, 9 ;708
-9005,19, 0,0, 4 ;712
-9005,20, 0,0, 3 ;715
-9005,21, 0,0, 2 ;717
-9005,22, 0,0, 2 ;719
-9005,23, 0,0, 1 ;720
-9005,24, 0,0, 2 ;722
-9005,25, 0,0, 1 ;723
-9005,26, 0,0, 1 ;724
-9005,27, 0,0, 2 ;726
-9005,28, 0,0, 1 ;727
-9005,29, 0,0, 1 ;728
-9005,30, 0,0, 1 ;729 (count 5 end)
-9004,0, 0,0, 1 ;730 (count 4 start)
-9004,1, 0,0, 2 ;732
-9004,2, 0,0, 2 ;734
-9004,3, 0,0, 2 ;736
-9004,4, 0,0, 2 ;738
-9004,5, 0,0, 2 ;740
-9004,6, 0,0, 2 ;742
-9004,7, 0,0, 1 ;743
-9004,8, 0,0, 2 ;745
-9004,9, 0,0, 3 ;748
-9004,10, 0,0, 4 ;752
-9004,11, 0,0, 9 ;761
-9004,12, 0,0, 5 ;766
-9004,13, 0,0, 4 ;770
-9004,14, 0,0, 4 ;774
-9004,15, 0,0, 4 ;778
-9004,16, 0,0, 4 ;782
-9004,17, 0,0, 44 ;826
-9004,18, 0,0, 9 ;835
-9004,19, 0,0, 4 ;839
-9004,20, 0,0, 3 ;842
-9004,21, 0,0, 2 ;844
-9004,22, 0,0, 2 ;846
-9004,23, 0,0, 1 ;847
-9004,24, 0,0, 2 ;849
-9004,25, 0,0, 1 ;850
-9004,26, 0,0, 1 ;851
-9004,27, 0,0, 2 ;853
-9004,28, 0,0, 1 ;854
-9004,29, 0,0, 1 ;855
-9004,30, 0,0, 1 ;856 (count 4 end)
-9003,0, 0,0, 1 ;857 (count 3 start)
-9003,1, 0,0, 2 ;859
-9003,2, 0,0, 2 ;861
-9003,3, 0,0, 2 ;863
-9003,4, 0,0, 2 ;865
-9003,5, 0,0, 2 ;867
-9003,6, 0,0, 2 ;869
-9003,7, 0,0, 1 ;870
-9003,8, 0,0, 2 ;872
-9003,9, 0,0, 3 ;875
-9003,10, 0,0, 4 ;879
-9003,11, 0,0, 9 ;888
-9003,12, 0,0, 5 ;893
-9003,13, 0,0, 4 ;897
-9003,14, 0,0, 4 ;901
-9003,15, 0,0, 4 ;905
-9003,16, 0,0, 4 ;909
-9003,17, 0,0, 44 ;953
-9003,18, 0,0, 9 ;962
-9003,19, 0,0, 4 ;966
-9003,20, 0,0, 3 ;969
-9003,21, 0,0, 2 ;971
-9003,22, 0,0, 2 ;973
-9003,23, 0,0, 1 ;974
-9003,24, 0,0, 2 ;976
-9003,25, 0,0, 1 ;977
-9003,26, 0,0, 1 ;978
-9003,27, 0,0, 2 ;980
-9003,28, 0,0, 1 ;981
-9003,29, 0,0, 1 ;982
-9003,30, 0,0, 1 ;983 (count 3 end)
-9002,0, 0,0, 1 ;984 (count 2 start)
-9002,1, 0,0, 2 ;986
-9002,2, 0,0, 2 ;988
-9002,3, 0,0, 2 ;990
-9002,4, 0,0, 2 ;992
-9002,5, 0,0, 2 ;994
-9002,6, 0,0, 2 ;996
-9002,7, 0,0, 1 ;997
-9002,8, 0,0, 2 ;999
-9002,9, 0,0, 3 ;1002
-9002,10, 0,0, 4 ;1006
-9002,11, 0,0, 9 ;1015
-9002,12, 0,0, 5 ;1020
-9002,13, 0,0, 4 ;1024
-9002,14, 0,0, 4 ;1028
-9002,15, 0,0, 4 ;1032
-9002,16, 0,0, 4 ;1036
-9002,17, 0,0, 44 ;1080
-9002,18, 0,0, 9 ;1089
-9002,19, 0,0, 4 ;1093
-9002,20, 0,0, 3 ;1096
-9002,21, 0,0, 2 ;1098
-9002,22, 0,0, 2 ;1100
-9002,23, 0,0, 1 ;1101
-9002,24, 0,0, 2 ;1103
-9002,25, 0,0, 1 ;1104
-9002,26, 0,0, 1 ;1105
-9002,27, 0,0, 2 ;1107
-9002,28, 0,0, 1 ;1108
-9002,29, 0,0, 1 ;1109
-9002,30, 0,0, 1 ;1110 (count 2 end)
-9001,0, 0,0, 1 ;1111 (count 1 start)
-9001,1, 0,0, 2 ;1113
-9001,2, 0,0, 2 ;1115
-9001,3, 0,0, 2 ;1117
-9001,4, 0,0, 2 ;1119
-9001,5, 0,0, 2 ;1121
-9001,6, 0,0, 2 ;1123
-9001,7, 0,0, 1 ;1124
-9001,8, 0,0, 2 ;1126
-9001,9, 0,0, 3 ;1129
-9001,10, 0,0, 4 ;1133
-9001,11, 0,0, 9 ;1142
-9001,12, 0,0, 5 ;1147
-9001,13, 0,0, 4 ;1151
-9001,14, 0,0, 4 ;1155
-9001,15, 0,0, 4 ;1159
-9001,16, 0,0, 4 ;1163
-9001,17, 0,0, 44 ;1207
-9001,18, 0,0, 9 ;1216
-9001,19, 0,0, 4 ;1220
-9001,20, 0,0, 3 ;1223
-9001,21, 0,0, 2 ;1225
-9001,22, 0,0, 2 ;1227
-9001,23, 0,0, 1 ;1228
-9001,24, 0,0, 2 ;1230
-9001,25, 0,0, 1 ;1231
-9001,26, 0,0, 1 ;1232
-9001,27, 0,0, 2 ;1234
-9001,28, 0,0, 1 ;1235
-9001,29, 0,0, 1 ;1236
-9001,30, 0,0, 1 ;1237 (count 1 end)
-9000,0, 0,0, 1 ;1238 (count 0 start)
-9000,1, 0,0, 2 ;1240
-9000,2, 0,0, 2 ;1242
-9000,3, 0,0, 2 ;1244
-9000,4, 0,0, 2 ;1246
-9000,5, 0,0, 2 ;1248
-9000,6, 0,0, 2 ;1250
-9000,7, 0,0, 1 ;1251
-9000,8, 0,0, 2 ;1253
-9000,9, 0,0, 3 ;1256
-9000,10, 0,0, 4 ;1260
-9000,11, 0,0, 9 ;1269
-9000,12, 0,0, 5 ;1274
-9000,13, 0,0, 4 ;1278
-9000,14, 0,0, 4 ;1282
-9000,15, 0,0, 4 ;1286
-9000,16, 0,0, 4 ;1290
-9000,17, 0,0, 75 ;1365
-9000,18, 0,0, 1 ;1366 (count 0 end)
-9010,0, 0,0, 1 ;1367 (1) (gameover start)
-9010,1, 0,0, 1 ;1368 (2)
-9010,2, 0,0, 1 ;1369 (3)
-9010,3, 0,0, 1 ;1370 (4)
-9010,4, 0,0, 1 ;1371 (5)
-9010,5, 0,0, 1 ;1372 (6)
-9010,6, 0,0, 1 ;1373 (7)
-9010,7, 0,0, 1 ;1374 (8)
-9010,8, 0,0, 1 ;1375 (9)
-9010,9, 0,0, 1 ;1376 (10)
-9010,10, 0,0, 1 ;1377 (11)
-9010,11, 0,0, 1 ;1378 (12)
-9010,12, 0,0, 1 ;1379 (13)
-9010,13, 0,0, 1 ;1380 (14)
-9010,14, 0,0, 1 ;1381 (15)
-9010,15, 0,0, 1 ;1382 (16)
-9010,16, 0,0, 1 ;1383 (17)
-9010,17, 0,0, 1 ;1384 (18)
-9010,18, 0,0, 1 ;1385 (19)
-9010,19, 0,0, 1 ;1386 (20)
-9010,20, 0,0, 1 ;1387 (21)
-9010,21, 0,0, 1 ;1388 (22)
-9010,22, 0,0, 1 ;1389 (23)
-9010,23, 0,0, 1 ;1390 (24)
-9010,24, 0,0, 1 ;1391 (25)
-9010,25, 0,0, 1 ;1392 (26)
-9010,26, 0,0, 1 ;1393 (27)
-9010,27, 0,0, 1 ;1394 (28)
-9010,28, 0,0, 1 ;1395 (29)
-9010,29, 0,0, 1 ;1396 (30)
-9010,30, 0,0, 1 ;1397 (31)
-9010,31, 0,0, 1 ;1398 (32)
-9010,32, 0,0, 1 ;1399 (33)
-9010,33, 0,0, 1 ;1400 (34)
-9010,34, 0,0, 1 ;1401 (35)
-9010,35, 0,0, 1 ;1402 (36)
-9010,36, 0,0, 1 ;1403 (37)
-9010,37, 0,0, 1 ;1404 (38)
-9010,38, 0,0, 1 ;1405 (39)
-9010,39, 0,0, 1 ;1406 (40)
-9010,40, 0,0, 1 ;1407 (41)
-9010,41, 0,0, 1 ;1408 (42)
-9010,42, 0,0, 1 ;1409 (43)
-9010,43, 0,0, 1 ;1410 (44)
-9010,44, 0,0, 1 ;1411 (45)
-9010,45, 0,0, 1 ;1412 (46)
-9010,46, 0,0, 1 ;1413 (47)
-9010,47, 0,0, 1 ;1414 (48)
-9010,48, 0,0, 1 ;1415 (49)
-9010,49, 0,0, 1 ;1416 (50)
-9010,50, 0,0, 1 ;1417 (51)
-9010,51, 0,0, 1 ;1418 (52)
-9010,52, 0,0, 1 ;1419 (53)
-9010,53, 0,0, 1 ;1420 (54)
-9010,54, 0,0, 1 ;1421 (55)
-9010,55, 0,0, 1 ;1422 (56)
-9010,56, 0,0, 1 ;1423 (57)
-9010,57, 0,0, 1 ;1424 (58)
-9010,58, 0,0, 1 ;1425 (59)
-9010,59, 0,0, 1 ;1426 (60)
-9010,60, 0,0, 1 ;1427 (61)
-9010,61, 0,0, 1 ;1428 (62)
-9010,62, 0,0, 1 ;1429 (63)
-9010,63, 0,0, 1 ;1430 (64)
-9010,64, 0,0, 1 ;1431 (65)
-9010,65, 0,0, 1 ;1432 (66)
-9010,66, 0,0, 1 ;1433 (67)
-9010,67, 0,0, 1 ;1434 (68)
-9010,68, 0,0, 1 ;1435 (69)
-9010,69, 0,0, 1 ;1436 (70)
-9010,70, 0,0, 1 ;1437 (71)
-9010,71, 0,0, 1 ;1438 (72)
-9010,72, 0,0, 1 ;1439 (73)
-9010,73, 0,0, 1 ;1440 (74)
-9010,74, 0,0, 1 ;1441 (75)
-9010,75, 0,0, 1 ;1442 (76)
-9010,76, 0,0, 1 ;1443 (77)
-9010,77, 0,0, 1 ;1444 (78)
-9010,78, 0,0, 1 ;1445 (79)
-9010,79, 0,0, 1 ;1446 (80)
-9010,80, 0,0, 1 ;1447 (81)
-9010,81, 0,0, 1 ;1448 (82)
-9010,82, 0,0, 1 ;1449 (83)
-9010,83, 0,0, 1 ;1450 (84)
-9010,84, 0,0, 1 ;1451 (85)
-9010,85, 0,0, 1 ;1452 (86)
-9010,86, 0,0, 1 ;1453 (87)
-9010,87, 0,0, 1 ;1454 (88)
-9010,88, 0,0, 1 ;1455 (89)
-9010,89, 0,0, 1 ;1456 (90)
-9010,90, 0,0, 1 ;1457 (91)
-9010,91, 0,0, 1 ;1458 (92)
-9010,92, 0,0, 1 ;1459 (93)
-9010,93, 0,0, 1 ;1460 (94)
-9010,94, 0,0, 1 ;1461 (95)
-9010,95, 0,0, 1 ;1462 (96)
-9010,96, 0,0, 1 ;1463 (97)
-9010,97, 0,0, 1 ;1464 (98)
-9010,98, 0,0, 1 ;1465 (99)
-9010,99, 0,0, 1 ;1466 (100)
-9010,100, 0,0, 1 ;1467 (101)
-9010,101, 0,0, 1 ;1468 (102)
-9010,102, 0,0, 1 ;1469 (103)
-9010,103, 0,0, 1 ;1470 (104)
-9010,104, 0,0, 1 ;1471 (105)
-9010,105, 0,0, 1 ;1472 (106)
-9010,106, 0,0, 1 ;1473 (107)
-9010,107, 0,0, 119 ;1592 (226)
-9010,107, 0,0, -1 ;1593+
+[Begin Action 900]
+909,0, 0,0, 1 ;1 (count 9 start initial animation)
+909,1, 0,0, 1 ;2
+909,2, 0,0, 1 ;3
+909,3, 0,0, 3 ;6
+909,4, 0,0, 3 ;9
+909,5, 0,0, 1 ;10
+909,6, 0,0, 3 ;13
+909,7, 0,0, 2 ;15
+909,8, 0,0, 2 ;17
+909,9, 0,0, 2 ;19
+909,10, 0,0, 1 ;20
+909,11, 0,0, 5 ;25
+909,12, 0,0, 5 ;30
+909,13, 0,0, 1 ;31
+909,14, 0,0, 1 ;32
+909,15, 0,0, 3 ;35
+909,16, 0,0, 3 ;38
+909,17, 0,0, 1 ;39
+909,18, 0,0, 5 ;44
+909,19, 0,0, 1 ;45
+909,20, 0,0, 4 ;49
+909,21, 0,0, 1 ;50
+909,22, 0,0, 1 ;51
+909,23, 0,0, 1 ;52
+909,24, 0,0, 2 ;54
+909,25, 0,0, 1 ;55
+909,26, 0,0, 5 ;60
+909,27, 0,0, 5 ;65
+909,28, 0,0, 1 ;66
+909,29, 0,0, 3 ;69
+909,30, 0,0, 2 ;71
+909,31, 0,0, 6 ;77 (count 9 actual counter)
+909,32, 0,0, 54 ;131
+909,33, 0,0, 4 ;135
+909,34, 0,0, 4 ;139
+909,35, 0,0, 4 ;143
+909,36, 0,0, 4 ;147
+909,37, 0,0, 44 ;191
+909,38, 0,0, 9 ;200
+909,39, 0,0, 4 ;204
+909,40, 0,0, 3 ;207
+909,41, 0,0, 2 ;209
+909,42, 0,0, 2 ;211
+909,43, 0,0, 1 ;212
+909,44, 0,0, 2 ;214
+909,45, 0,0, 1 ;215
+909,46, 0,0, 1 ;216
+909,47, 0,0, 2 ;218
+909,48, 0,0, 1 ;219
+909,49, 0,0, 1 ;220
+909,50, 0,0, 1 ;221 (count 9 end)
+908,0, 0,0, 1 ;222 (count 8 start)
+908,1, 0,0, 2 ;224
+908,2, 0,0, 2 ;226
+908,3, 0,0, 2 ;228
+908,4, 0,0, 2 ;230
+908,5, 0,0, 2 ;232
+908,6, 0,0, 2 ;234
+908,7, 0,0, 1 ;235
+908,8, 0,0, 2 ;237
+908,9, 0,0, 3 ;240
+908,10, 0,0, 4 ;244
+908,11, 0,0, 9 ;253
+908,12, 0,0, 5 ;258
+908,13, 0,0, 4 ;262
+908,14, 0,0, 4 ;266
+908,15, 0,0, 4 ;270
+908,16, 0,0, 4 ;274
+908,17, 0,0, 44 ;318
+908,18, 0,0, 9 ;327
+908,19, 0,0, 4 ;331
+908,20, 0,0, 3 ;334
+908,21, 0,0, 2 ;336
+908,22, 0,0, 2 ;338
+908,23, 0,0, 1 ;339
+908,24, 0,0, 2 ;341
+908,25, 0,0, 1 ;342
+908,26, 0,0, 1 ;343
+908,27, 0,0, 2 ;345
+908,28, 0,0, 1 ;346
+908,29, 0,0, 1 ;347
+908,30, 0,0, 1 ;348 (count 8 end)
+907,0, 0,0, 1 ;349 (count 7 start)
+907,1, 0,0, 2 ;351
+907,2, 0,0, 2 ;353
+907,3, 0,0, 2 ;355
+907,4, 0,0, 2 ;357
+907,5, 0,0, 2 ;359
+907,6, 0,0, 2 ;361
+907,7, 0,0, 1 ;362
+907,8, 0,0, 2 ;364
+907,9, 0,0, 3 ;367
+907,10, 0,0, 4 ;371
+907,11, 0,0, 9 ;380
+907,12, 0,0, 5 ;385
+907,13, 0,0, 4 ;389
+907,14, 0,0, 4 ;393
+907,15, 0,0, 4 ;397
+907,16, 0,0, 4 ;401
+907,17, 0,0, 44 ;445
+907,18, 0,0, 9 ;454
+907,19, 0,0, 4 ;458
+907,20, 0,0, 3 ;461
+907,21, 0,0, 2 ;463
+907,22, 0,0, 2 ;465
+907,23, 0,0, 1 ;466
+907,24, 0,0, 2 ;468
+907,25, 0,0, 1 ;469
+907,26, 0,0, 1 ;470
+907,27, 0,0, 2 ;472
+907,28, 0,0, 1 ;473
+907,29, 0,0, 1 ;474
+907,30, 0,0, 1 ;475 (count 7 end)
+906,0, 0,0, 1 ;476 (count 6 start)
+906,1, 0,0, 2 ;478
+906,2, 0,0, 2 ;480
+906,3, 0,0, 2 ;482
+906,4, 0,0, 2 ;484
+906,5, 0,0, 2 ;486
+906,6, 0,0, 2 ;488
+906,7, 0,0, 1 ;489
+906,8, 0,0, 2 ;491
+906,9, 0,0, 3 ;494
+906,10, 0,0, 4 ;498
+906,11, 0,0, 9 ;507
+906,12, 0,0, 5 ;512
+906,13, 0,0, 4 ;516
+906,14, 0,0, 4 ;520
+906,15, 0,0, 4 ;524
+906,16, 0,0, 4 ;528
+906,17, 0,0, 44 ;572
+906,18, 0,0, 9 ;581
+906,19, 0,0, 4 ;585
+906,20, 0,0, 3 ;588
+906,21, 0,0, 2 ;590
+906,22, 0,0, 2 ;592
+906,23, 0,0, 1 ;593
+906,24, 0,0, 2 ;595
+906,25, 0,0, 1 ;596
+906,26, 0,0, 1 ;597
+906,27, 0,0, 2 ;599
+906,28, 0,0, 1 ;600
+906,29, 0,0, 1 ;601
+906,30, 0,0, 1 ;602 (count 6 end)
+905,0, 0,0, 1 ;603 (count 5 start)
+905,1, 0,0, 2 ;605
+905,2, 0,0, 2 ;607
+905,3, 0,0, 2 ;609
+905,4, 0,0, 2 ;611
+905,5, 0,0, 2 ;613
+905,6, 0,0, 2 ;615
+905,7, 0,0, 1 ;616
+905,8, 0,0, 2 ;618
+905,9, 0,0, 3 ;621
+905,10, 0,0, 4 ;625
+905,11, 0,0, 9 ;634
+905,12, 0,0, 5 ;639
+905,13, 0,0, 4 ;643
+905,14, 0,0, 4 ;647
+905,15, 0,0, 4 ;651
+905,16, 0,0, 4 ;655
+905,17, 0,0, 44 ;699
+905,18, 0,0, 9 ;708
+905,19, 0,0, 4 ;712
+905,20, 0,0, 3 ;715
+905,21, 0,0, 2 ;717
+905,22, 0,0, 2 ;719
+905,23, 0,0, 1 ;720
+905,24, 0,0, 2 ;722
+905,25, 0,0, 1 ;723
+905,26, 0,0, 1 ;724
+905,27, 0,0, 2 ;726
+905,28, 0,0, 1 ;727
+905,29, 0,0, 1 ;728
+905,30, 0,0, 1 ;729 (count 5 end)
+904,0, 0,0, 1 ;730 (count 4 start)
+904,1, 0,0, 2 ;732
+904,2, 0,0, 2 ;734
+904,3, 0,0, 2 ;736
+904,4, 0,0, 2 ;738
+904,5, 0,0, 2 ;740
+904,6, 0,0, 2 ;742
+904,7, 0,0, 1 ;743
+904,8, 0,0, 2 ;745
+904,9, 0,0, 3 ;748
+904,10, 0,0, 4 ;752
+904,11, 0,0, 9 ;761
+904,12, 0,0, 5 ;766
+904,13, 0,0, 4 ;770
+904,14, 0,0, 4 ;774
+904,15, 0,0, 4 ;778
+904,16, 0,0, 4 ;782
+904,17, 0,0, 44 ;826
+904,18, 0,0, 9 ;835
+904,19, 0,0, 4 ;839
+904,20, 0,0, 3 ;842
+904,21, 0,0, 2 ;844
+904,22, 0,0, 2 ;846
+904,23, 0,0, 1 ;847
+904,24, 0,0, 2 ;849
+904,25, 0,0, 1 ;850
+904,26, 0,0, 1 ;851
+904,27, 0,0, 2 ;853
+904,28, 0,0, 1 ;854
+904,29, 0,0, 1 ;855
+904,30, 0,0, 1 ;856 (count 4 end)
+903,0, 0,0, 1 ;857 (count 3 start)
+903,1, 0,0, 2 ;859
+903,2, 0,0, 2 ;861
+903,3, 0,0, 2 ;863
+903,4, 0,0, 2 ;865
+903,5, 0,0, 2 ;867
+903,6, 0,0, 2 ;869
+903,7, 0,0, 1 ;870
+903,8, 0,0, 2 ;872
+903,9, 0,0, 3 ;875
+903,10, 0,0, 4 ;879
+903,11, 0,0, 9 ;888
+903,12, 0,0, 5 ;893
+903,13, 0,0, 4 ;897
+903,14, 0,0, 4 ;901
+903,15, 0,0, 4 ;905
+903,16, 0,0, 4 ;909
+903,17, 0,0, 44 ;953
+903,18, 0,0, 9 ;962
+903,19, 0,0, 4 ;966
+903,20, 0,0, 3 ;969
+903,21, 0,0, 2 ;971
+903,22, 0,0, 2 ;973
+903,23, 0,0, 1 ;974
+903,24, 0,0, 2 ;976
+903,25, 0,0, 1 ;977
+903,26, 0,0, 1 ;978
+903,27, 0,0, 2 ;980
+903,28, 0,0, 1 ;981
+903,29, 0,0, 1 ;982
+903,30, 0,0, 1 ;983 (count 3 end)
+902,0, 0,0, 1 ;984 (count 2 start)
+902,1, 0,0, 2 ;986
+902,2, 0,0, 2 ;988
+902,3, 0,0, 2 ;990
+902,4, 0,0, 2 ;992
+902,5, 0,0, 2 ;994
+902,6, 0,0, 2 ;996
+902,7, 0,0, 1 ;997
+902,8, 0,0, 2 ;999
+902,9, 0,0, 3 ;1002
+902,10, 0,0, 4 ;1006
+902,11, 0,0, 9 ;1015
+902,12, 0,0, 5 ;1020
+902,13, 0,0, 4 ;1024
+902,14, 0,0, 4 ;1028
+902,15, 0,0, 4 ;1032
+902,16, 0,0, 4 ;1036
+902,17, 0,0, 44 ;1080
+902,18, 0,0, 9 ;1089
+902,19, 0,0, 4 ;1093
+902,20, 0,0, 3 ;1096
+902,21, 0,0, 2 ;1098
+902,22, 0,0, 2 ;1100
+902,23, 0,0, 1 ;1101
+902,24, 0,0, 2 ;1103
+902,25, 0,0, 1 ;1104
+902,26, 0,0, 1 ;1105
+902,27, 0,0, 2 ;1107
+902,28, 0,0, 1 ;1108
+902,29, 0,0, 1 ;1109
+902,30, 0,0, 1 ;1110 (count 2 end)
+901,0, 0,0, 1 ;1111 (count 1 start)
+901,1, 0,0, 2 ;1113
+901,2, 0,0, 2 ;1115
+901,3, 0,0, 2 ;1117
+901,4, 0,0, 2 ;1119
+901,5, 0,0, 2 ;1121
+901,6, 0,0, 2 ;1123
+901,7, 0,0, 1 ;1124
+901,8, 0,0, 2 ;1126
+901,9, 0,0, 3 ;1129
+901,10, 0,0, 4 ;1133
+901,11, 0,0, 9 ;1142
+901,12, 0,0, 5 ;1147
+901,13, 0,0, 4 ;1151
+901,14, 0,0, 4 ;1155
+901,15, 0,0, 4 ;1159
+901,16, 0,0, 4 ;1163
+901,17, 0,0, 44 ;1207
+901,18, 0,0, 9 ;1216
+901,19, 0,0, 4 ;1220
+901,20, 0,0, 3 ;1223
+901,21, 0,0, 2 ;1225
+901,22, 0,0, 2 ;1227
+901,23, 0,0, 1 ;1228
+901,24, 0,0, 2 ;1230
+901,25, 0,0, 1 ;1231
+901,26, 0,0, 1 ;1232
+901,27, 0,0, 2 ;1234
+901,28, 0,0, 1 ;1235
+901,29, 0,0, 1 ;1236
+901,30, 0,0, 1 ;1237 (count 1 end)
+900,0, 0,0, 1 ;1238 (count 0 start)
+900,1, 0,0, 2 ;1240
+900,2, 0,0, 2 ;1242
+900,3, 0,0, 2 ;1244
+900,4, 0,0, 2 ;1246
+900,5, 0,0, 2 ;1248
+900,6, 0,0, 2 ;1250
+900,7, 0,0, 1 ;1251
+900,8, 0,0, 2 ;1253
+900,9, 0,0, 3 ;1256
+900,10, 0,0, 4 ;1260
+900,11, 0,0, 9 ;1269
+900,12, 0,0, 5 ;1274
+900,13, 0,0, 4 ;1278
+900,14, 0,0, 4 ;1282
+900,15, 0,0, 4 ;1286
+900,16, 0,0, 4 ;1290
+900,17, 0,0, 75 ;1365
+900,18, 0,0, 1 ;1366 (count 0 end)
+910,0, 0,0, 1 ;1367 (1) (gameover start)
+910,1, 0,0, 1 ;1368 (2)
+910,2, 0,0, 1 ;1369 (3)
+910,3, 0,0, 1 ;1370 (4)
+910,4, 0,0, 1 ;1371 (5)
+910,5, 0,0, 1 ;1372 (6)
+910,6, 0,0, 1 ;1373 (7)
+910,7, 0,0, 1 ;1374 (8)
+910,8, 0,0, 1 ;1375 (9)
+910,9, 0,0, 1 ;1376 (10)
+910,10, 0,0, 1 ;1377 (11)
+910,11, 0,0, 1 ;1378 (12)
+910,12, 0,0, 1 ;1379 (13)
+910,13, 0,0, 1 ;1380 (14)
+910,14, 0,0, 1 ;1381 (15)
+910,15, 0,0, 1 ;1382 (16)
+910,16, 0,0, 1 ;1383 (17)
+910,17, 0,0, 1 ;1384 (18)
+910,18, 0,0, 1 ;1385 (19)
+910,19, 0,0, 1 ;1386 (20)
+910,20, 0,0, 1 ;1387 (21)
+910,21, 0,0, 1 ;1388 (22)
+910,22, 0,0, 1 ;1389 (23)
+910,23, 0,0, 1 ;1390 (24)
+910,24, 0,0, 1 ;1391 (25)
+910,25, 0,0, 1 ;1392 (26)
+910,26, 0,0, 1 ;1393 (27)
+910,27, 0,0, 1 ;1394 (28)
+910,28, 0,0, 1 ;1395 (29)
+910,29, 0,0, 1 ;1396 (30)
+910,30, 0,0, 1 ;1397 (31)
+910,31, 0,0, 1 ;1398 (32)
+910,32, 0,0, 1 ;1399 (33)
+910,33, 0,0, 1 ;1400 (34)
+910,34, 0,0, 1 ;1401 (35)
+910,35, 0,0, 1 ;1402 (36)
+910,36, 0,0, 1 ;1403 (37)
+910,37, 0,0, 1 ;1404 (38)
+910,38, 0,0, 1 ;1405 (39)
+910,39, 0,0, 1 ;1406 (40)
+910,40, 0,0, 1 ;1407 (41)
+910,41, 0,0, 1 ;1408 (42)
+910,42, 0,0, 1 ;1409 (43)
+910,43, 0,0, 1 ;1410 (44)
+910,44, 0,0, 1 ;1411 (45)
+910,45, 0,0, 1 ;1412 (46)
+910,46, 0,0, 1 ;1413 (47)
+910,47, 0,0, 1 ;1414 (48)
+910,48, 0,0, 1 ;1415 (49)
+910,49, 0,0, 1 ;1416 (50)
+910,50, 0,0, 1 ;1417 (51)
+910,51, 0,0, 1 ;1418 (52)
+910,52, 0,0, 1 ;1419 (53)
+910,53, 0,0, 1 ;1420 (54)
+910,54, 0,0, 1 ;1421 (55)
+910,55, 0,0, 1 ;1422 (56)
+910,56, 0,0, 1 ;1423 (57)
+910,57, 0,0, 1 ;1424 (58)
+910,58, 0,0, 1 ;1425 (59)
+910,59, 0,0, 1 ;1426 (60)
+910,60, 0,0, 1 ;1427 (61)
+910,61, 0,0, 1 ;1428 (62)
+910,62, 0,0, 1 ;1429 (63)
+910,63, 0,0, 1 ;1430 (64)
+910,64, 0,0, 1 ;1431 (65)
+910,65, 0,0, 1 ;1432 (66)
+910,66, 0,0, 1 ;1433 (67)
+910,67, 0,0, 1 ;1434 (68)
+910,68, 0,0, 1 ;1435 (69)
+910,69, 0,0, 1 ;1436 (70)
+910,70, 0,0, 1 ;1437 (71)
+910,71, 0,0, 1 ;1438 (72)
+910,72, 0,0, 1 ;1439 (73)
+910,73, 0,0, 1 ;1440 (74)
+910,74, 0,0, 1 ;1441 (75)
+910,75, 0,0, 1 ;1442 (76)
+910,76, 0,0, 1 ;1443 (77)
+910,77, 0,0, 1 ;1444 (78)
+910,78, 0,0, 1 ;1445 (79)
+910,79, 0,0, 1 ;1446 (80)
+910,80, 0,0, 1 ;1447 (81)
+910,81, 0,0, 1 ;1448 (82)
+910,82, 0,0, 1 ;1449 (83)
+910,83, 0,0, 1 ;1450 (84)
+910,84, 0,0, 1 ;1451 (85)
+910,85, 0,0, 1 ;1452 (86)
+910,86, 0,0, 1 ;1453 (87)
+910,87, 0,0, 1 ;1454 (88)
+910,88, 0,0, 1 ;1455 (89)
+910,89, 0,0, 1 ;1456 (90)
+910,90, 0,0, 1 ;1457 (91)
+910,91, 0,0, 1 ;1458 (92)
+910,92, 0,0, 1 ;1459 (93)
+910,93, 0,0, 1 ;1460 (94)
+910,94, 0,0, 1 ;1461 (95)
+910,95, 0,0, 1 ;1462 (96)
+910,96, 0,0, 1 ;1463 (97)
+910,97, 0,0, 1 ;1464 (98)
+910,98, 0,0, 1 ;1465 (99)
+910,99, 0,0, 1 ;1466 (100)
+910,100, 0,0, 1 ;1467 (101)
+910,101, 0,0, 1 ;1468 (102)
+910,102, 0,0, 1 ;1469 (103)
+910,103, 0,0, 1 ;1470 (104)
+910,104, 0,0, 1 ;1471 (105)
+910,105, 0,0, 1 ;1472 (106)
+910,106, 0,0, 1 ;1473 (107)
+910,107, 0,0, 119 ;1592 (226)
+910,107, 0,0, -1 ;1593+
 
 ;-----------------------
 ;Continue screen background
@@ -1372,12 +1505,14 @@ winquote.spacing = 0, 0   ;Ikemen feature
 winquote.font = 5,0,1
 winquote.window = 38,521, 1241,708
 winquote.textwrap = w     ;Word wrap
+winquote.delay = 2        ;Ikemen feature
+winquote.time = 0         ;Ikemen feature
 
 ;-----------------------
 ;Victory screen background
-[VictoryBGdef] 
+[VictoryBGdef]
 
-[VictoryBG 1] 
+[VictoryBG 1]
 type  = normal
 spriteno = 100,0
 start = 0,0
@@ -1416,6 +1551,12 @@ wintext.offset = 640,240
 wintext.displaytime = -1
 wintext.layerno = 2
 
+;-----------------------
+;Win screen background
+[WinBGdef] ;Ikemen feature
+
+; results screens variants reuse WinBgDef if dedicated ResultsBgDef is not set
+
 ;-------------------------------------------------------------------
 ;Game ending screen definition
 ;This screen shows up after the Win Screen.
@@ -1447,8 +1588,13 @@ winstext.displaytime = -1
 winstext.layerno = 2
 roundstowin = 5 ;Number of rounds to get win pose (lose pose otherwise)
 
-; Ikemen feature
-[VS100 Kumite Results Screen]
+;-----------------------
+;Survival mode results screen background
+[SurvivalResultsBGdef] ;Ikemen feature
+
+
+;-------------------------------------------------------------------
+[VS100 Kumite Results Screen] ;Ikemen feature
 enabled = 1
 fadein.time = 0
 fadeout.time = 64
@@ -1460,8 +1606,13 @@ winstext.displaytime = -1
 winstext.layerno = 2
 roundstowin = 51
 
-; Ikemen feature
-[Time Attack Results Screen]
+;-----------------------
+;VS100 Kumite results screen background
+[VS100KumiteResultsBGdef] ;Ikemen feature
+
+
+;-------------------------------------------------------------------
+[Time Attack Results Screen] ;Ikemen feature
 enabled = 1
 fadein.time = 0
 fadeout.time = 64
@@ -1472,8 +1623,13 @@ winstext.offset = 640,240
 winstext.displaytime = -1
 winstext.layerno = 2
 
-; Ikemen feature
-[Time Challenge Results Screen]
+;-----------------------
+;Time Attack results screen background
+[TimeAttackResultsBGdef] ;Ikemen feature
+
+
+;-------------------------------------------------------------------
+[Time Challenge Results Screen] ;Ikemen feature
 enabled = 1
 fadein.time = 0
 fadeout.time = 64
@@ -1484,8 +1640,13 @@ winstext.offset = 640,240
 winstext.displaytime = -1
 winstext.layerno = 2
 
-; Ikemen feature
-[Score Challenge Results Screen]
+;-----------------------
+;Time Challenge results screen background
+[TimeChallengeBGdef] ;Ikemen feature
+
+
+;-------------------------------------------------------------------
+[Score Challenge Results Screen] ;Ikemen feature
 enabled = 1
 fadein.time = 0
 fadeout.time = 64
@@ -1496,6 +1657,12 @@ winstext.offset = 640,240
 winstext.displaytime = -1
 winstext.layerno = 2
 
+;-----------------------
+;Score Challenge results screen background
+[ScoreChallengeResultsBGdef] ;Ikemen feature
+
+
+;-------------------------------------------------------------------
 ; Ikemen feature
 [Boss Rush Results Screen]
 enabled = 1
@@ -1508,10 +1675,10 @@ winstext.offset = 640,240
 winstext.displaytime = -1
 winstext.layerno = 2
 
-;-------------------
-;Result screen background
-; Ikemen feature
-[ResultsBGdef]
+;-----------------------
+;Boss Rush results screen background
+[BossRushResultsBGdef] ;Ikemen feature
+
 
 ;-------------------------------------------------------------------
 ;Options screen definition
@@ -1651,123 +1818,8 @@ cursor.move.snd = 100, 0
 cursor.done.snd = 100, 1
 cancel.snd = 100, 2
 
-;Ikemen feature
-menu.itemname.menugame = "Game Settings"
-menu.itemname.menugame.difficulty = "Difficulty Level"
-menu.itemname.menugame.roundtime = "Time Limit"
-menu.itemname.menugame.lifemul = "Life"
-menu.itemname.menugame.singlevsteamlife = "Single VS Team Life"
-menu.itemname.menugame.gamespeed = "Game Speed"
-menu.itemname.menugame.roundsnumsingle = "Rounds to Win (Single)"
-menu.itemname.menugame.maxdrawgames = "Max Draw Games"
-menu.itemname.menugame.credits = "Credits"
-menu.itemname.menugame.aipalette = "AI Palette"
-menu.itemname.menugame.airamping = "AI Ramping"
-menu.itemname.menugame.quickcontinue = "Quick Continue"
-menu.itemname.menugame.autoguard = "Auto-Guard"
-menu.itemname.menugame.stunbar = "Dizzy"
-menu.itemname.menugame.guardbar = "Guard Break"
-menu.itemname.menugame.redlifebar = "Red Life"
-menu.itemname.menugame.teamduplicates = "Team Duplicates"
-menu.itemname.menugame.teamlifeshare = "Team Life Share"
-menu.itemname.menugame.teampowershare = "Team Power Share"
-menu.itemname.menugame.empty = ""
-menu.itemname.menugame.menutag = "Tag Settings"
-menu.itemname.menugame.menutag.roundsnumtag = "Rounds to Win (Tag)"
-menu.itemname.menugame.menutag.losekotag = "Partner KOed Lose"
-menu.itemname.menugame.menutag.empty = ""
-menu.itemname.menugame.menutag.mintag = "Min Tag Chars"
-menu.itemname.menugame.menutag.maxtag = "Max Tag Chars"
-menu.itemname.menugame.menutag.empty = ""
-menu.itemname.menugame.menutag.back = "Back"
-menu.itemname.menugame.menusimul = "Simul Settings"
-menu.itemname.menugame.menusimul.roundsnumsimul = "Rounds to Win (Simul)"
-menu.itemname.menugame.menusimul.losekosimul = "Player KOed Lose"
-menu.itemname.menugame.menusimul.empty = ""
-menu.itemname.menugame.menusimul.minsimul = "Min Simul Chars"
-menu.itemname.menugame.menusimul.maxsimul = "Max Simul Chars"
-menu.itemname.menugame.menusimul.empty = ""
-menu.itemname.menugame.menusimul.back = "Back"
-menu.itemname.menugame.menuturns = "Turns Settings"
-menu.itemname.menugame.menuturns.turnsrecoverybase = "Turns Recovery Base"
-menu.itemname.menugame.menuturns.turnsrecoverybonus = "Turns Recovery Bonus"
-menu.itemname.menugame.menuturns.empty = ""
-menu.itemname.menugame.menuturns.minturns = "Min Turns Chars"
-menu.itemname.menugame.menuturns.maxturns = "Max Turns Chars"
-menu.itemname.menugame.menuturns.empty = ""
-menu.itemname.menugame.menuturns.back = "Back"
-menu.itemname.menugame.menuratio = "Ratio Settings"
-menu.itemname.menugame.menuratio.ratiorecoverybase = "Ratio Recovery Base"
-menu.itemname.menugame.menuratio.ratiorecoverybonus = "Ratio Recovery Bonus"
-menu.itemname.menugame.menuratio.empty = ""
-menu.itemname.menugame.menuratio.ratio1life = "Ratio 1 Life"
-menu.itemname.menugame.menuratio.ratio1attack = "Ratio 1 Damage"
-menu.itemname.menugame.menuratio.ratio2life = "Ratio 2 Life"
-menu.itemname.menugame.menuratio.ratio2attack = "Ratio 2 Damage"
-menu.itemname.menugame.menuratio.ratio3life = "Ratio 3 Life"
-menu.itemname.menugame.menuratio.ratio3attack = "Ratio 3 Damage"
-menu.itemname.menugame.menuratio.ratio4life = "Ratio 4 Life"
-menu.itemname.menugame.menuratio.ratio4attack = "Ratio 4 Damage"
-menu.itemname.menugame.menuratio.empty = ""
-menu.itemname.menugame.menuratio.back = "Back"
-menu.itemname.menugame.back = "Back"
-
-menu.itemname.menuvideo = "Video Settings"
-menu.itemname.menuvideo.resolution = "Resolution" ;reserved submenu
-; Resolution is assigned based on values used in itemname suffix (e.g. 320x240)
-menu.itemname.menuvideo.resolution.320x240 = "320x240    (4:3 QVGA)"
-menu.itemname.menuvideo.resolution.640x480 = "640x480    (4:3 VGA)"
-menu.itemname.menuvideo.resolution.960x720 = "960x720    (4:3 HD)"
-menu.itemname.menuvideo.resolution.1280x720 = "1280x720   (16:9 HD)"
-menu.itemname.menuvideo.resolution.1600x900 = "1600x900   (16:9 HD+)"
-menu.itemname.menuvideo.resolution.1920x1080 = "1920x1080  (16:9 FHD)"
-menu.itemname.menuvideo.resolution.empty = ""
-menu.itemname.menuvideo.resolution.customres = "Custom"
-menu.itemname.menuvideo.resolution.back = "Back"
-menu.itemname.menuvideo.fullscreen = "Fullscreen"
-menu.itemname.menuvideo.vretrace = "VSync"
-menu.itemname.menuvideo.msaa = "MSAA"
-menu.itemname.menuvideo.shaders = "Shaders" ;reserved submenu
-; This list is populated with shaders existing in 'external/shaders' directory
-menu.itemname.menuvideo.shaders.empty = ""
-menu.itemname.menuvideo.shaders.noshader = "Disable"
-menu.itemname.menuvideo.shaders.back = "Back"
-menu.itemname.menuvideo.empty = ""
-menu.itemname.menuvideo.back = "Back"
-
-menu.itemname.menuaudio = "Audio Settings"
-menu.itemname.menuaudio.mastervolume = "Master Volume"
-menu.itemname.menuaudio.bgmvolume = "BGM Volume"
-menu.itemname.menuaudio.sfxvolume = "SFX Volume"
-menu.itemname.menuaudio.audioducking = "Audio Ducking"
-menu.itemname.menuaudio.empty = ""
-menu.itemname.menuaudio.back = "Back"
-
-menu.itemname.menuinput = "Input Settings"
-menu.itemname.menuinput.keyboard = "Key Config"
-menu.itemname.menuinput.gamepad = "Joystick Config"
-
-menu.itemname.menuinput.empty = ""
-menu.itemname.menuinput.inputdefault = "Default"
-menu.itemname.menuinput.back = "Back"
-
-menu.itemname.menuengine = "Engine Settings"
-menu.itemname.menuengine.players = "Players"
-menu.itemname.menuengine.debugkeys = "Debug Keys"
-menu.itemname.menuengine.empty = ""
-menu.itemname.menuengine.helpermax = "HelperMax"
-menu.itemname.menuengine.projectilemax = "PlayerProjectileMax"
-menu.itemname.menuengine.explodmax = "ExplodMax"
-menu.itemname.menuengine.afterimagemax = "AfterImageMax"
-menu.itemname.menuengine.empty = ""
-menu.itemname.menuengine.back = "Back"
-
-menu.itemname.empty = ""
-menu.itemname.portchange = "Port Change"
-menu.itemname.default = "Default Values"
-menu.itemname.empty = ""
-menu.itemname.savereturn = "Save and Return"
-menu.itemname.return = "Return Without Saving"
+; If custom menus are not declared, default option screen layout is loaded.
+; Refer to system.base.def for an example how to modify option screen menus.
 
 ;-------------------
 ;Options screen background
@@ -1796,11 +1848,11 @@ menu.uselocalcoord = 1
 menu.pos = 414, 99
 menu.item.offset = 0, 0
 menu.item.font = 7,0,1, 191,191,191
-menu.item.font.scale = 1.0, 1.0  
+menu.item.font.scale = 1.0, 1.0
 ;menu.item.font.height = -1
 menu.item.active.offset = 0, 0
 menu.item.active.font = 7,0,1
-menu.item.active.font.scale = 1.0, 1.0  
+menu.item.active.font.scale = 1.0, 1.0
 ;menu.item.active.font.height = -1
 menu.item.spacing = 0, 42
 ;menu.window.margins.y = 0, 0
@@ -1855,27 +1907,27 @@ menu.uselocalcoord = 1
 menu.pos = 414, 99
 menu.item.offset = 0, 0
 menu.item.font = 7,0,1, 191,191,191
-menu.item.font.scale = 1.0, 1.0  
+menu.item.font.scale = 1.0, 1.0
 ;menu.item.font.height = -1
 menu.item.active.offset = 0, 0
 menu.item.active.font = 7,0,1
-menu.item.active.font.scale = 1.0, 1.0  
+menu.item.active.font.scale = 1.0, 1.0
 ;menu.item.active.font.height = -1
 menu.item.selected.offset = 0, 0
 menu.item.selected.font = 7,0,1, 0,247,247
-menu.item.selected.font.scale = 1.0, 1.0  
+menu.item.selected.font.scale = 1.0, 1.0
 ;menu.item.selected.font.height = -1
 menu.item.selected.active.offset = 0, 0
 menu.item.selected.active.font = 7,0,1, 0,247,247
-menu.item.selected.active.font.scale = 1.0, 1.0  
+menu.item.selected.active.font.scale = 1.0, 1.0
 ;menu.item.selected.active.font.height = -1
 menu.item.value.offset = 450, 0
 menu.item.value.font = 7,0,-1, 191,191,191
-menu.item.value.font.scale = 1.0, 1.0  
+menu.item.value.font.scale = 1.0, 1.0
 ;menu.item.value.font.height = -1
 menu.item.value.active.offset = 450, 0
 menu.item.value.active.font = 7,0,-1
-menu.item.value.active.font.scale = 1.0, 1.0  
+menu.item.value.active.font.scale = 1.0, 1.0
 ;menu.item.value.active.font.height = -1
 menu.item.spacing = 0, 42
 ;menu.window.margins.y = 0, 0
@@ -1914,7 +1966,7 @@ movelist.title.text = "%s"
 movelist.title.uppercase = 0
 movelist.text.offset = 0, 36
 movelist.text.font = 7,0,1
-movelist.text.font.scale = 1.0, 1.0  
+movelist.text.font.scale = 1.0, 1.0
 ;movelist.text.font.height = -1
 movelist.text.spacing = 3, 3
 movelist.text.text = "Command List not found."
@@ -1938,18 +1990,8 @@ movelist.arrow.down.offset = 0, 0
 movelist.arrow.down.facing = 1
 movelist.arrow.down.scale = 1.0, 1.0
 
-menu.itemname.back = "Continue"
-menu.itemname.menuinput = "Button Config"
-menu.itemname.menuinput.keyboard = "Key Config"
-menu.itemname.menuinput.gamepad = "Joystick Config"
-menu.itemname.menuinput.empty = ""
-menu.itemname.menuinput.inputdefault = "Default"
-menu.itemname.menuinput.back = "Back"
-;menu.itemname.reset = "Round Reset"
-;menu.itemname.reload = "Rematch"
-menu.itemname.commandlist = "Command List"
-menu.itemname.characterchange = "Character Change"
-menu.itemname.exit = "Exit"
+; If custom menus are not declared, default menu screen layout is loaded.
+; Refer to system.base.def for an example how to modify pause screen menus.
 
 ;-------------------
 ;Pause menu screen background
@@ -1957,13 +1999,17 @@ menu.itemname.exit = "Exit"
 
 ;-------------------------------------------------------------------
 ;Training menu screen definition
-;[Training Info] ;Ikemen feature
-;uses [Menu Info] data if not declared
+[Training Info] ;Ikemen feature
+
+; If not overridden, values used for [Menu Info] are shared with [Training Info]
+; If custom menus are not declared, default menu screen layout is loaded.
+; Refer to system.base.def for an example how to modify pause screen menus.
 
 ;-------------------
 ;Training menu screen background
 ;[TrainingBGdef] ;Ikemen feature
-;uses [MenuBGdef] data if not declared
+
+; If commented out defaults to [MenuBGdef]
 
 ;-------------------------------------------------------------------
 ;Attract mode definition
@@ -1992,7 +2038,6 @@ start.press.font = 3,0,0
 start.press.font.scale = 1.0, 1.0
 ;start.press.font.height = -1
 start.press.blinktime = 30
-start.timer.enabled = 1
 start.timer.offset = 1089, 696
 start.timer.font = 2,0,-1
 start.timer.font.scale = 1.0, 1.0
@@ -2088,12 +2133,12 @@ snd.time = 0
 snd = 500,0
 bg.anim = 500
 ;bg.spr = 
-bg.offset = 25, 100
+bg.offset = 78, 100
 bg.facing = 1
 bg.scale = 3.0, 3.0
 bg.displaytime = 0
 ;text.text = "Here Comes A New Challenger!!"
-text.offset = 160, 120
+text.offset = 213, 120
 text.font = 2,5,0
 text.font.scale = 3.0, 3.0
 ;text.font.height = -1
@@ -2129,7 +2174,7 @@ overlay.alpha = 20, 100
 500,9, 0,0, 1,, AS64D192
 500,9, 0,0, 1,, AS48D208
 500,9, 0,0, 1,, AS32D224
-500,9, 0,0, -1,, AS16D240
+500,9, 0,0, 1,, AS16D240
 -1,0, 0,0, -1
 
 ;-------------------
@@ -2144,8 +2189,8 @@ enabled = 1
 bars.display = 0
 snd.time = 8
 snd = 600, 0
-p1.pos = -107, 0
-p2.pos = 107, 0
+p1.pos = 0, 0
+p2.pos = 0, 0
 
 p1.score.offset = 133, 126
 p1.score.font = 2,0,0
@@ -2161,13 +2206,13 @@ p2.score.text = "SCORE: %s"
 p2.score.displaytime = 0
 p1.bg.anim = 600
 ;p1.bg.spr = 
-p1.bg.offset = -53, 0
+p1.bg.offset = -1, 0
 p1.bg.facing = 1
 p1.bg.scale = 1.0, 1.0
 p1.bg.displaytime = 0
 p2.bg.anim = 600
 ;p2.bg.spr = 
-p2.bg.offset = 1013, 0
+p2.bg.offset = 1279, 0
 p2.bg.facing = 1
 p2.bg.scale = 1.0, 1.0
 p2.bg.displaytime = 0
@@ -2180,9 +2225,14 @@ p2.icon.displaytime = 0
 p1.icon.spacing = 0, 0
 p2.icon.spacing = 0, 0
 
+; gauge window parameter (x1,y1,x2,y2) is used not only to set drawing space,
+; but also to define gauge range (how much meter should be filled based on match
+; result, cutting portion of the art between x1 and x2 values, if needed). Gauge
+; art must be perfectly surrounded by rectangular window box to work correctly.
+
 ;p1.gauge.tech.anim = 
 p1.gauge.tech.spr = 600,11
-p1.gauge.tech.offset = 313, 60
+p1.gauge.tech.offset = 365, 60
 p1.gauge.tech.facing = 1
 p1.gauge.tech.scale = 1.0, 1.0
 p1.gauge.tech.window = 366, 60, 482, 70
@@ -2190,7 +2240,7 @@ p1.gauge.tech.ticks = 30
 p1.gauge.tech.max = 38
 ;p1.gauge.attack.anim = 
 p1.gauge.attack.spr = 600,12
-p1.gauge.attack.offset = 313, 82
+p1.gauge.attack.offset = 365, 82
 p1.gauge.attack.facing = 1
 p1.gauge.attack.scale = 1.0, 1.0
 p1.gauge.attack.window = 366, 82, 482, 92
@@ -2198,7 +2248,7 @@ p1.gauge.attack.ticks = 30
 p1.gauge.attack.max = 36
 ;p1.gauge.guard.anim = 
 p1.gauge.guard.spr = 600,13
-p1.gauge.guard.offset = 313, 104
+p1.gauge.guard.offset = 365, 104
 p1.gauge.guard.facing = 1
 p1.gauge.guard.scale = 1.0, 1.0
 p1.gauge.guard.window = 366, 104, 482, 114
@@ -2206,82 +2256,84 @@ p1.gauge.guard.ticks = 30
 p1.gauge.guard.max = 31
 ;p1.gauge.life.anim = 
 p1.gauge.life.spr = 600,14
-p1.gauge.life.offset = 313, 126
+p1.gauge.life.offset = 365, 126
 p1.gauge.life.facing = 1
 p1.gauge.life.scale = 1.0, 1.0
 p1.gauge.life.window = 366, 126, 482, 136
 p1.gauge.life.ticks = 30
 p1.gauge.life.max = 30
+
 ;p1.rank.1.anim = 
 p1.rank.1.spr = 601,0
-p1.rank.1.offset = -52, 0
+p1.rank.1.offset = 0, 0
 p1.rank.1.facing = 1
 p1.rank.1.scale = 1.0, 1.0
 ;p1.rank.2.anim = 
 p1.rank.2.spr = 602,0
-p1.rank.2.offset = -52, 0
+p1.rank.2.offset = 0, 0
 p1.rank.2.facing = 1
 p1.rank.2.scale = 1.0, 1.0
 ;p1.rank.3.anim = 
 p1.rank.3.spr = 603,0
-p1.rank.3.offset = -52, 0
+p1.rank.3.offset = 0, 0
 p1.rank.3.facing = 1
 p1.rank.3.scale = 1.0, 1.0
 ;p1.rank.4.anim = 
 p1.rank.4.spr = 604,0
-p1.rank.4.offset = -52, 0
+p1.rank.4.offset = 0, 0
 p1.rank.4.facing = 1
 p1.rank.4.scale = 1.0, 1.0
 ;p1.rank.5.anim = 
 p1.rank.5.spr = 605,0
-p1.rank.5.offset = -52, 0
+p1.rank.5.offset = 0, 0
 p1.rank.5.facing = 1
 p1.rank.5.scale = 1.0, 1.0
 ;p1.rank.6.anim = 
 p1.rank.6.spr = 606,0
-p1.rank.6.offset = -52, 0
+p1.rank.6.offset = 0, 0
 p1.rank.6.facing = 1
 p1.rank.6.scale = 1.0, 1.0
 ;p1.rank.7.anim = 
 p1.rank.7.spr = 607,0
-p1.rank.7.offset = -52, 0
+p1.rank.7.offset = 0, 0
 p1.rank.7.facing = 1
 p1.rank.7.scale = 1.0, 1.0
 ;p1.rank.8.anim = 
 p1.rank.8.spr = 608,0
-p1.rank.8.offset = -52, 0
+p1.rank.8.offset = 0, 0
 p1.rank.8.facing = 1
 p1.rank.8.scale = 1.0, 1.0
 ;p1.rank.9.anim = 
 p1.rank.9.spr = 609,0
-p1.rank.9.offset = -52, 0
+p1.rank.9.offset = 0, 0
 p1.rank.9.facing = 1
 p1.rank.9.scale = 1.0, 1.0
 ;p1.rank.10.anim = 
 p1.rank.10.spr = 610,0
-p1.rank.10.offset = -52, 0
+p1.rank.10.offset = 0, 0
 p1.rank.10.facing = 1
 p1.rank.10.scale = 1.0, 1.0
 ;p1.rank.11.anim = 
 p1.rank.11.spr = 611,0
-p1.rank.11.offset = -52, 0
+p1.rank.11.offset = 0, 0
 p1.rank.11.facing = 1
 p1.rank.11.scale = 1.0, 1.0
 ;p1.rank.12.anim = 
 p1.rank.12.spr = 612,0
-p1.rank.12.offset = -52, 0
+p1.rank.12.offset = 0, 0
 p1.rank.12.facing = 1
 p1.rank.12.scale = 1.0, 1.0
 ;p1.rank.13.anim = 
 p1.rank.13.spr = 613,0
-p1.rank.13.offset = -52, 0
+p1.rank.13.offset = 0, 0
 p1.rank.13.facing = 1
 p1.rank.13.scale = 1.0, 1.0
 ;p1.rank.14.anim = 
 p1.rank.14.spr = 614,0
-p1.rank.14.offset = -52, 0
+p1.rank.14.offset = 0, 0
 p1.rank.14.facing = 1
 p1.rank.14.scale = 1.0, 1.0
+
 ;p1.icon.fa.anim = 
 p1.icon.fa.spr = -1,0
 p1.icon.fa.offset = 0, 0
@@ -2305,7 +2357,7 @@ p1.icon.hf.scale = 1.0, 1.0
 
 ;p2.gauge.tech.anim = 
 p2.gauge.tech.spr = 600,11
-p2.gauge.tech.offset = 647, 60
+p2.gauge.tech.offset = 913, 60
 p2.gauge.tech.facing = -1
 p2.gauge.tech.scale = 1.0, 1.0
 p2.gauge.tech.window = 798, 60, 914, 70
@@ -2313,7 +2365,7 @@ p2.gauge.tech.ticks = 30
 p2.gauge.tech.max = 38
 ;p2.gauge.attack.anim = 
 p2.gauge.attack.spr = 600,12
-p2.gauge.attack.offset = 647, 82
+p2.gauge.attack.offset = 913, 82
 p2.gauge.attack.facing = -1
 p2.gauge.attack.scale = 1.0, 1.0
 p2.gauge.attack.window = 798, 82, 914, 92
@@ -2321,7 +2373,7 @@ p2.gauge.attack.ticks = 30
 p2.gauge.attack.max = 36
 ;p2.gauge.guard.anim = 
 p2.gauge.guard.spr = 600,13
-p2.gauge.guard.offset = 647, 104
+p2.gauge.guard.offset = 913, 104
 p2.gauge.guard.facing = -1
 p2.gauge.guard.scale = 1.0, 1.0
 p2.gauge.guard.window = 798, 104, 914, 114
@@ -2329,100 +2381,102 @@ p2.gauge.guard.ticks = 30
 p2.gauge.guard.max = 31
 ;p2.gauge.life.anim = 
 p2.gauge.life.spr = 600,14
-p2.gauge.life.offset = 647, 126
+p2.gauge.life.offset = 913, 126
 p2.gauge.life.facing = -1
 p2.gauge.life.scale = 1.0, 1.0
 p2.gauge.life.window = 798, 126, 914, 136
 p2.gauge.life.ticks = 30
 p2.gauge.life.max = 30
+
 ;p2.rank.1.anim = 
 p2.rank.1.spr = 601,0
-p2.rank.1.offset = 758, 0
+p2.rank.1.offset = 1024, 0
 p2.rank.1.facing = 1
 p2.rank.1.scale = 1.0, 1.0
 ;p2.rank.2.anim = 
 p2.rank.2.spr = 602,0
-p2.rank.2.offset = 758, 0
+p2.rank.2.offset = 1024, 0
 p2.rank.2.facing = 1
 p2.rank.2.scale = 1.0, 1.0
 ;p2.rank.3.anim = 
 p2.rank.3.spr = 603,0
-p2.rank.3.offset = 758, 0
+p2.rank.3.offset = 1024, 0
 p2.rank.3.facing = 1
 p2.rank.3.scale = 1.0, 1.0
 ;p2.rank.4.anim = 
 p2.rank.4.spr = 604,0
-p2.rank.4.offset = 758, 0
+p2.rank.4.offset = 1024, 0
 p2.rank.4.facing = 1
 p2.rank.4.scale = 1.0, 1.0
 ;p2.rank.5.anim = 
 p2.rank.5.spr = 605,0
-p2.rank.5.offset = 758, 0
+p2.rank.5.offset = 1024, 0
 p2.rank.5.facing = 1
 p2.rank.5.scale = 1.0, 1.0
 ;p2.rank.6.anim = 
 p2.rank.6.spr = 606,0
-p2.rank.6.offset = 758, 0
+p2.rank.6.offset = 1024, 0
 p2.rank.6.facing = 1
 p2.rank.6.scale = 1.0, 1.0
 ;p2.rank.7.anim = 
 p2.rank.7.spr = 607,0
-p2.rank.7.offset = 758, 0
+p2.rank.7.offset = 1024, 0
 p2.rank.7.facing = 1
 p2.rank.7.scale = 1.0, 1.0
 ;p2.rank.8.anim = 
 p2.rank.8.spr = 608,0
-p2.rank.8.offset = 758, 0
+p2.rank.8.offset = 1024, 0
 p2.rank.8.facing = 1
 p2.rank.8.scale = 1.0, 1.0
 ;p2.rank.9.anim = 
 p2.rank.9.spr = 609,0
-p2.rank.9.offset = 758, 0
+p2.rank.9.offset = 1024, 0
 p2.rank.9.facing = 1
 p2.rank.9.scale = 1.0, 1.0
 ;p2.rank.10.anim = 
 p2.rank.10.spr = 610,0
-p2.rank.10.offset = 758, 0
+p2.rank.10.offset = 1024, 0
 p2.rank.10.facing = 1
 p2.rank.10.scale = 1.0, 1.0
 ;p2.rank.11.anim = 
 p2.rank.11.spr = 611,0
-p2.rank.11.offset = 758, 0
+p2.rank.11.offset = 1024, 0
 p2.rank.11.facing = 1
 p2.rank.11.scale = 1.0, 1.0
 ;p2.rank.12.anim = 
 p2.rank.12.spr = 612,0
-p2.rank.12.offset = 758, 0
+p2.rank.12.offset = 1024, 0
 p2.rank.12.facing = 1
 p2.rank.12.scale = 1.0, 1.0
 ;p2.rank.13.anim = 
 p2.rank.13.spr = 613,0
-p2.rank.13.offset = 758, 0
+p2.rank.13.offset = 1024, 0
 p2.rank.13.facing = 1
 p2.rank.13.scale = 1.0, 1.0
 ;p2.rank.14.anim = 
 p2.rank.14.spr = 614,0
-p2.rank.14.offset = 758, 0
+p2.rank.14.offset = 1024, 0
 p2.rank.14.facing = 1
 p2.rank.14.scale = 1.0, 1.0
+
 ;p2.icon.fa.anim = 
 p2.icon.fa.spr = -1,0
-p2.icon.fa.offset = 0, 0
+p2.icon.fa.offset = 266, 0
 p2.icon.fa.facing = 1
 p2.icon.fa.scale = 1.0, 1.0
 ;p2.icon.p.anim = 
 p2.icon.p.spr = -1,0
-p2.icon.p.offset = 0, 0
+p2.icon.p.offset = 266, 0
 p2.icon.p.facing = 1
 p2.icon.p.scale = 1.0, 1.0
 ;p2.icon.sf.anim = 
 p2.icon.sf.spr = -1,0
-p2.icon.sf.offset = 0, 0
+p2.icon.sf.offset = 266, 0
 p2.icon.sf.facing = 1
 p2.icon.sf.scale = 1.0, 1.0
 ;p2.icon.hf.anim = 
 p2.icon.hf.spr = -1,0
-p2.icon.hf.offset = 0, 0
+p2.icon.hf.offset = 266, 0
 p2.icon.hf.facing = 1
 p2.icon.hf.scale = 1.0, 1.0
 
@@ -2471,15 +2525,15 @@ p2.face.scale = 0.75, 0.75
 ;p2.face.window = 0, 0, 1280, 720
 p1.name.offset = 270, 135
 p1.name.font = 7,0,1
-p1.name.font.scale = 1.0, 1.0  
+p1.name.font.scale = 1.0, 1.0
 ;p1.name.font.height = -1
 p2.name.offset = 30, 471
 p2.name.font = 7,0,1
-p2.name.font.scale = 1.0, 1.0  
+p2.name.font.scale = 1.0, 1.0
 ;p2.name.font.height = -1
 p1.text.offset = 270, 177
 p1.text.font = 7,0,1
-p1.text.font.scale = 1.0, 1.0  
+p1.text.font.scale = 1.0, 1.0
 ;p1.text.font.height = -1
 p1.text.spacing = 0, 0
 p1.text.delay = 3
@@ -2487,7 +2541,7 @@ p1.text.textwrap = w
 p1.text.window = 270,96, 1200,288
 p2.text.offset = 30, 513
 p2.text.font = 7,0,1
-p2.text.font.scale = 1.0, 1.0  
+p2.text.font.scale = 1.0, 1.0
 ;p2.text.font.height = -1
 p2.text.spacing = 0, 0
 p2.text.delay = 3
@@ -2495,44 +2549,44 @@ p2.text.textwrap = w
 p2.text.window = 30,432, 930,624
 
 [Begin Action 700]
-700,0, -478,0, 1, ,AS192D64
-700,0, -453,0, 1, ,AS192D64
-700,0, -428,0, 1, ,AS192D64
-700,0, -403,0, 1, ,AS192D64
-700,0, -378,0, 1, ,AS192D64
-700,0, -353,0, 1, ,AS192D64
-700,0, -328,0, 1, ,AS192D64
-700,0, -303,0, 1, ,AS192D64
-700,0, -278,0, 1, ,AS192D64
-700,0, -253,0, 1, ,AS192D64
-700,0, -228,0, 1, ,AS192D64
-700,0, -203,0, 1, ,AS192D64
-700,0, -178,0, 1, ,AS192D64
-700,0, -153,0, 1, ,AS192D64
-700,0, -128,0, 1, ,AS192D64
-700,0, -103,0, 1, ,AS192D64
-700,0, -78,0, 1, ,AS192D64
-700,0, -53,0, -1, ,AS192D64
+700,0, -425,0, 1, ,AS192D64
+700,0, -400,0, 1, ,AS192D64
+700,0, -375,0, 1, ,AS192D64
+700,0, -350,0, 1, ,AS192D64
+700,0, -325,0, 1, ,AS192D64
+700,0, -300,0, 1, ,AS192D64
+700,0, -275,0, 1, ,AS192D64
+700,0, -250,0, 1, ,AS192D64
+700,0, -225,0, 1, ,AS192D64
+700,0, -200,0, 1, ,AS192D64
+700,0, -175,0, 1, ,AS192D64
+700,0, -150,0, 1, ,AS192D64
+700,0, -125,0, 1, ,AS192D64
+700,0, -100,0, 1, ,AS192D64
+700,0, -75,0, 1, ,AS192D64
+700,0, -50,0, 1, ,AS192D64
+700,0, -25,0, 1, ,AS192D64
+700,0, 0,0, -1, ,AS192D64
 
 [Begin Action 701]
-700,0, 372,0, 1, ,AS192D64
-700,0, 347,0, 1, ,AS192D64
-700,0, 322,0, 1, ,AS192D64
-700,0, 297,0, 1, ,AS192D64
-700,0, 272,0, 1, ,AS192D64
-700,0, 247,0, 1, ,AS192D64
-700,0, 222,0, 1, ,AS192D64
-700,0, 197,0, 1, ,AS192D64
-700,0, 172,0, 1, ,AS192D64
-700,0, 147,0, 1, ,AS192D64
-700,0, 122,0, 1, ,AS192D64
-700,0, 97,0, 1, ,AS192D64
-700,0, 72,0, 1, ,AS192D64
-700,0, 47,0, 1, ,AS192D64
-700,0, 22,0, 1, ,AS192D64
-700,0, -3,0, 1, ,AS192D64
-700,0, -28,0, 1, ,AS192D64
-700,0, -53,0, -1, ,AS192D64
+700,0, 425,0, 1, ,AS192D64
+700,0, 400,0, 1, ,AS192D64
+700,0, 375,0, 1, ,AS192D64
+700,0, 350,0, 1, ,AS192D64
+700,0, 325,0, 1, ,AS192D64
+700,0, 300,0, 1, ,AS192D64
+700,0, 275,0, 1, ,AS192D64
+700,0, 250,0, 1, ,AS192D64
+700,0, 225,0, 1, ,AS192D64
+700,0, 200,0, 1, ,AS192D64
+700,0, 175,0, 1, ,AS192D64
+700,0, 150,0, 1, ,AS192D64
+700,0, 125,0, 1, ,AS192D64
+700,0, 100,0, 1, ,AS192D64
+700,0, 75,0, 1, ,AS192D64
+700,0, 50,0, 1, ,AS192D64
+700,0, 25,0, 1, ,AS192D64
+700,0, 0,0, -1, ,AS192D64
 
 ;-------------------------------------------------------------------
 ;Hiscore definition
@@ -2552,91 +2606,91 @@ title.font.scale = 1.0, 1.0
 ;title.font.height = -1
 title.text = "Ranking %s"
 title.uppercase = 0
-rank.title.offset = 105, 150
-rank.title.font = 7,0,0
-rank.title.font.scale = 1.0, 1.0  
-;rank.title.font.height = -1
-rank.title.text = "Rank"
-rank.text.offset = 126, 210
-rank.text.font = 2,0,-1
-rank.text.font.scale = 1.0, 1.0
-;rank.text.font.height = -1
-rank.text.spacing = 0, 18
-rank.text.text = "%sth"
-rank.text.1.text = "%sst"
-rank.text.2.text = "%snd"
-rank.text.3.text = "%srd"
-rank.text.active.font = 2,0,-1, 191,191,191
-rank.text.active.font.scale = 1.0, 1.0
-;rank.text.active.font.height = -1
-rank.text.active.switchtime = 4
-rank.text.active2.font = 2,0,-1
-rank.text.active2.font.scale = 1.0, 1.0
-;rank.text.active2.font.height = -1
-data.title.offset = 336, 150
-data.title.font = 7,0,0
-data.title.font.scale = 1.0, 1.0  
-;data.title.font.height = -1
-data.title.text = "Result"
-data.text.offset = 399, 210
-data.text.font = 2,0,-1
-data.text.font.scale = 1.0, 1.0
-;data.text.font.height = -1
-data.text.spacing = 0, 18
-data.text.score.text = "%8s"
-data.text.time.text = "%m'%s''%x"
-data.text.win.text = "Round %s"
-data.text.active.font = 2,0,-1, 191,191,191
-data.text.active.font.scale = 1.0, 1.0
-;data.text.active.font.height = -1
-data.text.active.switchtime = 4
-data.text.active2.font = 2,0,-1
-data.text.active2.font.scale = 1.0, 1.0
-;data.text.active2.font.height = -1
-name.title.offset = 558, 150
-name.title.font = 7,0,0
-name.title.font.scale = 1.0, 1.0  
-;name.title.font.height = -1
-name.title.text = "Name"
-name.text.offset = 531, 210
-name.text.font = 2,0,1
-name.text.font.scale = 1.0, 1.0
-;name.text.font.height = -1
-name.text.spacing = 0, 18
-name.text.text = "%3s"
-name.text.active.font = 2,0,1, 191,191,191
-name.text.active.font.scale = 1.0, 1.0
-;name.text.active.font.height = -1
-name.text.active.switchtime = 4
-name.text.active2.font = 2,0,1
-name.text.active2.font.scale = 1.0, 1.0
-;name.text.active2.font.height = -1
-name.text.uppercase = 1
-name.text.glyphs = "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "!", "?", ".", "<", ">"
-face.title.offset = 774, 150
-face.title.font = 7,0,0
-face.title.font.scale = 1.0, 1.0  
-;face.title.font.height = -1
-face.title.text = "Character"
-;face.anim = 
-face.spr = 9000, 0
-face.offset = 720, 193
-face.facing = 1
-face.scale = 1.0, 1.0
-;face.window = 0, 0, 1280, 720
-face.num = 1
-face.spacing = 30, 33
-;face.bg.anim = 
-face.bg.spr = 150,0
-face.bg.offset = 0, 0
-face.bg.facing = 1
-face.bg.scale = 0.25, 0.25
-;face.unknown.anim = 
-face.unknown.spr = 151,0
-face.unknown.offset = 0, 0
-face.unknown.facing = 1
-face.unknown.scale = 0.25, 0.25
-timer.enabled = 1
+title.rank.offset = 105, 150
+title.rank.font = 7,0,0
+title.rank.font.scale = 1.0, 1.0
+;title.rank.font.height = -1
+title.rank.text = "Rank"
+title.data.offset = 336, 150
+title.data.font = 7,0,0
+title.data.font.scale = 1.0, 1.0
+;title.data.font.height = -1
+title.data.text = "Result"
+title.name.offset = 558, 150
+title.name.font = 7,0,0
+title.name.font.scale = 1.0, 1.0
+;title.name.font.height = -1
+title.name.text = "Name"
+title.face.offset = 774, 150
+title.face.font = 7,0,0
+title.face.font.scale = 1.0, 1.0
+;title.face.font.height = -1
+title.face.text = "Character"
+item.offset = 0, 0
+item.spacing = 0, 0
+item.rank.offset = 126, 210
+item.rank.font = 2,0,-1
+item.rank.font.scale = 1.0, 1.0
+;item.rank.font.height = -1
+item.rank.spacing = 0, 26
+item.rank.text = "%sth"
+item.rank.1.text = "%sst"
+item.rank.2.text = "%snd"
+item.rank.3.text = "%srd"
+item.rank.active.font = 2,0,-1, 191,191,191
+item.rank.active.font.scale = 1.0, 1.0
+;item.rank.active.font.height = -1
+item.rank.active.switchtime = 4
+item.rank.active2.font = 2,0,-1
+item.rank.active2.font.scale = 1.0, 1.0
+;item.rank.active2.font.height = -1
+item.data.offset = 399, 210
+item.data.font = 2,0,-1
+item.data.font.scale = 1.0, 1.0
+;item.data.font.height = -1
+item.data.spacing = 0, 26
+item.data.score.text = "%8s"
+item.data.time.text = "%m'%s''%x"
+item.data.win.text = "Round %s"
+item.data.active.font = 2,0,-1, 191,191,191
+item.data.active.font.scale = 1.0, 1.0
+;item.data.active.font.height = -1
+item.data.active.switchtime = 4
+item.data.active2.font = 2,0,-1
+item.data.active2.font.scale = 1.0, 1.0
+;item.data.active2.font.height = -1
+item.name.offset = 531, 210
+item.name.font = 2,0,1
+item.name.font.scale = 1.0, 1.0
+;item.name.font.height = -1
+item.name.spacing = 0, 26
+item.name.text = "%3s"
+item.name.active.font = 2,0,1, 191,191,191
+item.name.active.font.scale = 1.0, 1.0
+;item.name.active.font.height = -1
+item.name.active.switchtime = 4
+item.name.active2.font = 2,0,1
+item.name.active2.font.scale = 1.0, 1.0
+;item.name.active2.font.height = -1
+item.name.uppercase = 1
+;item.face.anim = 
+item.face.spr = 9000, 0
+item.face.offset = 720, 189
+item.face.facing = 1
+item.face.scale = 0.33, 0.33
+;item.face.window = 0, 0, 1280, 720
+item.face.num = 4
+item.face.spacing = 38, 41
+;item.face.bg.anim = 
+item.face.bg.spr = 150,0
+item.face.bg.offset = 0, 0
+item.face.bg.facing = 1
+item.face.bg.scale = 0.33, 0.33
+;item.face.unknown.anim = 
+item.face.unknown.spr = 151,0
+item.face.unknown.offset = 0, 0
+item.face.unknown.facing = 1
+item.face.unknown.scale = 0.33, 0.33
 timer.offset = 930, 696
 timer.font = 2,0,-1
 timer.font.scale = 1.0, 1.0
@@ -2647,13 +2701,14 @@ timer.framespercount = 60
 timer.displaytime = 10
 window.width = 900
 window.margins.y = 60, 3
-window.visibleitems = 15
+window.visibleitems = 10
 ;overlay.window = 0, 0, 1280, 720
 overlay.col = 0, 0, 0
 overlay.alpha = 20, 100
 move.snd = 100, 0
 done.snd = 100, 1
 cancel.snd = 100, 2
+glyphs = "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "!", "?", ".", "<", ">"
 
 ;-------------------
 ;Hiscore screen background

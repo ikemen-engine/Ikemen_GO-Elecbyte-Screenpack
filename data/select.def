@@ -135,7 +135,8 @@
  ;   flexibility via 'arcade.ratiomatches' settings). The default order value is
  ;   1, if you omit this param. Edit *.maxmatches settings under [Options] to
  ;   customize amount of matches per order priority.
- ;   IKEMEN feature: Max 30 orders mugen limitation is lifted.
+ ;   IKEMEN feature: Max 30 orders mugen limitation is lifted. Negative order
+ ;   is reversed if character becomes unlocked (see 'unlock' parameter)
  ;
  ; - ordersurvival
  ;   IKEMEN feature: Set the paramvalue to the ordering priority to give the
@@ -143,7 +144,8 @@
  ;   param. It works like 'order' parameter, just for different game modes
  ;   (survival / survival co-op / netplay survival co-op). To exclude character
  ;   from showing up in survival modes you can set it to order group outside
- ;   configured survival.maxmatches range (e.g. ordersurvival=0).
+ ;   configured survival.maxmatches range (e.g. ordersurvival=0) Negative order
+ ;   is reversed if character becomes unlocked (see 'unlock' parameter)
  ;
  ; - arcadepath
  ;   IKEMEN feature: Set the paramvalue to the lua file (file path relative to
@@ -250,7 +252,8 @@ randomselect
  ;   IKEMEN feature: Set the paramvalue to the ordering priority to give the
  ;   stage in Arcade and Time Attack modes. If there is at least 1 stage with
  ;   assigned order, facing opponent with the exact order paramvalue will result
- ;   in stage being randomly chosen from stages with the matching order.
+ ;   in stage being randomly chosen from stages with the matching order. Stages
+ ;   can have multiple order parameters assigned at the same time.
  ;
  ; - unlock
  ;   IKEMEN feature: paramvalue is executed as Lua code condition, right after
