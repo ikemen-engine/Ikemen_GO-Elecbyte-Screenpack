@@ -74,9 +74,7 @@ if anim = 5120 || roundState != 2 { #getuprecoverytime
 }
 
 #global AI loop
-ignoreHitPause if aiLevelF && roundState = 2  && !standby {
-
-
+ignoreHitPause if aiLevelF && roundState = 2 && !standby {
 
 #prevent default jump behavior
 assertSpecial{flag: nojump; flag2: noairjump}
@@ -135,8 +133,6 @@ if ctrl && !enemyNear,ctrl && (enemyNear,getHitVar(hittime) > 0) {
 
 
 if (ctrl && stateNo != 105 || stateNo = 20 || stateNo = 100 || stateNo = 1310 || stateNo = 1330 || stateNo = 1330 || stateNo = 1350) && random < (750 * (aiLevelF ** 2 / 48.0)) {
-=======
-
 	if stateType != A {
 		#------------|SUPERS|---------------------------------------------------
 
@@ -145,19 +141,16 @@ if (ctrl && stateNo != 105 || stateNo = 20 || stateNo = 100 || stateNo = 1310 ||
 		#This first condition checks for if the opponent is in range of the attack hitting, it adds the opponents current velocity
 		#to determine if they would be hit by them moving closer while attacking. This can be set to any range if you are using this
 		#as an example.
-
 		if random < (500 * (aiLevelF ** 2 / 48.0)){
+			if ($p2dx = [-10, (35+floor($trvelx*.4)*3)] && enemyNear,moveType = A &&
+				(enemyNear,stateNo != 5040 && enemyNear,moveType != H || !$grounded && $p2dy = [-80+(floor(enemyNear,vel y*.4)*-5), -15] || $grounded)) && power >= 1000 {
+				changeState{value: 3050}
+			}
 
-		if ($p2dx = [-10, (35+floor($trvelx*.4)*3)] && enemyNear,moveType = A &&
-			(enemyNear,stateNo != 5040 && enemyNear,moveType != H || !$grounded && $p2dy = [-80+(floor(enemyNear,vel y*.4)*-5), -15] || $grounded)) && power >= 1000 {
-			changeState{value: 3050}
-		}
-
-		if ($p2dx = [30*($hitfall)-36, (90+floor($trvelx*.4)*5)] && enemyNear,moveType = A && ($p2dy = [-50+(floor(enemyNear,vel y*.4)*-5), -15] || $grounded) &&
-			(enemyNear,stateNo != 5040 && enemyNear,moveType != H || !$grounded && $p2dy = [-50, -15])) && power >= 1000 {
-			changeState{value: 3000}
-
-		}
+			if ($p2dx = [30*($hitfall)-36, (90+floor($trvelx*.4)*5)] && enemyNear,moveType = A && ($p2dy = [-50+(floor(enemyNear,vel y*.4)*-5), -15] || $grounded) &&
+				(enemyNear,stateNo != 5040 && enemyNear,moveType != H || !$grounded && $p2dy = [-50, -15])) && power >= 1000 {
+				changeState{value: 3000}
+			}
 		}
 		#-----------------------------------------------------------------------
 		#this is a command parry that kung fu man has, from an AI perspective, it can be challenging to indicate when it should be used.
@@ -167,7 +160,6 @@ if (ctrl && stateNo != 105 || stateNo = 20 || stateNo = 100 || stateNo = 1310 ||
 		#kung fu blocking
 		if $p2dx = [-15, 30+floor($trvelx*.4)*10+floor(enemyNear,const(size.attack.dist)*.5)] && $p2dy = [-50+(floor(enemyNear,vel y *.6)*-10), 0] &&
 			random <= (335 * (aiLevelF ** 2 / 48.0)) && enemyNear,moveType = A && aiLevel > 4 {
-
 			changeState{value: cond(enemyNear,stateType != C,1300,1320)}
 		}
 
@@ -181,7 +173,6 @@ if (ctrl && stateNo != 105 || stateNo = 20 || stateNo = 100 || stateNo = 1310 ||
 		if enemyNear,stateType = A && $p2dx = [5*($hitfall)-20, (30+floor($trvelx*.4)*20)] &&
 			(enemyNear,stateNo != 5040 && enemyNear,moveType != H || !$grounded && $p2dy = [-80+(floor(enemyNear,vel y*.6)*-5), -40+($hitfall)*30]) && (!map(gurt) || $p2dx > 30) &&
 			random <= (450 * (aiLevelF ** 2 / 48.0)) {
-
 
 			#1/3 chance to use ex move when power is at least half of one meter
 			if power >= 500 && random%3 = 1 {
@@ -201,7 +192,6 @@ if (ctrl && stateNo != 105 || stateNo = 20 || stateNo = 100 || stateNo = 1310 ||
 			(enemyNear,stateNo != 5040 && enemyNear,moveType != H || !$grounded && $p2dy = [-60, -15]) && (!map(gurt) || $p2dx > 30) &&
 			random <= (350 * (aiLevelF ** 2 / 48.0)) && enemyNear,moveType = A {
 
-
 			if power >= 500 && random%3 = 1 && $p2dy < -70 {
 				let version2 = 1070;
 			} else if enemyNear,vel x > 0 && $p2dy < -70 {
@@ -213,17 +203,13 @@ if (ctrl && stateNo != 105 || stateNo = 20 || stateNo = 100 || stateNo = 1310 ||
 		}
 		#-----------------------------------------------------------------------
 		#anti air normals
-
 		if random <= (420 * (aiLevelF ** 2 / 48.0)) && $p2dx < 45 && $p2dy = [-70+(floor(enemyNear,vel y*.4)*-5), -20] && !$nojug && $jugpt = 0 {
-
-
 			changeState{value: 410}
 		}
 
 		#-----------------------------------------------------------------------
 		#throw
 		if random <= (310 * (aiLevelF ** 2 / 48.0)) && stateType = S && stateNo != 100 && (enemyNear,moveType != H || enemyNear,stateNo = [120, 131]) &&
-
 			(map(AI_JI) < 2) && $p2dx < 30 && $grounded {
 			changeState{value: 800}
 		}
@@ -241,8 +227,7 @@ if (ctrl && stateNo != 105 || stateNo = 20 || stateNo = 100 || stateNo = 1310 ||
 		#this attack is a special case attack, the angle of attack indicates it can be used
 		#to stop crouching attacking opponents preemptively, so kfm will try to do so when possible.
 		#used to hit crouching attacking opponents from a distance
-		if ($p2dx = [35, 55+(floor($trvelx*.4)*5)]) && enemyNear,stateType = C && (enemyNear,moveType = A)&& random <= (450 * (aiLevelF ** 2 / 48.0)) {
-
+		if ($p2dx = [35, 55+(floor($trvelx*.4)*5)]) && enemyNear,stateType = C && (enemyNear,moveType = A) && random <= (450 * (aiLevelF ** 2 / 48.0)) {
 			changeState{value: 240}
 		}
 
@@ -256,7 +241,6 @@ if (ctrl && stateNo != 105 || stateNo = 20 || stateNo = 100 || stateNo = 1310 ||
 					changeState{value: $att}
 				}
 			} else if ($p2dx > 25 || random <= (225 * (aiLevelF ** 2 / 48.0))) && $grounded {
-
 				let att = cond($p2dy > -10 || enemyNear,stateType = S, 430, 230);
 				if $att = 430 && $p2dx < 45 + (floor($trvelx * .4) * 5) || $att != 430 {
 					changeState{value: $att}
@@ -268,7 +252,7 @@ if (ctrl && stateNo != 105 || stateNo = 20 || stateNo = 100 || stateNo = 1310 ||
 		#heavy attacks (210,240)
 		#we do not include 440 or 410 here because they are defined elsewhere in a more
 		#specialized way that focuses on what they are capable of doing in a match.
-		if $p2dx < 60 + (floor($trvelx * .4) * 5) && !$AI_JI && (!$nojug || $p2dy > -10) && (!map(gurt) || $p2dx > 35) &&random <= (425 * (aiLevelF ** 2 / 48.0))&&
+		if $p2dx < 60 + (floor($trvelx * .4) * 5) && !$AI_JI && (!$nojug || $p2dy > -10) && (!map(gurt) || $p2dx > 35) && random <= (425 * (aiLevelF ** 2 / 48.0)) &&
 			(enemyNear,stateNo != [1025, 1028] || enemyNear,moveType != H) {
 			if ($grounded || $p2dy = [-50 + (floor(enemyNear,vel y*.6)*-10), -25]) {
 				let att = cond($p2dy > -10 || enemyNear,stateType = S, 240, 210);
@@ -291,10 +275,9 @@ if (ctrl && stateNo != 105 || stateNo = 20 || stateNo = 100 || stateNo = 1310 ||
 
 		#-----------------------------------------------------------------------
 		#The term "poke" is used to refer to attacks that can usually attack opponents from a safe distance
-		#without high risk. the attacks below meet that criteria but can be changed if more attacks are added later.
+		#without high risk. The attacks below meet that criteria but can be changed if more attacks are added later.
 		#pokes
 		if $p2dx = [45, 60] && enemyNear,moveType != H && $grounded && random < (250 * (aiLevelF ** 2 / 48.0)) {
-
 			if $p2dx = [30, 60+(floor($trvelx*.4)*5)] && random%4 = 0 {
 				let att2 = 210;
 			} else if $p2dx = [30, 50+(floor($trvelx*.4)*5)] && random%4 = 1 {
@@ -320,9 +303,7 @@ if (ctrl && stateNo != 105 || stateNo = 20 || stateNo = 100 || stateNo = 1310 ||
 
 		#kung fu blocking - air
 		if $p2dx = [-15, 35+floor($trvelx*.4)*5+floor(enemyNear,const(size.attack.dist)*.5)] && $p2dy = [-20+(floor(enemyNear,vel y*.4)*-5), 30+(floor(vel y*.4)*5)] &&
-
 			random <= (600 * (aiLevelF ** 2 / 48.0)) && enemyNear,moveType = A {
-
 			changeState{value: 1340}
 		}
 
@@ -332,48 +313,44 @@ if (ctrl && stateNo != 105 || stateNo = 20 || stateNo = 100 || stateNo = 1310 ||
 		#to define it.
 		#let cu = $p2dx = [-65, 10];
 
-		#if $cu && vel x > 0 && (enemyNear,stateNo = 5120 || $grounded && !$nojug) && vel y > 0
-		#{
-		#ChangeState{value: 630}
+		#if $cu && vel x > 0 && (enemyNear,stateNo = 5120 || $grounded && !$nojug) && vel y > 0 {
+		#	ChangeState{value: 630}
 		#}
 
 		#------------|air normal attacks|---------------------------------------
 
 		#we do not want kfm to try to hit an attacking opponent using specials because this typically means kfm will lose to it.
 		#However, if it's a lower AI level it's ok to make mistakes, or if kfm is behind the opponent anyway.
-
-			if (enemynear,hitdefattr!=SCA,SA || facing != enemyNear,facing ||AIlevelF<6) && random <= (700 * (aiLevelF ** 2 / 48.0))
-			{
+		if (enemyNear,hitDefAttr != SCA,SA || facing != enemyNear,facing || aiLevelF < 6) && random <= (700 * (aiLevelF ** 2 / 48.0)) {
 
 			#These attacks will have variable y distance detection depending on if the opponent is standing or crouching, it is not perfect
 			#but the illusion of intelligence is all that matters. We do not want kfm to attack characters in a recovering (state 5040) state.
-			#heavy attacks are given priority as themy have bigger rewards, but light attacks are faster so both will be taken into account.
+			#heavy attacks are given priority as they have bigger rewards, but light attacks are faster so both will be taken into account.
 
-			if (frontedgebodydist <50||$p2dx =[-5,( 55 + (floor($trvelx*.4)*5)+(floor(vel x*.4)*20))]) &&($p2dy>30||$p2dy<0)&& $p2dy =[5,40+((enemynear,statetype=S||enemynear,stateno=[5115,5122])*40)+((enemynear,statetype=C)*25)]  &&
-			(Vel Y > 0 ||!$grounded&& !$nojug)
-			{
-			ChangeState{value:640}
+			if (frontEdgeBodyDist < 50 || $p2dx = [-5, (55+(floor($trvelx * .4)*5) + (floor(vel x * .4)*20))]) &&
+				($p2dy > 30 || $p2dy < 0) && $p2dy = [5,40 + ((enemyNear,stateType = S || enemyNear,stateNo = [5115,5122])*40) + ((enemyNear,stateType = C)*25)] &&
+				(vel y > 0 || !$grounded && !$nojug) {
+				changeState{value: 640}
 			}
 
-			if(frontedgebodydist <50||$p2dx =[-8,( 45 + (floor($trvelx*.4)*5)+(floor(vel x*.4)*5))]) &&($p2dy>30||$p2dy<0)&& $p2dy =[-20,45+((enemynear,statetype=S||enemynear,stateno=[5115,5122])*40)+((enemynear,statetype=C)*25)]  &&
- 			 (vel y >0 ||!$grounded&& !$nojug)
-			{
-			ChangeState{value:610}
+			if (frontEdgeBodyDist < 50 || $p2dx = [-8, (45+(floor($trvelx * .4)*5) + (floor(vel x * .4)*5))]) &&
+				($p2dy > 30 || $p2dy < 0) && $p2dy = [-20,45 + ((enemyNear,stateType = S || enemyNear,stateNo = [5115,5122])*40) + ((enemyNear,stateType = C)*25)] &&
+				(vel y > 0 || !$grounded && !$nojug) {
+				changeState{value: 610}
 			}
 
-			if(frontedgebodydist <50||$p2dx =[-15,( 40 + (floor($trvelx*.4)*5)+(floor(vel x*.4)*20))]) && $p2dy =[-20,35+((enemynear,statetype=S||enemynear,stateno=[5115,5122])*40)+((enemynear,statetype=C)*25)]  &&
-  			(vel y >0 || !$grounded&& !$nojug)
-			{
-			ChangeState{value:600}
+			if (frontEdgeBodyDist < 50 || $p2dx = [-15, (40+(floor($trvelx * .4)*5) + (floor(vel x * .4)*20))]) &&
+				$p2dy = [-20,35+((enemyNear,stateType = S || enemyNear,stateNo = [5115,5122])*40) + ((enemyNear,stateType = C)*25)] &&
+				(vel y > 0 || !$grounded && !$nojug) {
+				changeState{value: 600}
 			}
 
-			if (frontedgebodydist <50||$p2dx =[-15,( 30 + (floor($trvelx*.4)*5)+(floor(vel x*.4)*25))]) && $p2dy =[-80,35+((enemynear,statetype=S||enemynear,stateno=[5115,5122])*40)+((enemynear,statetype=C)*25)]  &&
- 			(vel y >0 || (!$grounded)&& (!$nojug)||$hitfall)
- 			{
- 			ChangeState{value:630}
- 			}
+			if (frontEdgeBodyDist < 50 || $p2dx =[-15, (30+(floor($trvelx * .4)*5) + (floor(vel x * .4)*25))]) &&
+				$p2dy = [-80,35+((enemyNear,stateType = S || enemyNear,stateNo = [5115,5122])*40) + ((enemyNear,stateType = C)*25)] &&
+				(vel y > 0 || (!$grounded) && (!$nojug) || $hitfall) {
+				changeState{value: 630}
 			}
-
+		}
 
 	#End of file: stateType = A
 	#===========================================================================
@@ -383,7 +360,6 @@ if (ctrl && stateNo != 105 || stateNo = 20 || stateNo = 100 || stateNo = 1310 ||
 #this section of AI is meant for attacks to be done after an attack defined above connects either as a hit
 #or blocked by the opponent.
 } else if moveContact && hitPauseTime = 0 && stateType != A && random < (700 * (aiLevelF ** 2 / 48.0)) {
-
 
 	#---------------------------------------------------------------------------
 	#These are freeform random combo fillers. They have very basic conditions and
@@ -512,6 +488,7 @@ if (stateNo = 1051 || stateNo = 1061 || stateNo = 1071) && (moveHit || moveConta
 #------------|walking|----------------------------------------------------------
 #These are the conditions that will make kfm walk forward.
 mapSet{map: "AIw"; value: 0}
+
 if ((enemyNear,moveType != A) || $p2dx > 25) || (enemyNear,stateType = L && $p2dx > 70) || $AI_JI > 0 {
 	mapSet{map: "AIw"; value: 1}
 }
@@ -533,6 +510,7 @@ if map(AIw) != 0 && aiLevel > 3 {
 
 #if the walk condition zeros out, kfm will stop walking.
 if map(AIw) = 0 && stateNo = 20 {
+	printToConsole{text: "changeState{value: 0}"}
 	changeState{value: 0; ctrl: 1}
 }
 #------------|running|----------------------------------------------------------
@@ -566,11 +544,9 @@ let p2l = enemyNear,anim = 5120 || enemyNear,stateNo = 5110 && enemyNear,time > 
 #Lastly, he will try to jump after hitting an enemy with an attack that did not knock down. This usually puts the opponent
 #in state 5040 or if they are stunned (state 5300). it is worth mentioning that at lower levels kfm will not be as precise
 #and will leave himself open forbeginners.
-
 if stateType != A && (((!map(gurt)) && (random < (375 * (aiLevelF ** 2 / 48.0)) || enemyNear,moveType = A && aiLevelF > 6) &&
 	($p2dx > 45 + ((enemyNear,moveType != A && $grounded) * 45) || frontEdgeBodyDist < 50 || $p2l || enemyNear,stateNo = 5040 && $p2dy > -40)) ||
 	enemyNear,hitDefAttr = SC,AT && random < (455 * (aiLevelF ** 2 / 48.0))) &&
-
 	(
 		enemyNear,hitDefAttr = SC,AT ||
 		($p2dx = [70, 90+(floor(vel x*.4)*5)] || frontEdgeDist < 30) && enemyNear,moveType != H ||
@@ -596,13 +572,13 @@ if $AIJ && (ctrl || stateNo = 20 || stateNo = 100) {
 }
 
 if stateNo = 40 {
-	sysvar(1) := 0;
-	#We override default sysvar setting to influence jumping forward or backward
+	sysVar(1) := 0;
+	#We override default sysVar setting to influence jumping forward or backward
 	if $p2dx >= 60 || (enemyNear,stateNo = 5120 || enemyNear,moveType = H) && $p2dx >= 20 || enemyNear,stateType = A && $p2dx >= 60 {
-		sysvar(1) := 1;
+		sysVar(1) := 1;
 	}
 	if $p2dx < 15 && enemyNear,moveType = A && backEdgeBodyDist > 30 && frontEdgeBodyDist > 60 {
-		sysvar(1) := -1;
+		sysVar(1) := -1;
 	}
 }
 
@@ -611,8 +587,6 @@ if stateNo = 40 {
 #we do not want him to back jump as often
 
 if stateType != A && (ctrl || stateNo = 20) && random <= (296 * (aiLevelF ** 2 / 48.0)) && backEdgeBodyDist > 40 &&
-
-
 	(enemyNear,moveType = A && $p2dx < 55 || $p2dx < 20 && enemyNear,anim = 5120 && enemyNear,backEdgeBodyDist > 60) {
 	changeState{value: 105; ctrl: 0}
 }
@@ -627,7 +601,7 @@ if alive && canRecover && random%5 = 0 && hitFall && stateNo = 5050 {
 		changeState{value: 5210}
 	}
 }
-#displayToClipboard{text: "%v %v %v %v %v"; params: $p2dx, sysvar(1), $jugpt, $CC, $AI_JI}
+#displayToClipboard{text: "%v %v %v %v %v"; params: $p2dx, sysVar(1), $jugpt, $CC, $AI_JI}
 
 #End of file: AI
 }
