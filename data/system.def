@@ -191,9 +191,6 @@ menu.itemname.menumission.timeattack = "TIME ATTACK"         ;Ikemen feature
 menu.itemname.menumission.survival = "SURVIVAL"
 menu.itemname.menumission.survivalcoop = "SURVIVAL CO-OP"
 menu.itemname.menumission.bossrush = "BOSS RUSH"             ;Ikemen feature
-menu.itemname.menumission.vs100kumite = "VS 100 KUMITE"      ;Ikemen feature
-menu.itemname.menumission.timechallenge = "TIME CHALLENGE"   ;Ikemen feature
-menu.itemname.menumission.scorechallenge = "SCORE CHALLENGE" ;Ikemen feature
 menu.itemname.menumission.bonusgames = "BONUS GAMES"         ;Ikemen feature
 menu.itemname.menumission.back = "BACK"                      ;Ikemen feature
 
@@ -469,15 +466,6 @@ teammenu.itemname.simul = Simul   ;Ikemen feature
 teammenu.itemname.tag = Tag       ;Ikemen feature
 teammenu.itemname.turns = Turns   ;Ikemen feature
 teammenu.itemname.ratio = Ratio   ;Ikemen feature
-
-record.offset = 159, 39      ;Ikemen feature
-record.font = 3,0,0          ;Ikemen feature
-record.font.scale = 1.0, 1.0 ;Ikemen feature
-; format: %m = minutes, %s = seconds, %x = milliseconds, %p = score, %c = char name, %n = player name, \n = newline
-record.scorechallenge.text = "- BEST RECORD -\n%c %p PTS: %n" ;Ikemen feature
-record.timechallenge.text = "- BEST RECORD -\n%c %m:%s.%x: %n" ;Ikemen feature
-
-;Sounds
 
 [Begin Action 110] ;Stage Background
 110,0, 0,0, 8
@@ -1297,24 +1285,6 @@ roundstowin = 5           ;Number of rounds to get win pose (lose pose otherwise
 
 
 ;-------------------------------------------------------------------
-[VS100 Kumite Results Screen] ;Ikemen feature
-enabled = 1
-fadein.time = 0
-fadeout.time = 64
-show.time = 300
-winstext.text = "Wins: %i\nLoses: %i"
-winstext.font = 3,0,0
-winstext.offset = 159,70
-winstext.displaytime = -1
-winstext.layerno = 2
-roundstowin = 51
-
-;-----------------------
-;VS100 Kumite results screen background
-[VS100KumiteResultsBGdef] ;Ikemen feature
-
-
-;-------------------------------------------------------------------
 [Time Attack Results Screen] ;Ikemen feature
 enabled = 1
 fadein.time = 0
@@ -1329,40 +1299,6 @@ winstext.layerno = 2
 ;-----------------------
 ;Time Attack results screen background
 [TimeAttackResultsBGdef] ;Ikemen feature
-
-
-;-------------------------------------------------------------------
-[Time Challenge Results Screen] ;Ikemen feature
-enabled = 1
-fadein.time = 0
-fadeout.time = 64
-show.time = 300
-winstext.text = "Clear Time: %m:%s.%x"
-winstext.font = 3,0,0
-winstext.offset = 159,70
-winstext.displaytime = -1
-winstext.layerno = 2
-
-;-----------------------
-;Time Challenge results screen background
-[TimeChallengeBGdef] ;Ikemen feature
-
-
-;-------------------------------------------------------------------
-[Score Challenge Results Screen] ;Ikemen feature
-enabled = 1
-fadein.time = 0
-fadeout.time = 64
-show.time = 300
-winstext.text = "Score: %i"
-winstext.font = 3,0,0
-winstext.offset = 159,70
-winstext.displaytime = -1
-winstext.layerno = 2
-
-;-----------------------
-;Score Challenge results screen background
-[ScoreChallengeResultsBGdef] ;Ikemen feature
 
 
 ;-------------------------------------------------------------------
