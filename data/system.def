@@ -560,18 +560,18 @@ match.font = 3,0,0
 p1.num = 4                  ;Ikemen feature
 p1.anim = 0                 ;Ikemen feature
 ;p1.spr = 9000, 1
-p1.offset =  30,168 ;20,31
+p1.offset = 130,168 ;20,31
 p1.facing = 1
 p1.scale = 1,1
-p1.spacing = 25,0           ;Ikemen feature
+p1.spacing = -25,0          ;Ikemen feature
 p1.padding = 1              ;Ikemen feature
 p2.num = 4                  ;Ikemen feature
 p2.anim = 0                 ;Ikemen feature
 ;p2.spr = 9000, 1
-p2.offset = 290,168 ;299,31
+p2.offset = 190,168 ;299,31
 p2.facing = -1
 p2.scale = 1,1
-p2.spacing = -25,0          ;Ikemen feature
+p2.spacing = 25,0           ;Ikemen feature
 p2.padding = 1              ;Ikemen feature
 
 ;Names

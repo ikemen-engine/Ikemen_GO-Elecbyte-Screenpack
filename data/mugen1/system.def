@@ -612,21 +612,21 @@ p1.num = 4                   ;Ikemen feature
 p1.anim = 0                  ;Ikemen feature
 p1.done.anim = 181           ;Ikemen feature
 ;p1.spr = 9000, 1
-p1.offset = 144,540 ;60,30
+p1.offset = 444,540 ;60,30
 p1.facing = 1
 p1.scale = 1,1
 p1.window = 60,30, 539,589
-p1.spacing = 75,0            ;Ikemen feature
+p1.spacing = -75,0           ;Ikemen feature
 p1.padding = 1               ;Ikemen feature
 p2.num = 4                   ;Ikemen feature
 p2.anim = 0                  ;Ikemen feature
 p2.done.anim = 181           ;Ikemen feature
 ;p2.spr = 9000, 1
-p2.offset = 1136,540 ;1220,30
+p2.offset = 836,540 ;1220,30
 p2.facing = -1
 p2.scale = 1,1
 p2.window = 741,30, 1220,589
-p2.spacing = -75,0           ;Ikemen feature
+p2.spacing = 75,0            ;Ikemen feature
 p2.padding = 1               ;Ikemen feature
 
 ;Names
