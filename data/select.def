@@ -31,21 +31,15 @@
  ;
  ;The optional parameters are:
  ;
- ; - music
+ ; - music<roundno>
  ;   Set the paramvalue to the music file path that should be used at the start
  ;   of round when facing this character. Music volume, loopstart and loopend
  ;   values can follow, separated by spaces. paramvalue overrides stage DEF
  ;   bgmusic assignment, so you can re-use the same stage with unique music for
  ;   multiple characters.
- ;   IKEMEN feature: You can use multiple music parameters for random selection.
- ;
- ; - musicalt
- ;   IKEMEN feature: Set the paramvalue to the music file path that should be
- ;   used after the first round (or during deciding or final round, depending
- ;   on stage DEF file settings) when facing this character. Music volume,
- ;   loopstart and loopend values can follow, separated by spaces. paramvalue
- ;   overrides stage DEF bgmusic.alt assignment. You can use multiple musicalt
- ;   parameters for random selection.
+ ;   IKEMEN feature: Setting optional <roundno> (typed as number) decides round
+ ;   on which the music will be played (defaults to 1 if omitted). You can use
+ ;   multiple music parameters for random selection.
  ;
  ; - musiclife
  ;   IKEMEN feature: Set the paramvalue to the music file path that should be
@@ -216,20 +210,13 @@ randomselect
  ;where paramname is the name of the parameter type, and paramvalue is the value
  ;to assign that parameter. The optional parameters are:
  ;
- ; - music
+ ; - music<roundno>
  ;   IKEMEN feature: Set the paramvalue to the music file path that should be
  ;   used at the start of round. Music volume, loopstart and loopend values can
  ;   follow, separated by spaces. Tracks will be played randomly from the
  ;   available pool if multiple parameters have been assigned or bgmusic is
- ;   present in the stage DEF file.
- ;
- ; - musicalt
- ;   IKEMEN feature: Set the paramvalue to the music file path that should be
- ;   used after the first round (or during deciding or final round, depending
- ;   on stage DEF file settings). Music volume, loopstart and loopend values can
- ;   follow, separated by spaces. Tracks will be played randomly from the
- ;   available pool if multiple parameters have been assigned or bgmusic.alt
- ;   is present in the stage DEF file.
+ ;   present in the stage DEF file. Setting optional <roundno> (typed as number)
+ ;   decides round on which the music will be played (defaults to 1 if omitted)
  ;
  ; - musiclife
  ;   IKEMEN feature: Set the paramvalue to the music file path that should be
