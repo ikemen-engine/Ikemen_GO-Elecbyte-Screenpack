@@ -10,16 +10,6 @@ sample = 0
 file = 500-0.wav
 
 [SoundDef]
-group = 600
-sample = 0
-file = 600-0.wav
-
-[SoundDef]
-group = 600
-sample = 1
-file = 600-1.wav
-
-[SoundDef]
 group = 900
 sample = 0
 file = 900-0.wav
