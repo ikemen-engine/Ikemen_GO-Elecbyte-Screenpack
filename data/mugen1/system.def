@@ -202,10 +202,9 @@ menu.itemname.menupractice.back = "BACK"                     ;Ikemen feature
 
 ; Submenu: Mission
 menu.itemname.menumission = "MISSION"                        ;Ikemen feature
-menu.itemname.menumission.timeattack = "TIME ATTACK"         ;Ikemen feature
 menu.itemname.menumission.survival = "SURVIVAL"
 menu.itemname.menumission.survivalcoop = "SURVIVAL CO-OP"
-menu.itemname.menumission.bossrush = "BOSS RUSH"             ;Ikemen feature
+menu.itemname.menumission.timeattack = "TIME ATTACK"         ;Ikemen feature
 menu.itemname.menumission.bonusgames = "BONUS GAMES"         ;Ikemen feature
 menu.itemname.menumission.back = "BACK"                      ;Ikemen feature
 
@@ -1593,24 +1592,6 @@ winstext.layerno = 2
 ;-----------------------
 ;Time Attack results screen background
 [TimeAttackResultsBGdef] ;Ikemen feature
-
-
-;-------------------------------------------------------------------
-; Ikemen feature
-[Boss Rush Results Screen]
-enabled = 1
-fadein.time = 0
-fadeout.time = 64
-show.time = 300
-winstext.text = "Congratulations!"
-winstext.font = 3,0,0
-winstext.offset = 640,240
-winstext.displaytime = -1
-winstext.layerno = 2
-
-;-----------------------
-;Boss Rush results screen background
-[BossRushResultsBGdef] ;Ikemen feature
 
 
 ;-------------------------------------------------------------------

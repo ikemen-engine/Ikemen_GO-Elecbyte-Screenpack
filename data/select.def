@@ -71,10 +71,6 @@
  ;   IKEMEN feature: Set the paramvalue to 0 to avoid displaying victory screen
  ;   when this character wins a match.
  ;
- ; - rankdisplay
- ;   IKEMEN feature: Set the paramvalue to 0 to avoid displaying rank data when
- ;   playing as or facing this character.
- ;
  ; - rounds
  ;   IKEMEN feature: Set the paramvalue to the number of rounds in order to
  ;   overwrite rounds number chosen in the settings.
@@ -94,11 +90,6 @@
  ;   IKEMEN feature: Setting paramvalue to -1 prevents stage from being randomly
  ;   selected for a match, while still allowing you to choose it from the stage
  ;   select list.
- ;
- ; - boss
- ;   IKEMEN feature: Set the paramvalue to 1 to include this character in "Boss
- ;   Rush" mode. At least 1 character needs this parameter for the mode to show
- ;   up in modes selection menu.
  ;
  ; - bonus
  ;   IKEMEN feature: Set the paramvalue to 1 to include this character in "Bonus
@@ -286,11 +277,6 @@ timeattack.maxmatches = 6,1,1,0,0,0,0,0,0,0
  ;By omitting -1 survival mode will end after particular amount of matches set
  ;below (in such case you can actually "complete" the mode).
 survival.maxmatches = -1,0,0,0,0,0,0,0,0,0
-
- ;IKEMEN feature: Maximum number of normal and ratio matches to fight before
- ;game ends in Boss Rush mode. Can be left empty, if player is meant to fight
- ;against all boss characters (in such case order parameter is still respected)
-bossrush.maxmatches = 
 
  ;IKEMEN feature: A 'Ratio' mode allows each team to select up to 3 characters
  ;and distribute 4 "ratio levels" amongst them, affecting their life and damage
