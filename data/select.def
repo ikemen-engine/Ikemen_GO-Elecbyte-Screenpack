@@ -41,6 +41,13 @@
  ;   on which the music will be played (defaults to 1 if omitted). You can use
  ;   multiple music parameters for random selection.
  ;
+ ; - musicfinal
+ ;   IKEMEN feature: Set the paramvalue to the music file that should be used at
+ ;   the start of final round. Music volume, loopstart and loopend values can
+ ;   follow, separated by spaces. paramvalue overrides stage DEF bgmusic.final
+ ;   assignment. You can use multiple musicfinal parameters for random
+ ;   selection.
+ ;
  ; - musiclife
  ;   IKEMEN feature: Set the paramvalue to the music file path that should be
  ;   used when player's controlled character has (by default) less then 30% life

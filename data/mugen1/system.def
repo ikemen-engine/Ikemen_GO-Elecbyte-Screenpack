@@ -304,9 +304,8 @@ Welcome to SUEHIRO's I.K.E.M.E.N GO engine!
 * This is a public development release, for testing purposes.
 * This build may contain bugs and incomplete features.
 * Your help and cooperation are appreciated!
+* Ikemen GO engine repositories: https://github.com/ikemen-engine
 * Original repo source code: https://osdn.net/users/supersuehiro/
-* Bug reports: https://github.com/Windblade-GR01/Ikemen-GO/issues
-* Features wiki: https://github.com/K4thos/Ikemen_GO/wiki
 
 ;-------------------------------------------------------------------
 ;Character select definition
@@ -2074,8 +2073,8 @@ starttime = 30
 endtime = 60
 switchtime = 30
 skiptime = 30
-key.skip = "a"
-key.cancel = "b&c&x&y&z&s"
+skip.key = "a"
+cancel.key = "b&c&x&y&z&s"
 p1.bg.anim = 700
 p1.bg.offset = 0, 32
 p1.bg.facing = 1
