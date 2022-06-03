@@ -1,5 +1,5 @@
-#ZSS language: https://github.com/Windblade-GR01/Ikemen-GO/wiki/ZSS
-#ZSS syntax highlighter for Notepad++: https://github.com/K4thos/npp_zss
+#ZSS language: https://github.com/ikemen-engine/Ikemen-GO/wiki/ZSS
+#ZSS syntax highlighter for Notepad++: https://github.com/ikemen-engine/zss_npp
 #-------------------------------------------------------------------------------
 #Commenting in ZSS
 #You may notice that the ";" character is now replaced with the "#" character.

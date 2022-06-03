@@ -146,7 +146,7 @@
  ;   use arcade path coded entirely in lua, which allows implementing
  ;   functionality normally not possible in mugen (rival matches, branching
  ;   paths, secret bosses etc.)
- ;   https://github.com/K4thos/Ikemen_GO/wiki/Miscellaneous-Info#arcs
+ ;   https://github.com/ikemen-engine/Ikemen-GO/wiki/Miscellaneous-Info#arcs
  ;
  ; - ratiopath
  ;   IKEMEN feature: Like 'arcadepath', but used only if the p2 team mode has
@@ -177,7 +177,7 @@
  ;   'unlock' has to be the very last parameter used in line (everything that
  ;   follows is treated as a pure Lua code). Default: true (if character is not
  ;   hidden, otherwise: false)
- ;   https://github.com/K4thos/Ikemen_GO/wiki/Miscellaneous-Info#lua_unlock
+ ;   https://github.com/ikemen-engine/Ikemen-GO/wiki/Miscellaneous-Info#lua_unlock
  ;
  ;You can also add a randomize icon to the select screen. To do this, put the
  ;word "randomselect" on a line of its own, with no extra parameters.
@@ -247,7 +247,7 @@ randomselect
  ;   will be hidden. Due to parameters syntax, 'unlock' has to be the very last
  ;   parameter used in line (everything that follows is treated as a pure Lua
  ;   code). Default: true.
- ;   https://github.com/K4thos/Ikemen_GO/wiki/Miscellaneous-Info#lua_unlock
+ ;   https://github.com/ikemen-engine/Ikemen-GO/wiki/Miscellaneous-Info#lua_unlock
  ;
  ;Examples:
  ; stages/mybg.def, music=sound/song.mp3, music=sound/song2.mp3
@@ -370,13 +370,13 @@ survival.AIramp.end   = 16, 4
  ; - path
  ;   IKEMEN feature: Path to file with lua extension (relative to game
  ;   directory), containing story mode arc coded in Lua language.
- ;   https://github.com/K4thos/Ikemen_GO/wiki/Miscellaneous-Info#arcs
+ ;   https://github.com/ikemen-engine/Ikemen-GO/wiki/Miscellaneous-Info#arcs
  ;
  ; - unlock
  ;   IKEMEN feature: Pure Lua code, executed exactly as is, each time upon
  ;   loading main menu. If it evaluates to boolean 'true' the story arc will be
  ;   selectable from story mode submenu, or hidden on 'false'. Default: true.
- ;   https://github.com/K4thos/Ikemen_GO/wiki/Miscellaneous-Info#lua_unlock
+ ;   https://github.com/ikemen-engine/Ikemen-GO/wiki/Miscellaneous-Info#lua_unlock
  ;
  ;Examples:
  ; name = arc1
