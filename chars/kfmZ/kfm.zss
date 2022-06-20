@@ -218,8 +218,6 @@ if animElem = 3 {
                                       #Y-offset for the spark rel. to p1
 		hitsound: 5, 0;               #Sound to play on hit
 		guardsound: 6, 0;             #Sound to play on guard
-		dizzypoints: -ceil(enemyNear,dizzyPointsMax * .04); #4% of opponents max dizzy points
-		guardpoints: -ceil(enemyNear,guardPointsMax * .02); #2% of opponents guard points
 		ground.type: High;            #Type: High, Low, Trip (def: Normal)
 		ground.slidetime: 5;          #Time that the opponent slides back
 		ground.hittime: 11;           #Time opponent is in hit state
@@ -289,8 +287,6 @@ if animElem = 3 {
 		ground.type: High;
 		ground.slidetime: 12;
 		ground.hittime: 16;
-		dizzypoints: -ceil(enemyNear,dizzyPointsMax * .14); #14% of opponents max dizzy points
-        guardpoints: -ceil(enemyNear,guardPointsMax * .11); #11% of opponents guard points
 		ground.velocity: -5.5;
 		air.velocity: -2.5, -4;
 		forcenofall: 1;
@@ -335,8 +331,6 @@ if animElem = 3 {
 		sparkxy: -10, -37;
 		hitsound: 5, 1;
 		guardsound: 6, 0;
-		dizzypoints: -ceil(enemyNear,dizzyPointsMax * .04); #4% of opponents max dizzy points
-		guardpoints: -ceil(enemyNear,guardPointsMax * .02); #2% of opponents guard points
 		ground.type: Low;
 		ground.slidetime: 10;
 		ground.hittime: 14;
@@ -373,8 +367,6 @@ if animElem = 3 {
 		sparkxy: -10, -60;
 		hitsound: 5, 2;
 		guardsound: 6, 0;
-		dizzypoints: -ceil(enemyNear,dizzyPointsMax * .14); #14% of opponents max dizzy points
-		guardpoints: -ceil(enemyNear,guardPointsMax * .11); #11% of opponents guard points
 		ground.type: Low;
 		ground.slidetime: 12;
 		ground.hittime: 17;
@@ -429,8 +421,6 @@ if animElem = 2 {
 		sparkxy: -10, -42;
 		hitsound: 5, 0;
 		guardsound: 6, 0;
-		dizzypoints: -ceil(enemyNear,dizzyPointsMax * .04); #4% of opponents max dizzy points
-		guardpoints: -ceil(enemyNear,guardPointsMax * .02); #2% of opponents guard points
 		ground.type: Low;
 		ground.slidetime: 4;
 		ground.hittime: 9;
@@ -481,8 +471,6 @@ if animElem = 3 {
 		sparkxy: -10, -55;
 		hitsound: 5, 2;
 		guardsound: 6, 0;
-		dizzypoints: -ceil(enemyNear,dizzyPointsMax * .05); #5% of opponents max dizzy points
-		guardpoints: -ceil(enemyNear,guardPointsMax * .03); #3% of opponents guard points
 		ground.type: Low;
 		ground.slidetime: 12;
 		ground.hittime: 17;
@@ -503,8 +491,6 @@ if animElem = 4 {
 		sparkxy: -10, -83;
 		hitsound: 5, 2;
 		guardsound: 6, 0;
-		dizzypoints: -ceil(enemyNear,dizzyPointsMax * .05); #5% of opponents max dizzy points
-		guardpoints: -ceil(enemyNear,guardPointsMax * .03); #3% of opponents guard points
 		ground.type: High;
 		ground.slidetime: 12;
 		ground.hittime: 17;
@@ -541,8 +527,6 @@ if animElem = 3 {
 		sparkxy: -10, -8;
 		hitsound: 5, 1;
 		guardsound: 6, 0;
-		dizzypoints: -ceil(enemyNear,dizzyPointsMax * .04); #4% of opponents max dizzy points
-		guardpoints: -ceil(enemyNear,guardPointsMax * .02); #2% of opponents guard points
 		ground.type: Low;
 		ground.slidetime: 6;
 		ground.hittime: 10;
@@ -586,8 +570,6 @@ if animElem = 4 {
 		hitsound: 5, 2;
 		guardsound: 6, 0;
 		ground.type: Trip;
-		dizzypoints: -ceil(enemyNear,dizzyPointsMax * .14); #14% of opponents max dizzy points
-		guardpoints: -ceil(enemyNear,guardPointsMax * .11); #11% of opponents guard points
 		ground.slidetime: 10;
 		ground.hittime: 17;
 		ground.velocity: -1.5, -2;
@@ -624,8 +606,6 @@ if animElem = 2 {
 		sparkxy: -10, -58;
 		hitsound: 5, 0;
 		guardsound: 6, 0;
-		dizzypoints: -ceil(enemyNear,dizzyPointsMax * .04); #4% of opponents max dizzy points
-		guardpoints: -ceil(enemyNear,guardPointsMax * .02); #2% of opponents guard points
 		ground.type: High;
 		ground.slidetime: 5;
 		ground.hittime: 8;
@@ -667,8 +647,6 @@ if animElem = 3 {
 		sparkxy: -10, -55;
 		hitsound: 5, 3;
 		guardsound: 6, 0;
-		dizzypoints: -ceil(enemyNear,dizzyPointsMax * .14); #14% of opponents max dizzy points
-		guardpoints: -ceil(enemyNear,guardPointsMax * .11); #11% of opponents guard points
 		animtype: Med;
 		ground.type: High;
 		ground.slidetime: 12;
@@ -703,8 +681,6 @@ if animElem = 2 {
 		sparkxy: -5, -35;
 		hitsound: 5, 0;
 		guardsound: 6, 0;
-		dizzypoints: -ceil(enemyNear,dizzyPointsMax * .04); #4% of opponents max dizzy points
-		guardpoints: -ceil(enemyNear,guardPointsMax * .02); #2% of opponents guard points
 		ground.type: High;
 		ground.slidetime: 6;
 		ground.hittime: 10;
@@ -739,8 +715,6 @@ if animElem = 2 {
 		sparkxy: -10, -40;
 		hitsound: 5, 3;
 		guardsound: 6, 0;
-		dizzypoints: -ceil(enemyNear,dizzyPointsMax * .14); #14% of opponents max dizzy points
-		guardpoints: -ceil(enemyNear,guardPointsMax * .11); #11% of opponents guard points
 		animtype: Med;
 		ground.type: High;
 		ground.slidetime: 12;
@@ -941,8 +915,6 @@ if animElem = 5 {
 			sparkxy: -10, -60;
 			hitsound: 5, 4;
 			guardsound: 6, 0;
-			dizzypoints: -ceil(enemyNear,dizzyPointsMax * .06); #6% of opponents max dizzy points
-			guardpoints: -ceil(enemyNear,guardPointsMax * .0225); #2.25% of opponents guard points
 			ground.type: Low;
 			ground.slidetime: 12;
 			ground.hittime: 17;
@@ -961,8 +933,6 @@ if animElem = 5 {
 			sparkxy: -10, -60;
 			hitsound: 5, 4;
 			guardsound: 6, 0;
-			dizzypoints: -ceil(enemyNear,dizzyPointsMax * .04); #4% of opponents max dizzy points
-			guardpoints: -ceil(enemyNear,guardPointsMax * .005); #.5% of opponents guard points
 			ground.type: Low;
 			ground.slidetime: 12;
 			ground.hittime: 17;
@@ -1013,8 +983,6 @@ if animElem = 5 {
 			sparkxy: -10, -60;
 			hitsound: 5, 4;
 			guardsound: 6, 0;
-			dizzypoints: -ceil(enemyNear,dizzyPointsMax * .06); #6% of opponents max dizzy points
-			guardpoints: -ceil(enemyNear,guardPointsMax * .0225); #2.25% of opponents guard points
 			ground.type: Low;
 			ground.slidetime: 12;
 			ground.hittime: 17;
@@ -1033,8 +1001,6 @@ if animElem = 5 {
 			sparkxy: -10, -60;
 			hitsound: 5, 4;
 			guardsound: 6, 0;
-			dizzypoints: -ceil(enemyNear,dizzyPointsMax * .04); #4% of opponents max dizzy points
-			guardpoints: -ceil(enemyNear,guardPointsMax * .005); #.5% of opponents guard points
 			ground.type: Low;
 			ground.slidetime: 12;
 			ground.hittime: 17;
@@ -1111,8 +1077,6 @@ if animElem = 4 {
 		ground.type: Low;
 		ground.slidetime: 20;
 		ground.hittime: 22;
-		dizzypoints: -ceil(enemyNear,dizzyPointsMax * .07); #7% of opponents max dizzy points
-		guardpoints: -ceil(enemyNear,guardPointsMax * .03); #3% of opponents guard points
 		ground.velocity: -8, -7;
 		guard.velocity: -7;
 		air.velocity: -8, -7;
@@ -1164,8 +1128,6 @@ if animElem = 4 {
 		sparkxy: -10, -70;
 		hitsound: 5, 3;
 		guardsound: 6, 0;
-		dizzypoints: -ceil(enemyNear,dizzyPointsMax * .04); #4% of opponents max dizzy points
-		guardpoints: -ceil(enemyNear,guardPointsMax * .008); #.8% of opponents guard points
 		ground.type: Low;
 		ground.slidetime: 20;
 		ground.hittime: 22;
@@ -1270,8 +1232,6 @@ if animElem = 5 {
 		hitsound: 5, 2;
 		guardsound: 6, 0;
 		ground.type: High;
-		dizzypoints: -ceil(enemyNear,dizzyPointsMax * .04); #4% of opponents max dizzy points
-		guardpoints: -ceil(enemyNear,guardPointsMax * .008); #.8% of opponents guard points
 		ground.slidetime: 15;
 		ground.hittime: 18;
 		ground.velocity: -6;
@@ -1333,8 +1293,6 @@ if animElem = 4 {
 		sparkxy: -10, -70;
 		hitsound: 5, 3;
 		guardsound: 6, 0;
-		dizzypoints: -ceil(enemyNear,dizzyPointsMax * .04); #4% of opponents max dizzy points
-		guardpoints: -ceil(enemyNear,guardPointsMax * .008); #.8% of opponents guard points
 		ground.type: Low;
 		ground.slidetime: 20;
 		ground.hittime: 22;
@@ -1421,8 +1379,6 @@ if animElem = 4 {
 		sparkxy: -10, -70;
 		hitsound: 5, 2;
 		guardsound: 6, 0;
-		dizzypoints: -ceil(enemyNear,dizzyPointsMax * .04); #4% of opponents max dizzy points
-		guardpoints: -ceil(enemyNear,guardPointsMax * .025); #2.5% of opponents guard points
 		ground.type: Low;
 		ground.slidetime: 18;
 		ground.hittime: 20;
@@ -1456,8 +1412,6 @@ if time = 0 {
 		guardflag: MA;
 		pausetime: 12, 12;
 		sparkxy: -10, -70;
-		dizzypoints: -ceil(enemyNear,dizzyPointsMax * .04); #4% of opponents max dizzy points
-		guardpoints: -ceil(enemyNear,guardPointsMax * .025); #2.5% of opponents guard points
 		hitsound: 5, 3;
 		guardsound: 6, 0;
 		ground.type: Low;
@@ -1513,8 +1467,6 @@ if time = 0 {
 		pausetime: 12, 12;
 		sparkxy: 0, -90;
 		hitsound: 5, 2;
-		dizzypoints: -ceil(enemyNear,dizzyPointsMax * .04); #4% of opponents max dizzy points
-		guardpoints: -ceil(enemyNear,guardPointsMax * .025); #2.5% of opponents guard points
 		guardsound: 6, 0;
 		ground.type: High;
 		ground.slidetime: 15;
@@ -1578,8 +1530,6 @@ if time = 0 {
 		hitsound: 5, 2;
 		guardsound: 6, 0;
 		ground.type: Low;
-		dizzypoints: -ceil(enemyNear,dizzyPointsMax * .04); #4% of opponents max dizzy points
-		guardpoints: -ceil(enemyNear,guardPointsMax * .0075); #.75% of opponents guard points
 		ground.slidetime: 15;
 		ground.hittime: 20;
 		ground.velocity: -3;
@@ -1603,8 +1553,6 @@ if animElem = 7 {
 		hitsound: 5, 2;
 		guardsound: 6, 0;
 		ground.type: Low;
-		dizzypoints: -ceil(enemyNear,dizzyPointsMax * .04); #4% of opponents max dizzy points
-		guardpoints: -ceil(enemyNear,guardPointsMax * .0075); #.75% of opponents guard points
 		ground.slidetime: 15;
 		ground.hittime: 20;
 		ground.velocity: -1, -9.5;
@@ -1647,8 +1595,6 @@ if time = 0 {
 		sparkxy: 0, -48;
 		hitsound: 5, 2;
 		guardsound: 6, 0;
-		dizzypoints: -ceil(enemyNear,dizzyPointsMax * .04); #4% of opponents max dizzy points
-		guardpoints: -ceil(enemyNear,guardPointsMax * .0075); #.75% of opponents guard points
 		ground.type: Low;
 		ground.slidetime: 15;
 		ground.hittime: 20;
@@ -1671,8 +1617,6 @@ if animElem = 7 {
 		pausetime: 12, 12;
 		sparkxy: 0, -110;
 		hitsound: 5, 2;
-		dizzypoints: -ceil(enemyNear,dizzyPointsMax * .04); #4% of opponents max dizzy points
-		guardpoints: -ceil(enemyNear,guardPointsMax * .0075); #.75% of opponents guard points
 		guardsound: 6, 0;
 		ground.type: Low;
 		ground.slidetime: 15;
@@ -1737,8 +1681,6 @@ if time = 0 || animElem = 4 {
 		sparkxy: 0, ifElse(time = 0, -48, -55);
 		hitsound: 5, 2;
 		guardsound: 6, 0;
-		dizzypoints: -ceil(enemyNear,dizzyPointsMax * .025); #2.5% of opponents max dizzy points
-		guardpoints: -ceil(enemyNear,guardPointsMax * .02); #2% of opponents guard points
 		ground.type: Low;
 		ground.slidetime: 18;
 		ground.hittime: 23;
@@ -1762,8 +1704,6 @@ if animElem = 7 {
 		pausetime: 12, 12;
 		sparkxy: 0, -110;
 		hitsound: 5, 2;
-		dizzypoints: -ceil(enemyNear,dizzyPointsMax * .025); #2.5% of opponents max dizzy points
-		guardpoints: -ceil(enemyNear,guardPointsMax * .02); #2% of opponents guard points
 		guardsound: 6, 0;
 		ground.type: Low;
 		ground.slidetime: 18;
@@ -1822,8 +1762,6 @@ if time = 0 {
 		pausetime: 12, 12;
 		sparkxy: 0, -65;
 		hitsound: 5, 3;
-		dizzypoints: -ceil(enemyNear,dizzyPointsMax * .085); #8.5% of opponents max dizzy points
-		guardpoints: -ceil(enemyNear,guardPointsMax * .06); #6% of opponents guard points
 		guardsound: 6, 0;
 		ground.type: Low;
 		ground.slidetime: 16;
@@ -1878,8 +1816,6 @@ if time = 0 {
 		sparkxy: 0, -65;
 		hitsound: 5, 3;
 		guardsound: 6, 0;
-		dizzypoints: -ceil(enemyNear,dizzyPointsMax * .09); #9% of opponents max dizzy points
-		guardpoints: -ceil(enemyNear,guardPointsMax * .07); #7% of opponents guard points
 		ground.type: Low;
 		ground.slidetime: 18;
 		ground.hittime: 22;
@@ -1954,8 +1890,6 @@ if time = 0 {
 		hitsound: 5, 4;
 		guardsound: 6, 0;
 		ground.type: Low;
-		dizzypoints: -ceil(enemyNear,dizzyPointsMax * .14); #14% of opponents max dizzy points
-		guardpoints: -ceil(enemyNear,guardPointsMax * .11); #11% of opponents guard points
 		ground.slidetime: 20;
 		ground.hittime: 32;
 		ground.velocity: -15;
@@ -2221,8 +2155,6 @@ if time = 0 {
 		pausetime: 12, 12;
 		sparkxy: 0, -65;
 		hitsound: 5, 3;
-		dizzypoints: -ceil(enemyNear,dizzyPointsMax * .08); #8% of opponents max dizzy points
-		guardpoints: -ceil(enemyNear,guardPointsMax * .06); #6% of opponents guard points
 		guardsound: 6, 0;
 		ground.type: Low;
 		ground.slidetime: 12;
@@ -2271,8 +2203,6 @@ if time = 0 {
 		sparkxy: 0, -65;
 		hitsound: 5, 3;
 		guardsound: 6, 0;
-		dizzypoints: -ceil(enemyNear,dizzyPointsMax * .09); #9% of opponents max dizzy points
-		guardpoints: -ceil(enemyNear,guardPointsMax * .07); #7% of opponents guard points
 		ground.type: Low;
 		ground.slidetime: 12;
 		ground.hittime: 17;
@@ -2341,8 +2271,6 @@ if animElemTime(4) = -2 {
 		sparkxy: -15, -45;
 		hitsound: 5, 2;
 		guardsound: 6, 0;
-		dizzypoints: -ceil(enemyNear,dizzyPointsMax * .05); #5% of opponents max dizzy points
-		guardpoints: -ceil(enemyNear,guardPointsMax * .04); #4% of opponents guard points
 		ground.type: Low;
 		ground.slidetime: 22;
 		ground.hittime: 24;
@@ -2365,8 +2293,6 @@ if animElem = 4 {
 		pausetime: 12, 12;
 		sparkxy: 0, -65;
 		hitsound: 5, 3;
-		dizzypoints: -ceil(enemyNear,dizzyPointsMax * .05); #5% of opponents max dizzy points
-		guardpoints: -ceil(enemyNear,guardPointsMax * .04); #4% of opponents guard points
 		guardsound: 6, 0;
 		ground.type: Low;
 		ground.slidetime: 22;
@@ -2459,8 +2385,6 @@ if animElem = 5 || animElem = 13 {
 		pausetime: 15, 15;
 		sparkxy: -10, -60;
 		hitsound: 5, 4;
-		dizzypoints: -1; #we dont want this to stun
-		guardpoints: -ceil(enemyNear,guardPointsMax * .05); #5% of opponents guard points
 		guardsound: 6, 0;
 		ground.type: Low;
 		ground.slidetime: 30;
@@ -2484,8 +2408,6 @@ if animElem = 21 {
 		pausetime: 15, 15;
 		sparkxy: -10, -60;
 		hitsound: 5, 4;
-		dizzypoints: -1; #we dont want this to stun
-		guardpoints: -ceil(enemyNear,guardPointsMax * .05); #5% of opponents guard points
 		guardsound: 6, 0;
 		ground.type: Low;
 		ground.slidetime: 30;
@@ -2559,8 +2481,6 @@ if time = 0 {
 		guardsound: 6, 0;
 		ground.type: Low;
 		ground.slidetime: 26;
-		dizzypoints: -1; #we dont want this to stun
-		guardpoints: -ceil(enemyNear,guardPointsMax * .15); #15% of opponents guard points
 		ground.hittime: 28;
 		ground.velocity: -1.3, -25;
 		guard.velocity: -11;
