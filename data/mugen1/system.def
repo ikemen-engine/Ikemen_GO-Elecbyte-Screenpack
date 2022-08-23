@@ -315,7 +315,7 @@ fadeout.time = 10
 rows = 4
 columns = 3
 wrapping = 0              ;1 to let cursor wrap around
-pos = 480,128             ;Position to draw to
+pos = 479,128             ;Position to draw to
 showemptyboxes = 1        ;1 to show empty boxes
 moveoveremptyboxes = 1    ;1 to allow cursor to move over empty boxes
 cell.size = 100,100       ;x,y size of each cell (in pixels)
@@ -342,6 +342,22 @@ p2.cursor.blink = 0       ;1 to blink p2's cursor if overlapping p1's
 p2.cursor.move.snd = 100,0
 p2.cursor.done.snd = 100,1
 p2.random.move.snd = 100,0
+p3.cursor.startcell = 3,0
+p3.cursor.active.anim = 172
+p3.cursor.active.scale = 1,1
+p3.cursor.done.spr = 173,0
+p3.cursor.done.scale = 1,1
+p3.cursor.move.snd = 100,0
+p3.cursor.done.snd = 100,1
+p3.random.move.snd = 100,0
+p4.cursor.startcell = 3,2
+p4.cursor.active.anim = 174
+p4.cursor.active.scale = 1,1
+p4.cursor.done.spr = 175,0
+p4.cursor.done.scale = 1,1
+p4.cursor.move.snd = 100,0
+p4.cursor.done.snd = 100,1
+p4.random.move.snd = 100,0
 random.move.snd.cancel = 0;1 to have random move sound cancel itself when played repeatedly
 stage.move.snd = 100,0
 stage.done.snd = 100,1
@@ -354,15 +370,15 @@ title.font = 4,0,0        ;Font of title (-1 for none)
 
 ;Big portraits
 p1.face.spr = 9000,1
-p1.face.offset = 0,0      ;Position to put big portrait
+p1.face.offset = 0,46      ;Position to put big portrait
 p1.face.scale = 1,1
 p1.face.facing = 1
-p1.face.window = 0,0, 739,959
+p1.face.window = 0,46, 476,561
 p2.face.spr = 9000,1
-p2.face.offset = 1279,0
+p2.face.offset = 1279,46
 p2.face.scale = 1,1
 p2.face.facing = -1
-p2.face.window = 540,0, 1279,959
+p2.face.window = 1280,46, 802,561
 
 ;Name
 p1.name.offset = 50,620   ;Position to put name
@@ -381,17 +397,17 @@ stage.done.font = 3,0
 ;Stage portraits
 ;stage.portrait.anim =                      ;Ikemen feature
 stage.portrait.spr = 9000,1                ;Ikemen feature
-stage.portrait.offset = -120, -142         ;Ikemen feature
+stage.portrait.offset = -121, -142         ;Ikemen feature
 stage.portrait.scale = 0.25, 0.25          ;Ikemen feature
 stage.portrait.bg.anim = 110               ;Ikemen feature
 ;stage.portrait.bg.spr =                    ;Ikemen feature
-stage.portrait.bg.offset = -162, -145      ;Ikemen feature
+stage.portrait.bg.offset = -163, -145      ;Ikemen feature
 stage.portrait.bg.scale = 1.0, 1.0         ;Ikemen feature
 ;stage.portrait.random.anim =               ;Ikemen feature
 stage.portrait.random.spr = 111,0          ;Ikemen feature
-stage.portrait.random.offset = -120, -142  ;Ikemen feature
+stage.portrait.random.offset = -121, -142  ;Ikemen feature
 stage.portrait.random.scale = 1.0, 1.0     ;Ikemen feature
-stage.portrait.window = 521, 565, 761, 665 ;Ikemen feature
+stage.portrait.window = 520, 565, 760, 665 ;Ikemen feature
 
 ;Team menu
 teammenu.move.wrapping = 1
@@ -447,7 +463,7 @@ p1.teammenu.ratio7.icon.facing = 1         ;Ikemen feature
 p1.teammenu.ratio7.icon.scale = 1.0, 1.0   ;Ikemen feature
 
 ;p2 team
-p2.teammenu.pos = 1200, 130
+p2.teammenu.pos = 1197, 130
 ;p2.teammenu.bg.spr =
 p2.teammenu.selftitle.font = 3,1,-1
 p2.teammenu.selftitle.text = "TEAM MODE"
@@ -463,38 +479,38 @@ p2.teammenu.item.active.font = 3,1,-1
 p2.teammenu.item.active2.font = 3,1,-1, 224,224,240 ;Second font color for blinking
 p2.teammenu.item.cursor.offset = 30, 0
 p2.teammenu.item.cursor.anim = 190
-p2.teammenu.value.icon.offset = -210,1
+p2.teammenu.value.icon.offset = -211,1
 p2.teammenu.value.icon.spr = 191,0
-p2.teammenu.value.empty.icon.offset = -210,1
+p2.teammenu.value.empty.icon.offset = -211,1
 p2.teammenu.value.empty.icon.spr = 192,0
 p2.teammenu.value.spacing = -30,0
 
 p2.teammenu.ratio1.icon.spr = 301, 0       ;Ikemen feature
-p2.teammenu.ratio1.icon.offset = -195, -35 ;Ikemen feature
+p2.teammenu.ratio1.icon.offset = -196, -35 ;Ikemen feature
 p2.teammenu.ratio1.icon.facing = 1         ;Ikemen feature
 p2.teammenu.ratio1.icon.scale = 1.0, 1.0   ;Ikemen feature
 p2.teammenu.ratio2.icon.spr = 301, 1       ;Ikemen feature
-p2.teammenu.ratio2.icon.offset = -195, -35 ;Ikemen feature
+p2.teammenu.ratio2.icon.offset = -196, -35 ;Ikemen feature
 p2.teammenu.ratio2.icon.facing = 1         ;Ikemen feature
 p2.teammenu.ratio2.icon.scale = 1.0, 1.0   ;Ikemen feature
 p2.teammenu.ratio3.icon.spr = 301, 2       ;Ikemen feature
-p2.teammenu.ratio3.icon.offset = -195, -35 ;Ikemen feature
+p2.teammenu.ratio3.icon.offset = -196, -35 ;Ikemen feature
 p2.teammenu.ratio3.icon.facing = 1         ;Ikemen feature
 p2.teammenu.ratio3.icon.scale = 1.0, 1.0   ;Ikemen feature
 p2.teammenu.ratio4.icon.spr = 301, 3       ;Ikemen feature
-p2.teammenu.ratio4.icon.offset = -195, -35 ;Ikemen feature
+p2.teammenu.ratio4.icon.offset = -196, -35 ;Ikemen feature
 p2.teammenu.ratio4.icon.facing = 1         ;Ikemen feature
 p2.teammenu.ratio4.icon.scale = 1.0, 1.0   ;Ikemen feature
 p2.teammenu.ratio5.icon.spr = 301, 4       ;Ikemen feature
-p2.teammenu.ratio5.icon.offset = -195, -35 ;Ikemen feature
+p2.teammenu.ratio5.icon.offset = -196, -35 ;Ikemen feature
 p2.teammenu.ratio5.icon.facing = 1         ;Ikemen feature
 p2.teammenu.ratio5.icon.scale = 1.0, 1.0   ;Ikemen feature
 p2.teammenu.ratio6.icon.spr = 301, 5       ;Ikemen feature
-p2.teammenu.ratio6.icon.offset = -195, -35 ;Ikemen feature
+p2.teammenu.ratio6.icon.offset = -196, -35 ;Ikemen feature
 p2.teammenu.ratio6.icon.facing = 1         ;Ikemen feature
 p2.teammenu.ratio6.icon.scale = 1.0, 1.0   ;Ikemen feature
 p2.teammenu.ratio7.icon.spr = 301, 6       ;Ikemen feature
-p2.teammenu.ratio7.icon.offset = -195, -35 ;Ikemen feature
+p2.teammenu.ratio7.icon.offset = -196, -35 ;Ikemen feature
 p2.teammenu.ratio7.icon.facing = 1         ;Ikemen feature
 p2.teammenu.ratio7.icon.scale = 1.0, 1.0   ;Ikemen feature
 
@@ -526,6 +542,24 @@ teammenu.itemname.ratio = Ratio   ;Ikemen feature
 170,6, 0,0, 1
 170,5, 0,0, 1
 170,4, 0,0, 1
+
+[Begin Action 172] ;P3 active cursor
+172,3, 0,0, 1
+172,2, 0,0, 1
+172,1, 0,0, 1
+172,0, 0,0, 1
+172,6, 0,0, 1
+172,5, 0,0, 1
+172,4, 0,0, 1
+
+[Begin Action 174] ;P4 active cursor
+174,3, 0,0, 1
+174,2, 0,0, 1
+174,1, 0,0, 1
+174,0, 0,0, 1
+174,6, 0,0, 1
+174,5, 0,0, 1
+174,4, 0,0, 1
 
 [Begin Action 180] ;P1 Team mode cursor
 180,0, 0,0, 1
@@ -724,7 +758,7 @@ p1.value.icon.member1.spr = 810, 0       ;Ikemen feature
 p1.value.icon.member2.spr = 810, 0       ;Ikemen feature
 p1.value.icon.member3.spr = 810, 0       ;Ikemen feature
 p1.value.icon.member4.spr = 810, 0       ;Ikemen feature
-p1.value.icon.offset = 417, 813          ;Ikemen feature
+p1.value.icon.offset = 417, 650          ;Ikemen feature
 p1.value.icon.facing = 1                 ;Ikemen feature
 p1.value.icon.scale = 1.0, 0.8           ;Ikemen feature
 ;p1.value.empty.icon.anim = -1            ;Ikemen feature
@@ -733,7 +767,7 @@ p1.value.empty.icon.member1.spr = 810, 1 ;Ikemen feature
 p1.value.empty.icon.member2.spr = 810, 2 ;Ikemen feature
 p1.value.empty.icon.member3.spr = 810, 3 ;Ikemen feature
 p1.value.empty.icon.member4.spr = 810, 4 ;Ikemen feature
-p1.value.empty.icon.offset = 417, 813    ;Ikemen feature
+p1.value.empty.icon.offset = 417, 650    ;Ikemen feature
 p1.value.empty.icon.facing = 1           ;Ikemen feature
 p1.value.empty.icon.scale = 1.0, 0.8     ;Ikemen feature
 p1.value.icon.spacing = -125, 0          ;Ikemen feature
@@ -744,7 +778,7 @@ p2.value.icon.member1.spr = 810, 5       ;Ikemen feature
 p2.value.icon.member2.spr = 810, 5       ;Ikemen feature
 p2.value.icon.member3.spr = 810, 5       ;Ikemen feature
 p2.value.icon.member4.spr = 810, 5       ;Ikemen feature
-p2.value.icon.offset = 723, 813          ;Ikemen feature
+p2.value.icon.offset = 723, 650          ;Ikemen feature
 p2.value.icon.facing = 1                 ;Ikemen feature
 p2.value.icon.scale = 1.0, 0.8           ;Ikemen feature
 ;p2.value.empty.icon.anim = -1            ;Ikemen feature
@@ -753,7 +787,7 @@ p2.value.empty.icon.member1.spr = 810, 6 ;Ikemen feature
 p2.value.empty.icon.member2.spr = 810, 7 ;Ikemen feature
 p2.value.empty.icon.member3.spr = 810, 8 ;Ikemen feature
 p2.value.empty.icon.member4.spr = 810, 9 ;Ikemen feature
-p2.value.empty.icon.offset = 723, 813    ;Ikemen feature
+p2.value.empty.icon.offset = 723, 650    ;Ikemen feature
 p2.value.empty.icon.facing = 1           ;Ikemen feature
 p2.value.empty.icon.scale = 1.0, 0.8     ;Ikemen feature
 p2.value.icon.spacing = 125, 0           ;Ikemen feature
@@ -2017,9 +2051,9 @@ snd.time = 0
 snd = 500,0
 bg.anim = 500
 ;bg.spr = 
-bg.offset = 78, 100
+bg.offset = 234, 298
 bg.facing = 1
-bg.scale = 3.0, 3.0
+bg.scale = 1.0, 1.0
 bg.displaytime = 0
 ;text.text = "Here Comes A New Challenger!!"
 text.offset = 213, 120
