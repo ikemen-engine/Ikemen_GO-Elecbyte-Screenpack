@@ -205,6 +205,11 @@ spr = stage0-720.sff
  ;because it slows down performance.
 debugbg = 0
 
+;-------------------------------------
+; IKEMEN GO ONLY, preview animation used in the Select screen
+[Begin Action 9000]
+9000,1, 0,0,-1
+;-------------------------------------
 
 ;----------
 ; Start each background element with the following:
