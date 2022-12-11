@@ -336,17 +336,17 @@ stage.active2.font = 3,2  ;Second font color for blinking
 stage.done.font = 3,0
 
 ;Stage portraits
-;stage.portrait.anim =                      ;Ikemen feature
+;stage.portrait.anim = 9000                 ;Ikemen feature
 stage.portrait.spr = 9000,1                ;Ikemen feature
-stage.portrait.offset = -60,-66            ;Ikemen feature
+stage.portrait.offset = -60,-65            ;Ikemen feature
 stage.portrait.scale = 0.5, 0.5            ;Ikemen feature
 stage.portrait.bg.anim = 110               ;Ikemen feature
 ;stage.portrait.bg.spr =                    ;Ikemen feature
-stage.portrait.bg.offset = -75, -71        ;Ikemen feature
+stage.portrait.bg.offset = -76, -71        ;Ikemen feature
 stage.portrait.bg.scale = 1.0, 1.0         ;Ikemen feature
 ;stage.portrait.random.anim =               ;Ikemen feature
 stage.portrait.random.spr = 111, 0         ;Ikemen feature
-stage.portrait.random.offset = -45, -65    ;Ikemen feature
+stage.portrait.random.offset = -76, -71    ;Ikemen feature
 stage.portrait.random.scale = 1.0, 1.0     ;Ikemen feature
 stage.portrait.window = 115, 172, 205, 223 ;Ikemen feature
 
