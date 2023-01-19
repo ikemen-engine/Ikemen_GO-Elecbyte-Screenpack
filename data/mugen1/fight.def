@@ -36,7 +36,7 @@ font4 = num1.def
 fightfx.sff = fightfx.sff
 fightfx.air = fightfx.air
 common.snd = common.snd
-
+fx1 = gofx.def; new ikemen fx
 ;-----------------------------------------------------------
 [FightFx]
 scale = 4
