@@ -1199,7 +1199,7 @@ if animElem = 3, -1 {
 }
 
 if animElem = 4 {
-	Posadd{x: -15}
+	posAdd{x: -15}
 }
 
 call EndState(0);
@@ -1214,7 +1214,7 @@ if time = 0 {
 	#Channel 0 is reserved for voices here but it is not a requirement.
 	call CSnd(100, 0, 0);
 	call CSnd(0, 1, 1);
-	Posadd{x: 10; y: -10}
+	posAdd{x: 10; y: -10}
 }
 
 #Gravity
@@ -1256,7 +1256,7 @@ anim: 1056; sprpriority: 1;
 velset: 0, 0;]
 
 if time = 0 {
-	Posset{y: 0} #Reset y-position to ground level
+	posSet{y: 0} #Reset y-position to ground level
 	call CSnd(40, 0, 1); #Play a sound for landing
 }
 
