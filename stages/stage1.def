@@ -202,6 +202,12 @@ spr = stage1.sff
 ; because it slows down performance.
 debugBg = 0
 
+;-------------------------------------
+; IKEMEN GO ONLY, preview animation used in the Select screen
+[Begin Action 9000]
+9000,1, 0,0,-1
+;-------------------------------------
+
 ; BG Colour
 [BG 1]
 type = normal
