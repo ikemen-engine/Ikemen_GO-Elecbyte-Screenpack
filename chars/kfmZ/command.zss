@@ -187,7 +187,7 @@ if command = "QCB_y" && $canCombo {
 }
 
 #-------------------------------------------------------------------------------
-#High Kung Fu Blocking (High)
+#Kung Fu Blocking (High)
 if command = "blocking" && command != "holddown" &&
 	((ctrl && stateType != A) ||
 		((stateNo = 1310 || stateNo = 1330) && time > 0)) {
@@ -195,7 +195,7 @@ if command = "blocking" && command != "holddown" &&
 }
 
 #-------------------------------------------------------------------------------
-#High Kung Fu Blocking (Low)
+#Kung Fu Blocking (Low)
 if command = "blocking" && command = "holddown" &&
 	((ctrl && stateType != A) ||
 		((stateNo = 1310 || stateNo = 1330) && time > 0)) {
@@ -203,9 +203,9 @@ if command = "blocking" && command = "holddown" &&
 }
 
 #-------------------------------------------------------------------------------
-#High Kung Fu Blocking (Air)
+#Kung Fu Blocking (Air)
 if command = "blocking" && command != "holddown" && command != "holdup" &&
-	((ctrl && stateType != A) ||
+	((ctrl && stateType = A) ||
 		(stateNo = 1350 && time > 0)) {
 	changeState{value: 1340}
 }
