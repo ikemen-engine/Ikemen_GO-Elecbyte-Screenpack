@@ -1267,6 +1267,29 @@ draw.font = 1,0
 draw.text = "Draw Game"
 draw.displaytime = 540
 
+; Ikemen feature: Perfect win text
+p1.perfect.pos = 0, 0
+;p1.perfect.bg.offset = 640, 380
+;p1.perfect.bg.anim =
+p1.perfect.text.offset = 640, 380
+p1.perfect.text.font = 1,0,0
+p1.perfect.text.text = Perfect!
+p1.perfect.time = 245
+p1.perfect.displaytime = 470
+p1.perfect.snd = 
+p1.perfect.sndtime = 245
+
+p2.perfect.pos = 0, 0
+;p2.perfect.bg.offset = 640, 380
+;p2.perfect.bg.anim =
+p2.perfect.text.offset = 640, 380
+p2.perfect.text.font = 1,0,0
+p2.perfect.text.text = Perfect!
+p2.perfect.time = 245
+p2.perfect.displaytime = 470
+p2.perfect.snd = 
+p2.perfect.sndtime = 245
+
 ; Fade
 fadein.time = 30           ;Ikemen feature: round start fade time (default: 30)
 fadein.col = 0, 0, 0       ;Ikemen feature: round start fade color (default: 0,0,0)
