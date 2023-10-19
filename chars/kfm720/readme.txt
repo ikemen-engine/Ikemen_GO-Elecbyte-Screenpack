@@ -94,6 +94,13 @@ y              - Air S. Punch
 a              - Air W. Kick
 b              - Flying Kick
 
+Command Attacks
+-----------------
+
+F+x            - Kung Fu Blocking
+F+x (while jumping) - Air Kung Fu Blocking
+DF+x           - Low Kung Fu Blocking
+
 Throws
 ------
 
