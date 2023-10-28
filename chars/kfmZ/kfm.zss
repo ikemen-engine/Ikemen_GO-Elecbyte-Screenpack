@@ -1935,11 +1935,12 @@ if time = 0 {
 		p2sprpriority: 1;
 	}
 	hitOverride{attr: SA, AP; stateno: 1310; time: 8}
-	hitOverride{attr: ; time: 0}
 }
 
-if animElemTime(2) = 1 && time = command = "holdfwd" || time = 8 {
-	reversalDef{reversal.attr: } #Stop
+#Stop countering
+if time = 4 && command = "holdfwd" || time = 8 {
+	reversalDef{reversal.attr: }
+	hitOverride{attr: ; time: 0}
 }
 
 call EndState(0);
