@@ -407,7 +407,7 @@ stage.portrait.bg.offset = -163, -145      ;Ikemen feature
 stage.portrait.bg.scale = 1.0, 1.0         ;Ikemen feature
 ;stage.portrait.random.anim =               ;Ikemen feature
 stage.portrait.random.spr = 111,0          ;Ikemen feature
-stage.portrait.random.offset = -121, -142  ;Ikemen feature
+stage.portrait.random.offset = -163, -145  ;Ikemen feature
 stage.portrait.random.scale = 1.0, 1.0     ;Ikemen feature
 stage.portrait.window = 520, 565, 760, 665 ;Ikemen feature
 
