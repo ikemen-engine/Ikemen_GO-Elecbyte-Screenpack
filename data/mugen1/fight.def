@@ -33,10 +33,11 @@ font1 = enter48.def
 font2 = num48.def
 font3 = name14.def
 font4 = num1.def
-fightfx.sff = fightfx.sff
-fightfx.air = fightfx.air
+fightfx.sff = fightfx.sff ;legacy Mugen hitsparks
+fightfx.air = fightfx.air ;legacy Mugen hitsparks
 common.snd = common.snd
-fx1 = gofx1280.def; new ikemen fx
+fx1 = gofx.def            ;new Ikemen fx
+
 ;-----------------------------------------------------------
 [FightFx]
 scale = 4
