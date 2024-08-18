@@ -1965,3 +1965,16 @@ overlay.col = 0, 0, 0
 overlay.alpha = 0, 128
 done.snd = 100, 0
 cancel.snd = 100, 2
+
+;-------------------------------------------------------------------
+;Additional glyphs definition
+[Glyphs]
+_CHARGE  = 136,0
+_HOLD	 = 137,0
+_RELEASE = 138,0
+_MASH	 = 139,0
+_CLOSE   = 140,0
+_FAR	 = 141,0
+_AIROK	 = 142,0
+_THROW	 = 143,0
+_COUNTER = 144,0
