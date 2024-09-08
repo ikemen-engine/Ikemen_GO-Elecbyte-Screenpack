@@ -63,8 +63,8 @@ trialstep.1.numofhits	= 1, 1			; If one parameter on the trial step is defined u
 ;---------------------------------------------
 
 [TrialDef, Kung Fu Juggle Combo]
-trialstep.1.text 		= KF Knee + Extra Kick
-trialstep.1.glyphs 		= _F_F^K_-^K
+trialstep.1.text 		= HK KF Knee + Extra Kick
+trialstep.1.glyphs 		= _F_F^HK_-^K
 trialstep.1.stateno 	= 1060, 1055
 
 trialstep.2.text 		= Crouching Jab
