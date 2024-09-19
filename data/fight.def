@@ -1,8 +1,8 @@
 ﻿; Definition of fight screen
 
-; *** DO NOT MODIFY OR OVERWRITE THIS FILE ***
-; To customize, make a copy of this file in a subdirectory of your
-; motif's name. See readme.txt for details on motifs.
+; Motif: MUGEN1
+; Optimal resolution: 1280x720
+; Requires: MUGEN 1.1
 
 ; Notes about fonts:
 ;   - up to 10 fonts can be specified in the [Files] section.
@@ -18,7 +18,7 @@
 ;-----------------------------------------------------------
 ; Ikemen feature
 [Info]
-localcoord = 320,240 ;Local coordinate space width and height
+localcoord = 1280,720 ;Local coordinate space width and height
 
 ;-----------------------------------------------------------
 ;Directories are checked in this order:
@@ -29,9 +29,10 @@ localcoord = 320,240 ;Local coordinate space width and height
 [Files]
 sff = fight.sff
 snd = fight.snd
-font1 = jg.fnt
-font2 = num1.fnt
-font3 = name1.fnt
+font1 = enter48.def
+font2 = num48.def
+font3 = name14.def
+font4 = num1.def
 fightfx.sff = fightfx.sff ;legacy Mugen hitsparks
 fightfx.air = fightfx.air ;legacy Mugen hitsparks
 common.snd = common.snd
@@ -39,501 +40,732 @@ fx1 = gofx.def            ;new Ikemen fx
 
 ;-----------------------------------------------------------
 [FightFx]
-scale = 1
+scale = 4
 
 ;-----------------------------------------------------------
 [Lifebar]
 ;Player 1
-p1.pos    = 140,12
+p1.pos    = 590,40
 p1.bg0.anim = 10
+p1.bg0.offset = -6,6
 p1.bg1.spr = 11,0
-p1.mid.spr = 12,0
+p1.mid.anim = 12
+p1.mid.offset = -6,6
 p1.front.spr = 13,0
-p1.shift.spr = 13,10   ;Ikemen feature
-p1.range.x  = 0,-127
+p1.front.offset = -6,6
+p1.shift.spr = 13,0          ;Ikemen feature
+p1.shift.offset = -6,6       ;Ikemen feature
+p1.shift.palfx.add = 0,-50,0 ;Ikemen feature
+p1.range.x  = -6,-433
 ;Player 2
-p2.pos    = 178,12
+p2.pos    = 690,40
 p2.bg0.anim = 10
+p2.bg0.offset = 6,6
 p2.bg0.facing = -1
 p2.bg1.spr = 11,0
 p2.bg1.facing = -1
-p2.mid.spr = 12,0
+p2.mid.anim = 12
+p2.mid.offset = 6,6
 p2.mid.facing = -1
 p2.front.spr = 13,0
+p2.front.offset = 6,6
 p2.front.facing = -1
-p2.shift.spr = 13,10   ;Ikemen feature
-p2.shift.facing = -1   ;Ikemen feature
-p2.range.x = 0,127
+p2.shift.spr = 13,0          ;Ikemen feature
+p2.shift.offset = 6,6        ;Ikemen feature
+p2.shift.facing = -1         ;Ikemen feature
+p2.shift.palfx.add = 0,-50,0 ;Ikemen feature
+p2.range.x = 6,433
 
 [Begin Action 10] ;Darkened lifebar background 
-10,0, 0,0, 1, , S
+10,0, 0,0, 1, , AS224D32
+
+[Begin Action 12] ;Blinking lifebar midground
+12,0, 0,0, 1
+12,1, 0,0, 1
+12,2, 0,0, 1
+12,3, 0,0, 1
+12,4, 0,0, 1
+12,5, 0,0, 1
+12,4, 0,0, 1
+12,3, 0,0, 1
+12,2, 0,0, 1
+12,1, 0,0, 1
 
 [Simul Lifebar]
 ;Player 1
-p1.pos    = 140,12
+p1.pos    = 590,40
 p1.bg0.anim = 20
-p1.bg1.spr = 21,0
-p1.mid.offset = 0,-1
-p1.mid.spr = 22,0
-p1.front.offset = 0,-1
-p1.front.spr = 23,0
-p1.shift.offset = 0,-1 ;Ikemen feature
-p1.shift.spr = 23,10   ;Ikemen feature
-p1.range.x  = 0,-127
+p1.bg0.offset = -6,6
+p1.bg1.spr = 11,0
+p1.mid.anim = 12
+p1.mid.offset = -6,6
+p1.mid.scale = 1,0.5
+p1.front.spr = 13,0
+p1.front.offset = -6,6
+p1.front.scale = 1,0.5
+p1.shift.spr = 13,0          ;Ikemen feature
+p1.shift.offset = -6,6       ;Ikemen feature
+p1.shift.scale = 1,0.5       ;Ikemen feature
+p1.shift.palfx.add = 0,-50,0 ;Ikemen feature
+p1.range.x  = -6,-433
 ;Player 2
-p2.pos    = 178,12
+p2.pos    = 690,40
 p2.bg0.anim = 20
+p2.bg0.offset = 6,6
 p2.bg0.facing = -1
-p2.bg1.spr = 21,0
+p2.bg1.spr = 11,0
 p2.bg1.facing = -1
-p2.mid.offset = 0,-1
-p2.mid.spr = 22,0
+p2.mid.anim = 12
+p2.mid.offset = 6,6
 p2.mid.facing = -1
-p2.front.offset = 0,-1
-p2.front.spr = 23,0
+p2.mid.scale = 1,0.5
+p2.front.spr = 13,0
+p2.front.offset = 6,6
 p2.front.facing = -1
-p2.shift.offset = 0,-1 ;Ikemen feature
-p2.shift.spr = 23,10   ;Ikemen feature
-p2.shift.facing = -1   ;Ikemen feature
-p2.range.x = 0,127
+p2.front.scale = 1,0.5
+p2.shift.spr = 13,0          ;Ikemen feature
+p2.shift.offset = 6,6        ;Ikemen feature
+p2.shift.facing = -1         ;Ikemen feature
+p2.shift.scale = 1,0.5       ;Ikemen feature
+p2.shift.palfx.add = 0,-50,0 ;Ikemen feature
+p2.range.x = 6,433
 ;Player 3
-p3.pos    = 140,15
-p3.mid.spr = 22,0
-p3.front.spr = 23,0
-p3.shift.spr = 23,10   ;Ikemen feature
-p3.range.x  = 0,-127
+p3.pos    = 590,49
+p3.mid.anim = 12
+p3.mid.offset = -6,6
+p3.mid.scale = 1,0.5
+p3.front.spr = 13,0
+p3.front.offset = -6,6
+p3.front.scale = 1,0.5
+p3.shift.spr = 13,0          ;Ikemen feature
+p3.shift.offset = -6,6       ;Ikemen feature
+p3.shift.scale = 1,0.5       ;Ikemen feature
+p3.shift.palfx.add = 0,-50,0 ;Ikemen feature
+p3.range.x  = -6,-433
 ;Player 4
-p4.pos    = 178,15
-p4.mid.spr = 22,0
+p4.pos    = 690,49
+p4.mid.anim = 12
+p4.mid.offset = 6,6
 p4.mid.facing = -1
-p4.front.spr = 23,0
+p4.mid.scale = 1,0.5
+p4.front.spr = 13,0
+p4.front.offset = 6,6
 p4.front.facing = -1
-p4.shift.spr = 23,10   ;Ikemen feature
-p4.shift.facing = -1   ;Ikemen feature
-p4.range.x = 0,127
+p4.front.scale = 1,0.5
+p4.shift.spr = 13,0          ;Ikemen feature
+p4.shift.offset = 6,6        ;Ikemen feature
+p4.shift.facing = -1         ;Ikemen feature
+p4.shift.scale = 1,0.5       ;Ikemen feature
+p4.shift.palfx.add = 0,-50,0 ;Ikemen feature
+p4.range.x = 6,433
 
-[Begin Action 20] ;Darkened lifebar background (team)
-20,0, 0,0, 1, , S
+[Begin Action 20] ;Darkened lifebar background (simul)
+20,0, 0,0, 1, , AS224D32
 
 ; Ikemen feature
 [Simul_3P Lifebar]
 ;Player 1
-p1.pos    = 140,12
+p1.pos    = 590,40
 p1.bg0.anim = 30
-p1.bg1.spr = 31,0
-p1.mid.offset = 0,-1
-p1.mid.spr = 32,0
-p1.front.offset = 0,-1
-p1.front.spr = 33,0
-p1.shift.offset = 0,-1 ;Ikemen feature
-p1.shift.spr = 33,10   ;Ikemen feature
-p1.range.x  = 0,-127
+p1.bg0.offset = -6,6
+p1.bg1.spr = 11,0
+p1.mid.anim = 12
+p1.mid.offset = -6,6
+p1.mid.scale = 1,0.33
+p1.front.spr = 13,0
+p1.front.offset = -6,6
+p1.front.scale = 1,0.33
+p1.shift.spr = 13,0          ;Ikemen feature
+p1.shift.offset = -6,6       ;Ikemen feature
+p1.shift.scale = 1,0.33      ;Ikemen feature
+p1.shift.palfx.add = 0,-50,0 ;Ikemen feature
+p1.range.x  = -6,-433
 ;Player 2
-p2.pos    = 178,12
+p2.pos    = 690,40
 p2.bg0.anim = 30
+p2.bg0.offset = 6,6
 p2.bg0.facing = -1
-p2.bg1.spr = 31,0
+p2.bg1.spr = 11,0
 p2.bg1.facing = -1
-p2.mid.offset = 0,-1
-p2.mid.spr = 32,0
+p2.mid.anim = 12
+p2.mid.offset = 6,6
 p2.mid.facing = -1
-p2.front.offset = 0,-1
-p2.front.spr = 33,0
+p2.mid.scale = 1,0.33
+p2.front.spr = 13,0
+p2.front.offset = 6,6
 p2.front.facing = -1
-p2.shift.offset = 0,-1 ;Ikemen feature
-p2.shift.spr = 33,10   ;Ikemen feature
-p2.shift.facing = -1   ;Ikemen feature
-p2.range.x = 0,127
+p2.front.scale = 1,0.33
+p2.shift.spr = 13,0          ;Ikemen feature
+p2.shift.offset = 6,6        ;Ikemen feature
+p2.shift.facing = -1         ;Ikemen feature
+p2.shift.scale = 1,0.33      ;Ikemen feature
+p2.shift.palfx.add = 0,-50,0 ;Ikemen feature
+p2.range.x = 6,433
 ;Player 3
-p3.pos    = 140,14
-p3.mid.spr = 32,0
-p3.front.spr = 33,0
-p3.shift.spr = 33,10   ;Ikemen feature
-p3.range.x  = 0,-127
+p3.pos    = 590,46
+p3.mid.anim = 12
+p3.mid.offset = -6,6
+p3.mid.scale = 1,0.33
+p3.front.spr = 13,0
+p3.front.offset = -6,6
+p3.front.scale = 1,0.33
+p3.shift.spr = 13,0          ;Ikemen feature
+p3.shift.offset = -6,6       ;Ikemen feature
+p3.shift.scale = 1,0.33      ;Ikemen feature
+p3.shift.palfx.add = 0,-50,0 ;Ikemen feature
+p3.range.x  = -6,-433
 ;Player 4
-p4.pos    = 178,14
-p4.mid.spr = 32,0
+p4.pos    = 690,46
+p4.mid.anim = 12
+p4.mid.offset = 6,6
 p4.mid.facing = -1
-p4.front.spr = 33,0
+p4.mid.scale = 1,0.33
+p4.front.spr = 13,0
+p4.front.offset = 6,6
 p4.front.facing = -1
-p4.shift.spr = 33,10   ;Ikemen feature
-p4.shift.facing = -1   ;Ikemen feature
-p4.range.x = 0,127
+p4.front.scale = 1,0.33
+p4.shift.spr = 13,0          ;Ikemen feature
+p4.shift.offset = 6,6        ;Ikemen feature
+p4.shift.facing = -1         ;Ikemen feature
+p4.shift.scale = 1,0.33      ;Ikemen feature
+p4.shift.palfx.add = 0,-50,0 ;Ikemen feature
+p4.range.x = 6,433
 ;Player 5
-p5.pos    = 140,17
-p5.mid.spr = 32,0
-p5.front.spr = 33,0
-p5.shift.spr = 33,10   ;Ikemen feature
-p5.range.x  = 0,-127
+p5.pos    = 590,52
+p5.mid.anim = 12
+p5.mid.offset = -6,6
+p5.mid.scale = 1,0.33
+p5.front.spr = 13,0
+p5.front.offset = -6,6
+p5.front.scale = 1,0.33
+p5.shift.spr = 13,0          ;Ikemen feature
+p5.shift.offset = -6,6       ;Ikemen feature
+p5.shift.scale = 1,0.33      ;Ikemen feature
+p5.shift.palfx.add = 0,-50,0 ;Ikemen feature
+p5.range.x  = -6,-433
 ;Player 6
-p6.pos    = 178,17
-p6.mid.spr = 32,0
+p6.pos    = 690,52
+p6.mid.anim = 12
+p6.mid.offset = 6,6
 p6.mid.facing = -1
-p6.front.spr = 33,0
+p6.mid.scale = 1,0.33
+p6.front.spr = 13,0
+p6.front.offset = 6,6
 p6.front.facing = -1
-p6.shift.spr = 33,10   ;Ikemen feature
-p6.shift.facing = -1   ;Ikemen feature
-p6.range.x = 0,127
+p6.front.scale = 1,0.33
+p6.shift.spr = 13,0          ;Ikemen feature
+p6.shift.offset = 6,6        ;Ikemen feature
+p6.shift.facing = -1         ;Ikemen feature
+p6.shift.scale = 1,0.33      ;Ikemen feature
+p6.shift.palfx.add = 0,-50,0 ;Ikemen feature
+p6.range.x = 6,433
 
 [Begin Action 30] ;Darkened lifebar background (team size 3)
-30,0, 0,0, 1, , S
+30,0, 0,0, 1, , AS224D32
 
 ; Ikemen feature
 [Simul_4P Lifebar]
 ;Player 1
-p1.pos    = 140,12
+p1.pos    = 590,40
 p1.bg0.anim = 34
+p1.bg0.offset = -6,6
 p1.bg1.spr = 35,0
-p1.mid.offset = 0,-1
-p1.mid.spr = 36,0
-p1.front.offset = 0,-1
-p1.front.spr = 37,0
-p1.shift.offset = 0,-1 ;Ikemen feature
-p1.shift.spr = 37,10   ;Ikemen feature
-p1.range.x  = 0,-127
+p1.mid.anim = 12
+p1.mid.offset = -6,6
+p1.mid.scale = 1,0.25
+p1.front.spr = 13,0
+p1.front.offset = -6,6
+p1.front.scale = 1,0.25
+p1.shift.spr = 13,0          ;Ikemen feature
+p1.shift.offset = -6,6       ;Ikemen feature
+p1.shift.scale = 1,0.25      ;Ikemen feature
+p1.shift.palfx.add = 0,-50,0 ;Ikemen feature
+p1.range.x  = -6,-433
 ;Player 2
-p2.pos    = 178,12
+p2.pos    = 690,40
 p2.bg0.anim = 34
+p2.bg0.offset = 6,6
 p2.bg0.facing = -1
 p2.bg1.spr = 35,0
 p2.bg1.facing = -1
-p2.mid.offset = 0,-1
-p2.mid.spr = 36,0
+p2.mid.anim = 12
+p2.mid.offset = 6,6
 p2.mid.facing = -1
-p2.front.offset = 0,-1
-p2.front.spr = 37,0
+p2.mid.scale = 1,0.25
+p2.front.spr = 13,0
+p2.front.offset = 6,6
 p2.front.facing = -1
-p2.shift.offset = 0,-1 ;Ikemen feature
-p2.shift.spr = 37,10   ;Ikemen feature
-p2.shift.facing = -1   ;Ikemen feature
-p2.range.x = 0,127
+p2.front.scale = 1,0.25
+p2.shift.spr = 13,0          ;Ikemen feature
+p2.shift.offset = 6,6        ;Ikemen feature
+p2.shift.facing = -1         ;Ikemen feature
+p2.shift.scale = 1,0.25      ;Ikemen feature
+p2.shift.palfx.add = 0,-50,0 ;Ikemen feature
+p2.range.x = 6,433
 ;Player 3
-p3.pos    = 140,13
-p3.mid.spr = 36,0
-p3.front.spr = 37,0
-p3.shift.spr = 37,10   ;Ikemen feature
-p3.range.x  = 0,-127
+p3.pos    = 590,45
+p3.mid.anim = 12
+p3.mid.offset = -6,6
+p3.mid.scale = 1,0.25
+p3.front.spr = 13,0
+p3.front.offset = -6,6
+p3.front.scale = 1,0.25
+p3.shift.spr = 13,0          ;Ikemen feature
+p3.shift.offset = -6,6       ;Ikemen feature
+p3.shift.scale = 1,0.25      ;Ikemen feature
+p3.shift.palfx.add = 0,-50,0 ;Ikemen feature
+p3.range.x  = -6,-433
 ;Player 4
-p4.pos    = 178,13
-p4.mid.spr = 36,0
+p4.pos    = 690,45
+p4.mid.anim = 12
+p4.mid.offset = 6,6
 p4.mid.facing = -1
-p4.front.spr = 37,0
+p4.mid.scale = 1,0.25
+p4.front.spr = 13,0
+p4.front.offset = 6,6
 p4.front.facing = -1
-p4.shift.spr = 37,10   ;Ikemen feature
-p4.shift.facing = -1   ;Ikemen feature
-p4.range.x = 0,127
+p4.front.scale = 1,0.25
+p4.shift.spr = 13,0          ;Ikemen feature
+p4.shift.offset = 6,6        ;Ikemen feature
+p4.shift.facing = -1         ;Ikemen feature
+p4.shift.scale = 1,0.25      ;Ikemen feature
+p4.shift.palfx.add = 0,-50,0 ;Ikemen feature
+p4.range.x = 6,433
 ;Player 5
-p5.pos    = 140,15
-p5.mid.spr = 36,0
-p5.front.spr = 37,0
-p5.shift.spr = 37,10   ;Ikemen feature
-p5.range.x  = 0,-127
+p5.pos    = 590,50
+p5.mid.anim = 12
+p5.mid.offset = -6,6
+p5.mid.scale = 1,0.25
+p5.front.spr = 13,0
+p5.front.offset = -6,6
+p5.front.scale = 1,0.25
+p5.shift.spr = 13,0          ;Ikemen feature
+p5.shift.offset = -6,6       ;Ikemen feature
+p5.shift.scale = 1,0.25      ;Ikemen feature
+p5.shift.palfx.add = 0,-50,0 ;Ikemen feature
+p5.range.x  = -6,-433
 ;Player 6
-p6.pos    = 178,15
-p6.mid.spr = 36,0
+p6.pos    = 690,50
+p6.mid.anim = 12
+p6.mid.offset = 6,6
 p6.mid.facing = -1
-p6.front.spr = 37,0
+p6.mid.scale = 1,0.25
+p6.front.spr = 13,0
+p6.front.offset = 6,6
 p6.front.facing = -1
-p6.shift.spr = 37,10   ;Ikemen feature
-p6.shift.facing = -1   ;Ikemen feature
-p6.range.x = 0,127
+p6.front.scale = 1,0.25
+p6.shift.spr = 13,0          ;Ikemen feature
+p6.shift.offset = 6,6        ;Ikemen feature
+p6.shift.facing = -1         ;Ikemen feature
+p6.shift.scale = 1,0.25      ;Ikemen feature
+p6.shift.palfx.add = 0,-50,0 ;Ikemen feature
+p6.range.x = 6,433
 ;Player 7
-p7.pos    = 140,17
-p7.mid.spr = 36,0
-p7.front.spr = 37,0
-p7.shift.spr = 37,10   ;Ikemen feature
-p7.range.x  = 0,-127
+p7.pos    = 590,55
+p7.mid.anim = 12
+p7.mid.offset = -6,6
+p7.mid.scale = 1,0.25
+p7.front.spr = 13,0
+p7.front.offset = -6,6
+p7.front.scale = 1,0.25
+p7.shift.spr = 13,0          ;Ikemen feature
+p7.shift.offset = -6,6       ;Ikemen feature
+p7.shift.scale = 1,0.25      ;Ikemen feature
+p7.shift.palfx.add = 0,-50,0 ;Ikemen feature
+p7.range.x  = -6,-433
 ;Player 8
-p8.pos    = 178,17
-p8.mid.spr = 36,0
+p8.pos    = 690,55
+p8.mid.anim = 12
+p8.mid.offset = 6,6
 p8.mid.facing = -1
-p8.front.spr = 37,0
+p8.mid.scale = 1,0.25
+p8.front.spr = 13,0
+p8.front.offset = 6,6
 p8.front.facing = -1
-p8.shift.spr = 37,10   ;Ikemen feature
-p8.shift.facing = -1   ;Ikemen feature
-p8.range.x = 0,127
+p8.front.scale = 1,0.25
+p8.shift.spr = 13,0          ;Ikemen feature
+p8.shift.offset = 6,6        ;Ikemen feature
+p8.shift.facing = -1         ;Ikemen feature
+p8.shift.scale = 1,0.25      ;Ikemen feature
+p8.shift.palfx.add = 0,-50,0 ;Ikemen feature
+p8.range.x = 6,433
 
 [Begin Action 34] ;Darkened lifebar background (team size 4)
-34,0, 0,0, 1, , S
+34,0, 0,0, 1, , AS224D32
 
 ; Ikemen feature
 [Tag Lifebar]
-mid.shift = 1          ;Ikemen feature: makes the shift element also affect mid element (default: 0)
-mid.freeze = 0         ;Ikemen feature: controls mid element freezing during gethit/combo (default: 1)
-mid.delay = 0          ;Ikemen feature: frames before mid element starts decreasing (default: 30)
-mid.mult = 10.0        ;Ikemen feature: moving relation between mid value and life (default: 1.0)
-mid.steps = 8          ;Ikemen feature: mid value decreasing steps (default: 8)
+mid.shift = 0                ;Ikemen feature: makes the shift element also affect mid element (default: 0)
+mid.freeze = 0               ;Ikemen feature: controls mid element freezing during gethit/combo (default: 1)
+mid.delay = 0                ;Ikemen feature: frames before mid element starts decreasing (default: 30)
+mid.mult = 1.0               ;Ikemen feature: moving relation between mid value and life (default: 1.0)
+mid.steps = 16               ;Ikemen feature: mid value decreasing steps (default: 8)
 ;Player 1
-p1.pos    = 140,12
+p1.pos    = 590,40
 p1.bg0.anim = 20
-p1.bg1.spr = 21,0
-p1.red.offset = 0,-1   ;Ikemen feature
-p1.red.spr = 22,0      ;Ikemen feature
-p1.mid.offset = 0,-1
-p1.mid.spr = 23,0
-p1.front.offset = 0,-1
-p1.front.spr = 23,0
-p1.shift.offset = 0,-1 ;Ikemen feature
-p1.shift.spr = 23,10   ;Ikemen feature
-p1.range.x  = 0,-127
-;Player 2
-p2.pos    = 178,12
-p2.bg0.anim = 20
-p2.bg0.facing = -1
-p2.bg1.spr = 21,0
-p2.bg1.facing = -1
-p2.red.offset = 0,-1   ;Ikemen feature
-p2.red.spr = 22,0      ;Ikemen feature
-p2.red.facing = -1     ;Ikemen feature
-p2.mid.offset = 0,-1
-p2.mid.spr = 23,0
-p2.mid.facing = -1
-p2.front.offset = 0,-1
-p2.front.spr = 23,0
-p2.front.facing = -1
-p2.shift.offset = 0,-1 ;Ikemen feature
-p2.shift.spr = 23,10   ;Ikemen feature
-p2.shift.facing = -1   ;Ikemen feature
-p2.range.x = 0,127
-;Player 3
-p3.pos    = 140,15
-p3.red.spr = 22,0      ;Ikemen feature
-p3.mid.spr = 23,0
-p3.front.spr = 23,0
-p3.shift.spr = 23,10   ;Ikemen feature
-p3.range.x  = 0,-127
-;Player 4
-p4.pos    = 178,15
-p4.red.spr = 22,0      ;Ikemen feature
-p4.red.facing = -1     ;Ikemen feature
-p4.mid.spr = 23,0
-p4.mid.facing = -1
-p4.front.spr = 23,0
-p4.front.facing = -1
-p4.shift.spr = 23,10   ;Ikemen feature
-p4.shift.facing = -1   ;Ikemen feature
-p4.range.x = 0,127
-
-; Ikemen feature
-[Tag_3P Lifebar]
-mid.shift = 1          ;Ikemen feature: makes the shift element also affect mid element (default: 0)
-mid.freeze = 0         ;Ikemen feature: controls mid element freezing during gethit/combo (default: 1)
-mid.delay = 0          ;Ikemen feature: frames before mid element starts decreasing (default: 30)
-mid.mult = 10.0        ;Ikemen feature: moving relation between mid value and life (default: 1.0)
-mid.steps = 8          ;Ikemen feature: mid value decreasing steps (default: 8)
-;Player 1
-p1.pos    = 140,12
-p1.bg0.anim = 30
-p1.bg1.spr = 31,0
-p1.red.offset = 0,-1   ;Ikemen feature
-p1.red.spr = 32,0      ;Ikemen feature
-p1.mid.offset = 0,-1
-p1.mid.spr = 33,0
-p1.front.offset = 0,-1
-p1.front.spr = 33,0
-p1.shift.offset = 0,-1 ;Ikemen feature
-p1.shift.spr = 33,10   ;Ikemen feature
-p1.range.x  = 0,-127
-;Player 2
-p2.pos    = 178,12
-p2.bg0.anim = 30
-p2.bg0.facing = -1
-p2.bg1.spr = 31,0
-p2.bg1.facing = -1
-p2.red.offset = 0,-1   ;Ikemen feature
-p2.red.spr = 32,0      ;Ikemen feature
-p2.red.facing = -1     ;Ikemen feature
-p2.mid.offset = 0,-1
-p2.mid.spr = 33,0
-p2.mid.facing = -1
-p2.front.offset = 0,-1
-p2.front.spr = 33,0
-p2.front.facing = -1
-p2.shift.offset = 0,-1 ;Ikemen feature
-p2.shift.spr = 33,10   ;Ikemen feature
-p2.shift.facing = -1   ;Ikemen feature
-p2.range.x = 0,127
-;Player 3
-p3.pos    = 140,14
-p3.red.spr = 32,0      ;Ikemen feature
-p3.mid.spr = 33,0
-p3.front.spr = 33,0
-p3.shift.spr = 33,10   ;Ikemen feature
-p3.range.x  = 0,-127
-;Player 4
-p4.pos    = 178,14
-p4.red.spr = 32,0      ;Ikemen feature
-p4.red.facing = -1     ;Ikemen feature
-p4.mid.spr = 33,0
-p4.mid.facing = -1
-p4.front.spr = 33,0
-p4.front.facing = -1
-p4.shift.spr = 33,10   ;Ikemen feature
-p4.shift.facing = -1   ;Ikemen feature
-p4.range.x = 0,127
-;Player 5
-p5.pos    = 140,17
-p5.red.spr = 32,0      ;Ikemen feature
-p5.mid.spr = 33,0
-p5.front.spr = 33,0
-p5.shift.spr = 33,10   ;Ikemen feature
-p5.range.x  = 0,-127
-;Player 6
-p6.pos    = 178,17
-p6.red.spr = 32,0      ;Ikemen feature
-p6.red.facing = -1     ;Ikemen feature
-p6.mid.spr = 33,0
-p6.mid.facing = -1
-p6.front.spr = 33,0
-p6.front.facing = -1
-p6.shift.spr = 33,10   ;Ikemen feature
-p6.shift.facing = -1   ;Ikemen feature
-p6.range.x = 0,127
-
-; Ikemen feature
-[Tag_4P Lifebar]
-mid.shift = 1          ;Ikemen feature: makes the shift element also affect mid element (default: 0)
-mid.freeze = 0         ;Ikemen feature: controls mid element freezing during gethit/combo (default: 1)
-mid.delay = 0          ;Ikemen feature: frames before mid element starts decreasing (default: 30)
-mid.mult = 10.0        ;Ikemen feature: moving relation between mid value and life (default: 1.0)
-mid.steps = 8          ;Ikemen feature: mid value decreasing steps (default: 8)
-;Player 1
-p1.pos    = 140,12
-p1.bg0.anim = 34
-p1.bg1.spr = 35,0
-p1.red.offset = 0,-1   ;Ikemen feature
-p1.red.spr = 36,0      ;Ikemen feature
-p1.mid.offset = 0,-1
-p1.mid.spr = 37,0
-p1.front.offset = 0,-1
-p1.front.spr = 37,0
-p1.shift.offset = 0,-1 ;Ikemen feature
-p1.shift.spr = 37,10   ;Ikemen feature
-p1.range.x  = 0,-127
-;Player 2
-p2.pos    = 178,12
-p2.bg0.anim = 34
-p2.bg0.facing = -1
-p2.bg1.spr = 35,0
-p2.bg1.facing = -1
-p2.red.offset = 0,-1   ;Ikemen feature
-p2.red.spr = 36,0      ;Ikemen feature
-p2.red.facing = -1     ;Ikemen feature
-p2.mid.offset = 0,-1
-p2.mid.spr = 37,0
-p2.mid.facing = -1
-p2.front.offset = 0,-1
-p2.front.spr = 37,0
-p2.front.facing = -1
-p2.shift.offset = 0,-1 ;Ikemen feature
-p2.shift.spr = 37,10   ;Ikemen feature
-p2.shift.facing = -1   ;Ikemen feature
-p2.range.x = 0,127
-;Player 3
-p3.pos    = 140,13
-p3.red.spr = 36,0      ;Ikemen feature
-p3.mid.spr = 37,0
-p3.front.spr = 37,0
-p3.shift.spr = 37,10   ;Ikemen feature
-p3.range.x  = 0,-127
-;Player 4
-p4.pos    = 178,13
-p4.red.spr = 36,0      ;Ikemen feature
-p4.red.facing = -1     ;Ikemen feature
-p4.mid.spr = 37,0
-p4.mid.facing = -1
-p4.front.spr = 37,0
-p4.front.facing = -1
-p4.shift.spr = 37,10   ;Ikemen feature
-p4.shift.facing = -1   ;Ikemen feature
-p4.range.x = 0,127
-;Player 5
-p5.pos    = 140,15
-p5.red.spr = 36,0      ;Ikemen feature
-p5.mid.spr = 37,0
-p5.front.spr = 37,0
-p5.shift.spr = 37,10   ;Ikemen feature
-p5.range.x  = 0,-127
-;Player 6
-p6.pos    = 178,15
-p6.red.spr = 36,0      ;Ikemen feature
-p6.red.facing = -1     ;Ikemen feature
-p6.mid.spr = 37,0
-p6.mid.facing = -1
-p6.front.spr = 37,0
-p6.front.facing = -1
-p6.shift.spr = 37,10   ;Ikemen feature
-p6.shift.facing = -1   ;Ikemen feature
-p6.range.x = 0,127
-;Player 7
-p7.pos    = 140,17
-p7.red.spr = 36,0      ;Ikemen feature
-p7.mid.spr = 37,0
-p7.front.spr = 37,0
-p7.shift.spr = 37,10   ;Ikemen feature
-p7.range.x  = 0,-127
-;Player 8
-p8.pos    = 178,17
-p8.red.spr = 36,0      ;Ikemen feature
-p8.red.facing = -1     ;Ikemen feature
-p8.mid.spr = 37,0
-p8.mid.facing = -1
-p8.front.spr = 37,0
-p8.front.facing = -1
-p8.shift.spr = 37,10   ;Ikemen feature
-p8.shift.facing = -1   ;Ikemen feature
-p8.range.x = 0,127
-
-[Turns Lifebar]
-;Player 1
-p1.pos    = 140,12
-p1.bg0.anim = 10
+p1.bg0.offset = -6,6
 p1.bg1.spr = 11,0
-p1.mid.spr = 12,0
-p1.front.spr = 13,0
-p1.shift.spr = 13,10   ;Ikemen feature
-p1.range.x  = 0,-127
+p1.red.spr = 12,0            ;Ikemen feature
+p1.red.offset = -6,6         ;Ikemen feature
+p1.red.scale = 1,0.5         ;Ikemen feature
+;p1.mid.anim = 12
+p1.mid.spr = 13,0
+p1.mid.offset = -6,6
+p1.mid.scale = 1,0.5
+p1.front.spr = 14,0 ;13,0
+p1.front.offset = -6,6
+p1.front.scale = 1,0.5
+p1.range.x  = -6,-433
 ;Player 2
-p2.pos    = 178,12
-p2.bg0.anim = 10
+p2.pos    = 690,40
+p2.bg0.anim = 20
+p2.bg0.offset = 6,6
 p2.bg0.facing = -1
 p2.bg1.spr = 11,0
 p2.bg1.facing = -1
-p2.mid.spr = 12,0
+p2.red.spr = 12,0            ;Ikemen feature
+p2.red.offset = 6,6          ;Ikemen feature
+p2.red.scale = 1,0.5         ;Ikemen feature
+p2.red.facing = -1           ;Ikemen feature
+;p2.mid.anim = 12
+p2.mid.spr = 13,0
+p2.mid.offset = 6,6
+p2.mid.facing = -1
+p2.mid.scale = 1,0.5
+p2.front.spr = 14,0 ;13,0
+p2.front.offset = 6,6
+p2.front.facing = -1
+p2.front.scale = 1,0.5
+p2.range.x = 6,433
+;Player 3
+p3.pos    = 590,49
+p3.red.spr = 12,0            ;Ikemen feature
+p3.red.offset = -6,6         ;Ikemen feature
+p3.red.scale = 1,0.5         ;Ikemen feature
+;p3.mid.anim = 12
+p3.mid.spr = 13,0
+p3.mid.offset = -6,6
+p3.mid.scale = 1,0.5
+p3.front.spr = 14,0 ;13,0
+p3.front.offset = -6,6
+p3.front.scale = 1,0.5
+p3.range.x  = -6,-433
+;Player 4
+p4.pos    = 690,49
+p4.red.spr = 12,0            ;Ikemen feature
+p4.red.offset = 6,6          ;Ikemen feature
+p4.red.scale = 1,0.5         ;Ikemen feature
+p4.red.facing = -1           ;Ikemen feature
+;p4.mid.anim = 12
+p4.mid.spr = 13,0
+p4.mid.offset = 6,6
+p4.mid.facing = -1
+p4.mid.scale = 1,0.5
+p4.front.spr = 14,0 ;13,0
+p4.front.offset = 6,6
+p4.front.facing = -1
+p4.front.scale = 1,0.5
+p4.range.x = 6,433
+
+; Ikemen feature
+[Tag_3P Lifebar]
+mid.shift = 0                ;Ikemen feature: makes the shift element also affect mid element (default: 0)
+mid.freeze = 0               ;Ikemen feature: controls mid element freezing during gethit/combo (default: 1)
+mid.delay = 0                ;Ikemen feature: frames before mid element starts decreasing (default: 30)
+mid.mult = 1.0               ;Ikemen feature: moving relation between mid value and life (default: 1.0)
+mid.steps = 16               ;Ikemen feature: mid value decreasing steps (default: 8)
+;Player 1
+p1.pos    = 590,40
+p1.bg0.anim = 30
+p1.bg0.offset = -6,6
+p1.bg1.spr = 11,0
+p1.red.spr = 12,0            ;Ikemen feature
+p1.red.offset = -6,6         ;Ikemen feature
+p1.red.scale = 1,0.33        ;Ikemen feature
+;p1.mid.anim = 12
+p1.mid.spr = 13,0
+p1.mid.offset = -6,6
+p1.mid.scale = 1,0.33
+p1.front.spr = 14,0 ;13,0
+p1.front.offset = -6,6
+p1.front.scale = 1,0.33
+p1.range.x  = -6,-433
+;Player 2
+p2.pos    = 690,40
+p2.bg0.anim = 30
+p2.bg0.offset = 6,6
+p2.bg0.facing = -1
+p2.bg1.spr = 11,0
+p2.bg1.facing = -1
+p2.red.spr = 12,0            ;Ikemen feature
+p2.red.offset = 6,6          ;Ikemen feature
+p2.red.scale = 1,0.33        ;Ikemen feature
+p2.red.facing = -1           ;Ikemen feature
+;p2.mid.anim = 12
+p2.mid.spr = 13,0
+p2.mid.offset = 6,6
+p2.mid.facing = -1
+p2.mid.scale = 1,0.33
+p2.front.spr = 14,0 ;13,0
+p2.front.offset = 6,6
+p2.front.facing = -1
+p2.front.scale = 1,0.33
+p2.range.x = 6,433
+;Player 3
+p3.pos    = 590,46
+p3.red.spr = 12,0            ;Ikemen feature
+p3.red.offset = -6,6         ;Ikemen feature
+p3.red.scale = 1,0.33        ;Ikemen feature
+;p3.mid.anim = 12
+p3.mid.spr = 13,0
+p3.mid.offset = -6,6
+p3.mid.scale = 1,0.33
+p3.front.spr = 14,0 ;13,0
+p3.front.offset = -6,6
+p3.front.scale = 1,0.33
+p3.range.x  = -6,-433
+;Player 4
+p4.pos    = 690,46
+p4.red.spr = 12,0            ;Ikemen feature
+p4.red.offset = 6,6          ;Ikemen feature
+p4.red.scale = 1,0.33        ;Ikemen feature
+p4.red.facing = -1           ;Ikemen feature
+;p4.mid.anim = 12
+p4.mid.spr = 13,0
+p4.mid.offset = 6,6
+p4.mid.facing = -1
+p4.mid.scale = 1,0.33
+p4.front.spr = 14,0 ;13,0
+p4.front.offset = 6,6
+p4.front.facing = -1
+p4.front.scale = 1,0.33
+p4.range.x = 6,433
+;Player 5
+p5.pos    = 590,52
+p5.red.spr = 12,0            ;Ikemen feature
+p5.red.offset = -6,6         ;Ikemen feature
+p5.red.scale = 1,0.33        ;Ikemen feature
+;p5.mid.anim = 12
+p5.mid.spr = 13,0
+p5.mid.offset = -6,6
+p5.mid.scale = 1,0.33
+p5.front.spr = 14,0 ;13,0
+p5.front.offset = -6,6
+p5.front.scale = 1,0.33
+p5.range.x  = -6,-433
+;Player 6
+p6.pos    = 690,52
+p6.red.spr = 12,0            ;Ikemen feature
+p6.red.offset = 6,6          ;Ikemen feature
+p6.red.scale = 1,0.33        ;Ikemen feature
+p6.red.facing = -1           ;Ikemen feature
+;p6.mid.anim = 12
+p6.mid.spr = 13,0
+p6.mid.offset = 6,6
+p6.mid.facing = -1
+p6.mid.scale = 1,0.33
+p6.front.spr = 14,0 ;13,0
+p6.front.offset = 6,6
+p6.front.facing = -1
+p6.front.scale = 1,0.33
+p6.range.x = 6,433
+
+; Ikemen feature
+[Tag_4P Lifebar]
+mid.shift = 0                ;Ikemen feature: makes the shift element also affect mid element (default: 0)
+mid.freeze = 0               ;Ikemen feature: controls mid element freezing during gethit/combo (default: 1)
+mid.delay = 0                ;Ikemen feature: frames before mid element starts decreasing (default: 30)
+mid.mult = 1.0               ;Ikemen feature: moving relation between mid value and life (default: 1.0)
+mid.steps = 16               ;Ikemen feature: mid value decreasing steps (default: 8)
+;Player 1
+p1.pos    = 590,40
+p1.bg0.anim = 34
+p1.bg0.offset = -6,6
+p1.bg1.spr = 35,0
+p1.red.spr = 12,0            ;Ikemen feature
+p1.red.offset = -6,6         ;Ikemen feature
+p1.red.scale = 1,0.25        ;Ikemen feature
+;p1.mid.anim = 12
+p1.mid.spr = 13,0
+p1.mid.offset = -6,6
+p1.mid.scale = 1,0.25
+p1.front.spr = 14,0 ;13,0
+p1.front.offset = -6,6
+p1.front.scale = 1,0.25
+p1.range.x  = -6,-433
+;Player 2
+p2.pos    = 690,40
+p2.bg0.anim = 34
+p2.bg0.offset = 6,6
+p2.bg0.facing = -1
+p2.bg1.spr = 35,0
+p2.bg1.facing = -1
+p2.red.spr = 12,0            ;Ikemen feature
+p2.red.offset = 6,6          ;Ikemen feature
+p2.red.scale = 1,0.25        ;Ikemen feature
+p2.red.facing = -1           ;Ikemen feature
+;p2.mid.anim = 12
+p2.mid.spr = 13,0
+p2.mid.offset = 6,6
+p2.mid.facing = -1
+p2.mid.scale = 1,0.25
+p2.front.spr = 14,0 ;13,0
+p2.front.offset = 6,6
+p2.front.facing = -1
+p2.front.scale = 1,0.25
+p2.range.x = 6,433
+;Player 3
+p3.pos    = 590,45
+p3.red.spr = 12,0            ;Ikemen feature
+p3.red.offset = -6,6         ;Ikemen feature
+p3.red.scale = 1,0.25        ;Ikemen feature
+;p3.mid.anim = 12
+p3.mid.spr = 13,0
+p3.mid.offset = -6,6
+p3.mid.scale = 1,0.25
+p3.front.spr = 14,0 ;13,0
+p3.front.offset = -6,6
+p3.front.scale = 1,0.25
+p3.range.x  = -6,-433
+;Player 4
+p4.pos    = 690,45
+p4.red.spr = 12,0            ;Ikemen feature
+p4.red.offset = 6,6          ;Ikemen feature
+p4.red.scale = 1,0.25        ;Ikemen feature
+p4.red.facing = -1           ;Ikemen feature
+;p4.mid.anim = 12
+p4.mid.spr = 13,0
+p4.mid.offset = 6,6
+p4.mid.facing = -1
+p4.mid.scale = 1,0.25
+p4.front.spr = 14,0 ;13,0
+p4.front.offset = 6,6
+p4.front.facing = -1
+p4.front.scale = 1,0.25
+p4.range.x = 6,433
+;Player 5
+p5.pos    = 590,50
+p5.red.spr = 12,0            ;Ikemen feature
+p5.red.offset = -6,6         ;Ikemen feature
+p5.red.scale = 1,0.25        ;Ikemen feature
+;p5.mid.anim = 12
+p5.mid.spr = 13,0
+p5.mid.offset = -6,6
+p5.mid.scale = 1,0.25
+p5.front.spr = 14,0 ;13,0
+p5.front.offset = -6,6
+p5.front.scale = 1,0.25
+p5.range.x  = -6,-433
+;Player 6
+p6.pos    = 690,50
+p6.red.spr = 12,0            ;Ikemen feature
+p6.red.offset = 6,6          ;Ikemen feature
+p6.red.scale = 1,0.25        ;Ikemen feature
+p6.red.facing = -1           ;Ikemen feature
+;p6.mid.anim = 12
+p6.mid.spr = 13,0
+p6.mid.offset = 6,6
+p6.mid.facing = -1
+p6.mid.scale = 1,0.25
+p6.front.spr = 14,0 ;13,0
+p6.front.offset = 6,6
+p6.front.facing = -1
+p6.front.scale = 1,0.25
+p6.range.x = 6,433
+;Player 7
+p7.pos    = 590,55
+p7.red.spr = 12,0            ;Ikemen feature
+p7.red.offset = -6,6         ;Ikemen feature
+p7.red.scale = 1,0.25        ;Ikemen feature
+;p7.mid.anim = 12
+p7.mid.spr = 13,0
+p7.mid.offset = -6,6
+p7.mid.scale = 1,0.25
+p7.front.spr = 14,0 ;13,0
+p7.front.offset = -6,6
+p7.front.scale = 1,0.25
+p7.range.x  = -6,-433
+;Player 8
+p8.pos    = 690,55
+p8.red.spr = 12,0            ;Ikemen feature
+p8.red.offset = 6,6          ;Ikemen feature
+p8.red.scale = 1,0.25        ;Ikemen feature
+p8.red.facing = -1           ;Ikemen feature
+;p8.mid.anim = 12
+p8.mid.spr = 13,0
+p8.mid.offset = 6,6
+p8.mid.facing = -1
+p8.mid.scale = 1,0.25
+p8.front.spr = 14,0 ;13,0
+p8.front.offset = 6,6
+p8.front.facing = -1
+p8.front.scale = 1,0.25
+p8.range.x = 6,433
+
+[Turns Lifebar]
+;Player 1
+p1.pos    = 590,40
+p1.bg0.anim = 10
+p1.bg0.offset = -6,6
+p1.bg1.spr = 11,0
+p1.mid.anim = 12
+p1.mid.offset = -6,6
+p1.front.spr = 13,0
+p1.front.offset = -6,6
+p1.shift.spr = 13,0          ;Ikemen feature
+p1.shift.offset = -6,6       ;Ikemen feature
+p1.shift.palfx.add = 0,-50,0 ;Ikemen feature
+p1.range.x  = -6,-433
+;Player 2
+p2.pos    = 690,40
+p2.bg0.anim = 10
+p2.bg0.offset = 6,6
+p2.bg0.facing = -1
+p2.bg1.spr = 11,0
+p2.bg1.facing = -1
+p2.mid.anim = 12
+p2.mid.offset = 6,6
 p2.mid.facing = -1
 p2.front.spr = 13,0
+p2.front.offset = 6,6
 p2.front.facing = -1
-p2.shift.spr = 13,10   ;Ikemen feature
-p2.shift.facing = -1   ;Ikemen feature
-p2.range.x = 0,127
+p2.shift.spr = 13,0          ;Ikemen feature
+p2.shift.offset = 6,6        ;Ikemen feature
+p2.shift.palfx.add = 0,-50,0 ;Ikemen feature
+p2.shift.facing = -1
+p2.range.x = 6,433
 
 ;-----------------------------------------------------------
 [Powerbar]
 ;Player 1
-p1.pos    = 140,22
+p1.pos    = 590,70
 p1.bg0.anim = 40
+p1.bg0.offset = -6,4
 p1.bg1.spr = 41,0
 ;p1.mid.spr = 42,0
-p1.front.spr = 43,0
-p1.range.x = 0,-107
-p1.counter.offset = -108,6
-p1.counter.font = 1,0, 0
-p1.levelbars = 0       ;Ikemen feature
+p1.front.anim = 43
+p1.front.offset = -6,4
+p1.range.x = -6,-245
+p1.counter.offset = -256,15
+p1.counter.font = 4,0, 0, 242,242,255
+p1.levelbars = 0             ;Ikemen feature
 
 ;Player 2
-p2.pos    = 178,22
+p2.pos    = 690,70
 p2.bg0.anim = 40
+p2.bg0.offset = 6,4
 p2.bg0.facing = -1
 p2.bg1.spr = 41,0
 p2.bg1.facing = -1
 ;p2.mid.spr = 42,0
 ;p2.mid.facing = -1
-p2.front.spr = 43,0
+p2.front.anim = 43
+p2.front.offset = 6,4
 p2.front.facing = -1
-p2.range.x  = 0,107
-p2.counter.offset = 109,6
-p2.counter.font = 1,0, 0
-p2.levelbars = 0       ;Ikemen feature
+p2.range.x  = 6,245
+p2.counter.offset = 259,15
+p2.counter.font = 4,0, 0, 242,242,255
+p2.levelbars = 0             ;Ikemen feature
 
 ; --level sounds---
 level1.snd = 21,0
@@ -541,7 +773,27 @@ level2.snd = 21,0
 level3.snd = 21,0
 
 [Begin Action 40] ;Darkened powerbar background 
-40,0, 0,0, 1, , S
+40,0, 0,0, 1, , AS224D32
+
+[Begin Action 43] ;Flashing powerbar
+43,0, 0,0, 15
+43,1, 0,0, 1
+43,2, 0,0, 1
+43,3, 0,0, 1
+43,4, 0,0, 1
+43,5, 0,0, 1
+43,6, 0,0, 1
+43,7, 0,0, 1
+43,8, 0,0, 1
+43,9, 0,0, 1
+43,10, 0,0, 1
+43,11, 0,0, 1
+43,12, 0,0, 1
+43,13, 0,0, 1
+43,14, 0,0, 1
+43,15, 0,0, 1
+43,16, 0,0, 1
+43,17, 0,0, 1
 
 ;-----------------------------------------------------------
 ;Ikemen feature
@@ -554,372 +806,322 @@ level3.snd = 21,0
 ;-----------------------------------------------------------
 [Face]
 ;Player 1
-p1.pos    = 2,12
-p1.bg.spr = 50,0
+p1.pos    = 20,20
+p1.bg0.spr = 50,0
+p1.bg1.anim = 51
 p1.face.spr = 9000,0
 p1.face.facing = 1
-p1.face.offset = 0,10
+p1.face.offset = 0,0
 ;Player 2
-p2.pos    = 316,12
-p2.bg.spr = 50,0
-p2.bg.facing = -1
+p2.pos    = 1260,20
+p2.bg0.spr = 50,0
+p2.bg0.facing = -1
+p2.bg1.anim = 51
+p2.bg1.facing = -1
 p2.face.spr = 9000,0
 p2.face.facing = -1
-p2.face.offset = 0,10
+p2.face.offset = 0,0
+
+[Begin Action 51] ;Darkened face background 
+51,0, 0,0, 1, , AS208D48
 
 [Simul Face]
 ;Player 1
-p1.pos    = 2,12
-p1.bg.spr = 50,0
+p1.pos    = 20,20
+p1.bg0.spr = 50,0
+p1.bg1.anim = 51
 p1.face.spr = 9000,0
 p1.face.facing = 1
-p1.face.offset = 0,10
 ;Player 2
-p2.pos    = 316,12
-p2.bg.spr = 50,0
-p2.bg.facing = -1
+p2.pos    = 1260,20
+p2.bg0.spr = 50,0
+p2.bg0.facing = -1
+p2.bg1.anim = 51
+p2.bg1.facing = -1
 p2.face.spr = 9000,0
 p2.face.facing = -1
-p2.face.offset = 0,10
 ;Player 3
-p3.pos = 30,30
-p3.bg.spr = 70,0
+p3.pos    = 144,80
+p3.bg0.spr = 70,0
+p3.bg1.anim = 71
 p3.face.spr = 9000,0
-p3.face.scale = 0.64,0.64
+p3.face.scale = 0.4,0.4
 p3.face.facing = 1
-p3.face.offset = 1,1
 ;Player 4
-p4.pos = 288,30
-p4.bg.spr = 70,0
-p4.bg.facing = -1
+p4.pos    = 1136,80
+p4.bg0.spr = 70,0
+p4.bg0.facing = -1
+p4.bg1.anim = 71
+p4.bg1.facing = -1
 p4.face.spr = 9000,0
-p4.face.scale = 0.64,0.64
+p4.face.scale = 0.4,0.4
 p4.face.facing = -1
-p4.face.offset = -1,1
-
 ; Ikemen feature
-[Simul_3P Face]
-;Player 1
-p1.pos    = 2,12
-p1.bg.spr = 50,0
-p1.face.spr = 9000,0
-p1.face.facing = 1
-p1.face.offset = 0,10
-;Player 2
-p2.pos    = 316,12
-p2.bg.spr = 50,0
-p2.bg.facing = -1
-p2.face.spr = 9000,0
-p2.face.facing = -1
-p2.face.offset = 0,10
-;Player 3
-p3.pos = 30,30
-p3.bg.spr = 70,0
-p3.face.spr = 9000,0
-p3.face.scale = 0.64,0.64
-p3.face.facing = 1
-p3.face.offset = 1,1
-;Player 4
-p4.pos = 288,30
-p4.bg.spr = 70,0
-p4.bg.facing = -1
-p4.face.spr = 9000,0
-p4.face.scale = 0.64,0.64
-p4.face.facing = -1
-p4.face.offset = -1,1
 ;Player 5
-p5.pos = 50,30
-p5.bg.spr = 70,0
+p5.pos    = 194,80
+p5.bg0.spr = 70,0
+p5.bg1.anim = 71
 p5.face.spr = 9000,0
-p5.face.scale = 0.64,0.64
+p5.face.scale = 0.4,0.4
 p5.face.facing = 1
-p5.face.offset = 1,1
 ;Player 6
-p6.pos = 268,30
-p6.bg.spr = 70,0
-p6.bg.facing = -1
+p6.pos    = 1086,80
+p6.bg0.spr = 70,0
+p6.bg0.facing = -1
+p6.bg1.anim = 71
+p6.bg1.facing = -1
 p6.face.spr = 9000,0
-p6.face.scale = 0.64,0.64
+p6.face.scale = 0.4,0.4
 p6.face.facing = -1
-p6.face.offset = -1,1
-
-; Ikemen feature
-[Simul_4P Face]
-;Player 1
-p1.pos    = 2,12
-p1.bg.spr = 50,0
-p1.face.spr = 9000,0
-p1.face.facing = 1
-p1.face.offset = 0,10
-;Player 2
-p2.pos    = 316,12
-p2.bg.spr = 50,0
-p2.bg.facing = -1
-p2.face.spr = 9000,0
-p2.face.facing = -1
-p2.face.offset = 0,10
-;Player 3
-p3.pos = 30,30
-p3.bg.spr = 70,0
-p3.face.spr = 9000,0
-p3.face.scale = 0.64,0.64
-p3.face.facing = 1
-p3.face.offset = 1,1
-;Player 4
-p4.pos = 288,30
-p4.bg.spr = 70,0
-p4.bg.facing = -1
-p4.face.spr = 9000,0
-p4.face.scale = 0.64,0.64
-p4.face.facing = -1
-p4.face.offset = -1,1
-;Player 5
-p5.pos = 50,30
-p5.bg.spr = 70,0
-p5.face.spr = 9000,0
-p5.face.scale = 0.64,0.64
-p5.face.facing = 1
-p5.face.offset = 1,1
-;Player 6
-p6.pos = 268,30
-p6.bg.spr = 70,0
-p6.bg.facing = -1
-p6.face.spr = 9000,0
-p6.face.scale = 0.64,0.64
-p6.face.facing = -1
-p6.face.offset = -1,1
 ;Player 7
-p7.pos = 70,30
-p7.bg.spr = 70,0
+p7.pos    = 244,80
+p7.bg0.spr = 70,0
+p7.bg1.anim = 71
 p7.face.spr = 9000,0
-p7.face.scale = 0.64,0.64
+p7.face.scale = 0.4,0.4
 p7.face.facing = 1
-p7.face.offset = 1,1
 ;Player 8
-p8.pos = 248,30
-p8.bg.spr = 70,0
-p8.bg.facing = -1
+p8.pos    = 1036,80
+p8.bg0.spr = 70,0
+p8.bg0.facing = -1
+p8.bg1.anim = 71
+p8.bg1.facing = -1
 p8.face.spr = 9000,0
-p8.face.scale = 0.64,0.64
+p8.face.scale = 0.4,0.4
 p8.face.facing = -1
-p8.face.offset = -1,1
 
 ; Ikemen feature
 [Tag Face]
 ;Player 1
-p1.pos    = 2,12
-p1.bg.spr = 50,0
+p1.pos    = 20,20
+p1.bg0.spr = 50,0
+p1.bg1.anim = 51
 p1.face.spr = 9000,0
 p1.face.facing = 1
-p1.face.offset = 0,10
 ;Player 2
-p2.pos    = 316,12
-p2.bg.spr = 50,0
-p2.bg.facing = -1
+p2.pos    = 1260,20
+p2.bg0.spr = 50,0
+p2.bg0.facing = -1
+p2.bg1.anim = 51
+p2.bg1.facing = -1
 p2.face.spr = 9000,0
 p2.face.facing = -1
-p2.face.offset = 0,10
 ;Player 3
-p3.pos = 30,30
-p3.bg.spr = 70,0
-p3.ko.spr = 71,0
+p3.pos    = 144,80
+p3.bg0.spr = 70,0
+p3.bg1.anim = 71
+p3.ko.anim = 72
 p3.face.spr = 9000,0
-p3.face.scale = 0.64,0.64
+p3.face.scale = 0.4,0.4
 p3.face.facing = 1
-p3.face.offset = 1,1
 ;Player 4
-p4.pos = 288,30
-p4.bg.spr = 70,0
-p4.bg.facing = -1
-p4.ko.spr = 71,0
+p4.pos    = 1136,80
+p4.bg0.spr = 70,0
+p4.bg0.facing = -1
+p4.bg1.anim = 71
+p4.bg1.facing = -1
+p4.ko.anim = 72
 p4.ko.facing = -1
 p4.face.spr = 9000,0
-p4.face.scale = 0.64,0.64
+p4.face.scale = 0.4,0.4
 p4.face.facing = -1
-p4.face.offset = -1,1
 ;Player 5
-p5.pos = 50,30
-p5.bg.spr = 70,0
-p5.ko.spr = 71,0
+p5.pos    = 194,80
+p5.bg0.spr = 70,0
+p5.bg1.anim = 71
+p5.ko.anim = 72
 p5.face.spr = 9000,0
-p5.face.scale = 0.64,0.64
+p5.face.scale = 0.4,0.4
 p5.face.facing = 1
-p5.face.offset = 1,1
 ;Player 6
-p6.pos = 268,30
-p6.bg.spr = 70,0
-p6.bg.facing = -1
-p6.ko.spr = 71,0
+p6.pos    = 1086,80
+p6.bg0.spr = 70,0
+p6.bg0.facing = -1
+p6.bg1.anim = 71
+p6.bg1.facing = -1
+p6.ko.anim = 72
 p6.ko.facing = -1
 p6.face.spr = 9000,0
-p6.face.scale = 0.64,0.64
+p6.face.scale = 0.4,0.4
 p6.face.facing = -1
-p6.face.offset = -1,1
 ;Player 7
-p7.pos = 70,30
-p7.bg.spr = 70,0
-p7.ko.spr = 71,0
+p7.pos    = 244,80
+p7.bg0.spr = 70,0
+p7.bg1.anim = 71
+p7.ko.anim = 72
 p7.face.spr = 9000,0
-p7.face.scale = 0.64,0.64
+p7.face.scale = 0.4,0.4
 p7.face.facing = 1
-p7.face.offset = 1,1
 ;Player 8
-p8.pos = 248,30
-p8.bg.spr = 70,0
-p8.bg.facing = -1
-p8.ko.spr = 71,0
+p8.pos    = 1036,80
+p8.bg0.spr = 70,0
+p8.bg0.facing = -1
+p8.bg1.anim = 71
+p8.bg1.facing = -1
+p8.ko.anim = 72
 p8.ko.facing = -1
 p8.face.spr = 9000,0
-p8.face.scale = 0.64,0.64
+p8.face.scale = 0.4,0.4
 p8.face.facing = -1
-p8.face.offset = -1,1
 
 [Turns Face]
 ;Player 1
-p1.pos    = 2,12
-p1.bg.spr = 50,0
+p1.pos    = 20,20
+p1.bg0.spr = 50,0
+p1.bg1.anim = 51
 p1.face.spr = 9000,0
 p1.face.facing = 1
-p1.face.offset = 0,10
-p1.teammate.pos = 30,30
-p1.teammate.spacing = 20,0
-p1.teammate.bg.spr = 70,0
-p1.teammate.ko.spr = 71,0
+;Player 1's teammates
+p1.teammate.pos = 144,80
+p1.teammate.spacing = 50,0
+p1.teammate.bg0.spr = 70,0
+p1.teammate.bg1.anim = 71
+p1.teammate.ko.anim = 72
 p1.teammate.face.spr = 9000,0
-p1.teammate.face.scale = 0.64,0.64
+p1.teammate.face.scale = 0.4,0.4
 p1.teammate.face.facing = 1
-p1.teammate.face.offset = 1,1
 ;Player 2
-p2.pos    = 316,12
-p2.bg.spr = 50,0
-p2.bg.facing = -1
+p2.pos    = 1260,20
+p2.bg0.spr = 50,0
+p2.bg0.facing = -1
+p2.bg1.anim = 51
+p2.bg1.facing = -1
 p2.face.spr = 9000,0
 p2.face.facing = -1
-p2.face.offset = 0,10
-p2.teammate.pos = 288,30
-p2.teammate.spacing = -20,0
-p2.teammate.bg.spr = 70,0
-p2.teammate.bg.facing = -1
-p2.teammate.ko.spr = 71,0
+;Player 2's teammates
+p2.teammate.pos = 1136,80
+p2.teammate.spacing = -50,0
+p2.teammate.bg0.spr = 70,0
+p2.teammate.bg0.facing = -1
+p2.teammate.bg1.anim = 71
+p2.teammate.bg1.facing = -1
+p2.teammate.ko.anim = 72
 p2.teammate.ko.facing = -1
 p2.teammate.face.spr = 9000,0
-p2.teammate.face.scale = 0.64,0.64
+p2.teammate.face.scale = 0.4,0.4
 p2.teammate.face.facing = -1
-p2.teammate.face.offset = -1,1
+
+[Begin Action 71] ;Darkened small face background 
+71,0, 0,0, 1, , AS208D48
+
+[Begin Action 72] ;KO overlay for small face
+72,0, 0,0, 1, , AS192D64
 
 ;-----------------------------------------------------------
 [Name]
 ;Player 1
-p1.pos = 14,10
+p1.pos = 142,35
 ;p1.bg. =
-p1.name.font = 3,0, 1
+p1.name.font = 3,3, 1
 ;Player 2
-p2.pos = 305,10
+p2.pos = 1138,35
 ;p2.bg. =
-p2.name.font = 3,0, -1
+p2.name.font = 3,1, -1
 
 [Simul Name]
 ;Player 1
-p1.pos = 14,10
+p1.pos = 142,35
 ;p1.bg. =
-p1.name.font = 3,0, 1
+p1.name.font = 3,3, 1
 ;Player 2
-p2.pos = 305,10
+p2.pos = 1138,35
 ;p2.bg. =
-p2.name.font = 3,0, -1
+p2.name.font = 3,1, -1
 ;Player 3
-p3.pos = 14,20
+p3.pos = 200,85
 ;p3.bg. =
-p3.name.font = 3,0, 1
+p3.name.font = 3,3, 1
+p3.name.scale = 0.5,1
 ;Player 4
-p4.pos = 305,20
+p4.pos = 1080,85
 ;p4.bg. =
-p4.name.font = 3,0, -1
+p4.name.font = 3,1, -1
+p4.name.scale = 0.5,1
 
 ; Ikemen feature
 [Simul_3P Name]
 ;Player 1
-p1.pos = 14,10
+p1.pos = 142,35
 ;p1.bg. =
-p1.name.font = 3,0, 1
+p1.name.font = 3,3, 1
 ;Player 2
-p2.pos = 305,10
+p2.pos = 1138,35
 ;p2.bg. =
-p2.name.font = 3,0, -1
+p2.name.font = 3,1, -1
 
 ; Ikemen feature
 [Simul_4P Name]
 ;Player 1
-p1.pos = 14,10
+p1.pos = 142,35
 ;p1.bg. =
-p1.name.font = 3,0, 1
+p1.name.font = 3,3, 1
 ;Player 2
-p2.pos = 305,10
+p2.pos = 1138,35
 ;p2.bg. =
-p2.name.font = 3,0, -1
+p2.name.font = 3,1, -1
 
 ; Ikemen feature
 [Tag Name]
 ;Player 1
-p1.pos = 14,10
+p1.pos = 142,35
 ;p1.bg. =
-p1.name.font = 3,0, 1
+p1.name.font = 3,3, 1
 ;Player 2
-p2.pos = 305,10
+p2.pos = 1138,35
 ;p2.bg. =
-p2.name.font = 3,0, -1
+p2.name.font = 3,1, -1
 
 [Turns Name]
 ;Player 1
-p1.pos = 14,10
+p1.pos = 142,35
 ;p1.bg. =
-p1.name.font = 3,0, 1
+p1.name.font = 3,3, 1
 ;Player 2
-p2.pos = 305,10
+p2.pos = 1138,35
 ;p2.bg. =
-p2.name.font = 3,0, -1
+p2.name.font = 3,1, -1
 
 ;-----------------------------------------------------------
 [Time]
-pos = 160,23
+pos = 642,84
 ; Uncomment the following line to use a bg component
 ;bg.spr = 
 ; Time count display
 counter.offset = 0,0
-counter.font = 2,0, 0
+counter.font = 2,0, 0, 255,255,242
 ; Ticks for each count
 framespercount = 60
 
 ;-----------------------------------------------------------
 [Combo]
-team1.pos = 10,80         ;Coords to show
-team1.start.x = -40       ;Starting x-coords
+team1.pos = 30,260        ;Coords to show
+team1.start.x = -240      ;Starting x-coords
 team1.counter.layerno = 2
-team1.counter.font = 2,4,1
+team1.counter.font = 2,3,1
 team1.counter.shake = 1   ;Set to 1 to shake count on hit
 team1.counter.time = 7    ;Ikemen feature: length of the counter shake
 team1.counter.mult = 0.05 ;Ikemen feature: counter shake intensity multiplier
 team1.text.layerno = 2
 ; Ikemen feature (text format %i = combo count, %d = combo damage, %p = combo damage percentage)
-team1.text.text = Rush!   ;You can use %i to show count in the text, eg "%i Hit!"
-team1.text.font = 1,0,1
-team1.text.offset = 3,0   ;Offset of text
+team1.text.text = "COMBO" ;You can use %i to show count in the text, eg "%i Hit!"
+team1.text.font = 1,4,1
+team1.text.offset = 12,0  ;Offset of text
 team1.displaytime = 90    ;Time to show text
 team1.showspeed = 8       ;Ikemen feature: text showing up speed (1 = instant)
 team1.hidespeed = 4       ;Ikemen feature: text hiding speed (the larger value, the faster speed)
 
-team2.pos = 309,80        ;Coords to show
-team2.start.x = 359       ;Starting x-coords
+team2.pos = 1250,260      ;Coords to show
+team2.start.x = 1520      ;Starting x-coords
 team2.counter.layerno = 2
-team2.counter.font = 2,4,-1
+team2.counter.font = 2,1,-1
 team2.counter.shake = 1   ;Set to 1 to shake count on hit
 team2.counter.time = 7    ;Ikemen feature: length of the counter shake
 team2.counter.mult = 0.05 ;Ikemen feature: counter shake intensity multiplier
 team2.text.layerno = 2
 ; Ikemen feature (text format %i = combo count, %d = combo damage, %p = combo damage percentage)
-team2.text.text = Rush!   ;You can use %i to show count in the text, eg "%i Hit!"
-team2.text.font = 1,0,-1
-team2.text.offset = 3,0   ;Offset of text
+team2.text.text = "COMBO" ;You can use %i to show count in the text, eg "%i Hit!"
+team2.text.font = 1,4,-1
+team2.text.offset = 12,0  ;Offset of text
 team2.displaytime = 90    ;Time to show text
 team2.showspeed = 8       ;Ikemen feature: text showing up speed (1 = instant)
 team2.hidespeed = 4       ;Ikemen feature: text hiding speed (the larger value, the faster speed)
@@ -931,39 +1133,39 @@ format.decimal.separator = .
 ;-----------------------------------------------------------
 ; Ikemen feature
 [Action]
-team1.pos = 10,95         ;Coords to show
-team1.spacing = 0,3       ;Spacing
-team1.start.x = -40       ;Starting x-coords
+team1.pos = 30,277        ;Coords to show
+team1.spacing = 0,9       ;Spacing
+team1.start.x = -240      ;Starting x-coords
 team1.bg.layerno = 2
-team1.bg.offset = 25,0
+team1.bg.offset = 75,0
 team1.bg.anim = 400
-team1.bg.scale = 0.5,0.5
+team1.bg.scale = 1.0,1.0
 team1.bg.spr = 
 team1.front.layerno = 2
-team1.front.offset = 25,0
-team1.front.scale = 0.5,0.5
+team1.front.offset = 75,0
+team1.front.scale = 1.0,1.0
 team1.text.layerno = 2
 team1.text.font = 1,0,1
-team1.text.offset = 3,0   ;Offset of text
+team1.text.offset = 9,0   ;Offset of text
 team1.text.scale = 1,1
 team1.displaytime = 60    ;Time to show message
 team1.showspeed = 2       ;Message showing up speed (1 = instant)
 team1.hidespeed = 8       ;Message hiding speed (the larger value, the faster speed)
 
-team2.pos = 309,95        ;Coords to show
-team2.spacing = 0,3       ;Spacing
-team2.start.x = 359       ;Starting x-coords
+team2.pos = 1250,277       ;Coords to show
+team2.spacing = 0,9       ;Spacing
+team2.start.x = 1520      ;Starting x-coords
 team2.bg.layerno = 2
-team2.bg.offset = -25,0
+team2.bg.offset = -75,0
 team2.bg.anim = 400
-team2.bg.scale = 0.5,0.5
+team2.bg.scale = 1.0,1.0
 team2.bg.spr = 
 team2.front.layerno = 2
-team2.front.offset = -25,0
-team2.front.scale = 0.5,0.5
+team2.front.offset = -75,0
+team2.front.scale = 1.0,1.0
 team2.text.layerno = 2
 team2.text.font = 1,0,-1
-team2.text.offset = 3,0   ;Offset of text
+team2.text.offset = 9,0   ;Offset of text
 team2.text.scale = 1,1
 team2.displaytime = 60    ;Time to show message
 team2.showspeed = 2       ;Message showing up speed (1 = instant)
@@ -975,7 +1177,7 @@ team2.hidespeed = 8       ;Message hiding speed (the larger value, the faster sp
 ;-----------------------------------------------------------
 [Round]
 match.wins = 2              ;Rounds needed to win a match (Ikemen feature: depreciated, this setting can be configured in in-game options)
-match.maxdrawgames = 1      ;Max number of drawgames allowed (-1 for infinite) *2001.11.01 NEW*
+match.maxdrawgames = 1      ;Max number of drawgames allowed (-1 for infinite)
 start.waittime = 30         ;Time to wait before starting intro
 
 ; Default position for all components
@@ -983,13 +1185,14 @@ pos = 0,0
 
 ; ROUND X
 round.time = 0              ;Time to show round display
-round.default.offset = 160, 100
+round.default.offset = 640, 320
 ; Default component to show for each round. Text can include a %i to
 ; the round number. Use "round.default.anim" for animation instead of
 ; text.
 round.default.font = 1,0, 0
-round.default.text = Round %i
+round.default.text = "Round %i"
 round.default.displaytime = 60
+round.default.scale = 1,1
 ; Sounds to play for each round (optional, specify up to round 9)
 round1.snd = 0,1
 round2.snd = 0,2
@@ -1002,7 +1205,7 @@ round.sndtime = 0           ;Time to play the sounds
 
 ; FIGHT
 fight.time = 0              ;Time to show FIGHT component
-fight.offset = 160, 110     ;Component for FIGHT display
+fight.offset = 640, 300     ;Component for FIGHT display
 fight.anim = 80             ;.
 fight.snd = 1,0             ;Sound to play
 fight.sndtime = 0           ;Time to play sound
@@ -1012,19 +1215,19 @@ ctrl.time = 30              ;Time players get control after starting fight
 
 ; KO
 KO.time    = 0              ;Time to show KO component
-KO.offset  = 160, 70        ;Component for KO display
+KO.offset  = 640, 300       ;Component for KO display
 KO.anim    = 200            ;.
 KO.snd     = 2,0            ;Sound to play for KO announcement
 ; Double KO
-DKO.offset = 160, 70
+DKO.offset = 640, 320
 DKO.font   = 1,5
-DKO.text   = Double K.O.
+DKO.text   = "Double K.O."
 DKO.displaytime = 60
 DKO.snd    = 2,1
 ; Time Over
-TO.offset  = 160, 70
+TO.offset  = 640, 320
 TO.font    = 1,5
-TO.text    = Time Over
+TO.text    = "Time Over"
 TO.displaytime = 60
 TO.snd     = 2,2
 KO.sndtime = 0             ;Time to play sound for KO, DKO and TO.
@@ -1040,29 +1243,29 @@ over.time = 270            ;Time to wait before round ends
 
 ; Win text
 win.time = 60              ;Time to wait before showing win/draw message
-win.offset = 160, 70
+win.offset = 640, 320
 win.font = 1,0
-win.text = %s Wins
+win.text = "%s Wins"
 win.displaytime = 540
 ; 2-player win text
-win2.offset = 160, 70
+win2.offset = 640, 320
 win2.font = 1,0
-win2.text = %s and %s Win
+win2.text = "%s and %s Win"
 win2.displaytime = 540
 ; Ikemen feature: 3-player win text
-win3.offset = 160, 70
+win3.offset = 640, 320
 win3.font = 1,0
-win3.text = Team %s Wins
+win3.text = "Team %s Wins"
 win3.displaytime = 540
 ; Ikemen feature: 4-player win text
-win4.offset = 160, 70
+win4.offset = 640, 320
 win4.font = 1,0
-win4.text = Team %s Wins
+win4.text = "Team %s Wins"
 win4.displaytime = 540
 ; Draw text
-draw.offset = 160, 70
+draw.offset = 640, 320
 draw.font = 1,0
-draw.text = Draw Game
+draw.text = "Draw Game"
 draw.displaytime = 540
 
 ; Fade
@@ -1075,111 +1278,86 @@ shutter.col = 0, 0, 0      ;Ikemen feature: skip intro fade color (default: 0,0,
 
 ;"Fight!" Animation
 [Begin Action 80]
-80,0, 0,0, 1
-80,6, 0,0, 1
-80,7, 0,0, 1
-80,6, 0,0, 1
-80,0, 0,0, 30
-80,1, 0,0, 1
-80,2, 0,0, 1
-80,3, 0,0, 1
-80,4, 0,0, 1
-80,5, 0,0, 1
+80,0, 0,0, 8, , AS128D128, 4,4, 180
+Interpolate Scale
+Interpolate Angle
+Interpolate Blend
+80,0, 0,0, 40, , AS256D0
+80,0, 0,0, 4, , AS192D63
+Interpolate Blend
+80,0, 0,0, 1, , AS32D223
 
 ;"K.O." Animation
 [Begin Action 200]
 -1,-1, 0,0, 5
-200,2, 0,0, 2, ,A1
-200,1, 0,0, 2, ,A
-200,2, 0,0, 2, ,A
-200,2, 0,0, 18, ,A1
-200,4, 0,0, 2, ,A1
-200,3, 0,0, 2, ,A
-200,4, 0,0, 2, ,A
-200,4, 0,0, 18, ,A1
-200,0, 0,0, 2, ,A1
-200,5, 0,0, 2, ,A1
-200,5, 0,0, 2, ,A
-200,5, 0,0, 2, ,A1
-200,0, 0,0, 2, ,A1
-200,0, 0,0, 50
-200,6, 0,0, 1, ,A1
-200,7, 0,0, 1, ,A1
-200,8, 0,0, 1, ,A1
-200,9, 0,0, 1, ,A1
-200,10, 0,0, 1, ,A1
+200,0, 0,0, 1, , AS255D255
+200,0, 0,0, 1, , AS255D224
+200,0, 0,0, 1, , AS255D192
+200,0, 0,0, 1, , AS255D160
+200,0, 0,0, 1, , AS255D128
+200,0, 0,0, 120
+200,0, 0,0, 1, , AS255D64
+200,0, 0,0, 1, , AS255D128
+200,0, 0,0, 1, , AS255D192
+200,0, 0,0, 1, , AS255D255
+200,0, 0,0, 1, , AS192D255
+200,0, 0,0, 1, , AS128D255
+200,0, 0,0, 1, , AS64D255
 
 ;-----------------------------------------------------------
 [WinIcon]
-p1.pos = 136,34
-p2.pos = 182,34
+p1.pos = 584,96
+p2.pos = 696,96
+; Background icon
+p1.bg0.spr = 120,0
+p2.bg0.spr = 120,0
 ; Offset for next icon (x,y)
-p1.iconoffset = -8,0  
-p2.iconoffset = 8,0
+p1.iconoffset = -24,0  
+p2.iconoffset = 24,0
 ; Counter text font and offset for representing wins
-p1.counter.offset = 0,0
-p1.counter.font = 2,1
-p1.counter.scale = 0.5,0.5
-p2.counter.offset = 0,0
-p2.counter.font = 2,1
-p2.counter.scale = 0.5,0.5
+p1.counter.offset = 0,5
+p1.counter.font = 4,0,0, 230,255,242
+p2.counter.offset = 0,5
+p2.counter.font = 4,0,0, 255,242,242
 ; Win by normal
 p1.n.spr = 100,0
-p1.n.scale = 0.5,0.5
 p2.n.spr = 100,0
-p2.n.scale = 0.5,0.5
 ; Win by special
 p1.s.spr = 101,0
-p1.s.scale = 0.5,0.5
 p2.s.spr = 101,0
-p2.s.scale = 0.5,0.5
 ; Win by hyper (super)
 p1.h.spr = 102,0
-p1.h.scale = 0.5,0.5
 p2.h.spr = 102,0
-p2.h.scale = 0.5,0.5
 ; Win by normal throw
 p1.throw.spr = 103,0
-p1.throw.scale = 0.5,0.5
 p2.throw.spr = 103,0
-p2.throw.scale = 0.5,0.5
 ; Win by cheese
 p1.c.spr = 104,0
-p1.c.scale = 0.5,0.5
 p2.c.spr = 104,0
-p2.c.scale = 0.5,0.5
 ; Win by time over
 p1.t.spr = 105,0
-p1.t.scale = 0.5,0.5
 p2.t.spr = 105,0
-p2.t.scale = 0.5,0.5
-; Win by suicide (here's a fun one)
+; Win by suicide
 p1.suicide.spr = 106,0
-p1.suicide.scale = 0.5,0.5
 p2.suicide.spr = 106,0
-p2.suicide.scale = 0.5,0.5
-; Opponent beaten by his own teammate (another fun one)
+; Opponent beaten by his own teammate
 p1.teammate.spr = 107,0
-p1.teammate.scale = 0.5,0.5
 p2.teammate.spr = 107,0
-p2.teammate.scale = 0.5,0.5
 ; Win by perfect (overlay icon)
 p1.perfect.spr = 110,0
-p1.perfect.scale = 0.5,0.5
 p2.perfect.spr = 110,0
-p2.perfect.scale = 0.5,0.5
 ; Use icons up until this number of wins
 useiconupto = 4
 
 ;-----------------------------------------------------------
 ; Ikemen feature
 [WinCount]
-p1.pos = 141,8
+p1.pos = 586,35
 ;p1.bg.spr = 
 p1.text.font = 3,0, -1
 p1.text.text = WINS %s
 
-p2.pos = 178,8
+p2.pos = 696,35
 ;p2.bg.spr = 
 p2.text.font = 3,0, 1
 p2.text.text = WINS %s
@@ -1195,7 +1373,7 @@ p2.enabled.versuscoop = 1
 ;-----------------------------------------------------------
 ; Ikemen feature
 [Timer]
-pos = 141,8
+pos = 586,35
 ;bg.spr = 
 text.font = 3,0, -1
 ; Time format: %m = minutes, %s = seconds, %x = milliseconds
@@ -1207,12 +1385,12 @@ enabled.timechallenge = 1
 ;-----------------------------------------------------------
 ; Ikemen feature
 [Score]
-p1.pos = 141,8
+p1.pos = 586,35
 ;p1.bg.spr = 
 p1.text.font = 3,0, -1
 p1.text.text = %s
 
-p2.pos = 178,8
+p2.pos = 696,35
 ;p2.bg.spr = 
 p2.text.font = 3,0, 1
 p2.text.text = %s
@@ -1235,7 +1413,7 @@ p1.enabled.training = 1
 ;-----------------------------------------------------------
 ; Ikemen feature
 [Match]
-pos = 141,8
+pos = 586,35
 ;bg.spr = 
 text.font = 3,0, -1
 text.text = STAGE %s
@@ -1248,13 +1426,13 @@ enabled.vs100kumite = 1
 ;-----------------------------------------------------------
 ; Ikemen feature
 [AILevel]
-p1.pos = 141,8
+p1.pos = 586,35
 ;p1.bg.spr = 
 p1.text.font = 3,0, -1
 ; %s = integer value, %p = percentage
 p1.text.text = CPU-%s
 
-p2.pos = 178,8
+p2.pos = 696,35
 ;p2.bg.spr = 
 p2.text.font = 3,0, 1
 p2.text.text = CPU-%s
@@ -1282,7 +1460,7 @@ p2.enabled.watch = 1
 ;-----------------------------------------------------------
 ; Ikemen feature
 [Mode]
-demo.pos = 305,10
+demo.pos = 1138,35
 ;demo.bg.spr = 
 demo.text.font = 3,0, -1
 demo.text.text = Demo Mode
@@ -1290,24 +1468,24 @@ demo.text.text = Demo Mode
 ;-----------------------------------------------------------
 ; Ikemen feature
 [Ratio]
-p1.pos          = 7, 15
+p1.pos          = 111, 111
 p1.level1.spr   = 300, 0
-p1.level1.scale = 0.5, 0.5
+p1.level1.scale = 1.0, 1.0
 p1.level2.spr   = 300, 1
-p1.level2.scale = 0.5, 0.5
+p1.level2.scale = 1.0, 1.0
 p1.level3.spr   = 300, 2
-p1.level3.scale = 0.5, 0.5
+p1.level3.scale = 1.0, 1.0
 p1.level4.spr   = 300, 3
-p1.level4.scale = 0.5, 0.5
-p2.pos          = 311, 15
+p1.level4.scale = 1.0, 1.0
+p2.pos          = 1169, 111
 p2.level1.spr   = 300, 0
-p2.level1.scale = 0.5, 0.5
+p2.level1.scale = 1.0, 1.0
 p2.level2.spr   = 300, 1
-p2.level2.scale = 0.5, 0.5
+p2.level2.scale = 1.0, 1.0
 p2.level3.spr   = 300, 2
-p2.level3.scale = 0.5, 0.5
+p2.level3.scale = 1.0, 1.0
 p2.level4.spr   = 300, 3
-p2.level4.scale = 0.5, 0.5
+p2.level4.scale = 1.0, 1.0
 
 ;-----------------------------------------------------------
 ; How to customize
