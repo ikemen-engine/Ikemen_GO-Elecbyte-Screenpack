@@ -15,13 +15,13 @@ localcoord = 320,240        ;Local coordinate space width and height
 ; Files for the player
 [Files]
 cmd     = kfm.cmd           ;Command set
-cns     = kfm.const           ;Constants
+cns     = kfm.const         ;Constants
 st      = kfm.zss           ;States
 st2 = hits.zss
 st3 = command.zss
 st4 = AI.zss
-stcommon = common1.cns.zss      ;Common states (from data/ or motif)
-sprite  = kfmZ.sff           ;Sprite
+stcommon = common1.cns.zss  ;Common states (from data/ or motif)
+sprite  = kfm.sff           ;Sprite
 anim    = kfm.air           ;Animation
 sound   = kfm.snd           ;Sound
 ai      = kfm.ai            ;AI hints data (not used)
