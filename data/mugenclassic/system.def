@@ -21,19 +21,19 @@ localcoord = 320,240      ;Local coordinate space width and height (new in MUGEN
 ;    ~/mugen/system.sff.
 
 [Files]
-spr = system.sff          ;Filename of sprite data
-snd = system.snd          ;Filename of sound data
-logo.storyboard = kfm/logo.def   ;Logo storyboard definition (optional)
-intro.storyboard = kfm/intro.def ;Intro storyboard definition (optional)
-select = select.def       ;Character and stage selection list
-fight = fight.def         ;Fight definition filename
-font1 = f-4x6.def         ;System fonts
-font2 = f-6x9.def         ;System fonts
-font3 = jg.fnt            ;System fonts
+spr = system.sff                    ;Filename of sprite data
+snd = system.snd                    ;Filename of sound data
+logo.storyboard = ../kfm/logo.def   ;Logo storyboard definition (optional)
+intro.storyboard = ../kfm/intro.def ;Intro storyboard definition (optional)
+select = select.def                 ;Character and stage selection list
+fight = fight.def                   ;Fight definition filename
+font1 = f-4x6.def                   ;System fonts
+font2 = f-6x9.def                   ;System fonts
+font3 = jg.fnt                      ;System fonts
 font4 = Open_Sans.def
 font5 = default-3x5-bold.def
 font6 = default-3x5.def
-module =                  ;Ikemen feature: External Lua code
+module =                            ;Ikemen feature: External Lua code
 
 ;----------------------------
 [Music]
@@ -1161,8 +1161,8 @@ counter.end.snd = 900, 10         ;Ikemen feature
 ;-------------------------------------------------------------------
 ;Game over screen definition
 [Game Over Screen]
-enabled = 1               ;Set to 1 to show game over screen, 0 to disable
-storyboard = kfm/gameover.def ;Game over storyboard filename
+enabled = 1                      ;Set to 1 to show game over screen, 0 to disable
+storyboard = ../kfm/gameover.def ;Game over storyboard filename
 
 ;-------------------------------------------------------------------
 ;Victory screen definition
@@ -1254,8 +1254,8 @@ storyboard =              ;Default ending storyboard filename
 ;Ending credits screen definition
 ;This screen shows up after the Win Screen and Ending
 [End Credits]
-enabled = 1               ;Set to 1 to show credits, 0 to disable
-storyboard = kfm/credits.def  ;Credits storyboard filename
+enabled = 1                      ;Set to 1 to show credits, 0 to disable
+storyboard = ../kfm/credits.def  ;Credits storyboard filename
 
 ;-------------------------------------------------------------------
 ;Survival mode results screen definition
@@ -1612,8 +1612,8 @@ fadeout.col = 0, 0, 0
 credits.key = "5"
 options.key = "F11"
 credits.snd = 400, 0
-logo.storyboard = "kfm/logo.def"
-intro.storyboard = "kfm/intro.def"
+logo.storyboard = "../kfm/logo.def"
+intro.storyboard = "../kfm/intro.def"
 start.storyboard = ""
 start.time = 600
 start.insert.text = "Insert coin"
