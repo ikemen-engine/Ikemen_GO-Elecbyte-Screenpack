@@ -170,7 +170,9 @@ if animElemTime(7) = 3 {
 }
 
 #Change to stand state when done
-call EndState(0);
+if animTime = 0 {
+	changeState{value: 0}
+}
 
 #-------------------------------------------------------------------------------
 [StateDef 195;

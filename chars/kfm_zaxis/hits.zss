@@ -37,7 +37,7 @@ if !getHitVar(IsBound) {
 type: A; movetype: H; physics: N; poweradd: 40;]
 
 if time = 0 {
-	velSet{x: 3.0; y: -7.0; z: ifelse(pos z < 0, 1.5, -1.5)}
+	velSet{x: 3.0; y: -7.0; z: ifelse(stateOwner, map(throw_up_down) > 0, 1.5, -1.5)}
 }
 
 #Gravity
