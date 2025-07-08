@@ -1,15 +1,20 @@
-#ZSS language: https://github.com/ikemen-engine/Ikemen-GO/wiki/ZSS
-#ZSS syntax highlighter for Notepad++: https://github.com/ikemen-engine/zss_npp
+# ZSS language: https://github.com/ikemen-engine/Ikemen-GO/wiki/ZSS
+# ZSS syntax highlighter for Notepad++: https://github.com/ikemen-engine/zss_npp
 #-------------------------------------------------------------------------------
-#Commenting in ZSS
-#You may notice that the ";" character is now replaced with the "#" character.
-#This is because ";" is now used to separate parameters in sctrls rather than a
-#blank space.
+# Commenting in ZSS
+# You may notice that the ";" character is now replaced with the "#" character.
+# This is because ";" is now used to separate parameters in sctrls rather than a
+# blank space.
+
+# This version of Kung Fu Man allows moving around in the Z axis
+# It is meant to showcase that feature in Ikemen GO
+# For the sake of backward compatibility, it uses some workarounds that one
+# would not normally need in a game designed with Z axis in mind
 
 #===============================================================================
 # Functions
 #===============================================================================
-#Used to apply palFx during EX moves
+# Used to apply palFx during EX moves
 [Function EXFX(time)]
 palFx{time: $time; add: 32, 16, 0; sinadd: 64, 32, 5, 3}
 
@@ -625,7 +630,7 @@ if animElemTime(7) = 3 {
 
 #Change to stand state when done
 if animTime = 0 {
-	changeState{value: 0; ctrl: 1}
+	changeState{value: 0}
 }
 
 #-------------------------------------------------------------------------------
@@ -1264,14 +1269,17 @@ if animTime = 0 {
 type: S; movetype: A; physics: N;
 anim: 810; poweradd: 0;]
 
-# Here a variable, var(2), is used to remember whether or not the
-# player was holding forward at the start of the state. This variable
-# is checked later on to turn KFM around if necessary.
+# Here a ,ap is used to remember which directions the player was holding up
+# until the enemy is thrown. This map is checked later to decide the enemy
+# throwing velocities
 if time = 0 {
-	#This is how variables are set in ZSS. They must always end with a ";"
-	#If this were a varAdd equivalent it would say:
-	#var(2) := var(2) + (command = "holdfwd");
-	var(2) := command = "holdfwd";
+	mapSet{map: "throw_back"; value: command = "holdback"}
+	mapSet{map: "throw_up_down"; value: 0}
+}
+
+# Update throwing z direction
+if (command = "holdup" || command = "holddown") && animElemTime(6) < 0 {
+	mapSet{map: "throw_up_down"; value: command = "holddown" - command = "holdup"}
 }
 
 if animElem = 2 {
@@ -1303,10 +1311,10 @@ if animElemTime(5) >= 0 && animElemTime(6) < 0 {
 
 #It is possible to group sctrls together if they had the same triggers in ZSS.
 #Saving time and space.
-if var(2) && animElem = 6 {
-	turn{}                  #If was holding fwd before, turn now
-	posAdd{x: -37}          #If was holding fwd before, move a little
-	targetFacing{value: -1} #If was holding fwd before, turn target too
+if !map(throw_back) && animElem = 6 {
+	turn{}                  # If player was not holding back before, turn now
+	posAdd{x: -37}          # And move a little
+	targetFacing{value: -1} # And turn the target too
 }
 
 #For optimization, else if is used to make sure the code below the first if
@@ -2993,8 +3001,19 @@ if animTime = 0 {
 #===============================================================================
 [StateDef -4]
 
-#Check if player is holding crouch button
+# Check if player is holding crouch button
 mapSet{map: "crouchinput"; value: inputTime(c) > 0}
+
+# Stop target Z velocities upon hitting them
+# Because conventional characters do not account for the Z axis
+ignoreHitPause if moveHitVar(frame) && numTarget {
+	for i = 0; numTarget - 1; 1 {
+		if target(-1, $i), hitShakeOver = 0 &&
+			target(-1, $i), vel x = 0 && target(-1, $i), vel y = 0 && target(-1, $i), vel z != 0 {
+			velSet{z: 0; redirectID: target(-1, $i), ID}
+		}
+	}
+}
 
 
 #===============================================================================
@@ -3002,12 +3021,12 @@ mapSet{map: "crouchinput"; value: inputTime(c) > 0}
 #===============================================================================
 [StateDef -3]
 
-#Landing Sound
-#This controller plays a sound every time KFM lands from a jump, or back-dash.
-#The code below is another way to represent the structure of
-#triggerall, trigger1, trigger2
+# Landing Sound
+# This controller plays a sound every time KFM lands from a jump, or back-dash.
+# The code below is another way to represent the structure of
+# triggerall, trigger1, trigger2
 
-if time = 1 && (stateNo = 52 || stateNo = 106) { #Jump land || Run-back land
+if time = 1 && (stateNo = 52 || stateNo = 106) { # Jump land || Run-back land
 	playSnd{value: S 40, 0; channel: 1}
 }
 

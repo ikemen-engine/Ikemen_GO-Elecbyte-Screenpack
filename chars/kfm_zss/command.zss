@@ -82,7 +82,7 @@ ignoreHitPause{mapSet{map:"canCombo"; value: $canCombo}}
 #Smash Kung Fu Upper (uses one super bar)
 if command = "SmashKFUpper" && power >= 1000 && stateType != A &&
 	(ctrl ||
-		(hitDefAttr = SC, NA, SA, HA && stateNo != [3050, 3100] && moveContact) ||
+		(hitDefAttr = SC, NA, SA, HA && stateNo != [3050, 3100) && moveContact) ||
 		(stateNo = 1310 || stateNo = 1330)) { #From blocking
 	changeState{value: 3050}
 }
@@ -91,7 +91,7 @@ if command = "SmashKFUpper" && power >= 1000 && stateType != A &&
 #Triple Kung Fu Palm (uses one super bar)
 if command = "TripleKFPalm" && power >= 1000 && stateType != A &&
 	(ctrl ||
-		(hitDefAttr = SC, NA, SA, HA && stateNo != [3050, 3100] && moveContact) ||
+		(hitDefAttr = SC, NA, SA, HA && stateNo != [3000, 3050) && moveContact) ||
 		(stateNo = 1310 || stateNo = 1330)) { #From blocking
 	changeState{value: 3000}
 }
