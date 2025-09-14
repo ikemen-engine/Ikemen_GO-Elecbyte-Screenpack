@@ -1121,7 +1121,7 @@ if animElem = 3 {
 		sparkxy: -10, -55;
 		hitsound: 5, 3;
 		guardsound: 6, 0;
-		animtype: Med;
+		animtype: Medium;
 		ground.type: High;
 		ground.slidetime: 12;
 		ground.hittime: 1 + 14;
@@ -1189,7 +1189,7 @@ if animElem = 2 {
 		sparkxy: -10, -40;
 		hitsound: 5, 3;
 		guardsound: 6, 0;
-		animtype: Med;
+		animtype: Medium;
 		ground.type: High;
 		ground.slidetime: 12;
 		ground.hittime: 1 + 15;
@@ -1269,7 +1269,7 @@ if animTime = 0 {
 type: S; movetype: A; physics: N;
 anim: 810; poweradd: 0;]
 
-# Here a ,ap is used to remember which directions the player was holding up
+# Here, a map is used to remember which directions the player was holding up
 # until the enemy is thrown. This map is checked later to decide the enemy
 # throwing velocities
 if time = 0 {
@@ -1712,7 +1712,7 @@ velAdd{y: 0.45}
 if animElem = 5 {
 	hitDef{
 		attr: A, SA;
-		animtype: Med;
+		animtype: Medium;
 		damage: 35 + (prevstateno = 1061)*5, 2;
 		priority: 4;
 		guardflag: MA;
@@ -1877,7 +1877,7 @@ if animElem = 4 {
 		guard.velocity: -7;
 		air.velocity: -2, -6;
 		fall: 1;
-		fall.animtype: Med;
+		fall.animtype: Medium;
 		fall.recovertime: 30;
 	}
 }
@@ -1950,7 +1950,7 @@ if time = 0 {
 	posAdd{x: 10; y: -10}
 	hitDef{
 		attr: A, SA;
-		animtype: Med;
+		animtype: Medium;
 		damage: 42, 2;
 		getpower: 0;
 		priority: 4;
@@ -2012,7 +2012,7 @@ if animElem = 4 {
 if time = 0 {
 	hitDef{
 		attr: S, SA;
-		animtype: Med;
+		animtype: Medium;
 		damage: 52, 4;
 		priority: 5;
 		guardflag: MA;
@@ -2080,7 +2080,7 @@ if animElem = 4 {
 if time = 0 {
 	hitDef{
 		attr: S, SA;
-		animtype: Med;
+		animtype: Medium;
 		damage: 57, 4;
 		priority: 5;
 		guardflag: MA;
@@ -2167,7 +2167,7 @@ if animTime < -2 {
 if time = 0 || animElem = 4 {
 	hitDef{
 		attr: S, SA;
-		animtype: Med;
+		animtype: Medium;
 		damage: 30, 4;
 		getpower: 0;
 		priority: 5;
