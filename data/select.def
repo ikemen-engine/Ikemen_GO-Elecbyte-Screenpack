@@ -21,6 +21,16 @@
  ;IKEMEN feature: Unlike mugen, stage declaration (including random, which is
  ;default assignment) can be skipped without affecting other parameters.
  ;
+ ;Zipped characters are also supported.
+ ;Place the ZIP file in the chars/ directory. The syntax is as
+ ;follows:
+ ;    zipname.zip/defname.def, stages/mybg.def
+ ;For example, if you have newsuave.def in suave.zip, the syntax is:
+ ;    suave.zip/newsuave.def, stages/mybg.def
+ ;If your def file has the same name as the zip file (eg. suave.def
+ ;in suave.zip), you can just put the name of the zip file alone:
+ ;    suave.zip, stages/mybg.def
+ ;
  ;Optional parameters should follow on the same line (except 'slot' parameter),
  ;separated by commas. Each parameter has the form:
  ;    paramname = paramvalue
