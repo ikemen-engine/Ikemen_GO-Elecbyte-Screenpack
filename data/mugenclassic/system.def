@@ -22,11 +22,11 @@ localcoord = 320,240      ;Local coordinate space width and height (new in MUGEN
 
 [Files]
 spr = system.sff                    ;Filename of sprite data
-snd = ../mugen_common/system.snd    ;Filename of sound data
+snd = system.snd                    ;Filename of sound data
 logo.storyboard = ../kfm/logo.def   ;Logo storyboard definition (optional)
 intro.storyboard = ../kfm/intro.def ;Intro storyboard definition (optional)
 select = select.def                 ;Character and stage selection list
-fight = fight.def                   ;Fight screen definition filename
+fight = fight.def                   ;Fight definition filename
 font1 = f-4x6.def                   ;System fonts
 font2 = f-6x9.def                   ;System fonts
 font3 = jg.fnt                      ;System fonts
