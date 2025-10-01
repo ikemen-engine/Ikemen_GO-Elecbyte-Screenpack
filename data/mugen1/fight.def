@@ -28,17 +28,15 @@ localcoord = 1280,720 ;Local coordinate space width and height
 
 [Files]
 sff = fight.sff
-snd = ../mugen_common/fight.snd
+snd = fight.snd
 font1 = enter48.def
 font2 = num48.def
 font3 = name14.def
 font4 = num1.def
-fightfx.sff = ../mugen_common/fightfx.sff ;Legacy Mugen hitsparks
-fightfx.air = ../mugen_common/fightfx.air ;Legacy Mugen hitsparks
-common.snd = ../mugen_common/common.snd   ;Legacy Mugen common char sounds
-;fx1 =                                    ;Extra common effects .def file
-;fx2 =                                    ;Extra common effects .def file
-;fx3 =                                    ;Extra common effects .def file
+fightfx.sff = fightfx.sff ;legacy Mugen hitsparks
+fightfx.air = fightfx.air ;legacy Mugen hitsparks
+common.snd = common.snd
+fx1 = gofx.def            ;new Ikemen fx
 
 ;-----------------------------------------------------------
 [FightFx]
