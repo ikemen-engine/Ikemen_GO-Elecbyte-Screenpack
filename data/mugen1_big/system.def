@@ -36,23 +36,23 @@ localcoord = 1280,720     ;Local coordinate space width and height (new in MUGEN
 ;    ~/mugen/system.sff.
 
 [Files]
-spr = ../mugen1/system.sff          ;Filename of sprite data
-snd = system.snd          ;Filename of sound data
-logo.storyboard =         ;Logo storyboard definition (optional)
-intro.storyboard =        ;Intro storyboard definition (optional)
-select = select.def       ;Character and stage selection list
-fight = ../mugen1/fight.def         ;Fight definition filename
+spr = ../mugen1/system.sff   ;Filename of sprite data
+snd = system.snd             ;Filename of sound data
+logo.storyboard =            ;Logo storyboard definition (optional)
+intro.storyboard =           ;Intro storyboard definition (optional)
+select = select.def          ;Character and stage selection list
+fight = ../mugen1/fight.def  ;Fight definition filename
 ;System fonts
 font1 = f-4x6.def
 font2 = name14.def
 font3 = enter48.def
 font4 = arcade.def
 font5 = mssansserif-tt36.def
-;font5.height = 36         ;Uncomment to override the size of the font (Truetype fonts only)
+;font5.height = 36           ;Uncomment to override the size of the font (Truetype fonts only)
 font6 = infofont.def
 font7 = Open_Sans.def
 font8 = num48.def
-module =                  ;Ikemen feature: External Lua code
+module =                     ;Ikemen feature: External Lua code
 
 ;----------------------------
 [Music]

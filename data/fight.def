@@ -32,10 +32,10 @@ snd = fight.snd
 font1 = jg.fnt
 font2 = num1.fnt
 font3 = name1.fnt
-fightfx.sff = fightfx.sff ;legacy Mugen hitsparks
-fightfx.air = fightfx.air ;legacy Mugen hitsparks
-common.snd = common.snd
-fx1 = gofx.def            ;new Ikemen fx
+fightfx.sff = fightfx.sff ;Legacy Mugen common effects
+fightfx.air = fightfx.air ;Legacy Mugen common effects
+common.snd = common.snd   ;Legacy Mugen common effects
+;fx1 =                    ;Extra common effects .def file
 
 ;-----------------------------------------------------------
 [FightFx]
