@@ -105,7 +105,7 @@ hiscore.bgm.loopend =
 fadein.time = 10
 fadeout.time = 10
 menu.pos = 159,158
-menu.tween.time = 2                                   ;Ikemen feature
+menu.tween.factor = 0.2                               ;Ikemen feature
 menu.item.font = 3,0,0
 menu.item.active.font = 3,5,0
 menu.item.spacing = 0, 13
@@ -133,7 +133,7 @@ menu.window.margins.y = 12, 8
 menu.window.visibleitems = 5
 menu.boxcursor.visible = 1     ;Set to 0 to disable default cursor display
 menu.boxcursor.tween.snap = 0                         ;Ikemen feature
-menu.boxcursor.tween.time = 3                         ;Ikemen feature
+menu.boxcursor.tween.factor = 0.3                     ;Ikemen feature
 menu.boxcursor.coords = -56,-10,57,2
 ; These are the sounds for cursor movement
 cursor.move.snd = 100,0
