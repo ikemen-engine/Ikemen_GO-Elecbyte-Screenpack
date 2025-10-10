@@ -1,8 +1,10 @@
 ﻿; Definitions of system screens
 
-; Motif: MUGEN1
+; Motif: MUGEN1 with 54 character slots
 ; Optimal resolution: 1280x720
 ; Supported languages: en, ja
+
+; This motif depends on the mugen1 motif.
 
 ; Notes about fonts:
 ;   - up to 10 fonts can be specified in the [Files] section.
@@ -15,7 +17,7 @@
 
 ;----------------------------
 [Info]
-name = "MUGEN1"           ;Name of motif
+name = "Big MUGEN1"       ;Name of motif
 author = "Elecbyte"       ;Motif author name
 versiondate = 01,01,2011  ;Version date of motif (MM-DD-YYYY) (new in MUGEN 1.0)
 mugenversion = 1.0        ;Version of M.U.G.E.N motif is compatible with (new in MUGEN 1.0)
@@ -36,8 +38,8 @@ localcoord = 1280,720     ;Local coordinate space width and height (new in MUGEN
 [Files]
 spr = system.sff          ;Filename of sprite data
 snd = system.snd          ;Filename of sound data
-logo.storyboard =         ;Logo storyboard definition (optional)
-intro.storyboard =        ;Intro storyboard definition (optional)
+logo.storyboard = logo.def        ;Logo storyboard definition (optional)
+intro.storyboard = intro.def       ;Intro storyboard definition (optional)
 select = select.def       ;Character and stage selection list
 fight = fight.def         ;Fight definition filename
 ;System fonts
@@ -315,51 +317,51 @@ Welcome to SUEHIRO's I.K.E.M.E.N GO engine!
 [Select Info]
 fadein.time = 10
 fadeout.time = 10
-rows = 4
-columns = 3
+rows = 9
+columns = 6
 wrapping = 0              ;1 to let cursor wrap around
-pos = 479,128             ;Position to draw to
+pos = 479,85              ;Position to draw to
 showemptyboxes = 1        ;1 to show empty boxes
 moveoveremptyboxes = 1    ;1 to allow cursor to move over empty boxes
-cell.size = 100,100       ;x,y size of each cell (in pixels)
-cell.spacing = 10         ;Space between each cell
+cell.size = 50,49         ;x,y size of each cell (in pixels)
+cell.spacing = 4          ;Space between each cell
 cell.bg.spr = 150,0       ;Note: Don't use animation for cells
-cell.bg.scale = 1,1
+cell.bg.scale = .5,.5
 cell.random.spr = 151,0   ;Icon for random select (don't use animation)
 cell.random.switchtime = 4;Time to wait before changing to another random portrait
-cell.random.scale = 1,1
+cell.random.scale = .5,.5
 p1.cursor.tween.factor = 0.5, 0.5    ;Ikemen feature
 p1.cursor.startcell = 0,0
 p1.cursor.active.anim = 160
-p1.cursor.active.scale = 1,1
+p1.cursor.active.scale = .5,.5
 p1.cursor.done.spr = 161,0
-p1.cursor.done.scale = 1,1
+p1.cursor.done.scale = .5,.5
 p1.cursor.move.snd = 100,0
 p1.cursor.done.snd = 100,1
 p1.random.move.snd = 100,0
 p2.cursor.tween.factor = 0.5, 0.5    ;Ikemen feature
 p2.cursor.startcell = 0,0
 p2.cursor.active.anim = 170
-p2.cursor.active.scale = 1,1
+p2.cursor.active.scale = .5,.5
 p2.cursor.done.spr = 171,0
-p2.cursor.done.scale = 1,1
+p2.cursor.done.scale = .5,.5
 p2.cursor.blink = 0       ;1 to blink p2's cursor if overlapping p1's
 p2.cursor.move.snd = 100,0
 p2.cursor.done.snd = 100,1
 p2.random.move.snd = 100,0
 p3.cursor.startcell = 3,0
 p3.cursor.active.anim = 172
-p3.cursor.active.scale = 1,1
+p3.cursor.active.scale = .5,.5
 p3.cursor.done.spr = 173,0
-p3.cursor.done.scale = 1,1
+p3.cursor.done.scale = .5,.5
 p3.cursor.move.snd = 100,0
 p3.cursor.done.snd = 100,1
 p3.random.move.snd = 100,0
 p4.cursor.startcell = 3,2
 p4.cursor.active.anim = 174
-p4.cursor.active.scale = 1,1
+p4.cursor.active.scale = .5,.5
 p4.cursor.done.spr = 175,0
-p4.cursor.done.scale = 1,1
+p4.cursor.done.scale = .5,.5
 p4.cursor.move.snd = 100,0
 p4.cursor.done.snd = 100,1
 p4.random.move.snd = 100,0
@@ -369,7 +371,7 @@ stage.done.snd = 100,1
 cancel.snd = 100,2
 portrait.spr = 9000,0
 portrait.offset = 0,0
-portrait.scale = 1,1
+portrait.scale = .5,.5
 title.offset = 640,38     ;Position of title (Arcade Mode, etc)
 title.font = 4,0,0        ;Font of title (-1 for none)
 
@@ -400,7 +402,7 @@ stage.active2.font = 3,2  ;Second font color for blinking
 stage.done.font = 3,0
 
 ;Stage portraits
-;stage.portrait.anim = 9000                 ;Ikemen feature
+;stage.portrait.anim =                      ;Ikemen feature
 stage.portrait.spr = 9000,1                ;Ikemen feature
 stage.portrait.offset = -121, -141         ;Ikemen feature
 stage.portrait.scale = 0.25, 0.25          ;Ikemen feature
@@ -1499,8 +1501,8 @@ counter.end.snd = 900, 10         ;Ikemen feature
 ;-------------------------------------------------------------------
 ;Game over screen definition
 [Game Over Screen]
-enabled = 0               ;Set to 1 to show game over screen, 0 to disable
-storyboard =              ;Game over storyboard filename
+enabled = 1               ;Set to 1 to show game over screen, 0 to disable
+storyboard = gameover.def             ;Game over storyboard filename
 
 ;-------------------------------------------------------------------
 ;Victory screen definition
@@ -1591,8 +1593,8 @@ storyboard =              ;Default ending storyboard filename
 ;Ending credits screen definition
 ;This screen shows up after the Win Screen and Ending
 [End Credits]
-enabled = 0               ;Set to 1 to show credits, 0 to disable
-storyboard =              ;Credits storyboard filename
+enabled = 1               ;Set to 1 to show credits, 0 to disable
+storyboard = credits.def             ;Credits storyboard filename
 
 ;-------------------------------------------------------------------
 ;Survival mode results screen definition
