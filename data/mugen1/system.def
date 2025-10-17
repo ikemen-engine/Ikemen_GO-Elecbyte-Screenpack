@@ -220,7 +220,6 @@ menu.itemname.menumission.bonusgames.back = "BACK"           ;Ikemen feature
 ; Submenu: Watch Mode
 menu.itemname.menuwatch = "WATCH MODE"                       ;Ikemen feature
 menu.itemname.menuwatch.watch = "CPU MATCH"
-menu.itemname.menuwatch.randomtest = "RANDOMTEST"            ;Ikemen feature
 menu.itemname.menuwatch.replay = "REPLAY"                    ;Ikemen feature
 menu.itemname.menuwatch.back = "BACK"                        ;Ikemen feature
 
