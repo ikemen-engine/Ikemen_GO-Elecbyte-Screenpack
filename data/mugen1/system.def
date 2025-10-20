@@ -374,17 +374,34 @@ portrait.scale = .5,.5
 title.offset = 640,38     ;Position of title (Arcade Mode, etc)
 title.font = 4,0,0        ;Font of title (-1 for none)
 
-;Big portraits
-p1.face.spr = 9000,1
-p1.face.offset = 0,46      ;Position to put big portrait
+;Main big portraits
+p1.face.anim = 0           ;Ikemen feature. Animated portraits
+p1.face.done.anim = 181    ;Ikemen feature. Portrait to use when selection is confirmed
+p1.face.offset = 160,560   ;Position to place the portrait
 p1.face.scale = 1,1
 p1.face.facing = 1
-p1.face.window = 0,46, 476,561
-p2.face.spr = 9000,1
-p2.face.offset = 1279,46
+p1.face.window = 0,46, 476,584
+p1.face.applypal = 1 ; Ikemen feature. Display portrait with selected palette (requires shared palette)
+p2.face.anim = 0
+p2.face.offset = 1120,560
 p2.face.scale = 1,1
 p2.face.facing = -1
-p2.face.window = 1280,46, 802,561
+p2.face.window = 802,46, 1280,584
+p2.face.applypal = 1
+
+;Secondary big portraits
+p1.face2.spr = 9000,1       ;Ikemen feature. Secondary portrait
+p1.face2.offset = 0,46
+p1.face2.scale = 1,1
+p1.face2.facing = 1
+p1.face2.window = 0,46, 476,561
+p1.face2.applypal = 1
+p2.face2.spr = 9000,1
+p2.face2.offset = 1279,46
+p2.face2.scale = 1,1
+p2.face2.facing = -1
+p2.face2.window = 802,46, 1280,561
+p2.face2.applypal = 1
 
 ;Name
 p1.name.offset = 50,620   ;Position to put name
@@ -526,6 +543,59 @@ teammenu.itemname.tag = Tag       ;Ikemen feature
 teammenu.itemname.turns = Turns   ;Ikemen feature
 teammenu.itemname.ratio = Ratio   ;Ikemen feature
 
+paletteselect = 3 ;Ikemen feature
+; Enables or disables palette selection menu in select screen. Accepted values:
+; 0 - Palette menu disabled. Palette corresponds to key pressed when selecting character
+; 1 - Palette menu enabled. Initial selected palette is 1
+; 2 - Palette menu enabled. Initial selected palette corresponds to key pressed (a = 1, b = 2, etc)
+; 3 - Palette menu enabled. Initial selected palette corresponds to key pressed + keymap (a = 4, x = 1, etc for Kung Fu Man)
+
+p1.palmenu.pos = 50, 90
+p2.palmenu.pos = 1230, 90
+
+p1.palmenu.bg.anim = 180
+p2.palmenu.bg.facing = 1
+p1.palmenu.bg.offset = 0, 50
+p2.palmenu.bg.anim = 190
+p2.palmenu.bg.facing = -1
+p2.palmenu.bg.offset = 0, 50
+
+p1.palmenu.text.text = "Color"
+p1.palmenu.text.offset = 0, 0
+p1.palmenu.text.font = 3, 3, 1
+p1.palmenu.text.scale = 1,1
+p2.palmenu.text.text = "Color"
+p2.palmenu.text.offset = 0, 0
+p2.palmenu.text.font = 3, 1, -1
+p2.palmenu.text.scale = 1,1
+
+p1.palmenu.number.offset = 70, 50
+p1.palmenu.number.font = 3, 3, 0
+p1.palmenu.number.scale = 1,1
+p2.palmenu.number.offset = -70, 50
+p2.palmenu.number.font = 3, 1, 0
+p2.palmenu.number.scale = 1,1
+
+p1.palmenu.next.key = "$U&$F"
+p1.palmenu.previous.key = "$D&$B"
+p1.palmenu.accept.key = "a&b&c&x&y&z"
+p1.palmenu.cancel.key = "m"
+p1.palmenu.random.key = "s"
+p1.palmenu.random.text = "?"
+p2.palmenu.next.key = "$U&$F"
+p2.palmenu.previous.key = "$D&$B"
+p2.palmenu.accept.key = "a&b&c&x&y&z"
+p2.palmenu.cancel.key = "m"
+p2.palmenu.random.key = "s"
+p2.palmenu.random.text = "?"
+
+p1.palmenu.value.snd = 100, 0
+p1.palmenu.done.snd = 100, 1
+p1.palmenu.cancel.snd = 100, 2
+p2.palmenu.value.snd = 100, 0
+p2.palmenu.done.snd = 100, 1
+p2.palmenu.cancel.snd = 100, 2
+
 [Begin Action 110] ;Stage Background
 110,0, 0,0, 8
 110,1, 0,0, 8
@@ -652,6 +722,7 @@ p1.scale = 1,1
 p1.window = 60,30, 539,589
 p1.spacing = -75,0           ;Ikemen feature
 p1.padding = 1               ;Ikemen feature
+p1.applypal = 1              ;Ikemen feature
 p2.num = 4                   ;Ikemen feature
 p2.anim = 0                  ;Ikemen feature
 p2.done.anim = 181           ;Ikemen feature
@@ -662,6 +733,7 @@ p2.scale = 1,1
 p2.window = 741,30, 1220,589
 p2.spacing = 75,0            ;Ikemen feature
 p2.padding = 1               ;Ikemen feature
+p2.applypal = 1              ;Ikemen feature
 
 ;Names
 p1.name.num = 1              ;Ikemen feature (not used for co-op)
@@ -1521,6 +1593,7 @@ p1.scale = 1,1
 p1.window = 0,0, 1279,500
 p1.name.offset = 40,570
 p1.name.font = 3,3,1
+p1.applypal = 1
 ;Win quote text
 winquote.text = "Winner!" ;Default win quote text to show
 winquote.offset = 40,615
