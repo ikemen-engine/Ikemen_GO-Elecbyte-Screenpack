@@ -383,6 +383,7 @@ p1.face.facing = 1
 p1.face.window = 0,46, 476,584
 p1.face.applypal = 1 ; Ikemen feature. Display portrait with selected palette (requires shared palette)
 p2.face.anim = 0
+p1.face.done.anim = 181
 p2.face.offset = 1120,560
 p2.face.scale = 1,1
 p2.face.facing = -1
@@ -870,6 +871,20 @@ p2.value.empty.icon.facing = 1           ;Ikemen feature
 p2.value.empty.icon.scale = 1.0, 0.8     ;Ikemen feature
 p2.value.icon.spacing = 125, 0           ;Ikemen feature
 p2.value.snd = 100, 1                    ;Ikemen feature
+
+;Stage portraits
+stage.pos = 640,707                        ;Ikemen feature
+stage.text = "Next Stage: %s"              ;Ikemen feature
+stage.text.font = 3,0,0                    ;Ikemen feature
+;stage.portrait.anim =                      ;Ikemen feature
+stage.portrait.spr = 9000,1                ;Ikemen feature
+stage.portrait.offset = -121, -141         ;Ikemen feature
+stage.portrait.scale = 0.25, 0.25          ;Ikemen feature
+stage.portrait.bg.anim = 110               ;Ikemen feature
+;stage.portrait.bg.spr =                    ;Ikemen feature
+stage.portrait.bg.offset = -163, -144      ;Ikemen feature
+stage.portrait.bg.scale = 1.0, 1.0         ;Ikemen feature
+stage.portrait.window = 521, 567, 759, 665 ;Ikemen feature
 
 ;Order timer
 ; Change timer.count to positive number to enable order selection timer
