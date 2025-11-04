@@ -875,7 +875,7 @@ p2.value.snd = 100, 1                    ;Ikemen feature
 ;Stage portraits
 stage.pos = 640,707                        ;Ikemen feature
 stage.text = "Next Stage: %s"              ;Ikemen feature
-stage.text.font = 3,0,0                    ;Ikemen feature
+stage.font = 3,0,0                         ;Ikemen feature
 ;stage.portrait.anim =                      ;Ikemen feature
 stage.portrait.spr = 9000,1                ;Ikemen feature
 stage.portrait.offset = -121, -141         ;Ikemen feature
