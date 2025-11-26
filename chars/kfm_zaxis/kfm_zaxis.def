@@ -42,6 +42,10 @@ a2 = 10
 b2 = 11
 c2 = 12
 
+[Map]
+AnalogEnabled = 1           ;Set to 1 to enable analog controls
+EOEnabled = 1               ;Set to 1 to enable the EO (Easy Operation) stick.
+
 ; Arcade mode
 [Arcade]
 intro.storyboard = intro.def
