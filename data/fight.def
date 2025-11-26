@@ -1242,10 +1242,11 @@ slow.time = 60             ;Total KO slowdown length (in ticks)
 slow.fadetime = 45         ;Ikemen feature: KO slowdown fade length (default: 75% of slow.time)
 slow.speed = 0.25          ;Ikemen feature: KO slowdown game speed adjustment (default: 0.25)
 
-over.waittime = 45         ;Time to wait after KO before player control is stopped
 over.hittime = 10          ;Time after KO that players can still damage each other (for double KO)
+over.waittime = 45         ;Time to wait after KO before player control is stopped
 over.wintime = 45          ;Time to wait before players change to win states
-over.time = 270            ;Time to wait before round ends
+over.forcewintime = 900    ;Ikemen feature: Time to wait before forcing win states if any player is frozen
+over.time = 210            ;Time to wait before round ends
 
 ; Win text
 win.time = 60              ;Time to wait before showing win/draw message
