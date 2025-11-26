@@ -154,18 +154,29 @@ if animTime = 0 {
 [StateDef 20;
 type: S; physics: S; sprpriority: 0; velset: 0, 0, 0;]
 
-if command = "holdback" {
-	velSet{x: const(velocity.walk.back.x)}
-} else if command = "holdfwd" {
-	velSet{x: const(velocity.walk.fwd.x)}
+let vx = Facing * map(vector_x);
+let vz = map(vector_z);
+let cs = GameOption(Input.ControllerStickSensitivity);
+if sysVar(1) = -1 {
+	if $vx != 0 {
+		velSet{x: const(velocity.walk.back.x) * -$vx}
+	} else {
+		velSet{x: const(velocity.walk.back.x)}
+	}
+} else if sysVar(1) = 1 {
+	if $vx != 0 {
+		velSet{x: const(velocity.walk.fwd.x) * $vx}
+	} else {
+		velSet{x: const(velocity.walk.fwd.x)}
+	}
 } else {
 	velSet{x: 0}
 }
 
-if command = "holdup" {
-	velSet{z: const(velocity.walk.up.z)}
-} else if command = "holddown" {
-	velSet{z: const(velocity.walk.down.z)}
+if command = "holdup" || ($vz < -$cs) {
+	velSet{z: const(velocity.walk.up.z) * cond($vz != 0, -$vz, 1)}
+} else if command = "holddown" || ($vz > $cs) {
+	velSet{z: const(velocity.walk.down.z) * cond($vz != 0, $vz, 1)}
 } else {
 	velSet{z: 0}
 }
@@ -190,7 +201,7 @@ if vel x > 0 {
 
 # We must stop walking manually so that the character still walks when releasing B and F but holding U or D
 assertSpecial{flag: nobrake}
-if command != "holdfwd" && command != "holdback" && command != "holdup" && command != "holddown" {
+if command != "holdfwd" && command != "holdback" && command != "holdup" && command != "holddown" && $vx = [-$cs,$cs] && $vz = [-$cs,$cs] {
 	changeState{value: 0}
 }
 
@@ -213,10 +224,20 @@ if command = "holdback" {
 } else if command = "holdfwd" {
 	sysVar(1) := 1;
 }
+let vx = map(vector_x) * Facing;
+let vz = map(vector_z);
+let cs = GameOption(Input.ControllerStickSensitivity);
+if $vx != [-$cs,$cs] {
+	if $vx < 0 {
+		sysVar(1) := -1;
+	} else {
+		sysVar(1) := 1;
+	}
+}
 
-if command = "holdup" {
+if command = "holdup" || $vz != [-$cs,1] {
 	map(jumpz) := -1;
-} else if command = "holddown" {
+} else if command = "holddown" || $vz != [-1,$cs] {
 	map(jumpz) := 1;
 }
 
@@ -3060,6 +3081,6 @@ if numProj > 0 {
 
 # Debug
 displayToClipboard{
-	text: "Pos Z = %f  Scale Z = %f  Crouch = %d";
-	params: pos z, scale z, map(crouchinput) != 0;
+	text: "Pos Z = %f  Scale Z = %f  Crouch = %d\nCS = %f, RightX = %f, RightY = %f, EOZone = %d";
+	params: pos z, scale z, map(crouchinput) != 0, GameOption(Input.ControllerStickSensitivity), Analog(RightX), Analog(RightY), floor(map(EOZone));
 }

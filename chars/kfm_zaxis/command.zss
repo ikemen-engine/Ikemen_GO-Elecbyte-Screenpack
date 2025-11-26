@@ -47,6 +47,38 @@
 # that is executed once every game-tick, regardless of what other state
 # you are in.
 
+# This is used to calculate the zones for the EO (Easy Operation) stick.
+# You may divide this into as many arbitrary zones as you wish by changing
+# the numZones parameter.
+[function getEOStickZone(vx, vy, numZones) zone]
+let zone = -1;
+# Decrement our leeway timer (to prevent specials from triggering too soon)
+if map(EOBufferTime) > 0 {
+	map(EOBufferTime) := map(EOBufferTime) - 1;
+} else if map(EOBufferTime) = 0 {
+	let cs = GameOption(Input.ControllerStickSensitivity);
+	if $vx != 0 || $vy != 0 {
+		let angleRad = atan2($vy, $vx);
+		let fcr = 2 * pi;
+		if $angleRad < 0 {
+			let angleRad = $angleRad + $fcr;
+		}
+		let zoneSizeRad = $fcr / $numZones;
+		let zone = floor($angleRad / $zoneSizeRad);
+	}
+	# Nullify the buffer time so it can get set next execution.
+	map(EOBufferTime) := -1;
+# Set the initial buffer timer.
+} else {
+	map(EOBufferTime) := 1;
+}
+
+# Gets how deep we are into the EO stick zone.
+[function getThrowDepth(vx, vy) depth]
+let depth = (($vx*$vx + $vy*$vy)**0.5);
+if $depth > 1.0 {
+	let depth = 1.0;
+}
 
 # Don't remove the following line. It's required by the CMD standard.
 
@@ -54,6 +86,88 @@
 # command code
 #===============================================================================
 [StateDef -1]
+
+let RDEADBAND = 0.20; #Deadband for right analog stick
+let HVY_DEPTH = 0.90; #This controls the heavy range for the EO stick.            H: [HVY_DEPTH,1.0]
+let MED_DEPTH = 0.30; #This controls the light and medium range for the EO stick. L: (0.0,MED_DEPTH), M: [MED_DEPTH,HVY_DEPTH)
+
+#This processes analog movement
+if map(AnalogEnabled) > 0 {
+	map(vector_x) := Analog(LeftX);
+	map(vector_z) := Analog(LeftY);
+	let cs = GameOption(Input.ControllerStickSensitivity);
+
+	#Some deadzone for D-Pads mapped to axes
+	if map(vector_x) != [-$cs,$cs] {
+		if map(vector_x) < 0 {
+			sysVar(1) := -1;
+		} else {
+			sysVar(1) := 1;
+		}
+	} else if command = "holdfwd" || command = "holdback" {
+		sysVar(1) := (command = "holdfwd" - command = "holdback");
+	} else {
+		sysVar(1) := 0;
+	}
+
+	#Process EO stick behavior
+	let numSpecialsAndSupers = 7;
+	let rx = map(right_x) := Analog(RightX);
+	let ry = map(right_y) := Analog(RightY);
+	let zone = -1;
+	if $rx != [-$RDEADBAND,$RDEADBAND] || $ry != [-$RDEADBAND,$RDEADBAND] {
+		let zone = call getEOStickZone($rx, $ry, $numSpecialsAndSupers);
+	}
+	map(EOZone) := $zone;
+	let depth = call getThrowDepth($rx, $ry);
+
+	# Don't set anything if EOEnabled is disabled.
+	if map(EOEnabled) <= 0 {
+		map(EOZone) := -1;
+		let depth = 0;
+	}
+} else {
+	map(vector_x) := map(vector_z) := 0;
+	map(EOZone) := -1;
+}
+
+#-------------------------------------------------------------------------------
+#ADC (Analog to Digital Converter) - This is used so that specials can function
+#for the new analog inputs
+let vx = 0;
+let vz = 0;
+ignorehitpause {
+	let vx = map(vector_x)*Facing;
+	let cs = GameOption(Input.ControllerStickSensitivity);
+	if $vx != 0 {
+		# Forward
+		if $vx > $cs {
+			AssertInput{
+				flag: F;
+			}
+		# Back
+		} else if -$vx > $cs {
+			AssertInput{
+				flag: B;
+			}
+		}
+	}
+
+	let vz = map(vector_z);
+	if $vz != 0 {
+		# Down
+		if $vz > $cs {
+			AssertInput{
+				flag: D;
+			}
+		# Up
+		} else if -$vz > $cs {
+			AssertInput{
+				flag: U;
+			}
+		}
+	}
+}
 
 #This is not a move, but it sets up the map "cancombo" to be 1 if
 #conditions are right for a combo into a special move (used below).
@@ -76,7 +190,7 @@ if roundState = 2 { #prevent attacks outside of fight state
 #
 #-------------------------------------------------------------------------------
 #Smash Kung Fu Upper (uses one super bar)
-if command = "SmashKFUpper" && power >= 1000 && stateType != A &&
+if (command = "SmashKFUpper" || map(EOZone) = 6) && power >= 1000 && stateType != A &&
 	(ctrl ||
 		(hitDefAttr = SC, NA, SA, HA && stateNo != [3050, 3099] && moveContact) ||
 		(stateNo = 1310 || stateNo = 1330)) { #From blocking
@@ -85,7 +199,7 @@ if command = "SmashKFUpper" && power >= 1000 && stateType != A &&
 
 #-------------------------------------------------------------------------------
 #Triple Kung Fu Palm (uses one super bar)
-if command = "TripleKFPalm" && power >= 1000 && stateType != A &&
+if (command = "TripleKFPalm" || map(EOZone) = 5) && power >= 1000 && stateType != A &&
 	(ctrl ||
 		(hitDefAttr = SC, NA, SA, HA && stateNo != [3000, 3049] && moveContact) ||
 		(stateNo = 1310 || stateNo = 1330)) { #From blocking
@@ -94,92 +208,92 @@ if command = "TripleKFPalm" && power >= 1000 && stateType != A &&
 
 #-------------------------------------------------------------------------------
 #Fast Kung Fu Knee (1/3 super bar)
-if command = "FF_ab" && power >= 330 && map(cancombo) { #Use combo condition (above)
+if (command = "FF_ab" || (map(EOZone) = 3 && $depth >= $HVY_DEPTH)) && power >= 330 && map(cancombo) { #Use combo condition (above)
 	changeState{value: 1070}
 }
 
 #-------------------------------------------------------------------------------
 #Fast Kung Fu Upper (1/3 super bar)
-if command = "upper_xy" && power >= 330 && map(cancombo) {
+if (command = "upper_xy" || (map(EOZone) = 1 && $depth >= $HVY_DEPTH)) && power >= 330 && map(cancombo) {
 	changeState{value: 1120}
 }
 
 #-------------------------------------------------------------------------------
 #Fast Kung Fu Zankou
-if command = "QCF_ab" && power >= 330 && map(cancombo) {
+if (command = "QCF_ab" || (map(EOZone) = 4 && $depth >= $HVY_DEPTH)) && power >= 330 && map(cancombo) {
 	changeState{value: 1420}
 }
 
 #-------------------------------------------------------------------------------
 #Fast Kung Fu Palm (1/3 super bar)
-if command = "QCF_xy" && power >= 330 && map(cancombo) {
+if (command = "QCF_xy" || (map(EOZone) = 0 && $depth >= $HVY_DEPTH)) && power >= 330 && map(cancombo) {
 	changeState{value: 1020}
 }
 
 #-------------------------------------------------------------------------------
 #Fast Kung Fu Blow (1/3 super bar)
-if command = "QCB_xy" && power >= 330 && map(cancombo) {
+if (command = "QCB_xy" || (map(EOZone) = 2 && $depth >= $HVY_DEPTH)) && power >= 330 && map(cancombo) {
 	changeState{value: 1220}
 }
 
 #-------------------------------------------------------------------------------
+#Strong Kung Fu Knee
+if (command = "FF_b" || (map(EOZone) = 3 && $depth >= $MED_DEPTH)) && map(cancombo) {
+changeState{value: 1060}
+}
+
+#-------------------------------------------------------------------------------
 #Light Kung Fu Knee
-if command = "FF_a" && map(cancombo) {
+if (command = "FF_a" || (map(EOZone) = 3 && $depth < $MED_DEPTH)) && map(cancombo) {
 	changeState{value: 1050}
 }
 
 #-------------------------------------------------------------------------------
-#Strong Kung Fu Knee
-if command = "FF_b" && map(cancombo) {
-	changeState{value: 1060}
-}
-
-#-------------------------------------------------------------------------------
-#Light Kung Fu Upper
-if command = "upper_x" && map(cancombo) {
-	changeState{value: 1100}
-}
-
-#-------------------------------------------------------------------------------
 #Strong Kung Fu Upper
-if command = "upper_y" && map(cancombo) {
+if (command = "upper_y" || (map(EOZone) = 1 && $depth >= $MED_DEPTH)) && map(cancombo) {
 	changeState{value: 1110}
 }
 
 #-------------------------------------------------------------------------------
-#Light Kung Fu Zankou
-if command = "QCF_a" && map(cancombo) {
-	changeState{value: 1400}
+#Light Kung Fu Upper
+if (command = "upper_x" || (map(EOZone) = 1 && $depth < $MED_DEPTH)) && map(cancombo) {
+	changeState{value: 1100}
 }
 
 #-------------------------------------------------------------------------------
 #Strong Kung Fu Zankou
-if command = "QCF_b" && map(cancombo) {
+if (command = "QCF_b" || (map(EOZone) = 4 && $depth >= $MED_DEPTH)) && map(cancombo) {
 	changeState{value: 1410}
 }
 
 #-------------------------------------------------------------------------------
-#Light Kung Fu Palm
-if command = "QCF_x" && map(cancombo) {
-	changeState{value: 1000}
+#Light Kung Fu Zankou
+if (command = "QCF_a" || (map(EOZone) = 4 && $depth < $MED_DEPTH)) && map(cancombo) {
+	changeState{value: 1400}
 }
 
 #-------------------------------------------------------------------------------
 #Strong Kung Fu Palm
-if command = "QCF_y" && map(cancombo) {
+if (command = "QCF_y" || (map(EOZone) = 0 && $depth >= $MED_DEPTH)) && map(cancombo) {
 	changeState{value: 1010}
 }
 
 #-------------------------------------------------------------------------------
-#Light Kung Fu Blow
-if command = "QCB_x" && map(cancombo) {
-	changeState{value: 1200}
+#Light Kung Fu Palm
+if (command = "QCF_x" || (map(EOZone) = 0 && $depth < $MED_DEPTH)) && map(cancombo) {
+	changeState{value: 1000}
 }
 
 #-------------------------------------------------------------------------------
 #Strong Kung Fu Blow
-if command = "QCB_y" && map(cancombo) {
+if (command = "QCB_y" || (map(EOZone) = 2 && $depth >= $MED_DEPTH)) && map(cancombo) {
 	changeState{value: 1210}
+}
+
+#-------------------------------------------------------------------------------
+#Light Kung Fu Blow
+if (command = "QCB_x" || (map(EOZone) = 2 && $depth < $MED_DEPTH)) && map(cancombo) {
+	changeState{value: 1200}
 }
 
 #-------------------------------------------------------------------------------
@@ -370,7 +484,8 @@ if command = "z" && stateType = A && ctrl &&
 
 #-------------------------------------------------------------------------------
 #Z-axis walk
-if (command = "holdup" || command = "holddown") && stateType = S && ctrl {
+let cs = GameOption(Input.ControllerStickSensitivity);
+if (command = "holdup" || command = "holddown" || (map(vector_z) != [-$cs,$cs])) && stateType = S && ctrl {
 	if stateNo != 100 {
 		changeState{value: 20}
 	}
