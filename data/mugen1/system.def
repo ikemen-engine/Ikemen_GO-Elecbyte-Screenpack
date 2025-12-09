@@ -94,7 +94,7 @@ option.bgm.loop = 1
 option.bgm.loopstart = 
 option.bgm.loopend = 
   ;Music to play at replay screen.
-replay.bgm   = 
+replay.bgm = 
 replay.bgm.volume = 100
 replay.bgm.loop = 1
 replay.bgm.loopstart = 
@@ -202,7 +202,6 @@ menu.itemname.server.back = "EXIT"                           ;Ikemen feature
 ; Submenu: Practice
 menu.itemname.menupractice = "PRACTICE"                      ;Ikemen feature
 menu.itemname.menupractice.training = "TRAINING"             ;Ikemen feature
-;menu.itemname.menupractice.trials = "TRIALS"                 ;Ikemen feature (not implemented yet)
 menu.itemname.menupractice.back = "BACK"                     ;Ikemen feature
 
 ; Submenu: Mission
@@ -235,54 +234,54 @@ menu.itemname.exit = "EXIT"
 bgclearcolor = 0,0,0
 
 [TitleBG Background Top]
-type  = normal
+type = normal
 spriteno = 100,0
 layerno = 0
 start = 0,0
-tile  = 1,1
+tile = 1,1
 velocity = -1, -1
 window = 0,0, 1279,334
 
 [TitleBG Background Middle]
-type  = normal
+type = normal
 spriteno = 100,1
 layerno = 0
 start = 0,0
-tile  = 1,1
+tile = 1,1
 velocity = -1, -1
 window = 0,335, 1279,631
 
 [TitleBG Background Bottom]
-type  = normal
+type = normal
 spriteno = 100,0
 layerno = 0
 start = 0,0
-tile  = 1,1
+tile = 1,1
 velocity = -1, -1
 window = 0,632, 1279,959
 
 [TitleBG 1]
-type  = normal
+type = normal
 spriteno = 100,0
 layerno = 0
 start = 0,0
-tile  = 1,1
+tile = 1,1
 velocity = -1, -1
 window = 0,332, 1279,334
 trans = add1
 
 [TitleBG 2]
-type  = normal
+type = normal
 spriteno = 100,0
 layerno = 0
 start = 0,0
-tile  = 1,1
+tile = 1,1
 velocity = -1, -1
 window = 0,632, 1279,634
 trans = add1
 
 [TitleBG Title Logo]
-type  = normal
+type = normal
 spriteno = 0,0
 layerno = 0
 start = 0,140
@@ -377,29 +376,29 @@ title.font = 4,0,0        ;Font of title (-1 for none)
 ;Main big portraits
 p1.face.anim = 0           ;Ikemen feature. Animated portraits
 p1.face.done.anim = 181    ;Ikemen feature. Portrait to use when selection is confirmed
-p1.face.offset = 160,560   ;Position to place the portrait
-p1.face.scale = 1,1
+p1.face.offset = 160, 560  ;Position to place the portrait
+p1.face.scale = 1, 1
 p1.face.facing = 1
 p1.face.window = 0,46, 476,584
-p1.face.applypal = 1 ; Ikemen feature. Display portrait with selected palette (requires shared palette)
+p1.face.applypal = 1       ; Ikemen feature. Display portrait with selected palette (requires shared palette)
 p2.face.anim = 0
 p2.face.done.anim = 181
-p2.face.offset = 1120,560
-p2.face.scale = 1,1
+p2.face.offset = 1120, 560
+p2.face.scale = 1, 1
 p2.face.facing = -1
 p2.face.window = 802,46, 1280,584
 p2.face.applypal = 1
 
 ;Secondary big portraits
 p1.face2.spr = 9000,1       ;Ikemen feature. Secondary portrait
-p1.face2.offset = 0,46
-p1.face2.scale = 1,1
+p1.face2.offset = 0, 46
+p1.face2.scale = 1, 1
 p1.face2.facing = 1
 p1.face2.window = 0,46, 476,561
 p1.face2.applypal = 1
 p2.face2.spr = 9000,1
-p2.face2.offset = 1279,46
-p2.face2.scale = 1,1
+p2.face2.offset = 1279, 46
+p2.face2.scale = 1, 1
 p2.face2.facing = -1
 p2.face2.window = 802,46, 1280,561
 p2.face2.applypal = 1
@@ -436,7 +435,7 @@ stage.portrait.window = 521, 567, 759, 665 ;Ikemen feature
 ;Team menu
 teammenu.move.wrapping = 1
 p1.teammenu.pos = 80, 130
-;p1.teammenu.bg.spr =
+;p1.teammenu.bg.spr = 
 p1.teammenu.selftitle.font = 3,3,1
 p1.teammenu.selftitle.text = "TEAM MODE"
 p1.teammenu.enemytitle.font = 3,3,1
@@ -488,7 +487,7 @@ p1.teammenu.ratio7.icon.scale = 1.0, 1.0   ;Ikemen feature
 
 ;p2 team
 p2.teammenu.pos = 1197, 130
-;p2.teammenu.bg.spr =
+;p2.teammenu.bg.spr = 
 p2.teammenu.selftitle.font = 3,1,-1
 p2.teammenu.selftitle.text = "TEAM MODE"
 p2.teammenu.enemytitle.font = 3,1,-1
@@ -664,51 +663,51 @@ p2.palmenu.cancel.snd = 100, 2
 ;spr = graphics/selectbg.sff  ;Filename of sprite data
 
 [SelectBG 0] ;Scrolling background
-type  = normal
+type = normal
 spriteno = 100,0
 layerno = 0
 start = 0,0
-tile  = 1,1
+tile = 1,1
 velocity = -1, -1
 
 [SelectBG 2.A] ;Title background
-type  = normal
+type = normal
 spriteno = 102,0
 layerno = 0
 start = 0, 4
 delta = 0,0
-tile  = 1,3
+tile = 1,3
 trans = sub
 velocity = -1, 0
 
 [SelectBG 2.B] ;Title background B
-type  = normal
+type = normal
 spriteno = 102,1
 layerno = 0
 start = 0, 4
 delta = 0,0
-tile  = 1,3
+tile = 1,3
 trans = add
 velocity = -3, 0
 
 [SelectBG 2.C] ;Title background C
-type  = normal
+type = normal
 spriteno = 102,2
 layerno = 0
 start = 0, 4
 delta = 0,0
-tile  = 1,3
+tile = 1,3
 trans = add
 velocity = -9, 0
 
 ;-------------------------------------------------------------------
 [VS Screen]
-time = 200                ;Time to show screen
+time = 200                   ;Time to show screen
 fadein.time = 20
 fadeout.time = 25
 
 ;Match text in arcade modes
-match.text = "Match %i"   ;%i can be used for the match number
+match.text = "Match %i"      ;%i can be used for the match number
 match.offset = 20, 710
 match.font = 2,0,1
 
@@ -717,9 +716,9 @@ p1.num = 4                   ;Ikemen feature
 p1.anim = 0                  ;Ikemen feature
 p1.done.anim = 181           ;Ikemen feature
 ;p1.spr = 9000, 1
-p1.offset = 444,540 ;60,30
+p1.offset = 444, 540
 p1.facing = 1
-p1.scale = 1,1
+p1.scale = 1, 1
 p1.window = 60,30, 539,589
 p1.spacing = -75,0           ;Ikemen feature
 p1.padding = 1               ;Ikemen feature
@@ -728,9 +727,9 @@ p2.num = 4                   ;Ikemen feature
 p2.anim = 0                  ;Ikemen feature
 p2.done.anim = 181           ;Ikemen feature
 ;p2.spr = 9000, 1
-p2.offset = 836,540 ;1220,30
+p2.offset = 836, 540
 p2.facing = -1
-p2.scale = 1,1
+p2.scale = 1, 1
 p2.window = 741,30, 1220,589
 p2.spacing = 75,0            ;Ikemen feature
 p2.padding = 1               ;Ikemen feature
@@ -905,16 +904,16 @@ done.time = 60                           ;Ikemen feature
 [VersusBGdef]
 
 [VersusBG BG]
-type  = normal
+type = normal
 spriteno = 204,0
 start = 0,0
 mask = 0
 
 [VersusBG BG for 4:3]
-type  = normal
+type = normal
 spriteno = 100,0
 start = 0,0
-tile  = 1,1
+tile = 1,1
 velocity = 0,0
 window = 0,720, 1279,959
 
@@ -975,20 +974,20 @@ start = 575,590
 velocity = .1,0
 
 [VersusBG 4] ;VS Logo Shadow
-type  = anim
+type = anim
 actionno = 201
 layerno = 1 ; Front
 start = -18,300
 velocity = .25,0
 
 [VersusBG 5] ;VS Logo
-type  = anim
+type = anim
 actionno = 200
 layerno = 1 ; Front
 start = 0,300
 
 [VersusBG 6] ;Next Match
-type  = anim
+type = anim
 actionno = 202
 layerno = 1 ; Front
 start = 18,38
@@ -1601,10 +1600,10 @@ time = 300                ;Time to show screen
 fadein.time = 8
 fadeout.time = 15
 ;Winner's portrait and name
-p1.offset = 400,-40
+p1.offset = 400, -40
 p1.spr = 9000,2
 p1.facing = 1
-p1.scale = 1,1
+p1.scale = 1, 1
 p1.window = 0,0, 1279,500
 p1.name.offset = 40,570
 p1.name.font = 3,3,1
@@ -1624,26 +1623,26 @@ winquote.time = 0         ;Ikemen feature
 [VictoryBGdef]
 
 [VictoryBG 1]
-type  = normal
+type = normal
 spriteno = 100,0
 start = 0,0
-tile  = 1,1
+tile = 1,1
 velocity = 0,1.5
 window = 0,501, 1279,959
 
 [VictoryBG 2]
-type  = normal
+type = normal
 spriteno = 100,1
 start = 0,0
-tile  = 1,1
+tile = 1,1
 window = 0,0, 1279,500
 velocity = 0,1.5
 
 [VictoryBG 3]
-type  = normal
+type = normal
 spriteno = 100,1
 start = 0,0
-tile  = 1,1
+tile = 1,1
 window = 25,520, 1254,709
 velocity = 0,1.5
 
@@ -1726,10 +1725,10 @@ winstext.layerno = 2
 [Option Info]
 fadein.time = 10
 fadein.col = 0, 0, 0                               ;Ikemen feature
-;fadein.anim =                                     ;Ikemen feature
+;fadein.anim =                                      ;Ikemen feature
 fadeout.time = 10
 fadeout.col = 0, 0, 0                              ;Ikemen feature
-;fadeout.anim =                                    ;Ikemen feature
+;fadeout.anim =                                     ;Ikemen feature
 title.offset = 640,38
 title.font = 4,0,0
 title.scale = 1.0, 1.0
@@ -1773,7 +1772,7 @@ menu.boxcursor.alpharange = 10, 40, 2, 255, 255, 0 ;Ikemen feature
 menu.boxbg.visible = 1                             ;Ikemen feature
 menu.boxbg.col = 0, 0, 0                           ;Ikemen feature
 menu.boxbg.alpha = 0, 128                          ;Ikemen feature
-;menu.arrow.up.anim =                              ;Ikemen feature
+;menu.arrow.up.anim =                               ;Ikemen feature
 menu.arrow.up.spr = 400, 0                         ;Ikemen feature
 menu.arrow.up.offset = 428, -51                    ;Ikemen feature
 menu.arrow.up.facing = 1                           ;Ikemen feature
@@ -1854,10 +1853,10 @@ cancel.snd = 100, 2
 [OptionBGdef]
 
 [OptionBG 1]
-type  = normal
+type = normal
 spriteno = 100,0
 start = 0,0
-tile  = 1,1
+tile = 1,1
 velocity = -1, -1
 
 ;-------------------------------------------------------------------
@@ -1889,12 +1888,12 @@ menu.boxcursor.alpharange = 10, 40, 2, 255, 255, 0
 menu.boxbg.visible = 1
 menu.boxbg.col = 0, 0, 0
 menu.boxbg.alpha = 0, 128
-;menu.arrow.up.anim =
+;menu.arrow.up.anim = 
 menu.arrow.up.spr = 400, 0
 menu.arrow.up.offset = 269, -51
 menu.arrow.up.facing = 1
 menu.arrow.up.scale = 1.0, 1.0
-;menu.arrow.down.anim =
+;menu.arrow.down.anim = 
 menu.arrow.down.spr = 401, 0
 menu.arrow.down.offset = 269, 525
 menu.arrow.down.facing = 1
@@ -1910,10 +1909,10 @@ menu.itemname.back = "Back"
 [ReplayBGdef] ;Ikemen feature
 
 [ReplayBG 1]
-type  = normal
+type = normal
 spriteno = 100,0
 start = 0,0
-tile  = 1,1
+tile = 1,1
 velocity = -1, -1
 
 ;-------------------------------------------------------------------
@@ -1957,12 +1956,12 @@ menu.boxcursor.alpharange = 10, 40, 2, 255, 255, 0
 menu.boxbg.visible = 1
 menu.boxbg.col = 0, 0, 0
 menu.boxbg.alpha = 0, 128
-;menu.arrow.up.anim =
+;menu.arrow.up.anim = 
 menu.arrow.up.spr = 400, 0
 menu.arrow.up.offset = 269, -51
 menu.arrow.up.facing = 1
 menu.arrow.up.scale = 1.0, 1.0
-;menu.arrow.down.anim =
+;menu.arrow.down.anim = 
 menu.arrow.down.spr = 401, 0
 menu.arrow.down.offset = 269, 525
 menu.arrow.down.facing = 1
@@ -2038,9 +2037,9 @@ fadeout.col = 0, 0, 0
 credits.key = "5"
 options.key = "F11"
 credits.snd = 400, 0
-logo.storyboard = "../kfm/logo.def"
-intro.storyboard = "../kfm/intro.def"
-start.storyboard = ""
+logo.storyboard = logo.def
+intro.storyboard = intro.def
+start.storyboard = 
 start.time = 600
 start.insert.text = "Insert coin"
 start.insert.offset = 640, 501
@@ -2076,54 +2075,54 @@ menu.itemname.arcade = "ARCADE"
 bgclearcolor = 0,0,0
 
 [AttractBG Background Top]
-type  = normal
+type = normal
 spriteno = 100,0
 layerno = 0
 start = 0,0
-tile  = 1,1
+tile = 1,1
 velocity = -1, -1
 window = 0,0, 1279,334
 
 [AttractBG Background Middle]
-type  = normal
+type = normal
 spriteno = 100,1
 layerno = 0
 start = 0,0
-tile  = 1,1
+tile = 1,1
 velocity = -1, -1
 window = 0,335, 1279,631
 
 [AttractBG Background Bottom]
-type  = normal
+type = normal
 spriteno = 100,0
 layerno = 0
 start = 0,0
-tile  = 1,1
+tile = 1,1
 velocity = -1, -1
 window = 0,632, 1279,959
 
 [AttractBG 1]
-type  = normal
+type = normal
 spriteno = 100,0
 layerno = 0
 start = 0,0
-tile  = 1,1
+tile = 1,1
 velocity = -1, -1
 window = 0,332, 1279,334
 trans = add1
 
 [AttractBG 2]
-type  = normal
+type = normal
 spriteno = 100,0
 layerno = 0
 start = 0,0
-tile  = 1,1
+tile = 1,1
 velocity = -1, -1
 window = 0,632, 1279,634
 trans = add1
 
 [AttractBG Title Logo]
-type  = normal
+type = normal
 spriteno = 0,0
 layerno = 0
 start = 0,140
@@ -2394,10 +2393,10 @@ glyphs = "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "
 [HiscoreBGdef] ;Ikemen feature
 
 [HiscoreBG 1]
-type  = normal
+type = normal
 spriteno = 100,0
 start = 0,0
-tile  = 1,1
+tile = 1,1
 velocity = -1, -1
 
 ;-------------------------------------------------------------------
