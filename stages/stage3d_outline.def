@@ -61,7 +61,7 @@ localcoord = 1280, 720
 xscale = 1
 yscale = 1
 
-portraitscale = 1
+portraitscale = 4
 
 ;--------------------------------------------------------
 [Shadow]
