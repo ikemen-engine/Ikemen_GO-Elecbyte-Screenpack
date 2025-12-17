@@ -393,18 +393,7 @@ p2.face.window = 802,46, 1280,584
 p2.face.applypal = 1
 
 p1.face.done.anim = 181    ;Ikemen feature. Portrait to use when selection is confirmed
-p1.face.done.offset = 160, 560
-p1.face.done.scale = 1, 1
-p1.face.done.facing = 1
-p1.face.done.window = 0,46, 476,584
-p1.face.done.applypal = 1 ; Ikemen feature. Display portrait with selected palette (requires shared palette)
-
 p2.face.done.anim = 181
-p2.face.done.offset = 1120, 560
-p2.face.done.scale = 1, 1
-p2.face.done.facing = -1
-p2.face.done.window = 802,46, 1280,584
-p2.face.done.applypal = 1
 
 ;Secondary big portraits
 p1.face2.spr = 9000,1       ;Ikemen feature. Secondary portrait
@@ -420,18 +409,6 @@ p2.face2.scale = 1, 1
 p2.face2.facing = -1
 p2.face2.window = 802,46, 1280,561
 p2.face2.applypal = 1
-
-p1.face2.done.offset = 0, 46
-p1.face2.done.scale = 1, 1
-p1.face2.done.facing = 1
-p1.face2.done.window = 0,46, 476,561
-p1.face2.done.applypal = 1
-
-p2.face2.done.offset = 1279, 46
-p2.face2.done.scale = 1, 1
-p2.face2.done.facing = -1
-p2.face2.done.window = 802,46, 1280,561
-p2.face2.done.applypal = 1
 
 ;Name
 p1.name.offset = 50,620   ;Position to put name
@@ -766,18 +743,7 @@ p2.padding = 1               ;Ikemen feature
 p2.applypal = 1              ;Ikemen feature
 
 p1.done.anim = 181           ;Ikemen feature
-p1.done.offset = 444, 540
-p1.done.facing = 1
-p1.done.scale = 1, 1
-p1.done.window = 60,30, 539,589
-p1.done.applypal = 1         ;Ikemen feature
-
 p2.done.anim = 181           ;Ikemen feature
-p2.done.offset = 836, 540
-p2.done.facing = -1
-p2.done.scale = 1, 1
-p2.done.window = 741,30, 1220,589
-p2.done.applypal = 1         ;Ikemen feature
 
 ;Names
 p1.name.num = 1              ;Ikemen feature (not used for co-op)
