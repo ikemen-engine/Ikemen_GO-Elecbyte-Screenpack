@@ -440,6 +440,13 @@ stage.portrait.random.offset = -163, -144  ;Ikemen feature
 stage.portrait.random.scale = 1.0, 1.0     ;Ikemen feature
 stage.portrait.window = 521, 567, 759, 665 ;Ikemen feature
 
+;Record
+record.font = 3,0,0
+record.offset = 640, 360
+record.scale = 1.0, 1.0
+;record.<gamemode>.text = 
+record.window = 
+
 ;Team menu
 teammenu.move.wrapping = 1
 p1.teammenu.pos = 80, 130
@@ -2381,7 +2388,7 @@ item.result.scale = 1.0, 1.0
 item.result.spacing = 0, 26
 item.result.score.text = "%08d"
 item.result.time.text = "%m'%s''%x"
-item.result.win.text = "Round %d"
+item.result.win.text = "Stage %d"
 item.result.active.font = 2,0,-1, 191,191,191
 item.result.active.switchtime = 4
 item.result.active2.font = 2,0,-1
