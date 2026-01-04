@@ -570,7 +570,7 @@ p1.palmenu.pos = 50, 90
 p2.palmenu.pos = 1230, 90
 
 p1.palmenu.bg.anim = 180
-p2.palmenu.bg.facing = 1
+p1.palmenu.bg.facing = 1
 p1.palmenu.bg.offset = 0, 50
 p2.palmenu.bg.anim = 190
 p2.palmenu.bg.facing = -1
