@@ -440,7 +440,7 @@ stage.portrait.window = 521, 567, 759, 665 ;Ikemen feature
 
 ;Record
 record.font = 3,0,0
-record.offset = 640, 360
+record.offset = 640, 663
 record.scale = 1.0, 1.0
 ;record.<gamemode>.text = 
 record.window = 
