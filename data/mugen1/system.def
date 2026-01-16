@@ -131,13 +131,10 @@ menu.item.font = 4,0,0
 menu.item.active.font = 4,5,0, 224,240,240
 menu.item.spacing = 0, 54
 
-connecting.host.offset = 640, 393                     ;Ikemen feature
-connecting.host.font = 7,0,0                          ;Ikemen feature
-connecting.host.scale = 1.0, 1.0                      ;Ikemen feature
+connecting.offset = 640, 393                          ;Ikemen feature
+connecting.font = 7,0,0                               ;Ikemen feature
+connecting.scale = 1.0, 1.0                           ;Ikemen feature
 connecting.host.text = "Waiting for player 2... (%s)" ;Ikemen feature
-connecting.join.offset = 640, 393                     ;Ikemen feature
-connecting.join.font = 7,0,0                          ;Ikemen feature
-connecting.join.scale = 1.0, 1.0                      ;Ikemen feature
 connecting.join.text = "Now connecting to %s... (%s)" ;Ikemen feature
 ;connecting.overlay.window = 0, 0, 1280, 720           ;Ikemen feature
 connecting.overlay.col = 0, 0, 0                      ;Ikemen feature
@@ -443,7 +440,7 @@ stage.portrait.window = 521, 567, 759, 665 ;Ikemen feature
 
 ;Record
 record.font = 3,0,0
-record.offset = 640, 360
+record.offset = 640, 663
 record.scale = 1.0, 1.0
 ;record.<gamemode>.text = 
 record.window = 
@@ -1868,23 +1865,24 @@ keymenu.menu.window.margins.y = 0, 0               ;Ikemen feature
 keymenu.menu.window.visibleitems = 0               ;Ikemen feature
 
 keymenu.menu.boxcursor.coords = -15, -27, 318, 8   ;Ikemen feature
-keymenu.itemname.configall = "Config all"          ;Ikemen feature
-keymenu.itemname.up = "Up"                         ;Ikemen feature
-keymenu.itemname.down = "Down"                     ;Ikemen feature
-keymenu.itemname.left = "Left"                     ;Ikemen feature
-keymenu.itemname.right = "Right"                   ;Ikemen feature
-keymenu.itemname.a = "A"                           ;Ikemen feature
-keymenu.itemname.b = "B"                           ;Ikemen feature
-keymenu.itemname.c = "C"                           ;Ikemen feature
-keymenu.itemname.x = "X"                           ;Ikemen feature
-keymenu.itemname.y = "Y"                           ;Ikemen feature
-keymenu.itemname.z = "Z"                           ;Ikemen feature
-keymenu.itemname.start = "Start"                   ;Ikemen feature
-keymenu.itemname.d = "D"                           ;Ikemen feature
-keymenu.itemname.w = "W"                           ;Ikemen feature
-keymenu.itemname.menu = "Menu"                     ;Ikemen feature
-keymenu.itemname.back = "Back"                     ;Ikemen feature
-keymenu.itemname.page = "Page"                     ;Ikemen feature
+
+keymenu.menu.itemname.configall = "Config all"     ;Ikemen feature
+keymenu.menu.itemname.up = "Up"                    ;Ikemen feature
+keymenu.menu.itemname.down = "Down"                ;Ikemen feature
+keymenu.menu.itemname.left = "Left"                ;Ikemen feature
+keymenu.menu.itemname.right = "Right"              ;Ikemen feature
+keymenu.menu.itemname.a = "A"                      ;Ikemen feature
+keymenu.menu.itemname.b = "B"                      ;Ikemen feature
+keymenu.menu.itemname.c = "C"                      ;Ikemen feature
+keymenu.menu.itemname.x = "X"                      ;Ikemen feature
+keymenu.menu.itemname.y = "Y"                      ;Ikemen feature
+keymenu.menu.itemname.z = "Z"                      ;Ikemen feature
+keymenu.menu.itemname.start = "Start"              ;Ikemen feature
+keymenu.menu.itemname.d = "D"                      ;Ikemen feature
+keymenu.menu.itemname.w = "W"                      ;Ikemen feature
+keymenu.menu.itemname.menu = "Menu"                ;Ikemen feature
+keymenu.menu.itemname.back = "Back"                ;Ikemen feature
+keymenu.menu.itemname.page = "Page"                ;Ikemen feature
 
 textinput.offset = 75, 96                          ;Ikemen feature
 textinput.font = 7,0,1                             ;Ikemen feature
