@@ -58,6 +58,7 @@ if Map(BrokenObject) = 0# objects should only be broken once
   if Player($i),HitFall = 1
   && Player($i),StateType = A
   && Player($i),Pos Y != 0
+  && Player($i),SprPriority > -9 #This is to avoid being affected when a stage fatal is triggered
   && #Now let's check if the player is near the object
     (
       #One way to detect is via Player Position
@@ -110,6 +111,8 @@ if Map(BrokenObject) = 0# objects should only be broken once
 	  removetime:120;
 	  ownpal:1;
     scale:1,1;
+	palfx.time: -1;
+	palfx.add:-32,-96,32;
     angle:randomrange(1,360);
 	  random:Map(WidthDetect)/2,Map(HeightDetect)/2;}
     }
@@ -158,12 +161,60 @@ if RoundState = 0
    ModifyStageBG{ID:102;actionno:0;}
    }
 }
-
 #;=========================================================================================
 #Negative states
 #===============================================================================
 [Statedef -4]
 #Attached chars will often use helpers to interact with Teams 1 and 2.
+
+#Stage Fatal! If the player dies within the window and is thrown up high enough, player will go through
+#and "fall" across, then an envhsake and a sound will play.
+if IsHelper(1) {#let's run this only once
+ DisplayToClipboard{text:"%v";params:Map(PlayerNumberIsDead);}
+ if RoundState = 3 && 
+ (
+  (Player(1),DecisiveRound && Player(1),Win = 1) ||
+  (Player(2),DecisiveRound && Player(2),Win = 1) ||
+  (Player(1),TeamMode = Turns && Player(1),Win = 0) || 
+  (Player(2),TeamMode = Turns && Player(2),Win = 0)
+ )
+ && Map(PlayerNumberIsDead) = 0
+ {
+ for i = 1 ; 8
+  {
+   if Player($i),Alive = 0 && Player($i),Vel Y != 0
+   && Abs(Player($i),Pos X + CameraPos X) < 30
+   && Player($i),Pos Y < -25
+   && Player($i),Pos Y > -150
+   {
+    #Mark the Player for the Fatal, play the sound and pause
+	Map(PlayerNumberIsDead):=Player($i),ID;
+	playSnd{value: 0,2;}
+	pause{time:120}
+   }
+  }
+ }#End Only in Roundover and conditions
+  if Map(PlayerNumberIsDead) != 0
+  #If the stage fatal is triggered,
+  #hide the lifebars, send the defeated player behind most stage layers,
+  #hide their reflection and shadow, and have them "fall" under the ground level,
+  #and trigger an EnvShake when they landed.
+  {
+    assertSpecial{flag:nobardisplay;}
+	SprPriority{value:-9;layerno:-1;RedirectId:Map(PlayerNumberIsDead);}
+    ModifyReflection{intensity:0;RedirectId:Map(PlayerNumberIsDead);}
+	ModifyShadow{intensity:0;RedirectId:Map(PlayerNumberIsDead);}
+	GroundLevelOffset{value:900;RedirectId:Map(PlayerNumberIsDead);}
+	if PlayerID(Map(PlayerNumberIsDead)),Pos Y + Vel Y >= 0
+	&& PlayerID(Map(PlayerNumberIsDead)),Vel Y > 5
+		{envShake{time:10;freq:10;ampl:10;}}
+  }
+}#End IsHelper(1)
+
+if IsHelper(1) && RoundState = 0#Reset the fatal just in case
+{
+ Map(PlayerNumberIsDead):= 0;
+}
 
 #Note the 'StageBackEdgeDist' and 'StageFrontEdgeDist' triggers,
 #they are useful for Attached Chars!

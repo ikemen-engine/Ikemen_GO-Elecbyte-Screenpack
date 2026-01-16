@@ -5,11 +5,12 @@
 ;--------------------------------------------------------
 [Info]
  ;Name of the stage.
-name = "Mountainside Temple"
-displayname = "Mountainside Temple" ;Name to display
-versiondate = 09,30,2009    ;Version date of stage (MM,DD,YYYY or X.XX)
-mugenversion = 1.1          ;Version of M.U.G.E.N stage works on (X.XX)
-author = "Elecbyte"         ;Stage author name
+name = "Mountainside Temple at Night"
+displayname = "Mountainside Temple at Night" ;Name to display
+versiondate = 01,16,2026    ;Version date of stage (MM,DD,YYYY or X.XX)
+IKEMENVersion = 1.0
+author = "Elecbyte, modified by Lasombra Demon"         ;Stage author name
+AttachedChar = AttachedChar - Temple - Definitions.def
 
 ;--------------------------------------------------------
 [Camera]
@@ -21,8 +22,8 @@ starty = 0
  ;You may want to fiddle a bit with these values to make sure the
  ;background doesn't move too far or too little
  ;***
-boundleft = -150 is the original Elecbyte value
-boundright = 150 is the original Elecbyte value
+boundleft = -50;-150 is the original Elecbyte value
+boundright = 50;150 is the original Elecbyte value
 
  ;High and low bound of camera
  ;High is a negative number. Make is more negative if you want to
@@ -204,7 +205,7 @@ bgmvolume = 100
 ; Main background definition
 [BGdef]
  ;Filename of sprite data
-spr = kfm.sff
+spr = kfmN.sff
 
  ;Set to 1 if you want to clear the screen to magenta before
  ;drawing layer 0 (the default background). Good for spotting "holes"
@@ -238,11 +239,10 @@ type  = normal
  ;*** Do not omit this line.
 spriteno = 0, 0
 
- ;This is the layer number, which determines where the sprite is drawn to.
- ;Valid values are 0 and 1.
- ;0 for background (behind characters), 1 for foreground (in front)
- ;If this line is omitted, the default value of 0 will be assumed.
-layerno = 0
+ ;This parameter will make things be drawn in front of this layer, use it to define the backmost layers of
+ ;the stage. Be sure to add IKEMENVersion or this will not work!
+
+layerno = -1
 
  ;This is the starting location of the background in the format
  ;x, y
@@ -436,6 +436,16 @@ scalestart = 0.5,0.5
 20,4, 0,0, 3
 -1,-1, 0,0, -1
 
+
+[BG Darkening]
+type  = normal
+spriteno = 23,0
+start = 170, 140
+tile = 1, 1
+trans = Addalpha
+Alpha = 128,64
+scalestart = 50,50
+
 ;--------------------------------------------------
 ;And fire is being disappeared via BGCtrl Manipulation
 [BG Fire left SIDE]
@@ -490,3 +500,32 @@ type=Enable
 time=1,99999,-1
 value=1
 SCTRLID=302;-> SAME AS NUMBER IN ATTACHEDCHAR SCTRL
+
+[BG RadialLightL]
+type  = anim
+actionno = 3
+start = -175, 90
+tile = 0, 0
+scalestart = 0.5,0.5
+ID = 201
+[BG RadialLightR]
+type  = anim
+actionno = 3
+start = 175, 90
+tile = 0, 0
+scalestart = 0.5,0.5
+ID = 202
+
+[Begin Action 3];Light
+23,1, 0,0, 1, , AS32D256
+23,1, 0,0, 1, H, AS16D224
+23,1, 0,0, 1, , AS48D232
+23,1, 0,0, 1, H, AS32D264
+23,1, 0,0, 1, , AS16D248
+23,1, 0,0, 1, H, AS32D256
+23,1, 0,0, 1, , AS48D216
+23,1, 0,0, 1, H, AS24D232
+23,1, 0,0, 1, , AS12D248
+23,1, 0,0, 1, H, AS32D256
+23,1, 0,0, 1, , AS16D224
+23,1, 0,0, 1, H, AS16D216
