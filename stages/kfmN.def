@@ -443,7 +443,7 @@ spriteno = 23,0
 start = 170, 140
 tile = 1, 1
 trans = Addalpha
-Alpha = 128,64
+Alpha = 96,64
 scalestart = 50,50
 
 ;--------------------------------------------------

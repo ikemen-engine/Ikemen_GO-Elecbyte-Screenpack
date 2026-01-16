@@ -146,7 +146,8 @@ if RoundState = 0
  Map(SlowDownTime):= StageConst(SlowDown);
 
  Map(BrokenObject):= 0;
- if Pos X < 0 {
+    #We check the proper side, and use StageBGVar to see if it was broken!
+ if Pos X < 0 && StageBGVar(101,0,actionno) != 0 {
     #We shrink the stage via ModifyStageVar
     ModifyStageVar{camera.boundleft:-50;}
     #We show the fire from the pillars via ModifyBGCtrl and a BGCtrl "Enable"
@@ -155,7 +156,7 @@ if RoundState = 0
     ModifyStageBG{ID:101;actionno:0;}
    }
  
- if Pos X > 0 {
+ if Pos X > 0 && StageBGVar(102,0,actionno) != 0 {
    ModifyStageVar{camera.boundright:50;}
    ModifyBGCtrl{ID:302;value:1;}
    ModifyStageBG{ID:102;actionno:0;}
@@ -170,51 +171,52 @@ if RoundState = 0
 #Stage Fatal! If the player dies within the window and is thrown up high enough, player will go through
 #and "fall" across, then an envhsake and a sound will play.
 if IsHelper(1) {#let's run this only once
- DisplayToClipboard{text:"%v";params:Map(PlayerNumberIsDead);}
- if RoundState = 3 && 
+
+ if RoundState = 0{Map(PlayerNumberIsDead):= -1;}#Reset everything every round
+ 
+ if RoundState = 3 && #Let's see...
  (
   (Player(1),DecisiveRound && Player(1),Win = 1) ||
   (Player(2),DecisiveRound && Player(2),Win = 1) ||
   (Player(1),TeamMode = Turns && Player(1),Win = 0) || 
   (Player(2),TeamMode = Turns && Player(2),Win = 0)
  )
- && Map(PlayerNumberIsDead) = 0
+ && Map(PlayerNumberIsDead) < 0#once it's checked, no need to re-check
  {
  for i = 1 ; 8
   {
    if Player($i),Alive = 0 && Player($i),Vel Y != 0
-   && Abs(Player($i),Pos X + CameraPos X) < 30
+   && Abs(Player($i),Pos X + CameraPos X) < 10
    && Player($i),Pos Y < -25
-   && Player($i),Pos Y > -150
+   && Player($i),Pos Y > -120
    {
     #Mark the Player for the Fatal, play the sound and pause
 	Map(PlayerNumberIsDead):=Player($i),ID;
 	playSnd{value: 0,2;}
-	pause{time:120}
+	pause{time:120}	
    }
   }
- }#End Only in Roundover and conditions
-  if Map(PlayerNumberIsDead) != 0
+  }#End check for Roundover and win conditions
+  
+  if Map(PlayerNumberIsDead) > 0 && RoundState > 2
   #If the stage fatal is triggered,
   #hide the lifebars, send the defeated player behind most stage layers,
   #hide their reflection and shadow, and have them "fall" under the ground level,
   #and trigger an EnvShake when they landed.
   {
     assertSpecial{flag:nobardisplay;}
-	SprPriority{value:-9;layerno:-1;RedirectId:Map(PlayerNumberIsDead);}
+	SprPriority{value:-9;layerno:-1;RedirectID:Map(PlayerNumberIsDead);}
     ModifyReflection{intensity:0;RedirectId:Map(PlayerNumberIsDead);}
 	ModifyShadow{intensity:0;RedirectId:Map(PlayerNumberIsDead);}
 	GroundLevelOffset{value:900;RedirectId:Map(PlayerNumberIsDead);}
 	if PlayerID(Map(PlayerNumberIsDead)),Pos Y + Vel Y >= 0
 	&& PlayerID(Map(PlayerNumberIsDead)),Vel Y > 5
-		{envShake{time:10;freq:10;ampl:10;}}
+		{
+		 envShake{time:30;freq:90;ampl:10;}				
+		}
   }
-}#End IsHelper(1)
 
-if IsHelper(1) && RoundState = 0#Reset the fatal just in case
-{
- Map(PlayerNumberIsDead):= 0;
-}
+}#End IsHelper(1)
 
 #Note the 'StageBackEdgeDist' and 'StageFrontEdgeDist' triggers,
 #they are useful for Attached Chars!
