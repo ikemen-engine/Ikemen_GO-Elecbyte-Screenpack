@@ -21,8 +21,8 @@ starty = 0
  ;You may want to fiddle a bit with these values to make sure the
  ;background doesn't move too far or too little
  ;***
-boundleft = -150 is the original Elecbyte value
-boundright = 150 is the original Elecbyte value
+boundleft = -150
+boundright = 150
 
  ;High and low bound of camera
  ;High is a negative number. Make is more negative if you want to
@@ -219,9 +219,6 @@ debugbg = 0
 9000,1, 0,0,-1
 ;-------------------------------------
 
-[CONSTANTS]
-SlowDown = 20
-
 ;----------
 ; Start each background element with the following:
 ; Make sure it's "[BG n]", where n is anything you like (it's only used to
@@ -363,130 +360,3 @@ start = 0, 11
 delta = .8, .75
 mask = 1
 tile = 1, 0
-
-;----------
-[BG Pillar Bottom]
-type  = normal
-spriteno = 15,0
-start = 0, 180
-delta = .8, .75
-mask = 1
-tile = 1, 0
-
-;----------
-[BG Pillar Top]
-type  = normal
-spriteno = 15,1
-start = 0, 11
-delta = .8, .75
-mask = 1
-tile = 1, 0
-
-;The breakables below are managed via ModifyStageBG
-;----------
-[BG Pillar left SIDE]
-type  = anim
-actionno = 0
-start = -170, 200
-delta = .95, .75
-mask = 1
-tile = 0, 0
-ID = 101
-
-[BG Torch left SIDE]
-type  = normal
-spriteno = 21,0
-start = -170, 140
-delta = .95, .75
-mask = 1
-tile = 0, 0
-ID = 201
-trans = Addalpha
-Alpha = 128,128
-scalestart = 0.5,0.5
-
-[BG Pillar right SIDE]
-type  = anim
-actionno = 0
-start = 170, 200
-delta = .95, .75
-mask = 1
-tile = 0, 0
-ID = 102
-
-[BG Torch right SIDE]
-type  = normal
-spriteno = 21,0
-start = 170, 140
-delta = .95, .75
-mask = 1
-tile = 0, 0
-ID = 202
-trans = Addalpha
-Alpha = 128,128
-scalestart = 0.5,0.5
-
-[Begin Action 0];Healthy Pillar 
-20,0, 0,0, -1
-
-[Begin Action 1];Broken Pillar 
-20,1, 0,0, 3
-20,2, 0,0, 3
-20,3, 0,0, 3
-20,4, 0,0, 3
--1,-1, 0,0, -1
-
-;--------------------------------------------------
-;And fire is being disappeared via BGCtrl Manipulation
-[BG Fire left SIDE]
-type  = anim
-Actionno = 2
-start = -170, 90
-delta = .95, .75
-mask = 1
-tile = 0, 0
-ID = 201
-scalestart = 0.5,0.5
-
-[BG Fire right SIDE]
-type  = anim
-Actionno = 2
-start = 170, 90
-delta = .95, .75
-mask = 1
-tile = 0, 0
-ID = 202
-scalestart = 0.5,0.5
-
-[Begin Action 2];Torch lit
-22,14, 18,-13, 6, , AS256D264
-22,14, -11,-10, 6, H, AS256D264
-22,15, 10,-12, 6, , AS200D264
-22,15, -11,-10, 6, H, AS256D264
-22,16, 15,-17, 6, , AS222D264
-22,16, 0,0, 6, H, AS256D264
-22,17, 20,-9, 6, , AS256D264
-22,17, -18,-12, 6, H, AS256D264
-22,16, 16,-18, 6, , AS200D264
-22,16, -12,-9, 6, H, AS256D264
-22,15, 0,0, 6, , AS256D264
-22,15, -14,-11, 6, H, AS256D264
-
-;BGCtrlDefs
-[BGCtrlDef Left]
-looptime = -1;No loop reset
-CTRLID=201;-> SAME AS ID IN BG ELEMENT
-[BGCtrl FireLeft]
-type=Enable
-time=1,99999,-1
-value=1
-SCTRLID=301;-> SAME AS NUMBER IN ATTACHEDCHAR SCTRL
-
-[BGCtrlDef Right]
-looptime = -1;No loop reset
-CTRLID=202;-> SAME AS ID IN BG ELEMENT
-[BGCtrl FireRight]
-type=Enable
-time=1,99999,-1
-value=1
-SCTRLID=302;-> SAME AS NUMBER IN ATTACHEDCHAR SCTRL
