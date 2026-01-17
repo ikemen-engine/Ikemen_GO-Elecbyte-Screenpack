@@ -275,6 +275,7 @@ stages/stage3d.def
 stages/stage3d_outline.def
 stages/stageZ.def
 stages/kfm.def
+stages/kfmN.def
 stages/stage0.def
 stages/stage0-720.def
 
