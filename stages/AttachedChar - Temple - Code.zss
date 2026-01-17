@@ -203,14 +203,16 @@ if IsHelper(1) {#let's run this only once
   #hide the lifebars, send the defeated player behind most stage layers,
   #hide their reflection and shadow, and have them "fall" under the ground level,
   #and trigger an EnvShake when they landed.
+  #"Landing" moment is checked via commonstates, which is a crucial thought process
+  #for this kind of universal moves.
   {
     assertSpecial{flag:nobardisplay;}
 	SprPriority{value:-9;layerno:-1;RedirectID:Map(PlayerNumberIsDead);}
     ModifyReflection{intensity:0;RedirectId:Map(PlayerNumberIsDead);}
 	ModifyShadow{intensity:0;RedirectId:Map(PlayerNumberIsDead);}
 	GroundLevelOffset{value:900;RedirectId:Map(PlayerNumberIsDead);}
-	if PlayerID(Map(PlayerNumberIsDead)),Pos Y + Vel Y >= 0
-	&& PlayerID(Map(PlayerNumberIsDead)),Vel Y > 5
+	if PlayerID(Map(PlayerNumberIsDead)),StateNo = 5101
+	&& PlayerID(Map(PlayerNumberIsDead)),Time < 2
 		{
 		 envShake{time:30;freq:90;ampl:10;}				
 		}
