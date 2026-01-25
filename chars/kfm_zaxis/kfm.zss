@@ -3068,7 +3068,7 @@ assertSpecial{flag: nocrouch; flag2: nostand; flag3: nojump; flag4: noairjump}
 
 # This code makes projectiles hit the top Z wall but not the bottom wall
 if numProj > 0 {
-	for i = 0; numProj; 1 {
+	for i = 0; numProj - 1; 1 {
 		if projVar(-1, $i, vel z) > 0 {
 			modifyProjectile{
 				ID: -1;
