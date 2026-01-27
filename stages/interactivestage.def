@@ -20,8 +20,8 @@ startY = 0
 ; Left and right bounds of camera
 ; You may want to fiddle a bit with these values to make sure the
 background doesn't move too far or too little
-boundleft = -125
-boundright = 125
+boundLeft = -30;
+boundRight = 30;
 
 ; High and low bound of camera
 ; High is a negative number. Make is more negative if you want to
@@ -93,8 +93,8 @@ rightBound =  1000
 [Bound]
 ; Distance from left/right edge of screen that players can move to.
 ; Typically 15
-screenLeft = 15
-screenRight = 15
+screenLeft = 30
+screenRight = 30
 
 ; ----------------------------------------------------------
 [StageInfo]
