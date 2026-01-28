@@ -1970,7 +1970,7 @@ velocity = -1, -1
 
 ;-------------------------------------------------------------------
 ;Pause menu screen definition
-[Menu Info] ;Ikemen feature
+[Pause Menu] ;Ikemen feature
 fadein.time = 0
 fadein.col = 0, 0, 0
 fadeout.time = 0
@@ -2063,21 +2063,20 @@ movelist.arrow.down.scale = 1.0, 1.0
 
 ;-------------------
 ;Pause menu screen background
-[MenuBGdef] ;Ikemen feature
+[PauseBGdef] ;Ikemen feature
 
 ;-------------------------------------------------------------------
 ;Training menu screen definition
-[Training Info] ;Ikemen feature
+[Training Pause Menu] ;Ikemen feature
 
-; If not overridden, values used for [Menu Info] are shared with [Training Info]
-; If custom menus are not declared, default menu screen layout is loaded.
+; If not overridden, values used for [Menu Info] are shared with this group.
 ; Refer to system.base.def for an example how to modify pause screen menus.
 
 ;-------------------
 ;Training menu screen background
-;[TrainingBGdef] ;Ikemen feature
+;[TrainingPauseBGdef] ;Ikemen feature
 
-; If commented out defaults to [MenuBGdef]
+; If commented out defaults to [PauseBGdef]
 
 ;-------------------------------------------------------------------
 ;Attract mode definition
