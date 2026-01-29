@@ -1852,38 +1852,39 @@ keymenu.p2.playerno.offset = 156, 0                ;Ikemen feature
 keymenu.p2.playerno.font = 7,0,0, 247,0,0          ;Ikemen feature
 keymenu.p2.playerno.scale = 1.0, 1.0               ;Ikemen feature
 
-keymenu.menu.pos = 0, 0                            ;Ikemen feature
+; unassigned 'keymenu' parameters use corresponding 'menu' values
 
-; unassigned 'keymenu.item' parameters use corresponding 'menu.item' values
-keymenu.menu.item.spacing = 0, 36                  ;Ikemen feature
-keymenu.menu.item.value.offset = 303, 0            ;Ikemen feature
-keymenu.menu.item.value.active.offset = 303, 0     ;Ikemen feature
-keymenu.menu.item.value.conflict.offset = 303, 0   ;Ikemen feature
-keymenu.menu.item.info.offset = 303, 0             ;Ikemen feature
-keymenu.menu.item.info.active.offset = 303, 0      ;Ikemen feature
+keymenu.pos = 0, 0                                 ;Ikemen feature
 
-keymenu.menu.window.margins.y = 0, 0               ;Ikemen feature
-keymenu.menu.window.visibleitems = 0               ;Ikemen feature
+keymenu.item.spacing = 0, 36                       ;Ikemen feature
+keymenu.item.value.offset = 303, 0                 ;Ikemen feature
+keymenu.item.value.active.offset = 303, 0          ;Ikemen feature
+keymenu.item.value.conflict.offset = 303, 0        ;Ikemen feature
+keymenu.item.info.offset = 303, 0                  ;Ikemen feature
+keymenu.item.info.active.offset = 303, 0           ;Ikemen feature
 
-keymenu.menu.boxcursor.coords = -15, -27, 318, 8   ;Ikemen feature
+keymenu.window.margins.y = 0, 0                    ;Ikemen feature
+keymenu.window.visibleitems = 0                    ;Ikemen feature
 
-keymenu.menu.itemname.configall = "Config all"     ;Ikemen feature
-keymenu.menu.itemname.up = "Up"                    ;Ikemen feature
-keymenu.menu.itemname.down = "Down"                ;Ikemen feature
-keymenu.menu.itemname.left = "Left"                ;Ikemen feature
-keymenu.menu.itemname.right = "Right"              ;Ikemen feature
-keymenu.menu.itemname.a = "A"                      ;Ikemen feature
-keymenu.menu.itemname.b = "B"                      ;Ikemen feature
-keymenu.menu.itemname.c = "C"                      ;Ikemen feature
-keymenu.menu.itemname.x = "X"                      ;Ikemen feature
-keymenu.menu.itemname.y = "Y"                      ;Ikemen feature
-keymenu.menu.itemname.z = "Z"                      ;Ikemen feature
-keymenu.menu.itemname.start = "Start"              ;Ikemen feature
-keymenu.menu.itemname.d = "D"                      ;Ikemen feature
-keymenu.menu.itemname.w = "W"                      ;Ikemen feature
-keymenu.menu.itemname.menu = "Menu"                ;Ikemen feature
-keymenu.menu.itemname.back = "Back"                ;Ikemen feature
-keymenu.menu.itemname.page = "Page"                ;Ikemen feature
+keymenu.boxcursor.coords = -15, -27, 318, 8        ;Ikemen feature
+
+keymenu.itemname.configall = "Config all"          ;Ikemen feature
+keymenu.itemname.up = "Up"                         ;Ikemen feature
+keymenu.itemname.down = "Down"                     ;Ikemen feature
+keymenu.itemname.left = "Left"                     ;Ikemen feature
+keymenu.itemname.right = "Right"                   ;Ikemen feature
+keymenu.itemname.a = "A"                           ;Ikemen feature
+keymenu.itemname.b = "B"                           ;Ikemen feature
+keymenu.itemname.c = "C"                           ;Ikemen feature
+keymenu.itemname.x = "X"                           ;Ikemen feature
+keymenu.itemname.y = "Y"                           ;Ikemen feature
+keymenu.itemname.z = "Z"                           ;Ikemen feature
+keymenu.itemname.start = "Start"                   ;Ikemen feature
+keymenu.itemname.d = "D"                           ;Ikemen feature
+keymenu.itemname.w = "W"                           ;Ikemen feature
+keymenu.itemname.menu = "Menu"                     ;Ikemen feature
+keymenu.itemname.back = "Back"                     ;Ikemen feature
+keymenu.itemname.page = "Page"                     ;Ikemen feature
 
 textinput.offset = 75, 96                          ;Ikemen feature
 textinput.font = 7,0,1                             ;Ikemen feature
