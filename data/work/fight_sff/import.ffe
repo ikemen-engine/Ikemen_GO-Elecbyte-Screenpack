@@ -271,3 +271,12 @@ yaxis = 0
 flags = 0
 palette = 400,0
 file = 424-0.png
+
+[SpriteDef]
+group = 425
+image = 0
+xaxis = 38
+yaxis = 0
+flags = 0
+palette = 400,0
+file = 425-0.png
