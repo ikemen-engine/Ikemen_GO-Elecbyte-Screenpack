@@ -1353,6 +1353,9 @@ p2.teammate.spr = 107,0
 ; Win by perfect (overlay icon)
 p1.perfect.spr = 110,0
 p2.perfect.spr = 110,0
+; Win by clutch (overlay icon)
+p1.clutch.spr = 111,0
+p2.clutch.spr = 111,0
 ; Use icons up until this number of wins
 useiconupto = 4
 
