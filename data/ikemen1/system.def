@@ -16,10 +16,10 @@
 ;----------------------------
 [Info]
 ikemenversion = 1.0
-name = "IKEMEN1"			;Name of motif
+name = "IKEMEN1"				;Name of motif
 author = "Ohmga Shironeko"		;Motif author name
 versiondate = 01,01,2011		;Version date of motif (MM-DD-YYYY) (new in MUGEN 1.0)
-mugenversion = 1.1			;Version of M.U.G.E.N motif is compatible with (new in MUGEN 1.0)
+mugenversion = 1.1				;Version of M.U.G.E.N motif is compatible with (new in MUGEN 1.0)
 localcoord = 1280,720			;Local coordinate space width and height (new in MUGEN 1.0)
 
 ;----------------------------
