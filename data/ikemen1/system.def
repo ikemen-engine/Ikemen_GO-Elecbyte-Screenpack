@@ -16,11 +16,11 @@
 ;----------------------------
 [Info]
 ikemenversion = 1.0
-name = "IKEMEN1"       ;Name of motif
-author = "Ohmga Shironeko"       ;Motif author name
-versiondate = 01,01,2011  ;Version date of motif (MM-DD-YYYY) (new in MUGEN 1.0)
-mugenversion = 1.1        ;Version of M.U.G.E.N motif is compatible with (new in MUGEN 1.0)
-localcoord = 1280,720     ;Local coordinate space width and height (new in MUGEN 1.0)
+name = "IKEMEN1"			;Name of motif
+author = "Ohmga Shironeko"		;Motif author name
+versiondate = 01,01,2011		;Version date of motif (MM-DD-YYYY) (new in MUGEN 1.0)
+mugenversion = 1.1			;Version of M.U.G.E.N motif is compatible with (new in MUGEN 1.0)
+localcoord = 1280,720			;Local coordinate space width and height (new in MUGEN 1.0)
 
 ;----------------------------
 ;Directories are checked in this order:
@@ -331,14 +331,13 @@ overlay.alpha = 0, 128            ;Ikemen feature
 
 ;----------------------------
 [Infobox Text]
-Welcome to I.K.E.M.E.N GO engine! (%s - %s)
+Welcome to SUEHIRO's I.K.E.M.E.N GO engine!
 
 * This is a public development release, for testing purposes.
 * This build may contain bugs and incomplete features.
 * Your help and cooperation are appreciated!
-* Source code: https://github.com/ikemen-engine/Ikemen-GO
-* Bug reports: https://github.com/ikemen-engine/Ikemen-GO/issues
-* Docs: https://github.com/ikemen-engine/Ikemen-GO/wiki
+* Ikemen GO engine repositories: https://github.com/ikemen-engine
+* Original repo source code: https://osdn.net/users/supersuehiro/
 
 ;-------------------------------------------------------------------
 ;Character select definition
@@ -478,6 +477,12 @@ p1.face.window = 0,46, 476,629
 p1.face.applypal = 1       ; Ikemen feature. Display portrait with selected palette (requires shared palette)
 p1.face.layerno = 2
 
+p1.face.random.anim = 151
+p1.face.random.offset = 300, 360
+p1.face.random.facing = 1
+p1.face.random.scale = 2, 2
+p1.face.random.layerno = 2
+	
 p2.face.anim = 0
 p2.face.offset = 1000, 560
 p2.face.scale = 0.75,0.75
@@ -485,6 +490,12 @@ p2.face.facing = -1
 p2.face.window = 802,46, 1280,629
 p2.face.applypal = 1
 p2.face.layerno = 2
+
+p2.face.random.anim = 151
+p2.face.random.offset = 960, 360
+p2.face.random.facing = 1
+p2.face.random.scale = 2, 2
+p2.face.random.layerno = 2
 
 p1.face.done.anim = 181    ;Ikemen feature. Portrait to use when selection is confirmed
 p2.face.done.anim = 181
@@ -511,6 +522,27 @@ p2.face2.scale = 1, 1
 p2.face2.facing = -1
 p2.face2.window = 802,46, 1280,629
 p2.face2.applypal = 1
+
+p1.face2.random.spr = 151,0
+p1.face2.random.offset = 0, 94
+p1.face2.random.facing = 1
+p1.face2.random.scale = 5, 5
+p1.face2.random.layerno = 2
+p1.face2.random.projection = perspective
+p1.face2.random.yangle = 70
+p1.face2.random.layerno = 2
+p1.face2.random.focallength = 400
+p1.face2.random.window = 0,46, 476,629
+
+p2.face2.random.spr = 151, 1
+p2.face2.random.offset = 1280, 94
+p2.face2.random.facing = -1
+p2.face2.random.scale = 5, 5
+p2.face2.random.layerno = 2
+p2.face2.random.window = 802,46, 1280,629
+p2.face2.random.projection = perspective
+p2.face2.random.yangle = -70
+p2.face2.random.focallength = 400
 
 ;Name
 p1.name.offset = 50,620   ;Position to put name
@@ -560,18 +592,20 @@ teammenu.move.wrapping = 1
 p1.teammenu.pos = 80, 160
 ;p1.teammenu.bg.spr = 
 p1.teammenu.selftitle.font = 3,0,0, 210,210,255
-p1.teammenu.selftitle.text = "TEAM\nMODE" ; The \n creates a line break here.
-p1.teammenu.selftitle.offset = 70, -30
+p1.teammenu.selftitle.text = "TEAM MODE" ; The \n creates a line break here.
+p1.teammenu.selftitle.scale = 0.75,0.75
+p1.teammenu.selftitle.offset = 130, 15
 p1.teammenu.selftitle.layerno = 2
 p1.teammenu.selftitle.projection = perspective
-p1.teammenu.selftitle.yangle = 50
+p1.teammenu.selftitle.yangle = 52.5
 p1.teammenu.selftitle.focallength = 600
 p1.teammenu.enemytitle.font = 3,0,0, 210,210,255
-p1.teammenu.enemytitle.text = "TEAM\nMODE"
+p1.teammenu.enemytitle.text = "TEAM MODE"
 p1.teammenu.enemytitle.layerno = 2
-p1.teammenu.enemytitle.offset = 70, -30
+p1.teammenu.enemytitle.scale = 0.75,0.75
+p1.teammenu.enemytitle.offset = 130, 15
 p1.teammenu.enemytitle.projection = perspective
-p1.teammenu.enemytitle.yangle = 50
+p1.teammenu.enemytitle.yangle = 52.5
 p1.teammenu.enemytitle.focallength = 600
 p1.teammenu.move.snd = 100,0
 p1.teammenu.value.snd = 100,0
@@ -662,18 +696,20 @@ p1.teammenu.ratio7.icon.layerno = 2
 p2.teammenu.pos = 1197, 160
 ;p2.teammenu.bg.spr = 
 p2.teammenu.selftitle.font = 3,1,0, 255,210,239
-p2.teammenu.selftitle.text = "TEAM\nMODE"
+p2.teammenu.selftitle.text = "TEAM MODE"
+p2.teammenu.selftitle.scale = 0.75,0.75
 p2.teammenu.selftitle.layerno = 2
-p2.teammenu.selftitle.offset = -70, -30
+p2.teammenu.selftitle.offset = -130, 15
 p2.teammenu.selftitle.projection = perspective
-p2.teammenu.selftitle.yangle = -50
+p2.teammenu.selftitle.yangle = -52.5
 p2.teammenu.selftitle.focallength = 600
 p2.teammenu.enemytitle.font = 3,1,0, 255,210,239
-p2.teammenu.enemytitle.text = "TEAM\nMODE"
+p2.teammenu.enemytitle.text = "TEAM MODE"
+p2.teammenu.enemytitle.scale = 0.75,0.75
 p2.teammenu.enemytitle.layerno = 2
-p2.teammenu.enemytitle.offset = -70, -30
+p2.teammenu.enemytitle.offset = -130, 15
 p2.teammenu.enemytitle.projection = perspective
-p2.teammenu.enemytitle.yangle = -50
+p2.teammenu.enemytitle.yangle = -52.5
 p2.teammenu.enemytitle.focallength = 600
 p2.teammenu.move.snd = 100,0
 p2.teammenu.value.snd = 100,0
@@ -828,6 +864,29 @@ p2.palmenu.cancel.snd = 100, 2
 110,0, 0,0, 8
 110,1, 0,0, 8
 110,2, 0,0, 8
+
+[Begin Action 151]
+LoopStart
+151,2, 0,0, 20
+Interpolate Scale
+151,2, 0,0, 20, , , 0.75
+Interpolate Scale
+151,2, 0,0, 1, , , 0.001
+151,3, 0,0, 20, , , 0.001
+Interpolate Scale
+151,3, 0,0, 20, , , 0.75
+Interpolate Scale
+151,3, 0,0, 3
+151,3, 0,0, 20
+Interpolate Scale
+151,3, 0,0, 20, , , 0.75
+Interpolate Scale
+151,3, 0,0, 1, , , 0.001
+151,2, 0,0, 20, , , 0.001
+Interpolate Scale
+151,2, 0,0, 20, , , 0.75
+Interpolate Scale
+151,2, 0,0, 3
 
 [Begin Action 160] ;P1 active cursor
 160,0, 0,0, 3
@@ -2436,7 +2495,7 @@ fadeout.col = 0, 0, 0
 ;fadeout.anim = 
 time = 360
 pos = 159, 0
-title.offset = 480, 94
+title.offset = 480, 74
 title.font = 4,0,0
 title.scale = 1.0, 1.0
 title.arcade.text = "RANKING ARCADE"
@@ -2446,25 +2505,25 @@ title.timeattack.text = "RANKING TIME ATTACK"
 title.survival.text = "RANKING SURVIVAL"
 title.survivalcoop.text = "RANKING SURVIVAL CO-OP"
 title.uppercase = 1
-title.rank.offset = 105, 150
+title.rank.offset = 105, 140
 title.rank.font = 3,0,0
-title.rank.scale = 0.5,0.5
+title.rank.scale = 0.66,0.66
 title.rank.text = "Rank"
-title.result.offset = 336, 150
+title.result.offset = 336, 140
 title.result.font = 3,0,0
-title.result.scale = 0.5,0.5
+title.result.scale = 0.66,0.66
 title.result.text = "Result"
-title.name.offset = 558, 150
+title.name.offset = 558, 140
 title.name.font = 3,0,0
-title.name.scale = 0.5,0.5
+title.name.scale = 0.66,0.66
 title.name.text = "Name"
-title.face.offset = 774, 150
+title.face.offset = 774, 140
 title.face.font = 3,0,0
-title.face.scale = 0.5,0.5
+title.face.scale = 0.66,0.66
 title.face.text = "Character"
 item.offset = 0, 0
 item.spacing = 0, 0
-item.rank.offset = 126, 210
+item.rank.offset = 126, 190
 item.rank.font = 2,0,-1
 item.rank.scale = 1.0, 1.0
 item.rank.spacing = 0, 26
@@ -2475,7 +2534,7 @@ item.rank.3.text = "%drd"
 item.rank.active.font = 2,0,-1, 191,191,191
 item.rank.active.switchtime = 4
 item.rank.active2.font = 2,0,-1
-item.result.offset = 399, 210
+item.result.offset = 399, 190
 item.result.font = 2,0,-1
 item.result.scale = 1.0, 1.0
 item.result.spacing = 0, 26
@@ -2485,7 +2544,7 @@ item.result.win.text = "Stage %d"
 item.result.active.font = 2,0,-1, 191,191,191
 item.result.active.switchtime = 4
 item.result.active2.font = 2,0,-1
-item.name.offset = 531, 210
+item.name.offset = 531, 190
 item.name.font = 2,0,1
 item.name.scale = 1.0, 1.0
 item.name.spacing = 0, 26
@@ -2496,17 +2555,17 @@ item.name.active2.font = 2,0,1
 item.name.uppercase = 1
 ;item.face.anim = 
 item.face.spr = 9000, 0
-item.face.offset = 720, 189
+item.face.offset = 700, 164
 item.face.facing = 1
-item.face.scale = 0.33, 0.33
+item.face.scale = 0.36, 0.36
 ;item.face.window = 0, 0, 1280, 720
 item.face.num = 4
-item.face.spacing = 38, 41
+item.face.spacing = 38, 48
 ;item.face.bg.anim = 
 item.face.bg.spr = 150,0
 item.face.bg.offset = 0, 0
 item.face.bg.facing = 1
-item.face.bg.scale = 0.33, 0.33
+item.face.bg.scale = 0.36, 0.36
 ;item.face.unknown.anim = 
 item.face.unknown.spr = 151,0
 item.face.unknown.offset = 0, 0

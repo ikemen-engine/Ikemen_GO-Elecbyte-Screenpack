@@ -15,6 +15,7 @@ Creative Commons Attribution 3.0 Unported License.
 http://creativecommons.org/licenses/by/3.0/deed.en_US  
 The license applies to following assets:  
 - Screenpack Motif assets made by Ohmga Shironeko
+- Screenpack Logo made by Ohmga Shironeko and  President Devon
 - Screenpack Motif sounds made by SuperFromND
 - Lifebar messages, rank backgrounds and icons by President Devon and Rurouni  
 - Command list glyphs by Rurouni  
