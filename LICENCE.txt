@@ -10,7 +10,7 @@ http://creativecommons.org/licenses/by/3.0/deed.en_US
 The license applies to following assets:
 - Screenpack Motif assets made by Ohmga Shironeko
 - Screenpack Motif sounds made by SuperFromND
-- Screenpack Logo made by Ohmga Shironeko and  President Devon
+- Screenpack Logo made by Ohmga Shironeko and President Devon
 - Lifebar messages, rank backgrounds, action icons by President Devon and Rurouni
 - Command list glyphs, order select icons by Rurouni
 - Dizzy, guard break, tag switch effects by Shiyo Kakuge
