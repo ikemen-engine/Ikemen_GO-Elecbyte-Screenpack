@@ -331,13 +331,14 @@ overlay.alpha = 0, 128            ;Ikemen feature
 
 ;----------------------------
 [Infobox Text]
-Welcome to SUEHIRO's I.K.E.M.E.N GO engine!
+Welcome to I.K.E.M.E.N GO engine! (%s - %s)
 
 * This is a public development release, for testing purposes.
 * This build may contain bugs and incomplete features.
 * Your help and cooperation are appreciated!
-* Ikemen GO engine repositories: https://github.com/ikemen-engine
-* Original repo source code: https://osdn.net/users/supersuehiro/
+* Source code: https://github.com/ikemen-engine/Ikemen-GO
+* Bug reports: https://github.com/ikemen-engine/Ikemen-GO/issues
+* Docs: https://github.com/ikemen-engine/Ikemen-GO/wiki
 
 ;-------------------------------------------------------------------
 ;Character select definition
