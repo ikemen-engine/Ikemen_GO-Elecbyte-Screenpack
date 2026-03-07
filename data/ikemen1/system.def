@@ -19,7 +19,7 @@
 [Info]
 name = IKEMEN1              ;Name of motif
 author = Ohmga Shironeko    ;Motif author name
-versiondate = 02,25,2026    ;Version date of motif (MM-DD-YYYY) (new in MUGEN 1.0)
+versiondate = 03,06,2026    ;Version date of motif (MM-DD-YYYY) (new in MUGEN 1.0)
 ikemenversion = 1.0         ;Version of I.K.E.M.E.N motif is compatible with (Ikemen nightly)
 localcoord = 1280,720       ;Local coordinate space width and height (new in MUGEN 1.0)
 
@@ -583,8 +583,9 @@ stage.portrait.layerno = 2
 
 ;Record
 record.font = 3,0,0
-record.offset = 640, 663
-record.scale = 1.0, 1.0
+record.offset = 640, 672
+record.scale = 0.6, 0.6
+record.layerno = 2
 ;record.<gamemode>.text = 
 record.window = 
 
@@ -2013,7 +2014,7 @@ menu.item.active.offset = 0, 0
 menu.item.active.font = 7,0,1
 menu.item.active.scale = 1.0, 1.0
 menu.item.spacing = 0, 42
-;menu.window.margins.y = 0, 0
+menu.window.margins.y = 21, 2
 menu.window.visibleitems = 13
 menu.boxcursor.visible = 1
 menu.boxcursor.coords = -15, -30, 462, 11
@@ -2129,11 +2130,11 @@ cancel.snd = 100, 2
 enter.snd = 100, 1
 exit.snd = 100, 2
 movelist.pos = 189, 60
-movelist.title.offset = 451,-22
+movelist.title.offset = 451, 48
 movelist.title.font = 4,0,0
 movelist.title.scale = 1.0, 1.0
 movelist.title.text = %s
-movelist.title.uppercase = 0
+movelist.title.uppercase = 1
 movelist.text.offset = 0, 36
 movelist.text.font = 7,0,1
 movelist.text.scale = 1.0, 1.0
