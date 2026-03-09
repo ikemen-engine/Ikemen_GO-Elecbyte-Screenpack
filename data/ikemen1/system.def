@@ -130,6 +130,25 @@ menu.item.spacing = 0, 54
 menu.item.layerno = 2
 menu.item.active.layerno = 2
 
+loading.font = PixelFlat.def, 0, -1, 191, 191, 191, 255, -1
+loading.offset = 1200, 680
+loading.scale = 1, 1
+loading.xshear = 0.25
+loading.text = NOW LOADING...
+	
+footer.title.font = PixelFlat.def, 0, 1, 191, 191, 191, 255, -1
+footer.title.offset = 5, 716
+
+footer.info.font = PixelFlat.def, 0, 0, 191, 191, 191, 255, -1
+footer.info.offset = 640, 716
+
+footer.version.font = PixelFlat.def, 0, -1, 191, 191, 191, 255, -1
+footer.version.offset = 1275, 716
+
+footer.overlay.col = 0, 0, 64
+footer.overlay.alpha = 255, 100
+footer.overlay.window = 0, 700, 1280, 720
+
 ;Network menu
 connecting.offset = 640, 393
 connecting.font = 7,0,0
