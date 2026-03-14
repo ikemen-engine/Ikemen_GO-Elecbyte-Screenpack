@@ -1,13 +1,11 @@
-; Arcade - 38 point font
+; Action - 16 Point Font
 ; Indexed 8-bank
 ; Bank 0 - mono
-; Bank 1 - red
+; Bank 1 - blue
 ; Bank 2 - green
-; Bank 3 - blue
-; Bank 4 - brown
-; Bank 5 - cyan
-; Bank 6 - purple
-; Bank 7 - yellow
+; Bank 3 - purple
+; Bank 4 - red
+; Bank 5 - yellow
 
 [FNT v2]
 ; FNT v2 version number.  Don't change this.
@@ -18,8 +16,8 @@ name = "Action"
 [Def]
 ; This is a bitmap font
 Type = bitmap
-; Bank numbers are mapped to palette numbers (0, bank).
-BankType = palette
+; Bank numbers are mapped to sprite group numbers (required for RGBA fonts).
+BankType = sprite
 ; Size of font: width, height.  Width is used for spaces.
 Size = 8,16
 ; Spacing between font glyphs: width, height.
