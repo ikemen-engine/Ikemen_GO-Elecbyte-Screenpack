@@ -132,7 +132,7 @@ menu.item.active.layerno = 2
 
 loading.font = PixelFlat.def, 0, -1, 191, 191, 191, 255, -1
 loading.offset = 1200, 680
-loading.scale = 1, 1
+loading.scale = 2.5, 2.5
 loading.xshear = 0.25
 loading.text = NOW LOADING...
 	
