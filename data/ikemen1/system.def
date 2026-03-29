@@ -43,14 +43,15 @@ logo.storyboard = logo.def  ;Logo storyboard definition (optional)
 select = select.def         ;Character and stage selection list
 fight = fight.def           ;Fight definition filename
 font1 = f-4x6.def
-font2 = pixel.def
-font3 = menu2.def
-font4 = menu1.def
+font2 = ikemen1/fonts/Pixel.def
+font3 = ikemen1/fonts/Menu2.def
+font4 = ikemen1/fonts/Menu1.def
 font5 = Open_Sans.def
 ;font5.height = 36          ;Uncomment to override the size of the font (Truetype fonts only)
 font6 = infofont.def
 font7 = Open_Sans.def
-font8 = Timer.def
+font8 = ikemen1/fonts/Timer.def
+font9 = ikemen1/fonts/PixelFlat.def
 module =                    ;External Lua code
 
 ;----------------------------
@@ -130,7 +131,7 @@ menu.item.spacing = 0, 54
 menu.item.layerno = 2
 menu.item.active.layerno = 2
 
-loading.font = PixelFlat.def, 0, -1, 191, 191, 191, 255, -1
+loading.font = 9, 0, -1, 191, 191, 191, 255, -1
 loading.offset = 1200, 680
 loading.scale = 1.5, 1.5
 loading.xshear = 0.25
