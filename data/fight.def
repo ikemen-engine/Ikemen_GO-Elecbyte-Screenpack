@@ -39,15 +39,15 @@ localcoord = 1280,720 	;Local coordinate space width and height
 [Files]
 sff = fight.sff
 snd = fight.snd
-font1 = Menu2.def
-font2 = Timer.def
-font3 = Menu2Small.def
-font4 = PowerbarNum.def
-font5 = Action.def
-font6 = ComboCounter.def
-font7 = HitNum.def
-font8 = Pixel.def
-font9 = Round.def
+font1 = ikemen1/fonts/Menu2.def
+font2 = ikemen1/fonts/Timer.def
+font3 = ikemen1/fonts/Menu2Small.def
+font4 = ikemen1/fonts/PowerbarNum.def
+font5 = ikemen1/fonts/Action.def
+font6 = ikemen1/fonts/ComboCounter.def
+font7 = ikemen1/fonts/HitNum.def
+font8 = ikemen1/fonts/Pixel.def
+font9 = ikemen1/fonts/Round.def
 fightfx.sff = fightfx.sff ;Legacy Mugen common effects
 fightfx.air = fightfx.air ;Legacy Mugen common effects
 common.snd = common.snd   ;Legacy Mugen common effects
@@ -1608,7 +1608,7 @@ p1.front9000.palfx.sinmul = 32, 32, 32, 15
 
 p1.front10000.spr = 43, 0
 p1.front10000.offset = 0,4
-p1.front10000.palfx.mul = 180, 180, 180
+p1.front10000.palfx.mul = 236, 236, 236
 p1.front10000.palfx.sinmul = 20, 20, 20, 10
 
 p1.frontMax.spr = 44, 0
@@ -1620,13 +1620,13 @@ p1.frontMax.palfx.sinmul = 30, 30, 30, 10
 p1.counterMax.text = M
 p1.counterMax.offset = -241,31
 p1.counterMax.font = 4, 0, 0
-p1.counterMax.palfx.mul = 180, 180, 180
-p1.counterMax.palfx.sinmul = 50, 50, 50, 5
+p1.counterMax.palfx.mul = 226, 226, 226
+p1.counterMax.palfx.sinmul = 30, 30, 30, 10
 
 p1.counter10000.offset = -241,31
 p1.counter10000.font = 4, 0, 0
-p1.counter10000.palfx.mul = 180, 180, 180
-p1.counter10000.palfx.sinmul = 50, 50, 50, 5
+p1.counter10000.palfx.mul = 226, 226, 226
+p1.counter10000.palfx.sinmul = 30, 30, 30, 10
 
 p1.counter9000.offset = -241,31
 p1.counter9000.font = 4, 0, 0
@@ -1748,7 +1748,7 @@ p2.front9000.facing = -1
 
 p2.front10000.spr = 43, 0
 p2.front10000.offset = 0,4
-p2.front10000.palfx.mul = 180, 180, 180
+p2.front10000.palfx.mul = 236, 236, 236
 p2.front10000.palfx.sinmul = 20, 20, 20, 10
 p2.front10000.facing = -1
 
@@ -1762,13 +1762,13 @@ p2.frontMax.facing = 1
 p2.counterMax.text = M
 p2.counterMax.offset = 241,31
 p2.counterMax.font = 4, 0, 0
-p2.counterMax.palfx.mul = 180, 180, 180
-p2.counterMax.palfx.sinmul = 50, 50, 50, 5
+p2.counterMax.palfx.mul = 226, 226, 226
+p2.counterMax.palfx.sinmul = 30, 30, 30, 10
 
 p2.counter10000.offset = 243,31
 p2.counter10000.font = 4, 0, 0
-p2.counter10000.palfx.mul = 180, 180, 180
-p2.counter10000.palfx.sinmul = 50, 50, 50, 5
+p2.counter10000.palfx.mul = 226, 226, 226
+p2.counter10000.palfx.sinmul = 30, 30, 30, 10
 
 p2.counter9000.offset = 243,31
 p2.counter9000.font = 4, 0, 0
@@ -2664,24 +2664,23 @@ framespercount = 60
 counter1.scale = 2, 2
 counter1.offset = 0, 30
 counter1.font = 2, 0, 0
-counter1.palfx.mul = 256, 64, 64
-counter1.palfx.sinmul = 0, 200, 200, 10
+counter1.palfx.mul = 256, 128, 128
+counter1.palfx.sinmul = 0, 128, 128, 20
 counter1.layerno = 0
 
 counter10.font = 2, 0, 0
 counter10.offset = 0, 0
 counter10.scale = 1, 1
-counter10.palfx.mul = 256, 64, 64
-counter10.palfx.sinmul = 0, 200, 200, 10
+counter10.palfx.mul = 256, 128, 128
+counter10.palfx.sinmul = 0, 128, 128, 20
 counter10.layerno = 0
 
 counter11.offset = 0, 0
 counter11.font = 2, 0, 0, 255, 255, 255
 counter11.scale = 1, 1
-;counter11.palfx.mul = 256, 64, 64
+;counter11.palfx.mul = 256, 128, 128
 counter11.layerno = 0
-;counter11.palfx.sinmul = 0, 200, 200, 10
-
+;counter11.palfx.sinmul = 0, 128, 128, 20
 
 ;-----------------------------------------------------------
 [Combo]
@@ -2709,7 +2708,7 @@ team1.counter90.font = 6,0,0
 team1.counter90.palfx.mul = 255, 26, 26
 team1.counter100.font = 6,0,0
 team1.counter100.palfx.mul = 255, 26, 26
-team1.counter100.palfx.sinmul = 90, 90, 90, 5
+team1.counter100.palfx.sinmul = 90, 90, 90, 15
 team1.counter.shake = 1   ;Set to 1 to shake count on hit
 team1.counter.time = 7    ; length of the counter shake
 team1.counter.mult = 0.05 ; counter shake intensity multiplier
@@ -2749,7 +2748,7 @@ team1.text100.text = "H!!!!!!!!!!!\n%p%"
 team1.text100.font = 7,0,0
 team1.text100.offset = 6,42
 team1.text100.palfx.mul = 256, 256, 256
-team1.text100.palfx.sinmul = 90, 90, 90, 5
+team1.text100.palfx.sinmul = 90, 90, 90, 15
 team1.displaytime = 90    ;Time to show text
 team1.showspeed = 8       ; text showing up speed (1 = instant)
 team1.hidespeed = 4       ; text hiding speed (the larger value, the faster speed)
@@ -2779,7 +2778,7 @@ team2.counter90.font = 6,0,0
 team2.counter90.palfx.mul = 255, 26, 26
 team2.counter100.font = 6,0,0
 team2.counter100.palfx.mul = 255, 26, 26
-team2.counter100.palfx.sinmul = 90, 90, 90, 5
+team2.counter100.palfx.sinmul = 90, 90, 90, 15
 team2.counter.shake = 1   ;Set to 1 to shake count on hit
 team2.counter.time = 7    ; length of the counter shake
 team2.counter.mult = 0.05 ; counter shake intensity multiplier
@@ -2819,7 +2818,7 @@ team2.text100.text = "H!!!!!!!!!!!\n%p%"
 team2.text100.font = 7,0,0
 team2.text100.offset = 6,42
 team2.text100.palfx.mul = 256, 256, 256
-team2.text100.palfx.sinmul = 90, 90, 90, 5
+team2.text100.palfx.sinmul = 90, 90, 90, 15
 team2.displaytime = 90    ;Time to show text
 team2.showspeed = 8       ;text showing up speed (1 = instant)
 team2.hidespeed = 4       ;text hiding speed (the larger value, the faster speed)
